@@ -501,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yun.YunBaseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				WARNING_CFLAGS = "";
+				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Debug;
 		};
@@ -522,7 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yun.YunBaseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				WARNING_CFLAGS = "";
+				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Release;
 		};
