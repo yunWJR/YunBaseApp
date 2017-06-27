@@ -9,238 +9,238 @@
 /* Begin PBXBuildFile section */
 		01E09711F001C49F92A97060414E262B /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E31645D5BC2839E1EFA3D2F01A42BF /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0214246CCB1FF7182F7222B9CCDF8FCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C472EE87CCC740E22CBEB435FC4A21 /* Foundation.framework */; };
-		035D907A1AB62CA43E9BB73B3BE38729 /* MTLModel+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 71216151F7970CACD00F23087CCFC9BE /* MTLModel+NSCoding.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0374870EC35FF5C19EF6A7EAC267A7A8 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EF360928FC841E4C333255EA0D9EC2 /* UIImage+GIF.m */; };
 		038A13B6B542C6A911A003462F110671 /* ChineseToPinYinTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7EA734484DD303C8597AFA35CD767F /* ChineseToPinYinTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		061E287A6DB3167967E7E76CAB1069A4 /* UILabel+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5EA4A9C540919A02D4BA535B04AFCD /* UILabel+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		064EC4AA8FCCD08F2037037B1E672DBF /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FB06599E913C4255387ED228F19DD5 /* AFURLSessionManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		064FF1126364FD972E6F699DF3688E37 /* YunUISearchBarFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = A167D2B158AA82975E57FF42478DAE8E /* YunUISearchBarFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077AF21032A7BCC4DC027CEE008A837C /* YunValueHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 687128DA2FC72C96E461CC5B05FFF547 /* YunValueHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		088CAAE30756554DA5DB99EADE6593A0 /* UIButton+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = A094ADD196A9A687D8A71FED17A18799 /* UIButton+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09943B8B9829EC5CAAD8C0C8F9F2D566 /* YunSystemMediaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDCFAA48151F253802F1464D90A2312 /* YunSystemMediaHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0A1CE7CE58B28609B573D4058ABDD616 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDA1DC0B5F6AA1DEB72AC9B383099FC /* AFSecurityPolicy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0A2BBB33DCD0C330A687A439D3AD560F /* YunUISearchBarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F366B89BC6DF8FE67D376CC5F4605C25 /* YunUISearchBarFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0B0E28610D7BC111ACA17A42FFFFC371 /* YunUIImageViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9783432C78BBD0EAEBCE0E50A9C36833 /* YunUIImageViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0B0EA907F208C79B918A1131E7369118 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B485D662514C47E8BFCFE1E7801E1F29 /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BE5400FD8D1F8A47B99AB35E914A2E1 /* UIImage+Resizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 15250DA14982604E1FBA5317BBDDB87A /* UIImage+Resizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C5790A51C0169CD861EE969049480AF /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C506E0CB1DFB3595C48F11D11539A855 /* SDWebImageDecoder.m */; };
-		0E34E868B6A6D2DAE0ED5E8013B851C5 /* YunConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B428DB2F524AF724821AA8D997D4FAE /* YunConfig.m */; };
+		0D8DD3832E2C26D3412CC4FD3C83CECB /* UIImage+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9BCBBBA6775025E9AB658F9AC14AFA /* UIImage+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0EF536EDD2A9C0EC1AE28D7C5B13C83E /* SDWebImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = CADB9ABEBEBB3EAF07EA419DEA7BEBF1 /* SDWebImageDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F8BC4F32DAF44B2979D14030416A084 /* NSValueTransformer+MTLInversionAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 87D3C50B4D095B7D0A374D8D9D2C21A5 /* NSValueTransformer+MTLInversionAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		104E5AD737503DC92F821720D498BCD5 /* CalculationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 09645B5C367A47FEFF498FD78436FE3F /* CalculationTime.m */; };
-		11A4355A68E357F1EC3E17B9D475CC11 /* YunKits-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A20E4B7C307650AA938CDE45C03907 /* YunKits-dummy.m */; };
-		128BFA69429135E8F81767B521DE56AD /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3504F955E7673F14B6559E6B27FA51D5 /* NYXImagesHelper.m */; };
+		12FCB056A2B7051B0D91B16CAFE85C1D /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C221B71E039DECEB76FE1BDC1B9C9E2D /* UIRefreshControl+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1341A7AC2439CB63D459D32EF985A414 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F433450402F4686841216BFE1C6AE113 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F0269B91D7E2826409087074343CF6 /* MASViewAttribute.m */; };
-		140C571FAA6944FBB3EE051BA24CBEBB /* UIImage+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C9A1EA6F8AB954B6456BDADA30FECA /* UIImage+Device.m */; };
-		153AC282EF469A963E974C2729BDCA0C /* UILabel+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF8737A403FF4DF9722A5476ECFBE8 /* UILabel+Style.m */; };
+		14B65CE3038761FA8F6F5D1ECED6A562 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B475BF354C9EBBDEC4CC61C262081A2 /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		15B6BDFDC0C80B351BD8B5835BB777D3 /* CalculationTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374D02DAC750397963E810B2C0429DF /* CalculationTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		16B94C855849D3C3471E16C361EAC1A2 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E71273108D7C12E75515D863529057E /* SDImageCache.m */; };
+		161792699538DED97ECA3DBCA8B5265F /* YunIdCardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA81C50460F5C6A62F5146903FB365E /* YunIdCardHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		16B5766616FAE4F672549A4DC7612CCC /* UIView+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AE7C51D9EF2DD6AD01D667F034149 /* UIView+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		172A9AB918B402625E4F918E0B3CD627 /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F97014B9D065E7B93BA07DE83E682F /* NSImage+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1730934FEE3A077B847AC40DBF32110E /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D46AFD05D129440699FF82402279B636 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		199C416EDA754D0577492F75FF5B2E97 /* YunAttributedStringFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 108B33AE3118A5BC8119395C5035DA4A /* YunAttributedStringFactory.m */; };
+		17E74D623462991F19748A7F99CF8ED6 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDFA8B1A4F7AF6FFD2D2C81EB8ED7B /* UIWebView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		19CFCF718B674B91847980FA20429558 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF2D7110444FF10F5EB34996D3CAB3E /* AFNetworkReachabilityManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1A05BF934A67A1D58510863477450A6D /* Mantle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5C3D4AC7FBA85E2913FC5E0E6057A /* Mantle-dummy.m */; };
-		1C8516E29CA8D6195A41E2CBBDF055A7 /* UIButton+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A23513C79D056C8160B2AD8545BACA38 /* UIButton+YunAdd.m */; };
+		1AF513D8D71B663D5422760106B13723 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9190A8FBCD4ECCDEBD5D74A55CB372 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1D0907809FA58944DCF0338BEEF823E3 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9477011E23A2B739CE8289A34E7A2C /* EXTScope.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1E3CBE510A5A3DFA10DFB185A4898ACF /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E71537DC28DC313248D8D1F759F0270 /* UIImage+Resizing.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1E7E81C1861E7D813C5EA4608AC2FCD7 /* YunUIButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F4FE0D84AB2572EFC5C4A2385E22 /* YunUIButtonFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1EA01C7C4E748395DF2F842FDC7FBFE2 /* UIColor+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 001D2FC245C67533CEA0D55A1EA07247 /* UIColor+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1F3BD3BC28432BB5E2F73501E06E4579 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F11D4CB5984B835C3685B955523CCF /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F871B2B505D5C2E316DFA0618C43847 /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = EE7931DDB7ECF945E07677F1625F96EF /* EXTKeyPathCoding.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		1F96C00681270F125CC0D695D22CE63A /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D2412C55E72341D0A426DC981C78CF52 /* SDWebImagePrefetcher.m */; };
 		2018607C3D61886864802AF58E0DFC61 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = A893171CEADE8C390DED7C77C9E1F959 /* metamacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		206FED9411A3D35E91EEE4769E584D38 /* MTLValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A892D4EF3AAF64993B2BD87E9F369 /* MTLValueTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		20C51751743698A0B9F358BD5279C6F1 /* YunNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C15A99C330E359E26964D5F29BEE09D /* YunNetworkHelper.m */; };
-		22780D8B252C4EC3543584502963CB29 /* YunUIImageViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9783432C78BBD0EAEBCE0E50A9C36833 /* YunUIImageViewFactory.m */; };
+		2020A86F9E1845CA1319EA46E3C29BB8 /* MTLTransformerErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2FF45A21713C7E68C203550431936F /* MTLTransformerErrorHandling.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		211646AEE68A3577495B0DF917A0DCDC /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 69572FCABEA61153D19D45DFA8E6926F /* AFImageDownloader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		21805860329091A2863F1C4A6C832AA3 /* UITextField+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A79B29DFD235DF03BE9D367A6EF010 /* UITextField+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		23DE641CE0BE31E70E54124B7F52F607 /* YunAttributedStringFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E17F953F889C023CFFC790B5C26A222 /* YunAttributedStringFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2579663181BFA8F7DA4B5D7CF8537FC0 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B716FAC0A36A2B9C1277707EDDD451E1 /* UIActivityIndicatorView+AFNetworking.m */; };
+		241783C8D5E43984BF8BA587B5974B1E /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 856EBA8BBCBF3EB3F3F868DA6F63C411 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		25B67CF8008EAF63FAD1356C0F228ACE /* YunIdCardHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EA502E86BCCFF28D5420396393D32E67 /* YunIdCardHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		265B02B3B5E9D908D61911BC5E0E078C /* YunTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D8CD48AEE970F6050F27CF3213FF04 /* YunTableViewCell.m */; };
+		2612D2B9BEA56B8CB2B361AA0BAB599F /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF12AF4632DB7BFDF2EBE90D10BE47 /* UIButton+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		27C806DD37E3CC8EE961EE669FAE33FA /* NSObject+MTLComparisonAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 52178DCF1759D55D56FE5AD459EEFC25 /* NSObject+MTLComparisonAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28AD50A3AEF82FBA85ED349C9474417D /* UIImage+Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 023BE069DF9B6AD94F0FC0C9C0D34893 /* UIImage+Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A0C164601ABC8BA083D05AADB9164AE /* NSDictionary+MTLJSONKeyPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A91EF6867D46E21D22A9906AFFAC00E /* NSDictionary+MTLJSONKeyPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F54E9B01B23EA1A9B02A66ABFB83E601 /* MASViewConstraint.m */; };
+		2BCD3F861A5F4CF448072C4692AD130D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F45F3C831C17C7D9A51B1421CD282B80 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2BE0E2D8FA30F1D0CCDF566D281EBFFB /* CalculationTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 09645B5C367A47FEFF498FD78436FE3F /* CalculationTime.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2CD713DD442D04F041A80F3AA8764F34 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1745375E20A4CD1649789AFD7967EB6 /* SDWebImageManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2E43F772333DE53F3E370304DA797837 /* ChineseToPinYinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 712B6CA70647903A5C80B95136B7EAB0 /* ChineseToPinYinTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2EBAA518CB8B2DAF89A63637091D4615 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 876A3E26FF9A4D24CB3B24734C936048 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F1C1D9B316B02D50241E4212709F640 /* UIImage+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9BCBBBA6775025E9AB658F9AC14AFA /* UIImage+YunAdd.m */; };
 		2FBE8464AE34F933C45902BD00E2F9BC /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B26A1A79D8B2B8294C47E1FEE6D4BF6 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FE76D5A0A44A57F70D6AB58CB025D45 /* UISearchBar+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E458E6BC3142D3FD5D07DD47A61CF11 /* UISearchBar+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		300F1DC33BB456630D8177659B3C9B69 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DDEF82850C4ACE0F35CE37CEB86871 /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30F9D6937F2A4EE2DF94F89C3561DAD5 /* YunView.h in Headers */ = {isa = PBXBuildFile; fileRef = 97F301434CD6E9BF38E7CDB82ACA50FE /* YunView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31ED9BD97AF9E62874AF3CDF2F8090CF /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F1F7E68A2D0154445C814338D9228D /* AFNetworkActivityIndicatorManager.m */; };
-		375296ECEBBB2CB01C0949A935D788CC /* NSString+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDD127ECBD1541BDAB8F3FF3ACBA355 /* NSString+YunAdd.m */; };
+		3388ED7EC42F7EC4F632BB02E936B64B /* UIImage+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C9A1EA6F8AB954B6456BDADA30FECA /* UIImage+Device.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		34F14317E6822838043CAECB32C5AFF5 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 58230114842226B47A27B61A7EBE229A /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3637E94D9A12C38C49FBDC9B0DBCEB7B /* YunUIViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0833294FEBC693CF2E9B9C3FC99B1A /* YunUIViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		364E49831CB5B21AD63F0B6BF5A6B225 /* UITabBar+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 306B3B1E857C2EBA4528B9E266293587 /* UITabBar+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3776420239ED0180EF58CFD77989B4A1 /* MTLReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = 738F551727317DB723BCCFC71B29E211 /* MTLReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B00C3A562A400D1327833A1E7A29DC5 /* YunFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C1124DAA4E4F3A7D295F453B9B6ECFA4 /* YunFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C090CB7129B3068023E5641BC52F2EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C472EE87CCC740E22CBEB435FC4A21 /* Foundation.framework */; };
-		3E3409917B36FC7B31D35C8DD26448EE /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B20AF7B96A8245A6DC77F5BC17827DFC /* UIImageView+HighlightedWebCache.m */; };
-		3E5485C969D32B09EE84D910DD7A50B3 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = BD33598AC9CB6A94072C97CC68F44B2F /* UIImage+MultiFormat.m */; };
-		3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8740E7D3C826F97482E43230BC2128 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		417E573220E2C2650ADEA316B007E35E /* UIColor+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 001D2FC245C67533CEA0D55A1EA07247 /* UIColor+YunAdd.m */; };
-		4359898A522E59E3992C877EE7C8129B /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E71537DC28DC313248D8D1F759F0270 /* UIImage+Resizing.m */; };
-		43A3D1B26380B3F55D8D5156F28D9169 /* MTLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ACAE8B0CCF704A3E689D68D988F1FB /* MTLModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		43169FB099EAE71C188E9BB58CCAFAFB /* YunValueVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B5856317B1411B0A7B464046F9BFAD94 /* YunValueVerifier.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		46401F3C7FF0B0CFE2E9B14914780835 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 376EDC613CAEF775C1E2DEAEBCF80FA8 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47D1FBFF30FF8C08F20F27EA95F25192 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DA19349EFE415500F0073D83A96E5F /* SDWebImageCompat.m */; };
-		4893308E494D8E2F9CF8C7468D278483 /* YunUIButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7F4FE0D84AB2572EFC5C4A2385E22 /* YunUIButtonFactory.m */; };
+		466869E41EB306F74C8A6E87CC1539BF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 511BFBAE373E220BB9DED8906B4B7791 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		48EBAF945D6600BFAC95C945559C4767 /* NSDictionary+MTLJSONKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 418828CB8346C75C6C638F53A3501CCA /* NSDictionary+MTLJSONKeyPath.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		490CA524521F7D444EA58FA915D7E99C /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 023B604D2308DE52DFF0160CA888716A /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49165C856AE6C700F8B8AC7C1659C39E /* NSError+MTLModelException.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4728AB21839F7314E79ED2C55AE6D2 /* NSError+MTLModelException.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		49B903D576E09560C52AA92FDCC31A68 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F7FD86DCD0C20255BA6B2DBED171B2E /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CBE1B46550A3FB90FDD1CB9CBA7B7FE /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C335B886B43D9C1E07169FEC9E1E86D7 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E074BE66853EE6E2DD1F91137F5C777 /* NYXImagesHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23105610FA04471283ED43762FDF09 /* NYXImagesHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EA80CFF42F6BE97866F71180072F7C8 /* NSObject+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFE0C35A97BE0621AD1093E60BD7EF5 /* NSObject+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F8F06A1BF0927372FE2B81719655E6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C472EE87CCC740E22CBEB435FC4A21 /* Foundation.framework */; };
-		5025F2DE440FA646975E5383652BD833 /* UITabBar+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 306B3B1E857C2EBA4528B9E266293587 /* UITabBar+YunAdd.m */; };
+		4FCD0E64283B37730E954EEF7696000E /* UISearchBar+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE16FD46B9B3BF20138853B48E3BCC7 /* UISearchBar+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5119FD722E1101AAC5CBD401B0553128 /* NSArray+MTLManipulationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC09C30AB7F994A8966F4F03CB47E888 /* NSArray+MTLManipulationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51F6393F3755BC5153341BADBB8C48B9 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD35DD71F8D563B72C2A02910A4243 /* EXTRuntimeExtensions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		548DB171668F636AB2E3E6A930B54F86 /* YunUIViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0833294FEBC693CF2E9B9C3FC99B1A /* YunUIViewFactory.m */; };
-		5493578E795F6F6829C47C4CA6FD036D /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B5472CAC5F63376E4B06EE21B9B68 /* UIButton+WebCache.m */; };
+		538F81B672830BAE752260203C441AC7 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EF360928FC841E4C333255EA0D9EC2 /* UIImage+GIF.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		548BBD5B63FA097F419829C3EE8EA068 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCDE1F0B42316874969526C000800E4 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		54BBF80A2E7CE10E202FCED41E3E7A36 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 51DC81364ADE0C5AA279FD35B920A59C /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		559A65712A519164CFE6F41E46B59F7A /* YunValueHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 687128DA2FC72C96E461CC5B05FFF547 /* YunValueHelper.m */; };
-		56B6F726EB214E49E4BAA6135FE157D5 /* NSArray+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB71C212B42FAD7B16413632CD7BF55 /* NSArray+MTLManipulationAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		5719F06B809080CDEF7E6BC75DEA1A3C /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = FCFB0D92531EFFE4FE0463BC8B00B08E /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5741DD6D20B53BEEC0865588554936D3 /* NSError+MTLModelException.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E225B9CD2C3771D8613D65FF5B6DC8C /* NSError+MTLModelException.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58CA46E8AABD8B6D839FF94127869EA1 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DCD7C5EC8D2E0FC2695146544742F8 /* NSData+ImageContentType.m */; };
-		5945033488F9995134DBB7014DE2412F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1E7A0AF397E0C292662AD0F906AA0 /* AFURLRequestSerialization.m */; };
-		5BB3EC4FB31DC30DEE5FEE151554721D /* MTLTransformerErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2FF45A21713C7E68C203550431936F /* MTLTransformerErrorHandling.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5C0696B2AD1DC23F6473F5A19FAB6296 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 69572FCABEA61153D19D45DFA8E6926F /* AFImageDownloader.m */; };
+		5B46C39A3F939EDB676981756CC24007 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA5E3C60CB3F559FB0225AFCDBAF57D /* Masonry-dummy.m */; };
+		5B4F8BA03E3E77032B74A190E0FE6460 /* YunTableViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F8F83778D4EB19D3EAA41B5049AEB7 /* YunTableViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5CDDA91B2D18ECDE09009719EF423359 /* NSError+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E67715965A86D43CF0031F2E23811 /* NSError+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5D1C187A3CC472F98EA3F1BACA399E34 /* MTLJSONAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 782706CE839FFEF74272D9D953DE8280 /* MTLJSONAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60346BDB74B30FBDD1ECAB0A6CCFA5C2 /* NSDictionary+MTLMappingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 236774C724F659BFFC555FF67D90DF3B /* NSDictionary+MTLMappingAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6034CD7FECF99EC4A4C4DC0C4BC08AA2 /* YunUIBarButtonItemFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A391A088A40605261428F4339846D5E /* YunUIBarButtonItemFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		605F41E10921935808E13ACA7007544A /* UIImage+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = BD99EA66271AEE000DEBBFEDAC9C0790 /* UIImage+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		605FBD8D4893D87FA1CC0046F058A89E /* UISearchBar+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE16FD46B9B3BF20138853B48E3BCC7 /* UISearchBar+YunAdd.m */; };
 		6167C82B5673D7577C7CD29D5FB2C9EC /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1BFB02E8A102F5843D0B00DF2F61CC /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE1066D004E65F40D569246A40039D /* MASCompositeConstraint.m */; };
+		61C611ABFFC5FFF35ACE70883CB8F523 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D548F4C9507EEF9D9A0EF95EA96493 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		61ED4B5B249526AFD6F7C6DB4D487A8A /* MTLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73ACAE8B0CCF704A3E689D68D988F1FB /* MTLModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6209E20926D79222E59F58B962BFAA1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E34D083144A7B2EEAD502F316779E6 /* UIKit.framework */; };
-		62275FBEA096419B499C8E5F5E26A410 /* YunTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FC362E4BDE1675809347EF607EEE3065 /* YunTheme.m */; };
 		6249770A7D163B0F3001D5A76C5FA01C /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A234BCF815A73E08E56B1E403F19614 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6656983B8711446869E5CC8B0530BABA /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F97014B9D065E7B93BA07DE83E682F /* NSImage+WebCache.m */; };
+		63299DE5DEA29075FADA35711169188E /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0110EFDD86113D632DD10EBCD11BBCA0 /* AFNetworking-dummy.m */; };
 		66635EAAE52FF5571DBCDC626FB8CA86 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E74B5E6E77A908EE8288F5C26C50A7 /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66E1040543AF7BA3DC3731FE17C85F5B /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDA1DC0B5F6AA1DEB72AC9B383099FC /* AFSecurityPolicy.m */; };
+		670B6B8209DA5CABDF49060A7580865E /* UILabel+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1D7836F8CB87C4CCDEFE17C60A8D1E /* UILabel+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		68019AADC9079C9EFB15249197E163BE /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 97F1B07FA4E8C0B3A5E0B6662B019F0A /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		682B0E603612B6ADBCCF30580F9A4B09 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C212BC398D42B808D0368407A3B3F08 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA5E3C60CB3F559FB0225AFCDBAF57D /* Masonry-dummy.m */; };
+		68F1A50AA6DA6C67C24B969731946E90 /* MTLReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F9DCC3E40EB060CE207D602D1E512D /* MTLReflection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6975AF8D4A23B1C36E2DB52DF37CA4CC /* NSString+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDD127ECBD1541BDAB8F3FF3ACBA355 /* NSString+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		69EFFC3D12390E7C05450FB4A1DC1EA7 /* YunAttributedStringFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 108B33AE3118A5BC8119395C5035DA4A /* YunAttributedStringFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6B71CE5BA32574F407349C1DA20605B4 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D163B805E337008EE74C623661806FC7 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BD6995EBF4FF4017BCAD9AF0E4FB76B /* YunDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2173FD742308BB0DEAD39030471E4E /* YunDateHelper.m */; };
+		6C053655C8F517E2513A7703654CB208 /* YunUILabelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D810269C61AF809566A6CA87843588 /* YunUILabelFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6C649B961836C236006A4345E22799BF /* YunValueHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 678098B929A00AA6F904D716115821AB /* YunValueHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		707E818332E5033501DF2D7826C639DF /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32DDCBE1EA0C5C866EAE7FE56D42136F /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		712AA019705C67E56ED06876BF905FED /* NSObject+MTLComparisonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD205BCEB40E4660B20864C6F099A /* NSObject+MTLComparisonAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		73811DA312BCB537D44D62EC6AD15766 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D890B56A126E49BBF7B05EE5C7C01 /* AFHTTPSessionManager.m */; };
-		73A28B2908EAB9D41374A74BD589D21E /* YunUISearchBarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F366B89BC6DF8FE67D376CC5F4605C25 /* YunUISearchBarFactory.m */; };
+		71C5951A994BFFD36FE95D39F0E8BAFE /* YunKits-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A20E4B7C307650AA938CDE45C03907 /* YunKits-dummy.m */; };
 		7461C0190AE22F99B1C81A8EF335E872 /* MTLModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B497D8547F189CB71C5320801AED6CA /* MTLModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74AC4DA902C4A093680E392DA9610FE8 /* NSValueTransformer+MTLInversionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C41FADDAB74B8DCAF66363D1417C14 /* NSValueTransformer+MTLInversionAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		74684D04FF691F750E46B3F14AAFD545 /* YunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6E9DD9B8C78CEFF1C75EF2E7C9A6D /* YunView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		757B2F6692D271E935EF4B2D83E262CA /* NSError+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7561313F0268042E4B88D44DD95D3E /* NSError+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		775CE7A8107457BDE59F113D40020839 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DDFBBF1459666C0DED503DC2C4260A /* AFAutoPurgingImageCache.m */; };
 		7786994F2F7D9F1CB44AB55AAAB6028E /* Mantle.h in Headers */ = {isa = PBXBuildFile; fileRef = B61B3903DC0EBCABFF19F24A395D677C /* Mantle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		781277601C831DBEB14A4BA9551CE079 /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F7AF82248A7C633FD90AD3FE4C58AC /* EXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B475BF354C9EBBDEC4CC61C262081A2 /* NSArray+MASAdditions.m */; };
+		7AFB20005C93E99DF8E0EC74541FC0F5 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E23D67FF4FECA3B6BC08432C21696A02 /* SDWebImageDownloaderOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7B12269BEFA5305C78EC3D22AB2B1CEC /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B716FAC0A36A2B9C1277707EDDD451E1 /* UIActivityIndicatorView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7BBE9CAF9699F22BA250F649B4E0CC8F /* MTLValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2A892D4EF3AAF64993B2BD87E9F369 /* MTLValueTransformer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C2FF1D80B9EB7BE72CF3CA320CC610A /* YunUIBarButtonItemFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AA6C6C12DE92032BF078EC0210531F4 /* YunUIBarButtonItemFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CD2B4088DBDDF65A253748B7F04FEF3 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 856EBA8BBCBF3EB3F3F868DA6F63C411 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7DAFDD9EDE646CA7697CAECEBCFC079E /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B20AF7B96A8245A6DC77F5BC17827DFC /* UIImageView+HighlightedWebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7DC82CC7A794A6CFB0C9D3CAC042E110 /* UILabel+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BF8737A403FF4DF9722A5476ECFBE8 /* UILabel+Style.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7E60C9062D4755D72F83AA39F04D1473 /* UIView+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FD57CE76CE6A9276B3953F92F56990 /* UIView+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E811DDDEF829D94CC3F2A976A4C4F1B /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D2412C55E72341D0A426DC981C78CF52 /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7E871ED47D03B6742403B884D1A91EF0 /* YunUIImageViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A92123137E35631B565DFF222B119EA /* YunUIImageViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81CA2B7A55506BA8365B305F07574B66 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 16B16DB5E1CCCA4F7FC6063A17A30B2B /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81CC68D29A3EAC986E82D911FBB75623 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AEB91B6B7754C88F30AFD74F070AAB /* SDWebImage-dummy.m */; };
-		821436F082CE8B281A2978C101D7E9C4 /* NSError+MTLModelException.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4728AB21839F7314E79ED2C55AE6D2 /* NSError+MTLModelException.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		827EAA8A88722724942ED366DA7D02ED /* YunConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A9F4F5E8F60B17B133A93C2361313C8E /* YunConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		846F6AA854FE57FB74C6B0CD9B68E025 /* NSString+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = F19E7C7BB301EF8C6EFC9869B2413296 /* NSString+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		847FB81F079A6B7ECF7ADB80BAD0F351 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = F26B6A4BE943531EEA92C2DAC1462ABD /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		84BEBC16C174C0A220A999F29E17A570 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 58230114842226B47A27B61A7EBE229A /* UIImageView+WebCache.m */; };
-		85D30678FF4F0AB306399A368EAA46B2 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D715E887C330E88E03ADA3BEA98F42 /* AFURLResponseSerialization.m */; };
+		85E5CBDBCFE9FBBA39E9846951DD72C0 /* MTLModel+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 71216151F7970CACD00F23087CCFC9BE /* MTLModel+NSCoding.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		86EE1CB5473A4A07081D8DE3A2C45924 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECC3294D5FF7EBCDCCFA4555B0298B1 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87331E49C9C604C0819606CAE653C6D0 /* YunSystemMediaHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1204EF4E45955DC3F2EDA0AF85F9D499 /* YunSystemMediaHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8831AE03C8F67D0899A4D0F7A66FAB5A /* YunAppItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 72A2BFA0403ED5DED551A637B1D52112 /* YunAppItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8844835AD9316049D1C1EDD98B42FBF5 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1745375E20A4CD1649789AFD7967EB6 /* SDWebImageManager.m */; };
-		89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9190A8FBCD4ECCDEBD5D74A55CB372 /* MASConstraint.m */; };
+		885EC137866E77B78BE08EAFD4B23121 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = BD33598AC9CB6A94072C97CC68F44B2F /* UIImage+MultiFormat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8958F2453EEBAF71BFEBD78FB48986EC /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F99D489B951F9ED8AED34C2664E1E0A /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AC986175CC78E77894434D11FE49C54 /* NSDictionary+MTLMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 317A3A989215841A559E852445FBFA81 /* NSDictionary+MTLMappingAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8BDD736A5462C351DA5F156B89B2CE97 /* NSDictionary+MTLMappingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 317A3A989215841A559E852445FBFA81 /* NSDictionary+MTLMappingAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8CA1F141CD6CFF6564FDB7F7C51DB4FD /* YunValueVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = A2770672DD304E24FCF653664B06589A /* YunValueVerifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D52E38B86B764DA0AC99B086A015BBE /* YunTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 254499B363C1F7E2E228C32F1EB9FAF9 /* YunTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DF79731DB834CECF4550BD402A9BBA1 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E23D67FF4FECA3B6BC08432C21696A02 /* SDWebImageDownloaderOperation.m */; };
-		8F9B4151AC419B91154CA05F602FE9E9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D5649E4C6CC94D71C4B03967FFFCF6 /* UIView+WebCacheOperation.m */; };
+		8DD87AAF5E943FE6C3D113C898916319 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DCD7C5EC8D2E0FC2695146544742F8 /* NSData+ImageContentType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8E5990805970D7DE63C02C8CDA9EED58 /* UITextView+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FC1C1C4BADE535E3BD3C4333B7605A /* UITextView+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		903158692A045396106CA22C0DD13BA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44556F74EB430D92D427C96DE1BA917 /* SystemConfiguration.framework */; };
+		90724BCD9F75D989C3C93A4FD54365B2 /* NSDictionary+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC3CCC618A1964FB6019D3D5821641 /* NSDictionary+MTLManipulationAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		90E5BABB5CB1EB9E6E439D18DCB48003 /* UILabel+Style.h in Headers */ = {isa = PBXBuildFile; fileRef = D54FCF6DDD7D64194674180BBC08894B /* UILabel+Style.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		913E45D2159D0F30BB5EF796B2C297EF /* NSDictionary+MTLManipulationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A133EF0A4966E49D09D3A59C299C2955 /* NSDictionary+MTLManipulationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D548F4C9507EEF9D9A0EF95EA96493 /* MASLayoutConstraint.m */; };
 		975A5DF19EBCF7C921369697F4ABB709 /* MTLModel+NSCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 25161D31AE0587CE8F850EE696991EE5 /* MTLModel+NSCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97A86FAAD4B1AD9B3292FF6AF1D8F82B /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0110EFDD86113D632DD10EBCD11BBCA0 /* AFNetworking-dummy.m */; };
-		97DF94478F60B996BDED104F3A573D7A /* YunSizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF89C025A1FC6C11D5633695BCA6617F /* YunSizeHelper.m */; };
-		97EF5F599DA9E7E98CEC77554CAEF672 /* NSObject+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4368DEEC46BB1CF41BC8A90287D9B417 /* NSObject+YunAdd.m */; };
 		983CB852CBBFBC04C2A6BA407E34F59B /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A1FD14AD325C82EF97419A880F17BC58 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9884EFDD35B153ACAE5CC40F5443D1BA /* YunTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D8CD48AEE970F6050F27CF3213FF04 /* YunTableViewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		98C14829E9A4FF069863BE1E4C8B8A2E /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3504F955E7673F14B6559E6B27FA51D5 /* NYXImagesHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9934AEA2C891C201D8ED5746FF42FE1B /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D4458C66BC4DEAD984CA490665538A0C /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9AAE9A21FDA4E0A4ED85C5584E49DF58 /* NSDictionary+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC3CCC618A1964FB6019D3D5821641 /* NSDictionary+MTLManipulationAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		99E00D593F76D7E6C96300345E211282 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 827CE22CD3E264E52FCBB5A75BF30402 /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9BB794E49AAA45328781EA704D291E07 /* YunSizeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E198C4AFDBC32FED4F9DC508D2D099A /* YunSizeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D63A30A4846A962F872F568C2B56D68 /* MTLReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F9DCC3E40EB060CE207D602D1E512D /* MTLReflection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9CD5F1FFE98B2A8E27192EA5F6734A7F /* UIButton+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A23513C79D056C8160B2AD8545BACA38 /* UIButton+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9E8BC7160BFCDDDFAB9BBAC5213B0DEC /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AFAFD9FFCE164D19CC3A8DADF84D9AE /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F5BB6B4995BA4A3B2C6AEBA6C31A6DB /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FB06599E913C4255387ED228F19DD5 /* AFURLSessionManager.m */; };
-		A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCDE1F0B42316874969526C000800E4 /* View+MASAdditions.m */; };
-		A277AD9070E44BED5A7DE0B1D64D6F15 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F45F3C831C17C7D9A51B1421CD282B80 /* UIImageView+AFNetworking.m */; };
 		A3CE53486F821309261040CED80301B5 /* YunNetworkHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FC94A73CECB09DCC1BCC15C02C14377D /* YunNetworkHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A51B068C08C7000350FFD1FD336B47E6 /* YunUILabelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D810269C61AF809566A6CA87843588 /* YunUILabelFactory.m */; };
-		A5EF38D3E713ABD69F6A842A6FF39998 /* NSDictionary+MTLJSONKeyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 418828CB8346C75C6C638F53A3501CCA /* NSDictionary+MTLJSONKeyPath.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A61A3AAD4C70527DFCDEDB6DACB633C2 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9477011E23A2B739CE8289A34E7A2C /* EXTScope.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A6436E3CFFCBFE591E2D2A68ED90CAC6 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 22BA2E413E19E227C3D790D1D1118FE4 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A69D3FE7C23DEF1824371EC0817A08E4 /* MTLTransformerErrorHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 524088495139BFC65D61D86EEED70358 /* MTLTransformerErrorHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A6CEC5E75E6259E6E78BEBBB0CB3FBC0 /* YunAppItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48D43F1353E3E98BCC1BF1637481F6 /* YunAppItem.m */; };
-		A7F7FDCD36E2DD8D8E346DB19452CC03 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDFA8B1A4F7AF6FFD2D2C81EB8ED7B /* UIWebView+AFNetworking.m */; };
+		A7232D376FFDED9C6B215DBEFCAF6142 /* NSObject+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4368DEEC46BB1CF41BC8A90287D9B417 /* NSObject+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A8230CA3F1AB0162BDE5753EAB0F3C60 /* YunUIButtonFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B8C3EAFD138C48C7F6E2D14019BAB0E6 /* YunUIButtonFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A83991D7C1373DF66020C2FDFC5D7564 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 36BEEB9378960192730F9AA6C04ABB43 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A906A376A93C1C83BB89E8F63A663F43 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DDFBBF1459666C0DED503DC2C4260A /* AFAutoPurgingImageCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A99D00C50186853EB4A698ABB95AA039 /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 583846FF5D5B1D2FBF6BAB686B28C8B8 /* EXTScope.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		AC4C865F6920A96757EC82776F739D55 /* YunIdCardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA81C50460F5C6A62F5146903FB365E /* YunIdCardHelper.m */; };
 		AD6DEBA71B7EFB9C8A7DDCDAE93BF350 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66963CA184171055DE5A50855BD4BED5 /* ImageIO.framework */; };
-		AF2B96966AA52AD650A2B397967A8250 /* MTLJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 445F3C8FB9E9412DE7BB90107C12BFE5 /* MTLJSONAdapter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AFA0E7524AF6ED96E138C8E512481FE5 /* MTLValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 74D772DA6CDA63E6ABEC53D6ECAE116F /* MTLValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFBF57497176B24A3B6F4FE9C92BB53D /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BAF750A3E87F7F7FF2A5200ADD595F /* SDImageCacheConfig.m */; };
 		B010A5E0A64633A9A24AC3E0802EC5F5 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F29B91E1B9B0191796380695CB51A3A9 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B25B553B19EEF847719CB655916CB83A /* YunSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 646F337DF5E721C8A70680DFD6E5080A /* YunSystemInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B2C6AC5C00A12CC460D3FA3C80C49862 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E6843214E74594D2E0068830B5ADEBFC /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2DEA0F5BBECE3A5C133399FE6B15095 /* UITextView+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FC1C1C4BADE535E3BD3C4333B7605A /* UITextView+YunAdd.m */; };
 		B300B451974C2F74D52CFC907E84E0A6 /* UITextView+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = DD5EC9EA952ACC8C75A8EC670391B017 /* UITextView+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3BDCB650EF5F94266202D42F1432CF9 /* YunTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF2BBBB81E67F1A659B1B7271628C0D /* YunTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B40756412613B53C80EE77C4C223990F /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A1BD8A4769FB2A201C0AE8D5295A99AC /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4BC416A599DF9937C8E85D18441D002 /* UITextField+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A79B29DFD235DF03BE9D367A6EF010 /* UITextField+YunAdd.m */; };
-		B6F2B107556CF17F9B6360C760CB687C /* UIImageView+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4950B200E880F205A70A09C9536C6 /* UIImageView+YunAdd.m */; };
-		B7759FEED37B93351A5456847A453940 /* YunSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 646F337DF5E721C8A70680DFD6E5080A /* YunSystemInfo.m */; };
-		B84CD33084C9867E67BD56E47B7BFC04 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C221B71E039DECEB76FE1BDC1B9C9E2D /* UIRefreshControl+AFNetworking.m */; };
 		B8EF1513A58E09F15D5B27C5706282D4 /* NSImage+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = DF9B6967FFC88D3B601E89E5B06D6554 /* NSImage+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA626B379000A72B037DEA282B656F87 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B60C05BDD884A4B7163D06998C68EB1 /* SDWebImageDownloader.m */; };
+		B9241B4FB7BA6DC065AAE8967C4BD032 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D5649E4C6CC94D71C4B03967FFFCF6 /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B953667D411D1DCD919CBD314F568A92 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8740E7D3C826F97482E43230BC2128 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BB1CBFEBF30E4B6155505AF14CB88842 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B60C05BDD884A4B7163D06998C68EB1 /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BDB5961C18E026FF2A1A1B05168DEF6D /* YunGlobalDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = C3DFD102CF64BC55FC8D41213A6659E9 /* YunGlobalDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C19E17967B7D8537BF108D21CA2B54FE /* YunTableViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F8F83778D4EB19D3EAA41B5049AEB7 /* YunTableViewFactory.m */; };
+		C18979A7332A246717A100C9BEB7116C /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BAF750A3E87F7F7FF2A5200ADD595F /* SDImageCacheConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C1C0D7C93BF3DE14A26757273598D0FA /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 142DC14D9F296CB19C35004F3BA9441A /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C536317D5B10639523EA60D406279195 /* YunSystemMediaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDCFAA48151F253802F1464D90A2312 /* YunSystemMediaHelper.m */; };
+		C4D12D56B5E4323CDE6A77AEF30D4D9F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D715E887C330E88E03ADA3BEA98F42 /* AFURLResponseSerialization.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C5AF2118C6B776B245611DAC902BD792 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CAD1604200109E789744A776C717BA3 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5C5248386D8C48CAA6B3D646A885764 /* YunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69B7F09DA9F536C4B9CE8CD50161B00 /* YunViewController.m */; };
 		C6EF1EC8FAFEE9AE7C84D66B5BCE28A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C472EE87CCC740E22CBEB435FC4A21 /* Foundation.framework */; };
+		C797198D3A3E1766F4052BB5DDA8906E /* NSObject+MTLComparisonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD205BCEB40E4660B20864C6F099A /* NSObject+MTLComparisonAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C88F85D3200060BD98FC13EA58121706 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 62AE17023B4B7FE0EE70CC0A18F0FB1E /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C949A5B623861D5A37DC2F50E2B67A27 /* UITabBar+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 85DE41BF54712F1DD61A307D2E483CE9 /* UITabBar+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB340CE8ACABAD362BEE9C11AA0DB350 /* UITextField+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 37BDA27C6D5571F9E7D1927556D4FBB3 /* UITextField+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBCCEAD402645565401CA93924736979 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DBF7B5E6CDF07930CBC82F7F99D3C4 /* CoreGraphics.framework */; };
-		CE7E5673D66EA99DB255EFD81EF61A71 /* YunValueVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = B5856317B1411B0A7B464046F9BFAD94 /* YunValueVerifier.m */; };
-		CFFEAC9EA514C53875178DB6CB44880A /* UILabel+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1D7836F8CB87C4CCDEFE17C60A8D1E /* UILabel+YunAdd.m */; };
+		CC5BD4C522049EA79A9BF717095E0165 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6ACDAA39C23B0DFBEE536556225B9C /* UIView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CEEE61762F8D1BD8204156907D28645D /* MTLJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 445F3C8FB9E9412DE7BB90107C12BFE5 /* MTLJSONAdapter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CEF7E139022FFA4F5C99D4DC5DE67990 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F0269B91D7E2826409087074343CF6 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D09C3A97EA20B98778C916CAE321F754 /* YunUIViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BF938E6C40EDCA517649D7B51A86053 /* YunUIViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D10CC46035F7A0C868C0955664A34609 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF12AF4632DB7BFDF2EBE90D10BE47 /* UIButton+AFNetworking.m */; };
 		D1D109A867D1D28F0570F1CEE36057B1 /* YunTableViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F354FE4A822B9E8EBDCC61CDCE137CF /* YunTableViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3F8E0ECC4184481EA3A87EF786589BD /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6ACDAA39C23B0DFBEE536556225B9C /* UIView+WebCache.m */; };
-		D4AA4704CA7863CC86E22AAF88635836 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3CD7DFA7E6C3C7D38019BD62D91071 /* UIProgressView+AFNetworking.m */; };
+		D232DCD1D6C1A99B64C232658CA91CFA /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD35DD71F8D563B72C2A02910A4243 /* EXTRuntimeExtensions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D433E3305BAE6CFE449FC9ACA3EEE2C5 /* YunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69B7F09DA9F536C4B9CE8CD50161B00 /* YunViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D486C538AE3151018303619712539B4C /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3CD7DFA7E6C3C7D38019BD62D91071 /* UIProgressView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D59FC98A74E440C4725B6FDC28F5951E /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D2120E81C082ADF5C95DE8C23DCFC5E /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5CB999FB5FC80FC126A38AB4DF12227 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AE03D658DB5A391E827E036A8E69B39 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D74E9268C42B427BBC1BF4BB237E6121 /* YunKits.h in Headers */ = {isa = PBXBuildFile; fileRef = 20421112963ABF70B1ADCBF5B83BFEF5 /* YunKits.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D767182D0721376E74B8180D998E1AF4 /* YunSystemInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EB58B9BDE616E0C923BB07469CA3890 /* YunSystemInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 511BFBAE373E220BB9DED8906B4B7791 /* ViewController+MASAdditions.m */; };
-		D864224312D267480189CAFB0198ABF9 /* UIView+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AE7C51D9EF2DD6AD01D667F034149 /* UIView+YunAdd.m */; };
+		D8D72BEC4364E9F77BCC6B8AB4E30DF3 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F54E9B01B23EA1A9B02A66ABFB83E601 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D90E81B3160349DB0ED1F517F2D51232 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6293CFA93E7270A330B2FD408446DC /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB945C24E546B2DF9F08D0FF362FC9E5 /* UIImageView+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = A9A7D65A4DA3891C2BA698EAF4951BAB /* UIImageView+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD360867E4E5FDD40CAC30B6D76AB808 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 650B5472CAC5F63376E4B06EE21B9B68 /* UIButton+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DE31BBF6A7963C5871A19655EF5532BE /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DE070FBCCCBC212964D007C5D95F0E73 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE825B8F32AB823F4BE5492CAC6FCB4B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A551CDFC895B6F2BE7EBF6438776B43 /* Security.framework */; };
 		DF5261CC591062DA00465F4C95824B10 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 417A686EABEA6264C7695660C0F701F4 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 827CE22CD3E264E52FCBB5A75BF30402 /* MASConstraintMaker.m */; };
+		DF82F7E3D2F6AA54D2A780EF1AFAB506 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E71273108D7C12E75515D863529057E /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E07007D9CF24B2CE9DAAAF03A198D1EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C472EE87CCC740E22CBEB435FC4A21 /* Foundation.framework */; };
 		E072DA57403C4BFF9B10467BE05604C5 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0803F4BC9600E2720DAA034A0D9F2C52 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0BD9DDBED404442E7EC34FBE1E851F8 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C40A660E50649C9BE4F701B9078A8D4B /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0EF330DB2D3521ED26E67B2E8687A2E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF2D7110444FF10F5EB34996D3CAB3E /* AFNetworkReachabilityManager.m */; };
 		E1E771349813022263F549BDF33CB4BB /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 99CCD10230906D304EF84784E6EE931A /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3855B457F376EF09FE9403DEFF605B9 /* YunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6E9DD9B8C78CEFF1C75EF2E7C9A6D /* YunView.m */; };
+		E22CB296AAE1779719C9713CEAD016BD /* YunDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C4E5A99D63267C4F8AC45408DBD891 /* YunDevice.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E3691FED69F917239C40AFD44962534B /* YunSizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BF89C025A1FC6C11D5633695BCA6617F /* YunSizeHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E3735DBE0A8D7CDF5902088FBC7A7687 /* YunDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2173FD742308BB0DEAD39030471E4E /* YunDateHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E7542B2C536DB2C543894587075D1289 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 53865EC34DC68CB4BAA6E83A2908AC79 /* NSValueTransformer+MTLPredefinedTransformerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7B0270BEDCBE116DDD853F76E27B0BA /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E36669A382C863133865970C15C938D5 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E86D7B26A5A9E141E1D2FEA015E57D65 /* NSError+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E67715965A86D43CF0031F2E23811 /* NSError+YunAdd.m */; };
+		E804714E174AF44903629AFD1415E8FD /* NSValueTransformer+MTLInversionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C41FADDAB74B8DCAF66363D1417C14 /* NSValueTransformer+MTLInversionAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E81A3DDBBA7965126D98EEA4C35E7363 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D890B56A126E49BBF7B05EE5C7C01 /* AFHTTPSessionManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EBCABAFE5B9B47B9D754A1E2486C1165 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DA19349EFE415500F0073D83A96E5F /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EC05F99ADBF8ED83704350F05F134476 /* YunConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B428DB2F524AF724821AA8D997D4FAE /* YunConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EC48DE078CA5E55922CCE02354D475CD /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 374D3A21102F832A844592DA0B4BEC2E /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED42DFCE0334B9257E398F615C1FAAF1 /* UIColor+YunAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E44A93535EBAB10A687A5CCCB92BA3D /* UIColor+YunAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F04444C411AC4C5935D740F2122356CA /* YunDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B076B6E37978945C00B2490DEE8C85C2 /* YunDateHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F045DF85D2D6413948613AAF948928A2 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AEB91B6B7754C88F30AFD74F070AAB /* SDWebImage-dummy.m */; };
 		F099E5987DD80E8D78E909AF81D3C587 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C95E5E5011DFE085E56C2C10648641 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0B56A7D38A399A2F67F9920C9526A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C472EE87CCC740E22CBEB435FC4A21 /* Foundation.framework */; };
 		F1F93EE1AA5E870F2CE81325CE9EB643 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 87C262E37B677B2FD9B7B8CCD8CAD7FB /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2CD843810B922C3ED1C2CDC1F359A4C /* YunUIBarButtonItemFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A391A088A40605261428F4339846D5E /* YunUIBarButtonItemFactory.m */; };
+		F390D582745DF3516ADD4D910A2ACFFA /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FE1066D004E65F40D569246A40039D /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F4368EB68C18D930143ED9A6B73E8192 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E34D083144A7B2EEAD502F316779E6 /* UIKit.framework */; };
 		F5CC06F3E0C232483A72DCCFAF393BE0 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FC7E0FDF9674C97A261FC1837BCFC6 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F65B839AA1CDFA55602F34A293ADBEAA /* ChineseToPinYinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 712B6CA70647903A5C80B95136B7EAB0 /* ChineseToPinYinTool.m */; };
+		F80F292BF60B8252720516F0EB281D55 /* NSArray+MTLManipulationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB71C212B42FAD7B16413632CD7BF55 /* NSArray+MTLManipulationAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F880C4BA7D40D1B0EAF7AE561D658E97 /* YunAppItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48D43F1353E3E98BCC1BF1637481F6 /* YunAppItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F8B71BB9667E21385D7AAEFEC796BAE4 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F1F7E68A2D0154445C814338D9228D /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F8DCA6C3C05A59B2C95A1B5F1CBD8C99 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE38B22614E3903B734136E1913D845 /* MobileCoreServices.framework */; };
+		FA668F944196115BFDAAAB7707FF208B /* YunNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C15A99C330E359E26964D5F29BEE09D /* YunNetworkHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FB9AA5207284E33FFC55FEB308BFA71F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1E7A0AF397E0C292662AD0F906AA0 /* AFURLRequestSerialization.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FBCE9F62FE4013809CB71945DA566D8B /* YunUILabelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B67E2B51D601DB01CCD04268D92FFC8 /* YunUILabelFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBDE89121F9260D6640529F8946D04C1 /* UIImageView+YunAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4950B200E880F205A70A09C9536C6 /* UIImageView+YunAdd.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FC0A687C52492DCD280A641DA372E07D /* Pods-YunBaseApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75285EBC0BDB2AF327E35D615986D978 /* Pods-YunBaseApp-dummy.m */; };
 		FC3AE4F5CBF64B6F69BD40947C356331 /* YunViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B34F750ED66A50203F93595F000369A /* YunViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC8B95B1B9CD17301C1C2CB87C9839B6 /* YunDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C4E5A99D63267C4F8AC45408DBD891 /* YunDevice.m */; };
+		FE291B841CEC22849F02D487A6F7A712 /* YunTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FC362E4BDE1675809347EF607EEE3065 /* YunTheme.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FE2B794FCC97EB51039BC75373ED06EA /* YunDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = BB88D6E0C7F83F986DE52B9EDD717076 /* YunDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE671723CC7AE446CC8CD987B694BD46 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C506E0CB1DFB3595C48F11D11539A855 /* SDWebImageDecoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1225,7 +1225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A84F4EC03E701355BE1B37AE8D1E9DA2 /* Build configuration list for PBXNativeTarget "SDWebImage" */;
 			buildPhases = (
-				1597D5B7BA6A6CF257247AD2C94A9CFD /* Sources */,
+				C9676958E1DEE7921728AA0EDB4619E2 /* Sources */,
 				32B587B17EB5176CC108618F606536AB /* Frameworks */,
 				E9361E9AD7931DEA24E1FE7DC7CDA821 /* Headers */,
 			);
@@ -1242,7 +1242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5806DDEC98958208C3C07B48195E4BDE /* Build configuration list for PBXNativeTarget "YunKits" */;
 			buildPhases = (
-				FD7C28733D48E6135661779CB8DC1D8C /* Sources */,
+				B36F0211DFF5D139E1BBE23CCD75CB12 /* Sources */,
 				472646CB54417D66F4838771DB09362B /* Frameworks */,
 				C09519CD62E5A82B7E76E4F67020CF8C /* Headers */,
 			);
@@ -1279,7 +1279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34CAE1CB89EDBF2E53735CC5D4E5E69F /* Build configuration list for PBXNativeTarget "Masonry" */;
 			buildPhases = (
-				C4BE2DC1E815E7367562323223772531 /* Sources */,
+				27E8E3A06AAFF112FF7BC4F0117165D8 /* Sources */,
 				6FD8312A1AEB348F49A81C438DB25115 /* Frameworks */,
 				BDF73468622762862D2FB76ED4AC0D8E /* Headers */,
 			);
@@ -1296,7 +1296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 483FBC4A668BF7F1A8767452E7E188AC /* Build configuration list for PBXNativeTarget "AFNetworking" */;
 			buildPhases = (
-				0068413C89BADAAF4691AA78AFE62C3E /* Sources */,
+				AAEE4C1DF970D446DF57CA3DDD16AD00 /* Sources */,
 				F3284DBE3CA8932733932AD2A48445B2 /* Frameworks */,
 				0A1C2B07813030B0D51EB1D804A4439E /* Headers */,
 			);
@@ -1362,75 +1362,45 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0068413C89BADAAF4691AA78AFE62C3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				775CE7A8107457BDE59F113D40020839 /* AFAutoPurgingImageCache.m in Sources */,
-				73811DA312BCB537D44D62EC6AD15766 /* AFHTTPSessionManager.m in Sources */,
-				5C0696B2AD1DC23F6473F5A19FAB6296 /* AFImageDownloader.m in Sources */,
-				31ED9BD97AF9E62874AF3CDF2F8090CF /* AFNetworkActivityIndicatorManager.m in Sources */,
-				97A86FAAD4B1AD9B3292FF6AF1D8F82B /* AFNetworking-dummy.m in Sources */,
-				E0EF330DB2D3521ED26E67B2E8687A2E /* AFNetworkReachabilityManager.m in Sources */,
-				66E1040543AF7BA3DC3731FE17C85F5B /* AFSecurityPolicy.m in Sources */,
-				5945033488F9995134DBB7014DE2412F /* AFURLRequestSerialization.m in Sources */,
-				85D30678FF4F0AB306399A368EAA46B2 /* AFURLResponseSerialization.m in Sources */,
-				9F5BB6B4995BA4A3B2C6AEBA6C31A6DB /* AFURLSessionManager.m in Sources */,
-				2579663181BFA8F7DA4B5D7CF8537FC0 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				D10CC46035F7A0C868C0955664A34609 /* UIButton+AFNetworking.m in Sources */,
-				A277AD9070E44BED5A7DE0B1D64D6F15 /* UIImageView+AFNetworking.m in Sources */,
-				D4AA4704CA7863CC86E22AAF88635836 /* UIProgressView+AFNetworking.m in Sources */,
-				B84CD33084C9867E67BD56E47B7BFC04 /* UIRefreshControl+AFNetworking.m in Sources */,
-				A7F7FDCD36E2DD8D8E346DB19452CC03 /* UIWebView+AFNetworking.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0A2554079B309EEE6BA23649E401207F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51F6393F3755BC5153341BADBB8C48B9 /* EXTRuntimeExtensions.m in Sources */,
-				A61A3AAD4C70527DFCDEDB6DACB633C2 /* EXTScope.m in Sources */,
+				D232DCD1D6C1A99B64C232658CA91CFA /* EXTRuntimeExtensions.m in Sources */,
+				1D0907809FA58944DCF0338BEEF823E3 /* EXTScope.m in Sources */,
 				1A05BF934A67A1D58510863477450A6D /* Mantle-dummy.m in Sources */,
-				AF2B96966AA52AD650A2B397967A8250 /* MTLJSONAdapter.m in Sources */,
-				035D907A1AB62CA43E9BB73B3BE38729 /* MTLModel+NSCoding.m in Sources */,
-				43A3D1B26380B3F55D8D5156F28D9169 /* MTLModel.m in Sources */,
-				9D63A30A4846A962F872F568C2B56D68 /* MTLReflection.m in Sources */,
-				5BB3EC4FB31DC30DEE5FEE151554721D /* MTLTransformerErrorHandling.m in Sources */,
-				206FED9411A3D35E91EEE4769E584D38 /* MTLValueTransformer.m in Sources */,
-				56B6F726EB214E49E4BAA6135FE157D5 /* NSArray+MTLManipulationAdditions.m in Sources */,
-				A5EF38D3E713ABD69F6A842A6FF39998 /* NSDictionary+MTLJSONKeyPath.m in Sources */,
-				9AAE9A21FDA4E0A4ED85C5584E49DF58 /* NSDictionary+MTLManipulationAdditions.m in Sources */,
-				8AC986175CC78E77894434D11FE49C54 /* NSDictionary+MTLMappingAdditions.m in Sources */,
-				821436F082CE8B281A2978C101D7E9C4 /* NSError+MTLModelException.m in Sources */,
-				712AA019705C67E56ED06876BF905FED /* NSObject+MTLComparisonAdditions.m in Sources */,
-				74AC4DA902C4A093680E392DA9610FE8 /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
-				7CD2B4088DBDDF65A253748B7F04FEF3 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
+				CEEE61762F8D1BD8204156907D28645D /* MTLJSONAdapter.m in Sources */,
+				85E5CBDBCFE9FBBA39E9846951DD72C0 /* MTLModel+NSCoding.m in Sources */,
+				61ED4B5B249526AFD6F7C6DB4D487A8A /* MTLModel.m in Sources */,
+				68F1A50AA6DA6C67C24B969731946E90 /* MTLReflection.m in Sources */,
+				2020A86F9E1845CA1319EA46E3C29BB8 /* MTLTransformerErrorHandling.m in Sources */,
+				7BBE9CAF9699F22BA250F649B4E0CC8F /* MTLValueTransformer.m in Sources */,
+				F80F292BF60B8252720516F0EB281D55 /* NSArray+MTLManipulationAdditions.m in Sources */,
+				48EBAF945D6600BFAC95C945559C4767 /* NSDictionary+MTLJSONKeyPath.m in Sources */,
+				90724BCD9F75D989C3C93A4FD54365B2 /* NSDictionary+MTLManipulationAdditions.m in Sources */,
+				8BDD736A5462C351DA5F156B89B2CE97 /* NSDictionary+MTLMappingAdditions.m in Sources */,
+				49165C856AE6C700F8B8AC7C1659C39E /* NSError+MTLModelException.m in Sources */,
+				C797198D3A3E1766F4052BB5DDA8906E /* NSObject+MTLComparisonAdditions.m in Sources */,
+				E804714E174AF44903629AFD1415E8FD /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
+				241783C8D5E43984BF8BA587B5974B1E /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1597D5B7BA6A6CF257247AD2C94A9CFD /* Sources */ = {
+		27E8E3A06AAFF112FF7BC4F0117165D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58CA46E8AABD8B6D839FF94127869EA1 /* NSData+ImageContentType.m in Sources */,
-				6656983B8711446869E5CC8B0530BABA /* NSImage+WebCache.m in Sources */,
-				16B94C855849D3C3471E16C361EAC1A2 /* SDImageCache.m in Sources */,
-				AFBF57497176B24A3B6F4FE9C92BB53D /* SDImageCacheConfig.m in Sources */,
-				81CC68D29A3EAC986E82D911FBB75623 /* SDWebImage-dummy.m in Sources */,
-				47D1FBFF30FF8C08F20F27EA95F25192 /* SDWebImageCompat.m in Sources */,
-				0C5790A51C0169CD861EE969049480AF /* SDWebImageDecoder.m in Sources */,
-				BA626B379000A72B037DEA282B656F87 /* SDWebImageDownloader.m in Sources */,
-				8DF79731DB834CECF4550BD402A9BBA1 /* SDWebImageDownloaderOperation.m in Sources */,
-				8844835AD9316049D1C1EDD98B42FBF5 /* SDWebImageManager.m in Sources */,
-				1F96C00681270F125CC0D695D22CE63A /* SDWebImagePrefetcher.m in Sources */,
-				5493578E795F6F6829C47C4CA6FD036D /* UIButton+WebCache.m in Sources */,
-				0374870EC35FF5C19EF6A7EAC267A7A8 /* UIImage+GIF.m in Sources */,
-				3E5485C969D32B09EE84D910DD7A50B3 /* UIImage+MultiFormat.m in Sources */,
-				3E3409917B36FC7B31D35C8DD26448EE /* UIImageView+HighlightedWebCache.m in Sources */,
-				84BEBC16C174C0A220A999F29E17A570 /* UIImageView+WebCache.m in Sources */,
-				D3F8E0ECC4184481EA3A87EF786589BD /* UIView+WebCache.m in Sources */,
-				8F9B4151AC419B91154CA05F602FE9E9 /* UIView+WebCacheOperation.m in Sources */,
+				F390D582745DF3516ADD4D910A2ACFFA /* MASCompositeConstraint.m in Sources */,
+				1AF513D8D71B663D5422760106B13723 /* MASConstraint.m in Sources */,
+				99E00D593F76D7E6C96300345E211282 /* MASConstraintMaker.m in Sources */,
+				61C611ABFFC5FFF35ACE70883CB8F523 /* MASLayoutConstraint.m in Sources */,
+				5B46C39A3F939EDB676981756CC24007 /* Masonry-dummy.m in Sources */,
+				CEF7E139022FFA4F5C99D4DC5DE67990 /* MASViewAttribute.m in Sources */,
+				D8D72BEC4364E9F77BCC6B8AB4E30DF3 /* MASViewConstraint.m in Sources */,
+				14B65CE3038761FA8F6F5D1ECED6A562 /* NSArray+MASAdditions.m in Sources */,
+				B953667D411D1DCD919CBD314F568A92 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				548BBD5B63FA097F419829C3EE8EA068 /* View+MASAdditions.m in Sources */,
+				466869E41EB306F74C8A6E87CC1539BF /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1442,71 +1412,101 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4BE2DC1E815E7367562323223772531 /* Sources */ = {
+		AAEE4C1DF970D446DF57CA3DDD16AD00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */,
-				89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */,
-				DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */,
-				955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */,
-				68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */,
-				13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */,
-				2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */,
-				7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */,
-				3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */,
-				D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */,
+				A906A376A93C1C83BB89E8F63A663F43 /* AFAutoPurgingImageCache.m in Sources */,
+				E81A3DDBBA7965126D98EEA4C35E7363 /* AFHTTPSessionManager.m in Sources */,
+				211646AEE68A3577495B0DF917A0DCDC /* AFImageDownloader.m in Sources */,
+				F8B71BB9667E21385D7AAEFEC796BAE4 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				63299DE5DEA29075FADA35711169188E /* AFNetworking-dummy.m in Sources */,
+				19CFCF718B674B91847980FA20429558 /* AFNetworkReachabilityManager.m in Sources */,
+				0A1CE7CE58B28609B573D4058ABDD616 /* AFSecurityPolicy.m in Sources */,
+				FB9AA5207284E33FFC55FEB308BFA71F /* AFURLRequestSerialization.m in Sources */,
+				C4D12D56B5E4323CDE6A77AEF30D4D9F /* AFURLResponseSerialization.m in Sources */,
+				064EC4AA8FCCD08F2037037B1E672DBF /* AFURLSessionManager.m in Sources */,
+				7B12269BEFA5305C78EC3D22AB2B1CEC /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				2612D2B9BEA56B8CB2B361AA0BAB599F /* UIButton+AFNetworking.m in Sources */,
+				2BCD3F861A5F4CF448072C4692AD130D /* UIImageView+AFNetworking.m in Sources */,
+				D486C538AE3151018303619712539B4C /* UIProgressView+AFNetworking.m in Sources */,
+				12FCB056A2B7051B0D91B16CAFE85C1D /* UIRefreshControl+AFNetworking.m in Sources */,
+				17E74D623462991F19748A7F99CF8ED6 /* UIWebView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD7C28733D48E6135661779CB8DC1D8C /* Sources */ = {
+		B36F0211DFF5D139E1BBE23CCD75CB12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				104E5AD737503DC92F821720D498BCD5 /* CalculationTime.m in Sources */,
-				F65B839AA1CDFA55602F34A293ADBEAA /* ChineseToPinYinTool.m in Sources */,
-				E86D7B26A5A9E141E1D2FEA015E57D65 /* NSError+YunAdd.m in Sources */,
-				97EF5F599DA9E7E98CEC77554CAEF672 /* NSObject+YunAdd.m in Sources */,
-				375296ECEBBB2CB01C0949A935D788CC /* NSString+YunAdd.m in Sources */,
-				128BFA69429135E8F81767B521DE56AD /* NYXImagesHelper.m in Sources */,
-				1C8516E29CA8D6195A41E2CBBDF055A7 /* UIButton+YunAdd.m in Sources */,
-				417E573220E2C2650ADEA316B007E35E /* UIColor+YunAdd.m in Sources */,
-				140C571FAA6944FBB3EE051BA24CBEBB /* UIImage+Device.m in Sources */,
-				4359898A522E59E3992C877EE7C8129B /* UIImage+Resizing.m in Sources */,
-				2F1C1D9B316B02D50241E4212709F640 /* UIImage+YunAdd.m in Sources */,
-				B6F2B107556CF17F9B6360C760CB687C /* UIImageView+YunAdd.m in Sources */,
-				153AC282EF469A963E974C2729BDCA0C /* UILabel+Style.m in Sources */,
-				CFFEAC9EA514C53875178DB6CB44880A /* UILabel+YunAdd.m in Sources */,
-				605FBD8D4893D87FA1CC0046F058A89E /* UISearchBar+YunAdd.m in Sources */,
-				5025F2DE440FA646975E5383652BD833 /* UITabBar+YunAdd.m in Sources */,
-				B4BC416A599DF9937C8E85D18441D002 /* UITextField+YunAdd.m in Sources */,
-				B2DEA0F5BBECE3A5C133399FE6B15095 /* UITextView+YunAdd.m in Sources */,
-				D864224312D267480189CAFB0198ABF9 /* UIView+YunAdd.m in Sources */,
-				A6CEC5E75E6259E6E78BEBBB0CB3FBC0 /* YunAppItem.m in Sources */,
-				199C416EDA754D0577492F75FF5B2E97 /* YunAttributedStringFactory.m in Sources */,
-				0E34E868B6A6D2DAE0ED5E8013B851C5 /* YunConfig.m in Sources */,
-				6BD6995EBF4FF4017BCAD9AF0E4FB76B /* YunDateHelper.m in Sources */,
-				FC8B95B1B9CD17301C1C2CB87C9839B6 /* YunDevice.m in Sources */,
-				AC4C865F6920A96757EC82776F739D55 /* YunIdCardHelper.m in Sources */,
-				11A4355A68E357F1EC3E17B9D475CC11 /* YunKits-dummy.m in Sources */,
-				20C51751743698A0B9F358BD5279C6F1 /* YunNetworkHelper.m in Sources */,
-				97DF94478F60B996BDED104F3A573D7A /* YunSizeHelper.m in Sources */,
-				B7759FEED37B93351A5456847A453940 /* YunSystemInfo.m in Sources */,
-				C536317D5B10639523EA60D406279195 /* YunSystemMediaHelper.m in Sources */,
-				265B02B3B5E9D908D61911BC5E0E078C /* YunTableViewCell.m in Sources */,
-				C19E17967B7D8537BF108D21CA2B54FE /* YunTableViewFactory.m in Sources */,
-				62275FBEA096419B499C8E5F5E26A410 /* YunTheme.m in Sources */,
-				F2CD843810B922C3ED1C2CDC1F359A4C /* YunUIBarButtonItemFactory.m in Sources */,
-				4893308E494D8E2F9CF8C7468D278483 /* YunUIButtonFactory.m in Sources */,
-				22780D8B252C4EC3543584502963CB29 /* YunUIImageViewFactory.m in Sources */,
-				A51B068C08C7000350FFD1FD336B47E6 /* YunUILabelFactory.m in Sources */,
-				73A28B2908EAB9D41374A74BD589D21E /* YunUISearchBarFactory.m in Sources */,
-				548DB171668F636AB2E3E6A930B54F86 /* YunUIViewFactory.m in Sources */,
-				559A65712A519164CFE6F41E46B59F7A /* YunValueHelper.m in Sources */,
-				CE7E5673D66EA99DB255EFD81EF61A71 /* YunValueVerifier.m in Sources */,
-				E3855B457F376EF09FE9403DEFF605B9 /* YunView.m in Sources */,
-				C5C5248386D8C48CAA6B3D646A885764 /* YunViewController.m in Sources */,
+				2BE0E2D8FA30F1D0CCDF566D281EBFFB /* CalculationTime.m in Sources */,
+				2E43F772333DE53F3E370304DA797837 /* ChineseToPinYinTool.m in Sources */,
+				5CDDA91B2D18ECDE09009719EF423359 /* NSError+YunAdd.m in Sources */,
+				A7232D376FFDED9C6B215DBEFCAF6142 /* NSObject+YunAdd.m in Sources */,
+				6975AF8D4A23B1C36E2DB52DF37CA4CC /* NSString+YunAdd.m in Sources */,
+				98C14829E9A4FF069863BE1E4C8B8A2E /* NYXImagesHelper.m in Sources */,
+				9CD5F1FFE98B2A8E27192EA5F6734A7F /* UIButton+YunAdd.m in Sources */,
+				1EA01C7C4E748395DF2F842FDC7FBFE2 /* UIColor+YunAdd.m in Sources */,
+				3388ED7EC42F7EC4F632BB02E936B64B /* UIImage+Device.m in Sources */,
+				1E3CBE510A5A3DFA10DFB185A4898ACF /* UIImage+Resizing.m in Sources */,
+				0D8DD3832E2C26D3412CC4FD3C83CECB /* UIImage+YunAdd.m in Sources */,
+				FBDE89121F9260D6640529F8946D04C1 /* UIImageView+YunAdd.m in Sources */,
+				7DC82CC7A794A6CFB0C9D3CAC042E110 /* UILabel+Style.m in Sources */,
+				670B6B8209DA5CABDF49060A7580865E /* UILabel+YunAdd.m in Sources */,
+				4FCD0E64283B37730E954EEF7696000E /* UISearchBar+YunAdd.m in Sources */,
+				364E49831CB5B21AD63F0B6BF5A6B225 /* UITabBar+YunAdd.m in Sources */,
+				21805860329091A2863F1C4A6C832AA3 /* UITextField+YunAdd.m in Sources */,
+				8E5990805970D7DE63C02C8CDA9EED58 /* UITextView+YunAdd.m in Sources */,
+				16B5766616FAE4F672549A4DC7612CCC /* UIView+YunAdd.m in Sources */,
+				F880C4BA7D40D1B0EAF7AE561D658E97 /* YunAppItem.m in Sources */,
+				69EFFC3D12390E7C05450FB4A1DC1EA7 /* YunAttributedStringFactory.m in Sources */,
+				EC05F99ADBF8ED83704350F05F134476 /* YunConfig.m in Sources */,
+				E3735DBE0A8D7CDF5902088FBC7A7687 /* YunDateHelper.m in Sources */,
+				E22CB296AAE1779719C9713CEAD016BD /* YunDevice.m in Sources */,
+				161792699538DED97ECA3DBCA8B5265F /* YunIdCardHelper.m in Sources */,
+				71C5951A994BFFD36FE95D39F0E8BAFE /* YunKits-dummy.m in Sources */,
+				FA668F944196115BFDAAAB7707FF208B /* YunNetworkHelper.m in Sources */,
+				E3691FED69F917239C40AFD44962534B /* YunSizeHelper.m in Sources */,
+				B25B553B19EEF847719CB655916CB83A /* YunSystemInfo.m in Sources */,
+				09943B8B9829EC5CAAD8C0C8F9F2D566 /* YunSystemMediaHelper.m in Sources */,
+				9884EFDD35B153ACAE5CC40F5443D1BA /* YunTableViewCell.m in Sources */,
+				5B4F8BA03E3E77032B74A190E0FE6460 /* YunTableViewFactory.m in Sources */,
+				FE291B841CEC22849F02D487A6F7A712 /* YunTheme.m in Sources */,
+				6034CD7FECF99EC4A4C4DC0C4BC08AA2 /* YunUIBarButtonItemFactory.m in Sources */,
+				1E7E81C1861E7D813C5EA4608AC2FCD7 /* YunUIButtonFactory.m in Sources */,
+				0B0E28610D7BC111ACA17A42FFFFC371 /* YunUIImageViewFactory.m in Sources */,
+				6C053655C8F517E2513A7703654CB208 /* YunUILabelFactory.m in Sources */,
+				0A2BBB33DCD0C330A687A439D3AD560F /* YunUISearchBarFactory.m in Sources */,
+				3637E94D9A12C38C49FBDC9B0DBCEB7B /* YunUIViewFactory.m in Sources */,
+				077AF21032A7BCC4DC027CEE008A837C /* YunValueHelper.m in Sources */,
+				43169FB099EAE71C188E9BB58CCAFAFB /* YunValueVerifier.m in Sources */,
+				74684D04FF691F750E46B3F14AAFD545 /* YunView.m in Sources */,
+				D433E3305BAE6CFE449FC9ACA3EEE2C5 /* YunViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9676958E1DEE7921728AA0EDB4619E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD87AAF5E943FE6C3D113C898916319 /* NSData+ImageContentType.m in Sources */,
+				172A9AB918B402625E4F918E0B3CD627 /* NSImage+WebCache.m in Sources */,
+				DF82F7E3D2F6AA54D2A780EF1AFAB506 /* SDImageCache.m in Sources */,
+				C18979A7332A246717A100C9BEB7116C /* SDImageCacheConfig.m in Sources */,
+				F045DF85D2D6413948613AAF948928A2 /* SDWebImage-dummy.m in Sources */,
+				EBCABAFE5B9B47B9D754A1E2486C1165 /* SDWebImageCompat.m in Sources */,
+				FE671723CC7AE446CC8CD987B694BD46 /* SDWebImageDecoder.m in Sources */,
+				BB1CBFEBF30E4B6155505AF14CB88842 /* SDWebImageDownloader.m in Sources */,
+				7AFB20005C93E99DF8E0EC74541FC0F5 /* SDWebImageDownloaderOperation.m in Sources */,
+				2CD713DD442D04F041A80F3AA8764F34 /* SDWebImageManager.m in Sources */,
+				7E811DDDEF829D94CC3F2A976A4C4F1B /* SDWebImagePrefetcher.m in Sources */,
+				DD360867E4E5FDD40CAC30B6D76AB808 /* UIButton+WebCache.m in Sources */,
+				538F81B672830BAE752260203C441AC7 /* UIImage+GIF.m in Sources */,
+				885EC137866E77B78BE08EAFD4B23121 /* UIImage+MultiFormat.m in Sources */,
+				7DAFDD9EDE646CA7697CAECEBCFC079E /* UIImageView+HighlightedWebCache.m in Sources */,
+				34F14317E6822838043CAECB32C5AFF5 /* UIImageView+WebCache.m in Sources */,
+				CC5BD4C522049EA79A9BF717095E0165 /* UIView+WebCache.m in Sources */,
+				B9241B4FB7BA6DC065AAE8967C4BD032 /* UIView+WebCacheOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -92,7 +92,6 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "YunBaseApp/Classes/*.{h,m}", "YunBaseApp/Classes/**/*.{h,m}"
-  
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

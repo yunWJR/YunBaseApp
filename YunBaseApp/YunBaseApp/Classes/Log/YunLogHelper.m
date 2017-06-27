@@ -12,7 +12,7 @@
 
 + (void)logMsg:(NSString *)msg {
     if (YunConfig.instance.isDebugMode) {
-        NSLog(msg);
+        NSLog(msg, nil);
     }
 }
 
