@@ -12,12 +12,6 @@
 
 @interface YunAppViewController : YunViewController
 
-// todo
-@property (nonatomic, strong) UIBarButtonItem *leftItem;
-
-// todo
-@property (nonatomic, strong) UIBarButtonItem *rightItem;
-
 // YES
 @property (nonatomic, assign) BOOL updateItem;
 

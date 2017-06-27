@@ -25,11 +25,11 @@
 }
 
 + (UIImage *)defNoCtnImg {
-    return [UIImage imageNamed:YunConfig.instance.imgViewHolderImgName];
+    return [UIImage imageNamed:YunConfig.instance.imgViewNoCtnImgName];
 }
 
 + (UIImage *)defNoNetImg {
-    return [UIImage imageNamed:YunConfig.instance.imgViewHolderImgName];
+    return [UIImage imageNamed:YunConfig.instance.imgViewNoNetName];
 }
 
 @end

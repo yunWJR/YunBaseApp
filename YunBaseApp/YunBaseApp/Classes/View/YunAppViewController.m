@@ -44,14 +44,14 @@
 
         if (_updateItem) {
             // 返回item
-            self.navigationItem.leftBarButtonItem = self.hideNagBarBackItem ? nil : self.leftItem;
+            self.navigationItem.leftBarButtonItem = self.hideNagBarBackItem ? nil : self.leftNagItem;
 
             // right item
-            self.navigationItem.rightBarButtonItem = self.rightItem;
+            self.navigationItem.rightBarButtonItem = self.rightNagItem;
         }
         else {
             if (!self.hideNagBarBackItem) {
-                self.navigationItem.leftBarButtonItem = self.leftItem;
+                self.navigationItem.leftBarButtonItem = self.leftNagItem;
             }
         }
     }
@@ -91,7 +91,7 @@
                          font:[YunAppTheme nagFontItem]
                         color:color == nil ? YunAppTheme.colorNagDark : color];
 
-    self.rightItem = self.navigationItem.rightBarButtonItem; // todo
+    self.rightNagItem = self.navigationItem.rightBarButtonItem;
 }
 
 - (void)setRightBarItemName:(NSString *)name {
@@ -103,7 +103,7 @@
                         font:[YunAppTheme nagFontItem]
                        color:color == nil ? YunAppTheme.colorNagDark : color];
 
-    self.leftItem = self.navigationItem.leftBarButtonItem; // todo
+    self.leftNagItem = self.navigationItem.leftBarButtonItem;
 }
 
 - (void)setLeftBarItemName:(NSString *)name {
@@ -113,13 +113,13 @@
 - (void)setLeftBarItemBtn:(UIBarButtonItem *)btn {
     self.navigationItem.leftBarButtonItem = btn;
 
-    self.leftItem = self.navigationItem.leftBarButtonItem; // todo
+    self.leftNagItem = self.navigationItem.leftBarButtonItem;
 }
 
 - (void)setRightBarItemBtn:(UIBarButtonItem *)btn {
     self.navigationItem.rightBarButtonItem = btn;
 
-    self.rightItem = self.navigationItem.rightBarButtonItem; // todo
+    self.rightNagItem = self.navigationItem.rightBarButtonItem;
 }
 
 - (void)setNavTitle:(NSString *)title {

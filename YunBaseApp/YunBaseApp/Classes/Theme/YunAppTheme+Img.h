@@ -15,7 +15,6 @@
 
 + (UIImage *)defAvrImg;
 
-// todo
 + (UIImage *)defNoCtnImg;
 
 + (UIImage *)defNoNetImg;

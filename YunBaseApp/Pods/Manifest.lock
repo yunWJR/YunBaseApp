@@ -21,7 +21,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - YunKits (0.0.5):
+  - YunKits (0.0.6):
     - AFNetworking (~> 3.0)
     - Masonry
     - SDWebImage
@@ -37,7 +37,7 @@ SPEC CHECKSUMS:
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  YunKits: 7ce4a7b390e409995dc6b498cef2bee669558be3
+  YunKits: 4fc0af3c1031b3ad4fc30af60e0a6096d0663f7d
 
 PODFILE CHECKSUM: 542b900878b8f745a4bfe773478b6d025b2cf0b0
 

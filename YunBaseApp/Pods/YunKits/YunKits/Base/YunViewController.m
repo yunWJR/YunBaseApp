@@ -125,6 +125,8 @@
                                                         action:@selector(didClickNagRightItem)];
 
     self.navigationItem.rightBarButtonItem = rBtnItem;
+
+    self.rightNagItem = rBtnItem;
 }
 
 - (void)setRightBarItemName:(NSString *)name font:(UIFont *)font color:(UIColor *)color {
@@ -138,6 +140,8 @@
                                                    action:@selector(didClickNagRightItem)];
 
     self.navigationItem.rightBarButtonItem = rBtnItem;
+
+    self.rightNagItem = rBtnItem;
 }
 
 - (void)setLeftBarItemByNormalImg:(NSString *)norImg highLightImg:(NSString *)highImg {
@@ -146,6 +150,8 @@
                                                         action:@selector(didClickNagLeftItem)];
 
     self.navigationItem.leftBarButtonItem = lBtnItem;
+
+    self.leftNagItem = lBtnItem;
 }
 
 - (void)setLeftBarItemName:(NSString *)name font:(UIFont *)font color:(UIColor *)color {
@@ -159,6 +165,8 @@
                                                    action:@selector(didClickNagLeftItem)];
 
     self.navigationItem.leftBarButtonItem = lBtnItem;
+
+    self.leftNagItem = lBtnItem;
 }
 
 - (UIBarButtonItem *)createBarItemByNormalImg:(NSString *)norImg highLightImg:(NSString *)highImg action:(nullable SEL)action {

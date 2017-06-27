@@ -38,6 +38,10 @@
 // 有数据需要更新 // 默认NO
 @property (nonatomic, assign) BOOL forceNoUpdate;
 
+@property (nonatomic, strong) UIBarButtonItem *leftNagItem;
+
+@property (nonatomic, strong) UIBarButtonItem *rightNagItem;
+
 #pragma mark - nag
 
 - (void)setRightBarItemByNormalImg:(NSString *)norImg highLightImg:(NSString *)highImg;

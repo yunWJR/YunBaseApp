@@ -29,6 +29,8 @@
         _imgViewHolderImgName = @"img_def_holder";
         _imgViewFailedImgName = @"img_def_failed";
         _imgViewAvrImgName = @"img_def_avr";
+        _imgViewNoCtnImgName = @"img_def_no_ctn";
+        _imgViewNoNetName = @"img_def_no_net";
 
         _imgViewDefCtnMode = UIViewContentModeScaleAspectFill;
 
