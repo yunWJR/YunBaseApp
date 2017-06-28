@@ -19,7 +19,7 @@ FOUNDATION_EXPORT const unsigned char YunBaseAppVersionString[];
 #import "YunAppViewController.h"
 #import "YunAppView.h"
 #import "YunAppThemeHeader.h"
-#import "PpmRqtMg.h"
+#import "YunRqtMg.h"
 #import "YunRqtConfig.h"
 #import "YunRqtRpsHelper.h"
 #import "YunRqtUrlHelper.h"

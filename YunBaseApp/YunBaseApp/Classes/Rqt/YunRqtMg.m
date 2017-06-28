@@ -4,16 +4,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PpmRqtMg.h"
+#import "YunRqtMg.h"
 #import "AFHTTPSessionManager.h"
 #import "YunValueVerifier.h"
 #import "YunLogHelper.h"
 #import "YunRqtConfig.h"
 
-@implementation PpmRqtMg
+@implementation YunRqtMg
 
-+ (PpmRqtMg *)request {
-    return [(PpmRqtMg *) [[self class] alloc] initWithURLManager];
++ (YunRqtMg *)request {
+    return [(YunRqtMg *) [[self class] alloc] initWithURLManager];
 }
 
 - (instancetype)initWithURLManager {

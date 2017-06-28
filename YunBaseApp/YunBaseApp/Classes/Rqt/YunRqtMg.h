@@ -7,11 +7,11 @@
 
 @class AFHTTPSessionManager;
 
-@interface PpmRqtMg : NSObject
+@interface YunRqtMg : NSObject
 
 @property (nonatomic, strong) AFHTTPSessionManager *_Nonnull rqMg;
 
-+ (PpmRqtMg *_Nonnull)request;
++ (YunRqtMg *_Nonnull)request;
 
 - (void)GET:(NSString *_Nonnull)URLString
  parameters:(nullable id)parameters
