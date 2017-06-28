@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong) YunBlankView *noNetView;
 
-@property (nonatomic, strong) YunBlankView *loadView;
+@property (nonatomic, strong) YunBlankView *stateView;
 
 - (void)setNagBg:(UIColor *)color;
 

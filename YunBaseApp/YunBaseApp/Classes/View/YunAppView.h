@@ -22,7 +22,7 @@
 
 @property (nonatomic, strong) YunBlankView *noNetView;
 
-@property (nonatomic, strong) YunBlankView *loadView;
+@property (nonatomic, strong) YunBlankView *stateView;
 
 - (instancetype)initWithSideOff:(CGFloat)sideOff superVC:(UIViewController *)superVC;
 
