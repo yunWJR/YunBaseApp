@@ -3,9 +3,10 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <YunKits/YunView.h>
 
-@interface YunBlankView : NSObject {
+@interface YunBlankView : YunView {
 
 }
+
 @end
