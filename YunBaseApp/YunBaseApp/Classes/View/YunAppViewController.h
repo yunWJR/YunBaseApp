@@ -9,11 +9,18 @@
 #import "YunViewController.h"
 
 @class YunErrorHelper;
+@class YunBlankView;
 
 @interface YunAppViewController : YunViewController
 
 // YES
 @property (nonatomic, assign) BOOL updateItem;
+
+@property (nonatomic, strong) YunBlankView *noCtnView;
+
+@property (nonatomic, strong) YunBlankView *noNetView;
+
+@property (nonatomic, strong) YunBlankView *loadView;
 
 - (void)setNagBg:(UIColor *)color;
 

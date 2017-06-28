@@ -5,6 +5,8 @@
 
 #import "YunView.h"
 
+@class YunBlankView;
+
 @interface YunAppView : YunView
 
 // 控件间距 // 默认10
@@ -15,6 +17,12 @@
 
 // super view
 @property (nonatomic, weak) UIViewController *superVC;
+
+@property (nonatomic, strong) YunBlankView *noCtnView;
+
+@property (nonatomic, strong) YunBlankView *noNetView;
+
+@property (nonatomic, strong) YunBlankView *loadView;
 
 - (instancetype)initWithSideOff:(CGFloat)sideOff superVC:(UIViewController *)superVC;
 
