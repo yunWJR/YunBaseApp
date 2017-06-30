@@ -11,4 +11,6 @@
 
 - (void)setRadius:(CGFloat)radius color:(UIColor *)color width:(CGFloat)width;
 
+- (void)setPhColor:(UIColor *)phColor phFont:(UIFont *)phFont;
+
 @end

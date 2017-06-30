@@ -1,14 +1,11 @@
 //
-//  CalculationTime.h
-//  YLPickerView
-//
 //  Created by yiliu on 16/4/13.
 //  Copyright © 2016年 mushoom. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface CalculationTime : NSObject
+@interface YunCalTime : NSObject
 
 /**
  *获取当前日期

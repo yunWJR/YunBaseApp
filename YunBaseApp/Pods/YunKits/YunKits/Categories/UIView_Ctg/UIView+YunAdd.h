@@ -25,4 +25,8 @@
 
 - (UIView *)subViewOfClassName:(NSString *)className;
 
+- (void)removeAllSubView;
+
+- (void)stopAnm;
+
 @end

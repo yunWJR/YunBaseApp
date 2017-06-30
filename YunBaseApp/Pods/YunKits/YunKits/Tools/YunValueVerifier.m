@@ -39,6 +39,10 @@
     return [ctn isEqualToString:@""];
 }
 
++ (BOOL)isValidStr:(NSString *)str {
+    return ![self isNilOrEmptyOrSpaceStr:str];
+}
+
 + (BOOL)isNilOrEmptyDic:(id)model {
     if (model == nil) {
         return YES;
@@ -62,7 +66,7 @@
 
 + (BOOL)isAllNum:(NSString *)str {
     unichar c;
-    for (int i = 0; i < str.length; i++) {
+    for (NSUInteger i = 0; i < str.length; i++) {
         c = [str characterAtIndex:i];
         if (!isdigit(c)) {
             return NO;

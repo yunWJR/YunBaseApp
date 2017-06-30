@@ -8,11 +8,11 @@
 
 @implementation UIImage (YunAdd)
 
-+ (UIImage *)GetImageWithColor:(UIColor *)color height:(CGFloat)height {
-    return [self GetImageWithColor:color size:CGSizeMake(1.0f, height)];
++ (UIImage *)getImageWithColor:(UIColor *)color height:(CGFloat)height {
+    return [self getImageWithColor:color size:CGSizeMake(1.0f, height)];
 }
 
-+ (UIImage *)GetImageWithColor:(UIColor *)color size:(CGSize)size {
++ (UIImage *)getImageWithColor:(UIColor *)color size:(CGSize)size {
     CGRect r = CGRectMake(0.0f, 0.0f, size.width, size.height);
     UIGraphicsBeginImageContext(r.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -20,6 +20,15 @@
     CGContextSetFillColorWithColor(context, [color CGColor]);
     CGContextFillRect(context, r);
 
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return img;
+}
+
++ (UIImage *)getViewImage:(UIView *)view {
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 

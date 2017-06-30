@@ -27,4 +27,8 @@
     return label.frame.size.width;
 }
 
+- (void)disableHl {
+    self.adjustsImageWhenHighlighted = NO;
+}
+
 @end

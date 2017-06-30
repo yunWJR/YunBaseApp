@@ -1,14 +1,11 @@
 //
-//  CalculationTime.m
-//  YLPickerView
-//
 //  Created by yiliu on 16/4/13.
 //  Copyright © 2016年 mushoom. All rights reserved.
 //
 
-#import "CalculationTime.h"
+#import "YunCalTime.h"
 
-@implementation CalculationTime
+@implementation YunCalTime
 
 /**
  *获取当前日期

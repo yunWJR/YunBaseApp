@@ -9,7 +9,7 @@ target 'YunBaseApp' do
   # use_frameworks!
 
   # Pods for YunBaseApp
-  pod 'AFNetworking', '~> 3.0'
+  pod 'AFNetworking'
   pod 'Masonry'
   pod 'Mantle'
   pod 'YunKits'

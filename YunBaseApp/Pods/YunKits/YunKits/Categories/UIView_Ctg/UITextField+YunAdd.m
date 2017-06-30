@@ -22,4 +22,14 @@
     self.layer.cornerRadius = radius;
 }
 
+- (void)setPhColor:(UIColor *)phColor phFont:(UIFont *)phFont {
+    if (phColor) {
+        [self setValue:phColor forKeyPath:@"_placeholderLabel.textColor"];
+    }
+
+    if (phFont) {
+        [self setValue:phFont forKeyPath:@"_placeholderLabel.font"];
+    }
+}
+
 @end

@@ -101,4 +101,12 @@
     return nil;
 }
 
+- (void)removeAllSubView {
+    [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
+- (void)stopAnm {
+    [self.layer removeAllAnimations];
+}
+
 @end

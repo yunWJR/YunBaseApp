@@ -11,4 +11,6 @@
 
 - (CGFloat)getTitleWidth;
 
+- (void)disableHl;
+
 @end

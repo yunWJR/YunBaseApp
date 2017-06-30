@@ -4,6 +4,7 @@
 //
 
 #import "YunConfig.h"
+#import "YunGlobalDefine.h"
 
 @implementation YunConfig {
 

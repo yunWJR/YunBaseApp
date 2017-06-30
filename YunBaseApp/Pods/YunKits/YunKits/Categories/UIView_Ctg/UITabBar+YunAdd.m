@@ -9,7 +9,7 @@
 @implementation UITabBar (YunAdd)
 
 - (void)setBarBgColor:(UIColor *)bgColor {
-    [self setBackgroundImage:[UIImage GetImageWithColor:bgColor size:CGSizeMake(1.0f, 1.0f)]];
+    [self setBackgroundImage:[UIImage getImageWithColor:bgColor size:CGSizeMake(1.0f, 1.0f)]];
 }
 
 @end
