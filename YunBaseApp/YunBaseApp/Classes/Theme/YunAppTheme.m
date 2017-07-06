@@ -40,15 +40,16 @@
 - (void)initData {
     // 默认系统字体
     self.fontLName = [UIFont systemFontOfSize:14].fontName;
-    self.fontNName = self.fontLName;
-    self.fontBName = self.fontLName;
-    self.fontNumName = self.fontLName;
+    self.fontNName = [UIFont systemFontOfSize:14].fontName;
+    self.fontBName = [UIFont boldSystemFontOfSize:14].fontName;
 
-    self.sizeSM = 10;
-    self.sizeS = 12;
-    self.sizeN = 14;
+    self.fontNumName = self.fontNName;
+
+    self.sizeSM = 13;
+    self.sizeS = 14;
+    self.sizeN = 15;
     self.sizeL = 16;
-    self.sizeLM = 18;
+    self.sizeLM = 17;
 
     self.scaleIsOn = YES;
 

@@ -63,6 +63,8 @@
 
 + (UIColor *)colorBaseAlert;
 
++ (UIColor *)colorBaseCmp;
+
 + (UIColor *)colorBaseWhite;
 
 + (UIColor *)colorBaseBlack;
