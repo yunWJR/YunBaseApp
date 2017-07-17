@@ -10,13 +10,19 @@
 
 + (UISearchBar *)barWithTarget:(id _Nullable)target {
     CGFloat screenWide = [UIScreen mainScreen].bounds.size.width;
-    return [self barWithFrame:CGRectMake(0.0f, 2.0f, screenWide - 15 * 4 - 26 * 2, 26.0f) bgImgName:nil phText:@"搜索" target:target];
+    return [self barWithFrame:CGRectMake(0.0f, 2.0f, screenWide - 15 * 4 - 26 * 2, 26.0f)
+                    bgImgName:nil
+                       phText:@"搜索"
+                       target:target];
 }
 
 + (UISearchBar *)barWithPhText:(NSString *_Nullable)phText
                         target:(id _Nullable)target {
     CGFloat screenWide = [UIScreen mainScreen].bounds.size.width;
-    return [self barWithFrame:CGRectMake(0.0f, 2.0f, screenWide - 15 * 4 - 26 * 2, 26.0f) bgImgName:nil phText:phText target:target];
+    return [self barWithFrame:CGRectMake(0.0f, 2.0f, screenWide - 15 * 4 - 26 * 2, 26.0f)
+                    bgImgName:nil
+                       phText:phText
+                       target:target];
 }
 
 + (UISearchBar *)barWithFrame:(CGRect)frame

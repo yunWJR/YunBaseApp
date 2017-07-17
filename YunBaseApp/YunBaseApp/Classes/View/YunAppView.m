@@ -4,7 +4,6 @@
 //
 
 #import "YunAppView.h"
-#import "YunBlankView.h"
 
 @implementation YunAppView
 

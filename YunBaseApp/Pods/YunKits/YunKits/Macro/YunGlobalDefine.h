@@ -26,11 +26,11 @@
 #define DP_GLOBLE_QUEUE_DEF(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
 
 // 通知
-#define NOTIF_ADD(n, f)     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(f) name:n object:nil]
-#define NOTIF_POST(n, o)    [[NSNotificationCenter defaultCenter] postNotificationName:n object:o]
-#define NOTIF_REMV()        [[NSNotificationCenter defaultCenter] removeObserver:self]
+#define NOTIF_ADD(n, f)   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(f) name:n object:nil]
+#define NOTIF_POST(n, o)  [[NSNotificationCenter defaultCenter] postNotificationName:n object:o]
+#define NOTIF_REMV()      [[NSNotificationCenter defaultCenter] removeObserver:self]
 
 // format
-#define FORMAT(f, ...)      [NSString stringWithFormat:f, ## __VA_ARGS__]
+#define FORMAT(f, ...)    [NSString stringWithFormat:f, ## __VA_ARGS__]
 
 #endif

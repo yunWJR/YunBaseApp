@@ -36,7 +36,10 @@
     }
     else {
         BOOL success = [application openURL:URL];
-        cmp(success);
+
+        if (cmp) {
+            cmp(success);
+        }
     }
 }
 

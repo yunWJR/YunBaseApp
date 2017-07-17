@@ -336,14 +336,20 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:YMD_Form];
-    NSDate *curDate = [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-%02ld", (long) year, (long) month, (long) day]];
+    NSDate
+            *curDate =
+            [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-%02ld",
+                                                                     (long) year,
+                                                                     (long) month,
+                                                                     (long) day]];
     NSCalendar *currentCalendar = [NSCalendar currentCalendar];
     NSRange daysRange = [currentCalendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:curDate];
 
     NSInteger days1 = daysRange.length;
 
     // firstday
-    NSInteger firstDay = [self weekdayWithDate:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
+    NSInteger
+            firstDay = [self weekdayWithDate:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
 
     weekNUm = (days1 - (matchDay - firstDay + 1)) / 7;
     if (matchDay >= firstDay) {
@@ -362,11 +368,15 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:YMD_Form];
-    NSDate *firstDay = [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
+    NSDate
+            *firstDay =
+            [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
     NSDateComponents *fCmp = [self getDateComponents:firstDay];
     NSInteger fDay = fCmp.day;
 
-    NSInteger firstDayWeekDay = [self weekdayWithDate:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
+    NSInteger
+            firstDayWeekDay =
+            [self weekdayWithDate:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
 
     NSInteger weekCount = (day - fDay + firstDayWeekDay) / 7;
     NSInteger weekRemain = (day - fDay + firstDayWeekDay) % 7;
@@ -426,9 +436,17 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:YMD_Form];
 
-    date = [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-%02ld", (long) year, (long) month, (long) day]];
-    NSDate *firstDay = [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
-    NSInteger firstDayWeekDay = [self weekdayWithDate:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
+    date =
+            [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-%02ld",
+                                                                     (long) year,
+                                                                     (long) month,
+                                                                     (long) day]];
+    NSDate
+            *firstDay =
+            [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
+    NSInteger
+            firstDayWeekDay =
+            [self weekdayWithDate:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
     NSInteger firstDayWeekNo = [self weekNoByWeekDay:firstDayWeekDay];
     if (firstDayWeekNo == 7 || firstDayWeekNo == 6) { // 第一天是周六或者周日,则后延
         firstDay = [self nextDate:firstDay withDays:(8 - firstDayWeekNo)];

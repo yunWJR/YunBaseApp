@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YunTableViewFactory : NSObject
+@interface YunUITableViewFactory : NSObject
 
 + (UITableView *)tvWithTg:(id)target
                   classes:(NSArray *)classes

@@ -4,7 +4,6 @@
 //
 
 #import "YunAppViewController.h"
-#import "YunBlankView.h"
 
 @interface YunAppViewController () {
 }

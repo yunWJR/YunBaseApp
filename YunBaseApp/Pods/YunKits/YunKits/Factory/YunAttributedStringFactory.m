@@ -125,7 +125,7 @@
 + (NSMutableAttributedString *_Nonnull)aStrWithTitle:(NSString *_Nonnull)title
                                           titleColor:(UIColor *_Nonnull)titleColor
                                            titleFont:(UIFont *_Nonnull)titleFont
-                                               isDel:(BOOL)isDel {
+                                          hasDelLine:(BOOL)hasDelLine {
     if (title == nil) {
         return nil;
     }
@@ -139,13 +139,40 @@
                   value:titleColor
                   range:NSMakeRange(0, title.length)];
 
-    if (isDel) {
+    if (hasDelLine) {
         [atStr addAttribute:NSStrikethroughStyleAttributeName
                       value:@(NSUnderlineStyleSingle | NSUnderlinePatternSolid)
                       range:NSMakeRange(0, title.length)];
 
-        [atStr addAttribute:NSStrikethroughColorAttributeName
-                      value:titleColor
+        // for 10.13
+        [atStr addAttribute:NSBaselineOffsetAttributeName
+                      value:@(0)
+                      range:NSMakeRange(0, title.length)];
+    }
+
+    return atStr;
+}
+
++ (NSMutableAttributedString *_Nonnull)aStrWithTitle:(NSString *_Nonnull)title
+                                          titleColor:(UIColor *_Nonnull)titleColor
+                                           titleFont:(UIFont *_Nonnull)titleFont
+                                        hasUnderLine:(BOOL)hasUnderLine {
+    if (title == nil) {
+        return nil;
+    }
+
+    NSMutableAttributedString *atStr = [[NSMutableAttributedString alloc] initWithString:title];
+    [atStr addAttribute:NSFontAttributeName
+                  value:titleFont
+                  range:NSMakeRange(0, title.length)];
+
+    [atStr addAttribute:NSForegroundColorAttributeName
+                  value:titleColor
+                  range:NSMakeRange(0, title.length)];
+
+    if (hasUnderLine) {
+        [atStr addAttribute:NSUnderlineStyleAttributeName
+                      value:@(NSUnderlineStyleSingle)
                       range:NSMakeRange(0, title.length)];
 
         // for 10.13

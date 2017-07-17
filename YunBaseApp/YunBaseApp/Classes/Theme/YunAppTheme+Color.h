@@ -69,6 +69,10 @@
 
 + (UIColor *)colorBaseBlack;
 
++ (UIColor *)colorBaseClear;
+
++ (UIColor *)colorBaseHex:(UInt32)hex;
+
 #pragma custom
 
 + (UIColor *)colorCustomByKey:(NSString *)key;

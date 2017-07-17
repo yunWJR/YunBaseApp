@@ -20,7 +20,7 @@
         self.bottomOff = off;
 
         self.allInterval = interval;
-        
+
         self.ctnIntervalV = interval;
         self.ctnIntervalH = interval;
     }

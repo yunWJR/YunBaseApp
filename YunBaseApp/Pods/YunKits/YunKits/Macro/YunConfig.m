@@ -4,7 +4,6 @@
 //
 
 #import "YunConfig.h"
-#import "YunGlobalDefine.h"
 
 @implementation YunConfig {
 
@@ -38,6 +37,8 @@
         _isDebugMode = NO;
 
         _isApnsDevMode = NO;
+
+        _iconViewTag = 99999;
     }
 
     return self;

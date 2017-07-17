@@ -3,12 +3,9 @@
 //  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <Masonry/Masonry.h>
-#import "YunAppThemeHeader.h"
 #import "YunViewController.h"
+#import "YunBaseAppNorHeader.h"
 
-@class YunErrorHelper;
 @class YunBlankView;
 
 @interface YunAppViewController : YunViewController

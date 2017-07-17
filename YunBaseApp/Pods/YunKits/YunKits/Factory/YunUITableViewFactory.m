@@ -3,9 +3,9 @@
 // Copyright (c) 2017 skkj. All rights reserved.
 //
 
-#import "YunTableViewFactory.h"
+#import "YunUITableViewFactory.h"
 
-@implementation YunTableViewFactory {
+@implementation YunUITableViewFactory {
 
 }
 

@@ -36,4 +36,6 @@
 // NO
 @property (nonatomic, assign) BOOL isApnsDevMode;
 
+@property (nonatomic, assign) NSInteger iconViewTag;
+
 @end

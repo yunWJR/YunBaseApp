@@ -30,7 +30,7 @@
 @property (nonatomic, assign) BOOL firstLoad;
 
 // 键盘出现和收起通知 // 默认NO
-@property (nonatomic, assign) BOOL keyboardNotf;
+@property (nonatomic, assign) BOOL keyboardNtf;
 
 // 有数据需要更新 // 默认NO
 @property (nonatomic, assign) BOOL needUpdateData; // 使用后设为NO

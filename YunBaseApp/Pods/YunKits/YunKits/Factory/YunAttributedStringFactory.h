@@ -33,6 +33,10 @@
 + (NSMutableAttributedString *_Nonnull)aStrWithTitle:(NSString *_Nonnull)title
                                           titleColor:(UIColor *_Nonnull)titleColor
                                            titleFont:(UIFont *_Nonnull)titleFont
-                                               isDel:(BOOL)isDel;
+                                          hasDelLine:(BOOL)hasDelLine;
 
++ (NSMutableAttributedString *_Nonnull)aStrWithTitle:(NSString *_Nonnull)title
+                                          titleColor:(UIColor *_Nonnull)titleColor
+                                           titleFont:(UIFont *_Nonnull)titleFont
+                                        hasUnderLine:(BOOL)hasUnderLine;
 @end

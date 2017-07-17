@@ -4,26 +4,43 @@
 //
 
 #import "YunUIBarButtonItemFactory.h"
+#import "YunSizeHelper.h"
+#import "YunUIImageViewFactory.h"
+#import <Masonry/Masonry.h>
 
 @implementation YunUIBarButtonItemFactory
 
-+ (UIBarButtonItem *)itemWithFrame:(CGRect)frame
-                             image:(NSString *_Nullable)image
++ (UIBarButtonItem *)itemWithFrame:(CGRect)btnFrame
+                               img:(NSString *_Nullable)image
+                              imgH:(CGFloat)imgH
                             target:(id _Nullable)target
                             action:(SEL _Nullable)action {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = frame;
-    [button setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    button.frame = btnFrame;
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+
+    UIImageView *icon = [YunUIImageViewFactory imgViewWithImgNameIconMode:image];
+    [button addSubview:icon];
+
+    [icon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(button);
+        make.centerY.equalTo(button);
+        make.height.equalTo(@(imgH));
+        make.width.equalTo(@(imgH));
+    }];
+
     UIBarButtonItem *btnItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 
     return btnItem;
 }
 
-+ (UIBarButtonItem *)itemWithImage:(NSString *_Nullable)image
-                            target:(id _Nullable)target
-                            action:(SEL _Nullable)action {
-    return [self itemWithFrame:CGRectMake(15, 12, 26, 26) image:image target:target action:action];
++ (UIBarButtonItem *)itemWithImg:(NSString *_Nullable)image
+                            imgH:(CGFloat)imgHeight
+                          target:(id _Nullable)target
+                          action:(SEL _Nullable)action {
+    CGRect btn = CGRectMake(0, 0, YunSizeHelper.navigationBarHeight, YunSizeHelper.navigationBarHeight);
+
+    return [self itemWithFrame:btn img:image imgH:imgHeight target:target action:action];
 }
 
 @end

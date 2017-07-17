@@ -5,6 +5,7 @@
 
 #import "YunAppTheme+Color.h"
 #import "YunAppThemeColorConfig.h"
+#import "UIColor+YunAdd.h"
 
 @implementation YunAppTheme (Color)
 
@@ -122,6 +123,14 @@
 
 + (UIColor *)colorBaseBlack {
     return YunAppThemeColorConfig.instance.colorBaseBlack;
+}
+
++ (UIColor *)colorBaseClear {
+    return [UIColor clearColor];
+}
+
++ (UIColor *)colorBaseHex:(UInt32)hex {
+    return [UIColor hexColor:hex];
 }
 
 #pragma custom

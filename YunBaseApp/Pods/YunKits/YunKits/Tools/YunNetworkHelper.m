@@ -40,25 +40,30 @@
 
 - (void)startMonitor {
     // 网络状态检测
-    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        _started = YES;
-        NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+    [[AFNetworkReachabilityManager sharedManager]
+                                   setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+                                       _started = YES;
+                                       NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
 
-        if (_didStatusChanged) {
-            _didStatusChanged(self.isNetworkAvailable);
-        }
+                                       if (_didStatusChanged) {
+                                           _didStatusChanged(self.isNetworkAvailable);
+                                       }
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:NETWORK_STATUS_NOTI_STR
-                                                            object:nil
-                                                          userInfo:@{@"status" : @(self.isNetworkAvailable)}];
-    }];
+                                       [[NSNotificationCenter defaultCenter]
+                                                              postNotificationName:NETWORK_STATUS_NOTI_STR
+                                                                            object:nil
+                                                                          userInfo:@{@"status" : @(self.isNetworkAvailable)}];
+                                   }];
 
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 }
 
 - (void)isNetworkReachable:(void (^)(BOOL))result {
+    result([AFNetworkReachabilityManager sharedManager].isReachable);
+
+    return;
     dispatch_async(dispatch_queue_create("background", 0), ^{
-        while (true) {
+        while (true) { // 死循环
             if (_started) {break;}
         }
 

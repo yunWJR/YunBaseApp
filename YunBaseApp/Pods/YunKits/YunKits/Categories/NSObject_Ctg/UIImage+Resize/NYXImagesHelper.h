@@ -42,9 +42,13 @@
 
 #import <UIKit/UIKit.h>
 
-CGContextRef NYXCreateARGBBitmapContext(const size_t width, const size_t height, const size_t bytesPerRow, BOOL withAlpha);
+CGContextRef
+NYXCreateARGBBitmapContext(const size_t width, const size_t height, const size_t bytesPerRow, BOOL withAlpha);
 
-CGImageRef NYXCreateGradientImage(const size_t pixelsWide, const size_t pixelsHigh, const CGFloat fromAlpha, const CGFloat toAlpha);
+CGImageRef NYXCreateGradientImage(const size_t pixelsWide,
+                                  const size_t pixelsHigh,
+                                  const CGFloat fromAlpha,
+                                  const CGFloat toAlpha);
 
 CIContext *NYXGetCIContext(void);
 

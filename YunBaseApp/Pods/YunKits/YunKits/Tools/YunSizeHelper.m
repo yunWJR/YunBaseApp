@@ -20,12 +20,20 @@
     return [UIApplication sharedApplication].statusBarFrame.size.height;
 }
 
-+ (CGFloat)screenWith {
++ (CGFloat)screenWidth {
     return [UIScreen mainScreen].bounds.size.width;
 }
 
 + (CGFloat)screenHeight {
     return [UIScreen mainScreen].bounds.size.height;
+}
+
++ (CGFloat)widthOn2x:(CGFloat)width {
+    return self.screenWidth * width / 375.00f;
+}
+
++ (CGFloat)heightOn2x:(CGFloat)height {
+    return self.screenHeight * height / 667.00f;
 }
 
 @end

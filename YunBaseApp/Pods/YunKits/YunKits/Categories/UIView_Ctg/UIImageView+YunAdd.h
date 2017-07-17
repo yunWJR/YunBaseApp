@@ -15,4 +15,8 @@
 
 - (void)setAvrImgUrlStr:(NSString *)urlStr;
 
+- (BOOL)setIconName:(NSString *)iconName
+               size:(CGFloat)size
+              color:(UIColor *)color;
+
 @end

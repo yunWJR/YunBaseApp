@@ -26,7 +26,7 @@
 
         _hideBottomBar = YES;
 
-        _keyboardNotf = NO;
+        _keyboardNtf = NO;
 
         _sideOff = 10;
 
@@ -79,7 +79,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    if (_keyboardNotf) {
+    if (_keyboardNtf) {
         [self addKeyboardNotification];
     }
 }
@@ -87,7 +87,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
-    if (_keyboardNotf) {
+    if (_keyboardNtf) {
         [self removeKeyboardNotification];
     }
 
@@ -169,7 +169,9 @@
     self.leftNagItem = lBtnItem;
 }
 
-- (UIBarButtonItem *)createBarItemByNormalImg:(NSString *)norImg highLightImg:(NSString *)highImg action:(nullable SEL)action {
+- (UIBarButtonItem *)createBarItemByNormalImg:(NSString *)norImg
+                                 highLightImg:(NSString *)highImg
+                                       action:(nullable SEL)action {
     UIButton *button = [UIButton new];
     button.backgroundColor = [UIColor clearColor];
     button.imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -190,7 +192,10 @@
     return btnItem;
 }
 
-- (UIBarButtonItem *)createBarItemByName:(NSString *)name font:(UIFont *)font color:(UIColor *)color action:(nullable SEL)action {
+- (UIBarButtonItem *)createBarItemByName:(NSString *)name
+                                    font:(UIFont *)font
+                                   color:(UIColor *)color
+                                  action:(nullable SEL)action {
     UIBarButtonItem *btnItem = [[UIBarButtonItem alloc] initWithTitle:name
                                                                 style:UIBarButtonItemStyleDone
                                                                target:self

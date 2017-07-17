@@ -11,7 +11,6 @@
  *获取当前日期
  */
 + (NSDictionary *)calculationNowTime {
-
     NSString *format = @"YYYY-MM-dd HH:mm";
     NSDate *senddate = [NSDate date];
 
@@ -37,7 +36,6 @@
  *设置默认时间
  */
 + (NSDictionary *)calculationDefaultTime:(NSString *)defaultTime {
-
     NSString *format = @"YYYY-MM-dd HH:mm";
 
     NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
@@ -63,7 +61,6 @@
  *获取年
  */
 + (NSArray *)calculationYear {
-
     NSMutableArray *arry = [[NSMutableArray alloc] init];
 
     for (int i = 1900; i <= 3000; i++) {
@@ -87,11 +84,16 @@
  *根据年份和月份获取天数
  */
 + (NSArray *)calculationDay:(NSString *)iyear andMonth:(NSString *)month {
-
     NSInteger year = [iyear integerValue];
     NSInteger imonth = [month integerValue];
 
-    if ((imonth == 1) || (imonth == 3) || (imonth == 5) || (imonth == 7) || (imonth == 8) || (imonth == 10) || (imonth == 12)) {
+    if ((imonth == 1) ||
+        (imonth == 3) ||
+        (imonth == 5) ||
+        (imonth == 7) ||
+        (imonth == 8) ||
+        (imonth == 10) ||
+        (imonth == 12)) {
         return [self getDays:31];
     }
 
@@ -175,7 +177,6 @@
  *根据时间获取星期几
  */
 + (NSString *)ObtainWeek:(NSString *)day andMonth:(NSString *)month andYear:(NSString *)year {
-
     NSDateComponents *_comps = [[NSDateComponents alloc] init];
 
     NSInteger dayInter = [day integerValue];
@@ -225,7 +226,6 @@
 
 //把阳历转换成农历
 + (NSString *)getChineseCalendarWithDate:(NSString *)dateStr {
-
     NSArray *chineseYears = @[
             @"甲子", @"乙丑", @"丙寅", @"丁卯", @"戊辰", @"己巳", @"庚午", @"辛未", @"壬申", @"癸酉",
             @"甲戌", @"乙亥", @"丙子", @"丁丑", @"戊寅", @"己卯", @"庚辰", @"辛己", @"壬午", @"癸未",

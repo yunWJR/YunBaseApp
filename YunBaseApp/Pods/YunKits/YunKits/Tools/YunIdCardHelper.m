@@ -69,7 +69,10 @@
 - (BOOL)checkCode:(NSString *)code {
     NSInteger sum = 0;
     for (NSInteger i = 0; i < self.validateCode.count; i++) {
-        sum += ((NSNumber *) self.validateCode[i]).integerValue * [code substringWithRange:NSMakeRange(i, 1)].integerValue;
+        sum
+                +=
+                ((NSNumber *) self.validateCode[i]).integerValue *
+                [code substringWithRange:NSMakeRange(i, 1)].integerValue;
     }
     int remainder = fmod(sum, 11);
 

@@ -10,12 +10,16 @@
 
 + (CGFloat)navigationBarHeight;
 
++ (CGFloat)tabBarHeight;
+
 + (CGFloat)statusBarHeight;
 
-+ (CGFloat)screenWith;
++ (CGFloat)screenWidth;
 
 + (CGFloat)screenHeight;
 
-+ (CGFloat)tabBarHeight;
++ (CGFloat)widthOn2x:(CGFloat)width;
+
++ (CGFloat)heightOn2x:(CGFloat)height;
 
 @end

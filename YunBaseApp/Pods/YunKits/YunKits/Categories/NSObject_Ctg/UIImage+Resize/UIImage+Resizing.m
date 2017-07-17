@@ -56,7 +56,10 @@
             break;
     }
 
-    if (self.imageOrientation == UIImageOrientationLeft || self.imageOrientation == UIImageOrientationLeftMirrored || self.imageOrientation == UIImageOrientationRight || self.imageOrientation == UIImageOrientationRightMirrored) {
+    if (self.imageOrientation == UIImageOrientationLeft ||
+        self.imageOrientation == UIImageOrientationLeftMirrored ||
+        self.imageOrientation == UIImageOrientationRight ||
+        self.imageOrientation == UIImageOrientationRightMirrored) {
         CGFloat temp = x;
         x = y;
         y = temp;
@@ -66,7 +69,9 @@
         newSize.height = temp;
     }
 
-    CGRect cropRect = CGRectMake(x * self.scale, y * self.scale, newSize.width * self.scale, newSize.height * self.scale);
+    CGRect
+            cropRect =
+            CGRectMake(x * self.scale, y * self.scale, newSize.width * self.scale, newSize.height * self.scale);
 
     /// Create the cropped image
     CGImageRef croppedImageRef = CGImageCreateWithImageInRect(self.CGImage, cropRect);
@@ -117,7 +122,12 @@
     }
 
     /// Create an ARGB bitmap context
-    CGContextRef bmContext = NYXCreateARGBBitmapContext(destWidth, destHeight, destWidth * kNyxNumberOfComponentsPerARBGPixel, NYXImageHasAlpha(self.CGImage));
+    CGContextRef
+            bmContext =
+            NYXCreateARGBBitmapContext(destWidth,
+                                       destHeight,
+                                       destWidth * kNyxNumberOfComponentsPerARBGPixel,
+                                       NYXImageHasAlpha(self.CGImage));
     if (!bmContext) {
         return nil;
     }
