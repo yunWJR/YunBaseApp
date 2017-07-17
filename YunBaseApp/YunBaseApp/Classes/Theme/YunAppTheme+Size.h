@@ -7,6 +7,8 @@
 
 @interface YunAppTheme (Size)
 
++ (CGFloat)lineHeightL;
+
 + (CGFloat)lineHeight;
 
 + (CGFloat)lineHeightB;

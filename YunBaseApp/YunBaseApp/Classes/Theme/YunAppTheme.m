@@ -53,8 +53,9 @@
 
     self.scaleIsOn = YES;
 
-    self.lineH = 0.5f;
-    self.lineHB = 1.0f;
+    self.lineHL = 0.5f;
+    self.lineH = 1.0f;
+    self.lineHB = 1.5f;
 
     self.sizeNagTitle = 17.0f;
     self.sizeNagItem = 14.0f;

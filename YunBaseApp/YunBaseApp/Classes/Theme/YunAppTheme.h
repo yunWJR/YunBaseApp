@@ -33,6 +33,8 @@
 
 @property (nonatomic, assign) BOOL scaleIsOn;
 
+@property (nonatomic, assign) CGFloat lineHL;
+
 @property (nonatomic, assign) CGFloat lineH;
 
 @property (nonatomic, assign) CGFloat lineHB;

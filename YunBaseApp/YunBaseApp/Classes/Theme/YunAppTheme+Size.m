@@ -7,6 +7,10 @@
 
 @implementation YunAppTheme (Size)
 
++ (CGFloat)lineHeightL {
+    return YunAppTheme.instance.lineHL;
+}
+
 + (CGFloat)lineHeight {
     return YunAppTheme.instance.lineH;
 }
