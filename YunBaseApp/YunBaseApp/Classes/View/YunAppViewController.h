@@ -4,6 +4,7 @@
 //
 
 #import <YunKits/YunViewController.h>
+#import <YunKits/YunFactory.h>
 #import "YunBaseAppNorHeader.h"
 
 @class YunBlankView;
