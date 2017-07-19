@@ -11,6 +11,10 @@
 
 @interface YunAppViewController : YunViewController
 
+@property (nonatomic, assign) BOOL changed;
+
+@property (nonatomic, copy) void (^didPopSuperView)(YunAppViewController *vc);
+
 // YES
 @property (nonatomic, assign) BOOL updateItem;
 

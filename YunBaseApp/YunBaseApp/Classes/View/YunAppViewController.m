@@ -71,6 +71,14 @@
 
 #pragma mark - handles
 
+- (void)didClickNagLeftItem {
+    [super didClickNagLeftItem];
+
+    if (_didPopSuperView) {
+        _didPopSuperView(self);
+    }
+}
+
 #pragma mark - public functions
 
 - (void)setNagBg:(UIColor *)color {
