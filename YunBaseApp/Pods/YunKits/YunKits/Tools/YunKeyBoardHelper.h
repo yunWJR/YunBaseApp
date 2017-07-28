@@ -3,7 +3,7 @@
 // Copyright (c) 2017 skkj. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol YunKeyBoardDelegate <NSObject>
 

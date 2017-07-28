@@ -77,4 +77,10 @@
 
 - (UIColor *)colorCustomByKey:(NSString *)key;
 
+#pragma custom color list
+
+@property (nonatomic, strong) NSArray<UIColor *> *colorList;
+
+- (UIColor *)colorIn:(NSInteger)index;
+
 @end

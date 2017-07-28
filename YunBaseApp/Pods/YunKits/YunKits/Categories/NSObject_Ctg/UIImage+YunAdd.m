@@ -8,22 +8,29 @@
 
 @implementation UIImage (YunAdd)
 
-+ (UIImage *)getImageWithColor:(UIColor *)color height:(CGFloat)height {
-    return [self getImageWithColor:color size:CGSizeMake(1.0f, height)];
++ (UIImage *)imgWithColor:(UIColor *)color {
+    return [self imgWithColor:color size:CGSizeMake(1.0f, 1.0f)];
 }
 
-+ (UIImage *)getImageWithColor:(UIColor *)color size:(CGSize)size {
-    CGRect r = CGRectMake(0.0f, 0.0f, size.width, size.height);
-    UIGraphicsBeginImageContext(r.size);
++ (UIImage *)imgWithColor:(UIColor *)color height:(CGFloat)height {
+    return [self imgWithColor:color size:CGSizeMake(1.0f, height)];
+}
+
++ (UIImage *)imgWithColor:(UIColor *)color size:(CGSize)size {
+    if (!color || size.width <= 0 || size.height <= 0) {
+        return nil;
+    }
+
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
 
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, r);
-
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    return img;
+    return image;
 }
 
 + (UIImage *)getViewImage:(UIView *)view {

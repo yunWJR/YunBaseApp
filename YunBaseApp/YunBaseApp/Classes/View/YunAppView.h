@@ -11,9 +11,6 @@
 
 @interface YunAppView : YunView
 
-// 控件间距 // 默认10
-@property (nonatomic, assign) CGFloat sideOff;
-
 // 第一次加载标识符 // 默认YES
 @property (nonatomic, assign) BOOL firstLoad;
 
@@ -25,10 +22,6 @@
 @property (nonatomic, strong) YunBlankView *noNetView;
 
 @property (nonatomic, strong) YunBlankView *stateView;
-
-- (instancetype)initWithSideOff:(CGFloat)sideOff superVC:(UIViewController *)superVC;
-
-+ (instancetype)viewWithSideOff:(CGFloat)sideOff superVC:(UIViewController *)superVC;
 
 #pragma mark - public functions
 

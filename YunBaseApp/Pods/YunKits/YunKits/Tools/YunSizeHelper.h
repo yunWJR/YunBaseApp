@@ -8,11 +8,13 @@
 
 @interface YunSizeHelper : NSObject
 
++ (CGFloat)statusBarHeight;
+
 + (CGFloat)navigationBarHeight;
 
-+ (CGFloat)tabBarHeight;
++ (CGFloat)statusAndNagBarHeight;
 
-+ (CGFloat)statusBarHeight;
++ (CGFloat)tabBarHeight;
 
 + (CGFloat)screenWidth;
 

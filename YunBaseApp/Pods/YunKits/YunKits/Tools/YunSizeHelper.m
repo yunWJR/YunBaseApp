@@ -7,17 +7,21 @@
 
 @implementation YunSizeHelper
 
++ (CGFloat)statusBarHeight { //
+    return [UIApplication sharedApplication].statusBarFrame.size.height;
+}
+
 // 该高度有可能有误差
 + (CGFloat)navigationBarHeight {
     return 44;
 }
 
-+ (CGFloat)tabBarHeight {
-    return 49;
++ (CGFloat)statusAndNagBarHeight {
+    return self.navigationBarHeight + self.statusBarHeight;
 }
 
-+ (CGFloat)statusBarHeight { //
-    return [UIApplication sharedApplication].statusBarFrame.size.height;
++ (CGFloat)tabBarHeight {
+    return 49;
 }
 
 + (CGFloat)screenWidth {

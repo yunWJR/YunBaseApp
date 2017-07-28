@@ -14,13 +14,21 @@
 
 + (NSString *)intStr:(NSInteger)intValue format:(NSString *)format;
 
++ (NSString *)floatStr:(CGFloat)value;
+
 + (NSString *)priceStr:(CGFloat)price;
 
 + (NSString *)priceStrWithStr:(NSString *)priceStr;
 
 + (NSString *)strWithoutSpace:(NSString *)str;
 
-+ (NSString *)randomStrWithLength:(int)len;
++ (NSMutableString *)randomChinese:(NSInteger)len;
+
++ (NSMutableString *)randomChineseWithMaxLength:(NSInteger)maxLen;
+
++ (NSString *)randomStrWithLength:(NSInteger)len;
+
++ (NSString *)randomStrWithMaxLength:(NSInteger)maxLen;
 
 + (NSString *)strWithDic:(NSDictionary *)dic;
 

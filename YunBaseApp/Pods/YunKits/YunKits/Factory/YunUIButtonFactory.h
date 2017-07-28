@@ -52,10 +52,12 @@
                              iconSize:(CGFloat)iconSize
                             iconColor:(UIColor *_Nonnull)iconColor
                                 title:(NSString *_Nonnull)title
-                        titleFontSize:(UIFont *_Nonnull)titleFont
+                            titleFont:(UIFont *_Nonnull)titleFont
                            titleColor:(UIColor *_Nonnull)titleColor
                                isHori:(BOOL)isHori
                                target:(id _Nullable)target
                                action:(SEL _Nullable)action;
+
++ (UIButton *_Nonnull)setDefHlColor:(UIButton *_Nonnull)btn;
 
 @end

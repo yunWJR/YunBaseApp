@@ -15,6 +15,7 @@
         self.allOff = off;
 
         self.topOff = off;
+        self.sideOff = off;
         self.leftOff = off;
         self.rightOff = off;
         self.bottomOff = off;

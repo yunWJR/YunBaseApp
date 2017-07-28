@@ -11,14 +11,6 @@
 
 #pragma mark - form
 
-+ (NSString *)getYmdForm;
-
-+ (void)setYmdForm:(NSString *)ymd;
-
-+ (NSString *)getYmdHmForm;
-
-+ (void)setYmdHmForm:(NSString *)ymdHm;
-
 #pragma mark - public funtions
 
 #pragma mark - date

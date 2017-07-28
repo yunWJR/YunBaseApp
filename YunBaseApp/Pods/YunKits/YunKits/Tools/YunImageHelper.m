@@ -3,20 +3,18 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "YunImageHelper.h"
 
 @implementation YunImageHelper
 
-- (NSString *)encodeToBase64String:(UIImage *)image {
+- (NSString *)encodeToBase64Str:(UIImage *)image {
     return [UIImagePNGRepresentation(image) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
 }
 
 - (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData {
-    NSData
-            *data =
-            [[NSData alloc]
-                     initWithBase64EncodedString:strEncodeData options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    NSData *data =
+            [[NSData alloc] initWithBase64EncodedString:strEncodeData
+                                                options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [UIImage imageWithData:data];
 }
 

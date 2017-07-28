@@ -43,6 +43,14 @@
     return nil;
 }
 
+- (UIColor *)colorIn:(NSInteger)index {
+    if (_colorList == nil || index > _colorList.count - 1) {
+        return nil;
+    }
+
+    return _colorList[index];
+}
+
 #pragma mark - private funtions
 
 - (void)initColors {

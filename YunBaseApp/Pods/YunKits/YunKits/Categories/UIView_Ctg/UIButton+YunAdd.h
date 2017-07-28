@@ -13,4 +13,6 @@
 
 - (void)disableHl;
 
+- (void)setHlColor:(UIColor *)color;
+
 @end

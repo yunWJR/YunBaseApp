@@ -10,7 +10,6 @@
 @implementation UILabel (YunAdd)
 
 + (CGFloat)calHeightByWidth:(CGFloat)width text:(NSString *)text font:(UIFont *)font {
-
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 0)];
     label.text = text;
     label.font = font;
@@ -43,8 +42,14 @@
 
 - (CGFloat)getTextWidth {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_MAX, 0)];
-    label.text = self.text;
-    label.font = self.font;
+    if (self.attributedText) {
+        label.attributedText = self.attributedText;
+    }
+    else {
+        label.text = self.text;
+        label.font = self.font;
+    }
+
     [label sizeToFit];
 
     return label.frame.size.width;

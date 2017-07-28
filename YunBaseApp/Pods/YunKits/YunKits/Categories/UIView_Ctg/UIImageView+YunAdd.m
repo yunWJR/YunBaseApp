@@ -13,15 +13,15 @@
 @implementation UIImageView (YunAdd)
 
 - (void)setImgUrlStr:(NSString *)urlStr {
-    UIImage *placeholderImage = [UIImage imageNamed:YunConfig.instance.imgViewHolderImgName];
+    UIImage *phImg = [UIImage imageNamed:YunConfig.instance.imgViewHolderImgName];
 
     if ([YunValueVerifier isNilOrEmptyStr:urlStr]) {
-        self.image = placeholderImage;
+        self.image = phImg;
         return;
     }
 
     [self sd_setImageWithURL:[NSURL URLWithString:urlStr]
-            placeholderImage:placeholderImage
+            placeholderImage:phImg
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        if (!image) {
                            self.image = [UIImage imageNamed:YunConfig.instance.imgViewFailedImgName];
@@ -46,15 +46,15 @@
 }
 
 - (void)setAvrImgUrlStr:(NSString *)urlStr {
-    UIImage *placeholderImage = [UIImage imageNamed:YunConfig.instance.imgViewAvrImgName];
+    UIImage *phImg = [UIImage imageNamed:YunConfig.instance.imgViewAvrImgName];
 
     if ([YunValueVerifier isNilOrEmptyStr:urlStr]) {
-        self.image = placeholderImage;
+        self.image = phImg;
         return;
     }
 
     [self sd_setImageWithURL:[NSURL URLWithString:urlStr]
-            placeholderImage:placeholderImage
+            placeholderImage:phImg
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        if (!image) {
                            self.image = [UIImage imageNamed:YunConfig.instance.imgViewAvrImgName];
@@ -63,7 +63,7 @@
 }
 
 - (BOOL)setIconName:(NSString *)iconName size:(CGFloat)size color:(UIColor *)color {
-    UILabel *iconLbl = [self viewWithTag:YunConfig.instance.iconViewTag];
+    UILabel *iconLbl = [self viewWithTag:YunConfig.instance.iconViewTagInImgView];
     if (iconLbl) {
         iconLbl.font = [UIFont fontWithName:YunConfig.instance.iconFontName size:size];
         iconLbl.text = iconName;

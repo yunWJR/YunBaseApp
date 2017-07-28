@@ -5,9 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YunRgxHelper : NSObject {
-
-}
+@interface YunRgxHelper : NSObject
 
 + (BOOL)matchRgx:(NSString *)rgx ctn:(NSString *)ctn;
 

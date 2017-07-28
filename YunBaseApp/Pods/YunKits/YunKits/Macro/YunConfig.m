@@ -38,7 +38,14 @@
 
         _isApnsDevMode = NO;
 
-        _iconViewTag = 99999;
+        _iconViewTagInImgView = 99999;
+
+        _dateFmYm = @"yyyy-MM";
+        _dateFmYmd = @"yyyy-MM-dd";
+        _dateFmYmdHm = @"yyyy-MM-dd hh:mm";
+        _dateFmHm = @"hh:mm";
+
+        _btnDefHlColor = [UIColor lightGrayColor];
     }
 
     return self;

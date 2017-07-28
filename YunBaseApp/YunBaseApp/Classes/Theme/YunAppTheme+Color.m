@@ -139,4 +139,8 @@
     return [YunAppThemeColorConfig.instance colorCustomByKey:key];
 }
 
++ (UIColor *)colorIn:(NSInteger)index {
+    return [YunAppThemeColorConfig.instance colorIn:index];
+}
+
 @end

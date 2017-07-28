@@ -10,11 +10,11 @@
 
 @implementation YunUIBarButtonItemFactory
 
-+ (UIBarButtonItem *)itemWithFrame:(CGRect)btnFrame
-                               img:(NSString *_Nullable)image
-                              imgH:(CGFloat)imgH
-                            target:(id _Nullable)target
-                            action:(SEL _Nullable)action {
++ (UIBarButtonItem *)barBtnWithFrame:(CGRect)btnFrame
+                                 img:(NSString *_Nullable)image
+                                imgH:(CGFloat)imgH
+                              target:(id _Nullable)target
+                              action:(SEL _Nullable)action {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = btnFrame;
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
@@ -34,13 +34,13 @@
     return btnItem;
 }
 
-+ (UIBarButtonItem *)itemWithImg:(NSString *_Nullable)image
-                            imgH:(CGFloat)imgHeight
-                          target:(id _Nullable)target
-                          action:(SEL _Nullable)action {
++ (UIBarButtonItem *)barBtnWithImg:(NSString *_Nullable)image
+                              imgH:(CGFloat)imgHeight
+                            target:(id _Nullable)target
+                            action:(SEL _Nullable)action {
     CGRect btn = CGRectMake(0, 0, YunSizeHelper.navigationBarHeight, YunSizeHelper.navigationBarHeight);
 
-    return [self itemWithFrame:btn img:image imgH:imgHeight target:target action:action];
+    return [self barBtnWithFrame:btn img:image imgH:imgHeight target:target action:action];
 }
 
 @end

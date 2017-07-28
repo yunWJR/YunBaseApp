@@ -4,27 +4,14 @@
 //
 
 #import "YunAppView.h"
+#import "UIView+YunAdd.h"
 
-@implementation YunAppView
-
-- (instancetype)initWithSideOff:(CGFloat)sideOff superVC:(UIViewController *)superVC {
-    self = [super init];
-    if (self) {
-        self.sideOff = sideOff;
-        self.superVC = superVC;
-        self.firstLoad = YES;
-    }
-
-    return self;
-}
-
-+ (instancetype)viewWithSideOff:(CGFloat)sideOff superVC:(UIViewController *)superVC {
-    return [[self alloc] initWithSideOff:sideOff superVC:superVC];
+@implementation YunAppView {
+    UIViewController *_superVc;
 }
 
 - (instancetype)init {
     if (self = [super init]) {
-        _sideOff = 10;
         _firstLoad = YES;
     }
     return self;
@@ -33,7 +20,19 @@
 #pragma mark - public funtions
 
 - (void)updateData:(BOOL)force {
+}
 
+- (UIViewController *)superVC {
+    if (_superVc == nil) {
+        return [self superViewController];
+    }
+    else {
+        return _superVc;
+    }
+}
+
+- (void)setSuperVC:(UIViewController *)superVC {
+    _superVc = superVC;
 }
 
 @end

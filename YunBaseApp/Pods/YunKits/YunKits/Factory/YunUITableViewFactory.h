@@ -11,4 +11,8 @@
                   classes:(NSArray *)classes
                       ids:(NSArray *)ids;
 
++ (UITableView *)tvWithTg:(id)target
+                classItem:(nullable Class)cellClass
+                      ids:(NSArray *)ids;
+
 @end

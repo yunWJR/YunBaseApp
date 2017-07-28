@@ -4,12 +4,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Masonry/Masonry.h>
 
 @interface YunView : UIView
 
 // 控件间距控制
 
 @property (nonatomic, assign) CGFloat allOff;
+
+@property (nonatomic, assign) CGFloat sideOff;
 
 @property (nonatomic, assign) CGFloat topOff;
 

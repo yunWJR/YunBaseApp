@@ -4,6 +4,7 @@
 //
 
 #import "UILabel+Style.h"
+#import "UIView+YunAdd.h"
 
 @implementation UILabel (Style)
 
@@ -28,16 +29,7 @@
 }
 
 - (void)setRadius:(CGFloat)radius width:(CGFloat)width color:(UIColor *)color {
-    if (self == nil) {
-        return;
-    }
-
-    self.layer.masksToBounds = YES;
-    self.layer.cornerRadius = radius;
-    [self.layer setBorderWidth:width];
-    if (color) {
-        [self.layer setBorderColor:color.CGColor];
-    }
+    [self setViewRadius:radius width:width color:color];
 }
 
 @end

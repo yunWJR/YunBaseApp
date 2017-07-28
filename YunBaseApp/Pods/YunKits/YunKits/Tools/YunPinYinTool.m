@@ -7,7 +7,7 @@
 
 @implementation YunPinYinTool
 
-+ (NSString *)pinYinStringFromChinese:(NSString *)chinese hasSoundMark:(BOOL)hasOrNot {
++ (NSString *)pinYinFromChinese:(NSString *)chinese hasSoundMark:(BOOL)hasOrNot {
     CFMutableStringRef chineseMutableStringRef = CFStringCreateMutableCopy(NULL, 0, (__bridge CFStringRef) chinese);
 
     CFStringTransform(chineseMutableStringRef, NULL, kCFStringTransformMandarinLatin, NO);

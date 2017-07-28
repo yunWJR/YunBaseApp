@@ -66,8 +66,8 @@
 
     UILabel *iconLbl = [YunUILabelFactory labelWithIcon:iconName
                                                fontSize:size
-                                              textColor:color];
-    iconLbl.tag = YunConfig.instance.iconViewTag;
+                                                  color:color];
+    iconLbl.tag = YunConfig.instance.iconViewTagInImgView;
 
     [imgView addSubview:iconLbl];
 

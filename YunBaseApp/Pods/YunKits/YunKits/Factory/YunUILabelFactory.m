@@ -6,6 +6,7 @@
 #import "YunUILabelFactory.h"
 #import "UILabel+Style.h"
 #import "YunConfig.h"
+#import "UIView+YunAdd.h"
 
 @implementation YunUILabelFactory
 
@@ -20,6 +21,12 @@
                       font:(UIFont *)font
                      color:(UIColor *)color {
     return [self labelWithText:text font:font color:color align:NSTextAlignmentLeft lines:1 adjust:NO];
+}
+
++ (UILabel *)labelWithMulText:(NSString *)text
+                         font:(UIFont *)font
+                        color:(UIColor *)color {
+    return [self labelWithText:text font:font color:color align:NSTextAlignmentLeft lines:0 adjust:NO];
 }
 
 + (UILabel *)labelWithText:(NSString *)text
@@ -44,15 +51,14 @@
                borderColor:(UIColor *)borderColor {
     UILabel *lbl = [self labelWithText:text font:font color:color
                                  align:align lines:lines adjust:adjust];
-
-    [lbl setRadius:radius width:width color:borderColor];
+    [lbl setViewRadius:radius width:width color:borderColor];
 
     return lbl;
 }
 
 + (UILabel *)labelWithIcon:(NSString *_Nullable)icon
                   fontSize:(CGFloat)fontSize
-                 textColor:(UIColor *_Nullable)color {
+                     color:(UIColor *_Nullable)color {
     UILabel *iconLbl = [UILabel new];
     iconLbl.font = [UIFont fontWithName:YunConfig.instance.iconFontName size:fontSize];
     iconLbl.text = icon;

@@ -8,8 +8,8 @@
 
 @implementation NSString (YunAdd)
 
-- (NSString *)strByDefCtn:(NSString *)text {
-    return [YunValueVerifier isNilOrEmptyStr:self] ? text : self;
+- (NSString *)strByDefCtn:(NSString *)ctn {
+    return [YunValueVerifier isValidStr:ctn] ? self : ctn;
 }
 
 @end

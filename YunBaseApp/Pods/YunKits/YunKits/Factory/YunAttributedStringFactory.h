@@ -39,4 +39,5 @@
                                           titleColor:(UIColor *_Nonnull)titleColor
                                            titleFont:(UIFont *_Nonnull)titleFont
                                         hasUnderLine:(BOOL)hasUnderLine;
+
 @end

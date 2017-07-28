@@ -10,7 +10,7 @@
 
 @implementation UIImage (Device)
 
-+ imageNamedOnDevice:(NSString *)name {
++ imgOnDevice:(NSString *)name {
     NSString *image = name;
     if ([YunDevice isPhone6Plus]) {
         image = [NSString stringWithFormat:@"%@-1242*2208", name];

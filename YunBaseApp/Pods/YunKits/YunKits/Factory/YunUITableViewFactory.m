@@ -12,6 +12,8 @@
 + (UITableView *)tvWithTg:(id)target
                   classes:(NSArray *)classes
                       ids:(NSArray *)ids {
+    if (classes.count != ids.count) {return nil;}
+
     UITableView *tvc = [[UITableView alloc] init];
     tvc.delegate = target;
     tvc.dataSource = target;
@@ -20,6 +22,22 @@
 
     for (int i = 0; i < classes.count; ++i) {
         [tvc registerClass:classes[i] forCellReuseIdentifier:ids[i]];
+    }
+
+    return tvc;
+}
+
++ (UITableView *)tvWithTg:(id)target
+                classItem:(nullable Class)cellClass
+                      ids:(NSArray *)ids {
+    UITableView *tvc = [[UITableView alloc] init];
+    tvc.delegate = target;
+    tvc.dataSource = target;
+    tvc.backgroundColor = [UIColor clearColor];
+    tvc.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    for (int i = 0; i < ids.count; ++i) {
+        [tvc registerClass:cellClass forCellReuseIdentifier:ids[i]];
     }
 
     return tvc;

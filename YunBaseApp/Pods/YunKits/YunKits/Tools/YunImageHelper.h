@@ -3,15 +3,11 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@class UIImage;
+@interface YunImageHelper : NSObject
 
-@interface YunImageHelper : NSObject {
-
-}
-
-- (NSString *)encodeToBase64String:(UIImage *)image;
+- (NSString *)encodeToBase64Str:(UIImage *)image;
 
 - (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData;
 

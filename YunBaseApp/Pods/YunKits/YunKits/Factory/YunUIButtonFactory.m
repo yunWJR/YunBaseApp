@@ -8,6 +8,7 @@
 #import "YunAttributedStringFactory.h"
 #import "YunUIImageViewFactory.h"
 #import "YunConfig.h"
+#import "UIImage+YunAdd.h"
 
 @implementation YunUIButtonFactory
 
@@ -20,6 +21,8 @@
     if (target && action) {
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
+
+    btn = [self setDefHlColor:btn];
 
     return btn;
 }
@@ -78,6 +81,8 @@
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
 
+    btn = [self setDefHlColor:btn];
+
     return btn;
 }
 
@@ -96,6 +101,8 @@
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
 
+    btn = [self setDefHlColor:btn];
+
     return btn;
 }
 
@@ -112,6 +119,8 @@
     if (target && action) {
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
+
+    btn = [self setDefHlColor:btn];
 
     return btn;
 }
@@ -132,6 +141,8 @@
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
 
+    btn = [self setDefHlColor:btn];
+
     return btn;
 }
 
@@ -139,12 +150,12 @@
                      iconSize:(CGFloat)iconSize
                     iconColor:(UIColor *_Nonnull)iconColor
                         title:(NSString *_Nonnull)title
-                titleFontSize:(UIFont *_Nonnull)titleFont
+                    titleFont:(UIFont *_Nonnull)titleFont
                    titleColor:(UIColor *_Nonnull)titleColor
                        isHori:(BOOL)isHori
                        target:(id _Nullable)target
                        action:(SEL _Nullable)action {
-    UIButton *funBtn = [UIButton new];
+    UIButton *btn = [UIButton new];
 
     NSMutableAttributedString *atStr = [YunAttributedStringFactory aStrWithIcon:icon
                                                                       iconColor:iconColor
@@ -154,17 +165,30 @@
                                                                       titleFont:titleFont
                                                                          isHori:isHori];
 
-    [funBtn setAttributedTitle:atStr forState:UIControlStateNormal];
+    [btn setAttributedTitle:atStr forState:UIControlStateNormal];
 
-    funBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    funBtn.titleLabel.numberOfLines = isHori ? 1 : 2;
-    funBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
+    btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+    btn.titleLabel.numberOfLines = isHori ? 1 : 2;
+    btn.titleLabel.adjustsFontSizeToFitWidth = YES;
 
     if (target && action) {
-        [funBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
 
-    return funBtn;
+    btn = [self setDefHlColor:btn];
+
+    return btn;
+}
+
++ (UIButton *)setDefHlColor:(UIButton *)btn {
+    if (!btn) {return btn;}
+
+    if (YunConfig.instance.btnDefHlColor && YunConfig.instance.btnHasHlColor) {
+        [btn setBackgroundImage:[UIImage imgWithColor:YunConfig.instance.btnDefHlColor]
+                       forState:UIControlStateHighlighted];
+    }
+
+    return btn;
 }
 
 @end

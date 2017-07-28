@@ -9,6 +9,6 @@
 
 @interface UIImage (Device)
 
-+ imageNamedOnDevice:(NSString *)name;
++ imgOnDevice:(NSString *)name;
 
 @end

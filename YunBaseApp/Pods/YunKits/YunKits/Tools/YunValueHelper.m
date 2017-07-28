@@ -19,6 +19,10 @@
     return [NSString stringWithFormat:format, [self intStr:intValue]];
 }
 
++ (NSString *)floatStr:(CGFloat)value {
+    return [NSString stringWithFormat:@"%0.02lf", value];
+}
+
 + (NSString *)priceStr:(CGFloat)price {
     return [NSString stringWithFormat:@"￥%0.02lf", price];
 }
@@ -36,7 +40,36 @@
     return str;
 }
 
-+ (NSString *)randomStrWithLength:(int)len {
++ (NSMutableString *)randomChinese:(NSInteger)len {
+    NSMutableString *randomChineseStr = @"".mutableCopy;
+
+    for (NSInteger i = 0; i < len; i++) {
+        NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+
+        //随机生成汉字高位
+        NSInteger randomH = 0xA1 + arc4random() % (0xFE - 0xA1 + 1);
+
+        //随机生成汉子低位
+        NSInteger randomL = 0xB0 + arc4random() % (0xF7 - 0xB0 + 1);
+
+        //组合生成随机汉字
+        NSInteger number = (randomH << 8) + randomL;
+
+        NSData *data = [NSData dataWithBytes:&number length:2];
+
+        NSString *string = [[NSString alloc] initWithData:data encoding:gbkEncoding];
+
+        [randomChineseStr appendString:string];
+    }
+
+    return randomChineseStr;
+}
+
++ (NSMutableString *)randomChineseWithMaxLength:(NSInteger)maxLen {
+    return [self randomChinese:[self randomInt:maxLen]];
+}
+
++ (NSString *)randomStrWithLength:(NSInteger)len {
     NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSMutableString *randomString = [NSMutableString stringWithCapacity:len];
 
@@ -45,6 +78,10 @@
     }
 
     return randomString;
+}
+
++ (NSString *)randomStrWithMaxLength:(NSInteger)maxLen {
+    return [self randomStrWithLength:[self randomInt:maxLen]];
 }
 
 + (NSString *)strWithDic:(NSDictionary *)dic {

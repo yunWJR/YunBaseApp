@@ -13,7 +13,7 @@
 
 + (UIColor *)hexColor:(UInt32)hex alpha:(CGFloat)alpha;
 
-+ (UIColor *)hexColorString:(NSString *)color alpha:(CGFloat)alpha;
++ (UIColor *)hexColorStr:(NSString *)color alpha:(CGFloat)alpha;
 
 + (UIColor *)randomColor;
 

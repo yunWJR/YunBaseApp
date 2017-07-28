@@ -4,10 +4,7 @@
 //
 
 #import "YunDateHelper.h"
-
-static NSString *YMD_Form = @"yyyy-MM-dd";
-
-static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
+#import "YunConfig.h"
 
 @implementation YunDateHelper
 
@@ -23,20 +20,12 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 
 #pragma mark - form
 
-+ (NSString *)getYmdForm {
-    return YMD_Form;
++ (NSString *)Ymd_Form {
+    return YunConfig.instance.dateFmYmd;
 }
 
-+ (void)setYmdForm:(NSString *)ymd {
-    YMD_Form = ymd;
-}
-
-+ (NSString *)getYmdHmForm {
-    return YMDHM_Form;
-}
-
-+ (void)setYmdHmForm:(NSString *)ymdHm {
-    YMDHM_Form = ymdHm;
++ (NSString *)YmdHm_Form {
+    return YunConfig.instance.dateFmYmdHm;
 }
 
 #pragma mark - public funtions
@@ -60,7 +49,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 
 + (NSDate *)dateByYMDStr:(NSString *)ymd {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:YMD_Form];
+    [formatter setDateFormat:self.Ymd_Form];
     NSDate *date = [formatter dateFromString:ymd];
     return date;
 }
@@ -124,7 +113,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 
 + (long long)unixIntervalByYMDStr:(NSString *)ymd {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:YMD_Form];
+    [formatter setDateFormat:self.Ymd_Form];
     NSDate *date = [formatter dateFromString:ymd];
     if (date) {
         return [self unixIntervalByDate:date];
@@ -135,7 +124,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 
 + (long long)unixIntervalByYMDHMStr:(NSString *)ymdHm {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:YMDHM_Form];
+    [formatter setDateFormat:self.YmdHm_Form];
     NSDate *date = [formatter dateFromString:ymdHm];
     if (date) {
         return [self unixIntervalByDate:date];
@@ -158,8 +147,8 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 }
 
 + (BOOL)isSameDateByYMD:(NSDate *)date1 date2:(NSDate *)date2 {
-    NSString *date1Str = [self dateStrWith:date1 andFormat:YMD_Form];
-    NSString *date2Str = [self dateStrWith:date2 andFormat:YMD_Form];
+    NSString *date1Str = [self dateStrWith:date1 andFormat:self.Ymd_Form];
+    NSString *date2Str = [self dateStrWith:date2 andFormat:self.Ymd_Form];
 
     return [date1Str isEqualToString:date2Str];
 }
@@ -175,14 +164,14 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 
 + (NSString *)dateStrYMDWith:(NSDate *)ymd {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:YMD_Form];
+    [formatter setDateFormat:self.Ymd_Form];
 
     return [formatter stringFromDate:ymd];
 }
 
 + (NSString *)dateStrYMDHMWith:(NSDate *)ymdHm {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:YMDHM_Form];
+    [formatter setDateFormat:self.YmdHm_Form];
 
     return [formatter stringFromDate:ymdHm];
 }
@@ -232,7 +221,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
     // 创建 格式 对象
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     // 设置 日期 格式 可以根据自己的需求 随时调整， 否则计算的结果可能为 nil
-    formatter.dateFormat = YMD_Form;
+    formatter.dateFormat = self.Ymd_Form;
     // 将字符串日期 转换为 NSDate 类型
     NSDate *endDate = [formatter dateFromString:dateYmd];
     // 判断当前日期 和 未来某个时刻日期 相差的天数
@@ -266,7 +255,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
     // 创建 格式 对象
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     // 设置 日期 格式 可以根据自己的需求 随时调整， 否则计算的结果可能为 nil
-    [formatter setDateFormat:YMD_Form];
+    [formatter setDateFormat:self.Ymd_Form];
     [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
 
     // 将字符串日期 转换为 NSDate 类型
@@ -335,7 +324,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
     NSInteger matchDay = 6; // 周五 1是周日 2是周一 6是周五
 
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setDateFormat:YMD_Form];
+    [dateFormatter setDateFormat:self.Ymd_Form];
     NSDate
             *curDate =
             [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-%02ld",
@@ -347,7 +336,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
 
     NSInteger days1 = daysRange.length;
 
-    // firstday
+    // first day
     NSInteger
             firstDay = [self weekdayWithDate:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
 
@@ -367,7 +356,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
     NSInteger day = cmp.day;
 
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setDateFormat:YMD_Form];
+    [dateFormatter setDateFormat:self.Ymd_Form];
     NSDate
             *firstDay =
             [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-01", (long) year, (long) month]];
@@ -434,7 +423,7 @@ static NSString *YMDHM_Form = @"yyyy-MM-dd hh:mm";
     NSInteger weekNum = [self weekNumForYear:year month:month day:day];
 
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setDateFormat:YMD_Form];
+    [dateFormatter setDateFormat:self.Ymd_Form];
 
     date =
             [dateFormatter dateFromString:[NSString stringWithFormat:@"%04ld-%02ld-%02ld",

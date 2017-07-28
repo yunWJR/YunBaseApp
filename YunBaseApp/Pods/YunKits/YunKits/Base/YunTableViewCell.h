@@ -4,6 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Masonry/Masonry.h>
 
 @interface YunTableViewCell : UITableViewCell
 
@@ -11,10 +12,17 @@
 @property (nonatomic, assign) CGFloat allOff;
 
 @property (nonatomic, assign) CGFloat topOff;
+
+@property (nonatomic, assign) CGFloat sideOff;
+
 @property (nonatomic, assign) CGFloat leftOff;
+
 @property (nonatomic, assign) CGFloat rightOff;
+
 @property (nonatomic, assign) CGFloat bottomOff;
+
 @property (nonatomic, assign) CGFloat ctnIntervalV;
+
 @property (nonatomic, assign) CGFloat ctnIntervalH;
 
 @end

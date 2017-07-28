@@ -9,7 +9,7 @@
 
 + (YunConfig *)instance;
 
-// iconfont
+// icon font
 @property (nonatomic, copy) NSString *iconFontName;
 
 // img_def_holder
@@ -30,12 +30,31 @@
 // UIViewContentModeScaleAspectFill
 @property (nonatomic, assign) UIViewContentMode imgViewDefCtnMode;
 
+//
+@property (nonatomic, assign) NSInteger iconViewTagInImgView;
+
+// btn def hl color  nil=none
+@property (nonatomic, strong) UIColor *btnDefHlColor;
+
+// NO
+@property (nonatomic, assign) BOOL btnHasHlColor;
+
 // NO
 @property (nonatomic, assign) BOOL isDebugMode;
 
 // NO
 @property (nonatomic, assign) BOOL isApnsDevMode;
 
-@property (nonatomic, assign) NSInteger iconViewTag;
+// yyyy-MM
+@property (nonatomic, copy) NSString *dateFmYm;
+
+// yyyy-MM-dd
+@property (nonatomic, copy) NSString *dateFmYmd;
+
+// yyyy-MM-dd hh:mm
+@property (nonatomic, copy) NSString *dateFmYmdHm;
+
+// hh:mm
+@property (nonatomic, copy) NSString *dateFmHm;
 
 @end

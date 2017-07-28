@@ -1,5 +1,5 @@
 # YunKits
-yun,s kits for iOS
+yun's kits for iOS
 
 for objective-c
 

@@ -9,8 +9,13 @@
 
 - (void)setTextLeftPadding:(CGFloat)leftPadding;
 
-- (void)setRadius:(CGFloat)radius color:(UIColor *)color width:(CGFloat)width;
+- (void)setRadius:(CGFloat)radius color:(UIColor *)color width:(CGFloat)width
+__deprecated_msg("已过期, 请使用setViewRadius");
 
 - (void)setPhColor:(UIColor *)phColor phFont:(UIFont *)phFont;
+
+- (void)setPhText:(NSString *)text tAl:(NSTextAlignment)tAl font:(UIFont *)font color:(UIColor *)color;
+
+- (void)addTextChangedNoti:(id)tg action:(SEL)action;
 
 @end

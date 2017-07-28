@@ -21,6 +21,7 @@
 - (void)setAllOff:(CGFloat)allOff {
     _allSideOff = allOff;
 
+    _sideOff = _allSideOff;
     _topOff = _allSideOff;
     _leftOff = _allSideOff;
     _rightOff = _allSideOff;

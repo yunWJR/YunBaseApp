@@ -77,4 +77,6 @@
 
 + (UIColor *)colorCustomByKey:(NSString *)key;
 
++ (UIColor *)colorIn:(NSInteger)index;
+
 @end
