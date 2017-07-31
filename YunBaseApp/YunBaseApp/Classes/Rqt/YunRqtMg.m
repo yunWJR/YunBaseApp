@@ -4,6 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <YunKits/YunGlobalDefine.h>
 #import "YunRqtMg.h"
 #import "AFHTTPSessionManager.h"
 #import "YunValueVerifier.h"
@@ -27,6 +28,8 @@
     //_rqMg.requestSerializer = [AFHTTPRequestSerializer serializer];
     //[_rqMg.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     //[_rqMg.requestSerializer setValue:@"*/*" forHTTPHeaderField:@"Accept"];
+
+    [self setHeaderPara:YunRqtConfig.instance.headerParas];
 
     return self;
 }
@@ -56,6 +59,8 @@
             URLString = [NSString stringWithFormat:@"%@?%@", URLString, paraStr];
         }
         parameters = [NSDictionary new];
+
+        [YunLogHelper logMsg:FORMAT(@"POST:URLString--%@", [_rqMg.requestSerializer HTTPRequestHeaders])];
     }
 
     [_rqMg POST:URLString
@@ -76,13 +81,18 @@
           failure:failure];
 }
 
-- (void)setHeaderToken:(NSString *_Nonnull)token {
-    //if ([YunValueVerifier isNilOrEmptyStr:token]) {return;}
+- (void)setHeaderPara:(NSDictionary *)paras {
+    if (paras == nil || paras.count == 0) {return;}
 
-    [_rqMg.requestSerializer setValue:token forHTTPHeaderField:YunRqtConfig.instance.tokenParaName];
+    for (int i = 0; i < paras.allKeys.count; ++i) {
+        NSString *keyStr = paras.allKeys[i];
+        NSString *valueStr = paras[keyStr];
 
-    [YunLogHelper logMsg:[NSString stringWithFormat:@"requestSerializer--%@",
-                                                    [_rqMg.requestSerializer HTTPRequestHeaders]]];
+        [_rqMg.requestSerializer setValue:valueStr
+                       forHTTPHeaderField:keyStr];
+    }
+
+    [YunLogHelper logMsg:FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders])];
 }
 
 @end

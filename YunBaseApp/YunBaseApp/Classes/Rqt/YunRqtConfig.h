@@ -27,6 +27,8 @@
 
 @property (nonatomic, copy) NSString *pageSizeParaName;
 
+@property (nonatomic, assign) NSDictionary *baseParas;
+
 #pragma mark - rps
 
 @property (nonatomic, copy) NSString *rspCodeName;
@@ -41,7 +43,7 @@
 
 @property (nonatomic, assign) BOOL postParaMode;
 
-@property (nonatomic, assign) BOOL isTokenHeader;
+@property (nonatomic, assign) NSDictionary *headerParas;
 
 + (YunRqtConfig *)instance;
 

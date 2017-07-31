@@ -15,15 +15,8 @@
 @implementation YunRqtUrlHelper
 
 + (NSMutableDictionary *)getBasePara {
-    NSMutableDictionary *paraDic = [NSMutableDictionary dictionaryWithCapacity:2];
-
-    if (YunRqtConfig.instance.apiKey) {
-        paraDic[YunRqtConfig.instance.apiKeyParaName] = YunRqtConfig.instance.apiKey;
-    }
-
-    if (YunRqtConfig.instance.devType) {
-        paraDic[YunRqtConfig.instance.devTypeParaName] = YunRqtConfig.instance.devType;
-    }
+    NSMutableDictionary *paraDic =
+            [[NSMutableDictionary alloc] initWithDictionary:YunRqtConfig.instance.baseParas];
 
     return paraDic;
 }

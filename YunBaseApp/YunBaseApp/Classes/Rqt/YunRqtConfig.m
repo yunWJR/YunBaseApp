@@ -41,7 +41,6 @@
     self.rstSuccessName = @"success";
 
     self.postParaMode = NO;
-    self.isTokenHeader = NO;
 }
 
 @end

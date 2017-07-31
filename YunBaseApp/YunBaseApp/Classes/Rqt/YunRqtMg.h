@@ -30,6 +30,6 @@
        success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
        failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure;
 
-- (void)setHeaderToken:(NSString *_Nonnull)token;
+- (void)setHeaderPara:(NSDictionary *_Nonnull)paras;
 
 @end
