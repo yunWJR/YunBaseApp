@@ -88,8 +88,14 @@
         NSString *keyStr = paras.allKeys[i];
         NSString *valueStr = paras[keyStr];
 
-        [_rqMg.requestSerializer setValue:valueStr
-                       forHTTPHeaderField:keyStr];
+        if ([YunValueVerifier isValidStr:valueStr]) {
+            [_rqMg.requestSerializer setValue:valueStr
+                           forHTTPHeaderField:keyStr];
+        }
+        else {
+            [_rqMg.requestSerializer setValue:@""
+                           forHTTPHeaderField:keyStr];
+        }
     }
 
     [YunLogHelper logMsg:FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders])];

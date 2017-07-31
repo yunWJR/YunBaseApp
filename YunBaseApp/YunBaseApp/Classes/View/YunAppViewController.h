@@ -24,6 +24,8 @@
 
 @property (nonatomic, strong) YunBlankView *stateView;
 
+@property (nonatomic, strong) YunBlankView *loadView;
+
 - (void)setNagBg:(UIColor *)color;
 
 - (void)setNagTitle:(UIColor *)color font:(UIFont *)font;
