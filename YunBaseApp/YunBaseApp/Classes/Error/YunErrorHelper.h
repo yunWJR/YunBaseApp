@@ -15,6 +15,16 @@
 
 + (instancetype)itemWithRpsError:(YunRqtRpsHelper *)rps;
 
++ (instancetype)itemWithError:(NSError *)error;
+
++ (instancetype)netWorkDownError;
+
++ (instancetype)noCachError;
+
++ (instancetype)modelError;
+
++ (instancetype)upImgError;
+
 - (YunErrorModel *)getError;
 
 @end
