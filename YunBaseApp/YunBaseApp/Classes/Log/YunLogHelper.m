@@ -11,6 +11,8 @@
 }
 
 + (void)logMsg:(NSString *)msg {
+    if (msg == nil) {return;}
+    
     if (YunConfig.instance.isDebugMode) {
         NSLog(msg, nil);
     }
