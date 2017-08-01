@@ -27,7 +27,7 @@
 
 @property (nonatomic, copy) NSString *pageSizeParaName;
 
-@property (nonatomic, strong) NSDictionary *baseParas;
+@property (nonatomic, strong) NSMutableDictionary *baseParas;
 
 #pragma mark - rps
 
@@ -43,7 +43,7 @@
 
 @property (nonatomic, assign) BOOL postParaMode;
 
-@property (nonatomic, strong) NSDictionary *headerParas;
+@property (nonatomic, strong) NSMutableDictionary *headerParas;
 
 + (YunRqtConfig *)instance;
 
