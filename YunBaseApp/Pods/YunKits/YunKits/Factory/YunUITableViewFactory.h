@@ -7,12 +7,12 @@
 
 @interface YunUITableViewFactory : NSObject
 
-+ (UITableView *)tvWithTg:(id)target
-                  classes:(NSArray *)classes
-                      ids:(NSArray *)ids;
++ (UITableView *)tvWithTg:(id _Nullable)target
+                  classes:(NSArray *_Nullable)classes
+                      ids:(NSArray *_Nullable)ids;
 
-+ (UITableView *)tvWithTg:(id)target
-                classItem:(nullable Class)cellClass
-                      ids:(NSArray *)ids;
++ (UITableView *)tvWithTg:(id _Nullable)target
+                classItem:(Class _Nullable)cellClass
+                      ids:(NSArray *_Nullable)ids;
 
 @end

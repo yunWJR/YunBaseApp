@@ -23,6 +23,8 @@
 
 @property (nonatomic, strong) YunBlankView *stateView;
 
+@property (nonatomic, strong) YunBlankView *msgView;
+
 #pragma mark - public functions
 
 - (void)updateData:(BOOL)force;

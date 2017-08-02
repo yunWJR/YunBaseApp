@@ -16,7 +16,7 @@
 @implementation YunRqtRpsHelper
 
 - (instancetype)initWithRsp:(id)rspObj {
-    [YunLogHelper logMsg:[NSString stringWithFormat:@"JSON: %@", rspObj]];
+    [YunLogHelper logMsg:[NSString stringWithFormat:@"RspObj: %@", rspObj]];
 
     self = [super init];
     if (self) {
@@ -27,7 +27,7 @@
 }
 
 - (BOOL)isSuccess {
-    if ([self.rspObj[YunRqtConfig.instance.rspCodeName] isEqual:@"200"]) {
+    if ([self.rspObj[YunRqtConfig.instance.rspCodeName] isEqual:YunRqtConfig.instance.rstSuccessCode]) {
         return YES;
     }
 

@@ -7,13 +7,16 @@
 #import "YunConfig.h"
 
 @implementation YunLogHelper {
-
 }
 
 + (void)logMsg:(NSString *)msg {
-    if (msg == nil) {return;}
-    
+
     if (YunConfig.instance.isDebugMode) {
+        if (msg == nil) {
+            NSLog(@"Log:NO Msg");
+            return;
+        }
+
         NSLog(msg, nil);
     }
 }

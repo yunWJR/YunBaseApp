@@ -40,6 +40,8 @@
     self.rstErrName = @"errorMsg";
     self.rstSuccessName = @"success";
 
+    self.rstSuccessCode = @"200";
+
     self.postParaMode = NO;
 }
 

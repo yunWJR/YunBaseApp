@@ -28,7 +28,7 @@
 }
 
 + (UITableView *)tvWithTg:(id)target
-                classItem:(nullable Class)cellClass
+                classItem:(Class)cellClass
                       ids:(NSArray *)ids {
     UITableView *tvc = [[UITableView alloc] init];
     tvc.delegate = target;

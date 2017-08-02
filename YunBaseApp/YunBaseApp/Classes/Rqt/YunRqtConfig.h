@@ -39,6 +39,8 @@
 
 @property (nonatomic, copy) NSString *rstSuccessName;
 
+@property (nonatomic, copy) NSString *rstSuccessCode;
+
 #pragma mark - rqt mg
 
 @property (nonatomic, assign) BOOL postParaMode;
