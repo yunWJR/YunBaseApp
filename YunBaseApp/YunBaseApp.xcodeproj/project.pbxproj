@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D4D2027ABDA4D9CCD791903 /* YunRqtRpsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D21FA93B1B68F28406A82 /* YunRqtRpsHelper.m */; };
+		1D4D205E805A1EBE22BE9501 /* YunAppConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4D2378DA51111F5A79FF94 /* YunAppConfig.h */; };
 		1D4D2081F2817CAF1BBF11FD /* YunAppTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4D22A6F9CD02D3D8480443 /* YunAppTheme.h */; };
 		1D4D20A3923A0DA55A50E2B4 /* YunErrorHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4D2D42368776DFBE82784D /* YunErrorHeader.h */; };
 		1D4D20EE8EDC69C3B6C1B916 /* YunRqtMg.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D23BFC11FC39167A92E85 /* YunRqtMg.m */; };
@@ -18,6 +19,7 @@
 		1D4D227C4D0D0E69E95ECBE4 /* YunAppTheme+IconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D20826F9736BC4B593186 /* YunAppTheme+IconFont.m */; };
 		1D4D22A328D63B7B7B887216 /* YunAppThemeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4D2750A0A86655A8345ED9 /* YunAppThemeHeader.h */; };
 		1D4D235AC6EFE66DC85E5072 /* YunAppTheme+Font.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4D236B0DB043A24EA1A0DB /* YunAppTheme+Font.h */; };
+		1D4D238EB49211D4C2AB87AC /* YunAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D2A60902CC64112071A0B /* YunAppConfig.m */; };
 		1D4D239A8587A0747861D986 /* YunRqtConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4D2D2358F5AAB47F41AA4F /* YunRqtConfig.h */; };
 		1D4D264D3A717F679CB7613F /* YunErrorConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4D2DBF32101961C15F0F14 /* YunErrorConfig.h */; };
 		1D4D26B2F79C401A2E6C7314 /* YunErrorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D2A3F99F18B31A7313C89 /* YunErrorModel.m */; };
@@ -63,6 +65,7 @@
 		1D4D23606392C56C4C580276 /* YunRqtHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunRqtHeader.h; sourceTree = "<group>"; };
 		1D4D236B0DB043A24EA1A0DB /* YunAppTheme+Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YunAppTheme+Font.h"; sourceTree = "<group>"; };
 		1D4D236CE405269DF8F81D52 /* YunErrorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunErrorHelper.h; sourceTree = "<group>"; };
+		1D4D2378DA51111F5A79FF94 /* YunAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunAppConfig.h; sourceTree = "<group>"; };
 		1D4D23BFC11FC39167A92E85 /* YunRqtMg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunRqtMg.m; sourceTree = "<group>"; };
 		1D4D249916536A51C89B500E /* YunAppThemeColorConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunAppThemeColorConfig.m; sourceTree = "<group>"; };
 		1D4D258A34D9A5152AF184BC /* YunLogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunLogHelper.h; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		1D4D29C76F4FFB1F37C719CE /* YunRqtConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunRqtConfig.m; sourceTree = "<group>"; };
 		1D4D2A200FA14B0E5F1326A7 /* YunAppTheme+Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YunAppTheme+Font.m"; sourceTree = "<group>"; };
 		1D4D2A3F99F18B31A7313C89 /* YunErrorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunErrorModel.m; sourceTree = "<group>"; };
+		1D4D2A60902CC64112071A0B /* YunAppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunAppConfig.m; sourceTree = "<group>"; };
 		1D4D2AAB11AD908260590510 /* YunBaseApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunBaseApp.h; sourceTree = "<group>"; };
 		1D4D2BB422A31552A4A4C869 /* YunRqtUrlHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunRqtUrlHelper.h; sourceTree = "<group>"; };
 		1D4D2BC32080E108EDB1B09D /* YunAppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunAppView.m; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				1D4D20017CA667C1FE824B4B /* YunAppViewController.m */,
 				1D4D21CF2F0FA300A24D5F44 /* YunBlankView.m */,
 				1D4D2CABFB09395102914CF9 /* YunBlankView.h */,
+				1D4D2A60902CC64112071A0B /* YunAppConfig.m */,
+				1D4D2378DA51111F5A79FF94 /* YunAppConfig.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				1D4D20A3923A0DA55A50E2B4 /* YunErrorHeader.h in Headers */,
 				1D4D2F6BD0324BE9198CF50F /* YunRqtHeader.h in Headers */,
 				1D4D28209DC25C31C1EE495C /* YunBaseAppNorHeader.h in Headers */,
+				1D4D205E805A1EBE22BE9501 /* YunAppConfig.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +407,7 @@
 				1D4D26B2F79C401A2E6C7314 /* YunErrorModel.m in Sources */,
 				1D4D2BA89FDED7AA048A8008 /* YunErrorConfig.m in Sources */,
 				1D4D2C67CA7C59886BDF7391 /* YunBlankView.m in Sources */,
+				1D4D238EB49211D4C2AB87AC /* YunAppConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@
 
 #import "YunAppView.h"
 #import "UIView+YunAdd.h"
+#import "YunAppConfig.h"
 
 @implementation YunAppView {
     UIViewController *_superVc;
@@ -13,6 +14,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         _firstLoad = YES;
+        _updateInterval = YunAppConfig.instance.viewUpdateInterval;
     }
     return self;
 }

@@ -4,6 +4,7 @@
 //
 
 #import "YunAppViewController.h"
+#import "YunAppConfig.h"
 
 @interface YunAppViewController () {
 }
@@ -18,7 +19,7 @@
     if (self) {
         _updateItem = YES;
 
-        _updateInterval = 120;
+        _updateInterval = YunAppConfig.instance.viewUpdateInterval;
     }
 
     return self;
