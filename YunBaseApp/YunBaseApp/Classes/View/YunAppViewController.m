@@ -17,6 +17,8 @@
 
     if (self) {
         _updateItem = YES;
+
+        _updateInterval = 120;
     }
 
     return self;
@@ -140,10 +142,39 @@
 
 #pragma mark - request functions
 
+- (void)rqtDataFromServer:(BOOL)force {
+    if (force || self.canUpdate) {
+        [self rqtDataFromServer];
+    }
+    else {
+        return;
+    }
+}
+
 - (void)rqtDataFromServer {
+    //[self setCurUpdateDate];
+}
+
+- (void)rqtMoreDataFromServer {
 }
 
 - (void)updateVcData {
+    [self setCurUpdateDate];
+}
+
+#pragma mark - update date
+
+- (void)setCurUpdateDate {
+    _lastUpdateDate = [NSDate date];
+}
+
+- (BOOL)canUpdate {
+    if (_lastUpdateDate == nil) {
+        return YES;
+    }
+
+    NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:_lastUpdateDate];
+    return time > _updateInterval;
 }
 
 @end

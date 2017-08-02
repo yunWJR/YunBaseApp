@@ -26,6 +26,12 @@
 
 @property (nonatomic, strong) YunBlankView *msgView;
 
+// 最后一次更新信息
+@property (nonatomic, strong) NSDate *lastUpdateDate;
+
+// 120秒
+@property (nonatomic, assign) NSTimeInterval updateInterval;
+
 - (void)setNagBg:(UIColor *)color;
 
 - (void)setNagTitle:(UIColor *)color font:(UIFont *)font;
@@ -46,8 +52,18 @@
 
 #pragma mark - request
 
+- (void)rqtDataFromServer:(BOOL)force;
+
 - (void)rqtDataFromServer;
 
+- (void)rqtMoreDataFromServer;
+
 - (void)updateVcData;
+
+#pragma mark - update date
+
+- (void)setCurUpdateDate;
+
+- (BOOL)canUpdate;
 
 @end
