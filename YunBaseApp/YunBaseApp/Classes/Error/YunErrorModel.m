@@ -4,6 +4,9 @@
 //
 
 #import "YunErrorModel.h"
+#import "YunValueHelper.h"
+#import <YunKits/YunGlobalDefine.h>
+#import <YunKits/YunConfig.h>
 
 @implementation YunErrorModel
 
@@ -22,5 +25,17 @@
     return [[self alloc] initWithType:type code:code msg:msg];
 }
 
+- (NSString *)getMsgByMode {
+    if (YunConfig.instance.isDebugMode) {
+        return self.getDetailMsg;
+    }
+    else {
+        return _msg;
+    }
+}
+
+- (NSString *)getDetailMsg {
+    return FORMAT(@"错误信息：%@\n错误码：%@", _msg, [YunValueHelper intStr:_code]);
+}
 
 @end

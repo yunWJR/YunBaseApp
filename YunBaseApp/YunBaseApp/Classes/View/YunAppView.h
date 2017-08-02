@@ -3,9 +3,9 @@
 //  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
 //
 
+#import "YunBaseAppNorHeader.h"
 #import <YunKits/YunView.h>
 #import <YunKits/YunFactory.h>
-#import "YunBaseAppNorHeader.h"
 
 @class YunBlankView;
 
@@ -25,8 +25,30 @@
 
 @property (nonatomic, strong) YunBlankView *msgView;
 
+// 最后一次更新信息
+@property (nonatomic, strong) NSDate *lastUpdateDate;
+
+// 120秒
+@property (nonatomic, assign) NSTimeInterval updateInterval;
+
 #pragma mark - public functions
 
 - (void)updateData:(BOOL)force;
+
+#pragma mark - request
+
+- (void)rqtDataFromServer:(BOOL)force;
+
+- (void)rqtDataFromServer;
+
+- (void)rqtMoreDataFromServer;
+
+- (void)updateVcData;
+
+#pragma mark - update date
+
+- (void)setCurUpdateDate;
+
+- (BOOL)canUpdate;
 
 @end

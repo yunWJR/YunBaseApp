@@ -152,7 +152,7 @@
 }
 
 - (void)rqtDataFromServer {
-    //[self setCurUpdateDate];
+    [self setCurUpdateDate];
 }
 
 - (void)rqtMoreDataFromServer {

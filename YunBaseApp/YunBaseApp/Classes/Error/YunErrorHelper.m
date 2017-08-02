@@ -62,7 +62,7 @@
 #pragma mark - public functions
 
 - (YunErrorModel *)getError {
-    return [YunErrorConfig.instance getErrorItem:_error.code];
+    return [YunErrorConfig.instance getErrorItem:_error];
 }
 
 @end

@@ -3,7 +3,6 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "YunErrorConfig.h"
 
 @interface YunErrorModel : NSObject
@@ -15,5 +14,9 @@
 @property (nonatomic, copy) NSString *msg;
 
 + (instancetype)itemWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg;
+
+- (NSString *)getMsgByMode;
+
+- (NSString *)getDetailMsg;
 
 @end

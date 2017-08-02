@@ -57,6 +57,6 @@ typedef enum : NSInteger {
 
 - (void)addItem:(YunErrorType)type code:(YunErrorCodeAndMsg *)code;
 
-- (YunErrorModel *)getErrorItem:(NSInteger)code;
+- (YunErrorModel *)getErrorItem:(NSError *)error;
 
 @end

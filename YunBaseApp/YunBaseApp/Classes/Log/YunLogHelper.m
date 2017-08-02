@@ -13,7 +13,7 @@
 
     if (YunConfig.instance.isDebugMode) {
         if (msg == nil) {
-            NSLog(@"Log:NO Msg");
+            NSLog(@"Log: NO Msg");
             return;
         }
 

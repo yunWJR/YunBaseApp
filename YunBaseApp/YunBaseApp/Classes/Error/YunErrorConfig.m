@@ -5,6 +5,8 @@
 
 #import "YunErrorConfig.h"
 #import "YunErrorModel.h"
+#import <YunKits/NSError+YunAdd.h>
+#import <YunKits/YunGlobalDefine.h>
 
 @implementation YunErrorCodeAndMsg
 
@@ -119,7 +121,9 @@
     }
 }
 
-- (YunErrorModel *)getErrorItem:(NSInteger)code {
+- (YunErrorModel *)getErrorItem:(NSError *)error {
+    NSInteger code = error.code;
+
     for (int i = 0; i < self.errorMap.count; ++i) {
         for (int j = 0; j < self.errorMap[i].codes.count; ++j) {
             if (self.errorMap[i].codes[j].code == code) {
@@ -135,7 +139,17 @@
         }
     }
 
-    return nil;
+    NSString *errMsg = [error.userInfo valueForKey:CUSTOM_MSG_KEY];
+    NSString *msg = nil;
+
+    if (errMsg) {
+        msg = FORMAT(@"%@", errMsg);
+    }
+    else {
+        msg = FORMAT(@"%@", error.userInfo);
+    }
+
+    return [YunErrorModel itemWithType:YunErrTypeUnknown code:error.code msg:msg];
 }
 
 @end
