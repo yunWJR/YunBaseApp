@@ -123,11 +123,14 @@
     for (int i = 0; i < self.errorMap.count; ++i) {
         for (int j = 0; j < self.errorMap[i].codes.count; ++j) {
             if (self.errorMap[i].codes[j].code == code) {
-                [YunErrorModel itemWithType:self.errorMap[i].type
-                                       code:code
-                                        msg:self.errorMap[i].codes[j].msg == nil ?
-                                            self.errorMap[i].defMsg :
-                                            self.errorMap[i].codes[j].msg];
+                YunErrorModel *item =
+                        [YunErrorModel itemWithType:self.errorMap[i].type
+                                               code:code
+                                                msg:self.errorMap[i].codes[j].msg == nil ?
+                                                    self.errorMap[i].defMsg :
+                                                    self.errorMap[i].codes[j].msg];
+
+                return item;
             }
         }
     }
