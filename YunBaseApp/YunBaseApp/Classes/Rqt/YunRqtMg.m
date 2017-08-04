@@ -26,11 +26,11 @@
     _rqMg = [AFHTTPSessionManager manager];
 
     if (YunRqtConfig.instance.responseSerializer) { //响应
-        _rqMg.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _rqMg.responseSerializer = YunRqtConfig.instance.responseSerializer;
     }
 
     if (YunRqtConfig.instance.requestSerializer) {
-        _rqMg.requestSerializer = [AFHTTPRequestSerializer serializer];
+        _rqMg.requestSerializer = YunRqtConfig.instance.requestSerializer;
 
         //[_rqMg.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         //[_rqMg.requestSerializer setValue:@"*/*" forHTTPHeaderField:@"Accept"];
