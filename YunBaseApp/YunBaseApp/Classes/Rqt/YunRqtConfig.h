@@ -4,9 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol AFURLRequestSerialization;
-@protocol AFURLResponseSerialization;
+#import "AFNetworking.h"
 
 @interface YunRqtConfig : NSObject
 
