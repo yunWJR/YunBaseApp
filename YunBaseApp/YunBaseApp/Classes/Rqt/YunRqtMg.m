@@ -24,10 +24,17 @@
     }
 
     _rqMg = [AFHTTPSessionManager manager];
-    //_rqMg.responseSerializer = [AFHTTPResponseSerializer serializer];//响应
-    //_rqMg.requestSerializer = [AFHTTPRequestSerializer serializer];
-    //[_rqMg.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    //[_rqMg.requestSerializer setValue:@"*/*" forHTTPHeaderField:@"Accept"];
+
+    if (YunRqtConfig.instance.responseSerializer) { //响应
+        _rqMg.responseSerializer = [AFHTTPResponseSerializer serializer];
+    }
+
+    if (YunRqtConfig.instance.requestSerializer) {
+        _rqMg.requestSerializer = [AFHTTPRequestSerializer serializer];
+
+        //[_rqMg.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        //[_rqMg.requestSerializer setValue:@"*/*" forHTTPHeaderField:@"Accept"];
+    }
 
     [self setHeaderPara:YunRqtConfig.instance.headerParas];
 

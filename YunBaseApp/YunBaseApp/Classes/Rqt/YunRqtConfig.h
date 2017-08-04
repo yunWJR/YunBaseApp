@@ -5,6 +5,9 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AFURLRequestSerialization;
+@protocol AFURLResponseSerialization;
+
 @interface YunRqtConfig : NSObject
 
 #pragma mark - url
@@ -46,6 +49,10 @@
 @property (nonatomic, assign) BOOL postParaMode;
 
 @property (nonatomic, strong) NSMutableDictionary *headerParas;
+
+@property (nonatomic, strong) AFHTTPRequestSerializer <AFURLRequestSerialization> *requestSerializer;
+
+@property (nonatomic, strong) AFHTTPResponseSerializer <AFURLResponseSerialization> *responseSerializer;
 
 + (YunRqtConfig *)instance;
 
