@@ -25,6 +25,13 @@
      success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
      failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure;
 
+- (void)POST:(NSString *_Nonnull)URLString
+  parameters:(nullable id)parameters
+    paraMode:(BOOL)paraMode
+    progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
+     success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
+     failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure;
+
 - (void)DELETE:(NSString *_Nonnull)URLString
     parameters:(nullable id)parameters
        success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
