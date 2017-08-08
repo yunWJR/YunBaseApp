@@ -63,7 +63,7 @@
      failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
     // post 参数修改
-    if (YunRqtConfig.instance.postParaMode) {
+    if (YunRqtConfig.instance.queryMode) {
         NSString *paraStr = AFQueryStringFromParameters(parameters);
         if (![YunValueVerifier isNilOrEmptyStr:paraStr]) {
             URLString = [NSString stringWithFormat:@"%@?%@", URLString, paraStr];
@@ -82,13 +82,13 @@
 
 - (void)POST:(NSString *_Nonnull)URLString
   parameters:(nullable id)parameters
-    paraMode:(BOOL)paraMode
+   queryMode:(BOOL)queryMode
     progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
      success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
      failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
     // post 参数修改
-    if (paraMode) {
+    if (queryMode) {
         NSString *paraStr = AFQueryStringFromParameters(parameters);
         if (![YunValueVerifier isNilOrEmptyStr:paraStr]) {
             URLString = [NSString stringWithFormat:@"%@?%@", URLString, paraStr];

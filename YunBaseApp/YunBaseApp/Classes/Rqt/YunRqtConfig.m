@@ -44,7 +44,7 @@
 
     self.rstSuccessCode = @"200";
 
-    self.postParaMode = NO;
+    self.queryMode = NO;
 }
 
 @end

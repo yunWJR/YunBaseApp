@@ -44,7 +44,7 @@
 
 #pragma mark - rqt mg
 
-@property (nonatomic, assign) BOOL postParaMode;
+@property (nonatomic, assign) BOOL queryMode;
 
 @property (nonatomic, strong) NSMutableDictionary *headerParas;
 
