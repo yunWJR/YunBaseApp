@@ -47,7 +47,9 @@
 
         if (_updateItem) {
             // 返回item
-            self.navigationItem.leftBarButtonItem = self.hideNagBarBackItem ? nil : self.leftNagItem;
+            if (!self.hideNagBarBackItem) {
+                self.navigationItem.leftBarButtonItem = self.leftNagItem;
+            }
 
             // right item
             self.navigationItem.rightBarButtonItem = self.rightNagItem;
