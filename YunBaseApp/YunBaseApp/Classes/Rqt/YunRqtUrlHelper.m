@@ -3,9 +3,9 @@
 //  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
 //
 
-#import <CommonCrypto/CommonDigest.h>
 #import "YunRqtUrlHelper.h"
 #import "YunRqtConfig.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @interface YunRqtUrlHelper () {
 }

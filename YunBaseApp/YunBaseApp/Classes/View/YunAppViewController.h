@@ -3,9 +3,8 @@
 //  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
 //
 
-#import <YunKits/YunViewController.h>
-#import <YunKits/YunFactory.h>
 #import "YunBaseAppNorHeader.h"
+#import <YunKits/YunViewController.h>
 
 @class YunBlankView;
 

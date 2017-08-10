@@ -10,7 +10,6 @@
 }
 
 + (void)logMsg:(NSString *)msg {
-
     if (YunConfig.instance.isDebugMode) {
         if (msg == nil) {
             NSLog(@"Log: NO Msg");

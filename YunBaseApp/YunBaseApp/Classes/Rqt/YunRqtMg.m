@@ -3,9 +3,8 @@
 // Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <YunKits/YunGlobalDefine.h>
 #import "YunRqtMg.h"
+#import <YunKits/YunGlobalDefine.h>
 #import "AFHTTPSessionManager.h"
 #import "YunValueVerifier.h"
 #import "YunLogHelper.h"
