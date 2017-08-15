@@ -34,6 +34,8 @@
               tAl:(NSTextAlignment)tAl
              font:(UIFont *)font
             color:(UIColor *)color {
+    if (text == nil) {return;}
+
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
     style.alignment = tAl;
 

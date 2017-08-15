@@ -9,7 +9,7 @@
 @interface YunViewController : UIViewController
 
 // 返回视图,nil则返回上一级视图 // 默认nil
-@property (nonatomic, weak) UIViewController *backVC;
+@property (nonatomic, weak) YunViewController *backVC;
 
 // 导航栏隐藏属性 // 默认NO
 @property (nonatomic, assign) BOOL hideNagBar;

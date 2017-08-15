@@ -27,17 +27,23 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_MAX, 0)];
     label.text = text;
     label.font = font;
-    [label sizeToFit];
 
-    return label.frame.size.width;
+    return [label getTextWidth];
+}
+
++ (CGFloat)calWidthWithTextAt:(NSAttributedString *)at {
+    UILabel *label = [UILabel new];
+    label.attributedText = at;
+
+    return [label getTextWidth];
 }
 
 - (CGFloat)getTextHeightByWidth:(CGFloat)width {
-    return [self getHeightByWidth:width text:self.text font:self.font];
+    return [UILabel calHeightByWidth:width text:self.text font:self.font];
 }
 
 - (CGFloat)getOneLineHeight {
-    return [self getHeightByWidth:100 text:@"字" font:self.font];
+    return [UILabel calHeightByWidth:100 text:@"字" font:self.font];
 }
 
 - (CGFloat)getTextWidth {
@@ -91,16 +97,6 @@
                   range:NSMakeRange(0, text.length)];
 
     self.attributedText = atStr;
-}
-
-- (CGFloat)getHeightByWidth:(CGFloat)width text:(NSString *)text font:(UIFont *)font {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 0)];
-    label.text = text;
-    label.font = font;
-    label.numberOfLines = 0;
-    [label sizeToFit];
-
-    return label.frame.size.height;
 }
 
 @end

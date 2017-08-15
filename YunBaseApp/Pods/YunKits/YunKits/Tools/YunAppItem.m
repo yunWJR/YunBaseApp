@@ -8,9 +8,11 @@
 #import "YunSystemMediaHelper.h"
 #import "SDImageCache.h"
 #import "sys/utsname.h"
+#import "YunConfig.h"
+#import "YunValueVerifier.h"
+#import "YunGlobalDefine.h"
 
 @implementation YunAppItem {
-
 }
 
 + (UIWindow *)appWindow {
@@ -150,6 +152,32 @@
             return vc;
         }
     }
+}
+
++ (BOOL)gotoAppStoreComment {
+    if ([YunValueVerifier isInvalidStr:YunConfig.instance.appId]) {
+        return NO;
+    }
+
+    NSString *urlStr =
+            FORMAT(@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@&pageNumber=0&sortOrdering=2&mt=8",
+                   YunConfig.instance.appId);
+
+    [YunSystemMediaHelper openURL:urlStr];
+
+    return YES;
+}
+
++ (BOOL)gotoAppStore {
+    if ([YunValueVerifier isInvalidStr:YunConfig.instance.appId]) {
+        return NO;
+    }
+
+    NSString *urlStr = FORMAT(@"itms-apps://itunes.apple.com/app/id%@", YunConfig.instance.appId);
+
+    [YunSystemMediaHelper openURL:urlStr];
+
+    return YES;
 }
 
 @end

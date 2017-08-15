@@ -29,4 +29,8 @@
 // 获取当前正在显示的控制器
 + (UIViewController *)getVisibleVcFrom:(UIViewController *)vc;
 
++ (BOOL)gotoAppStoreComment;
+
++ (BOOL)gotoAppStore;
+
 @end

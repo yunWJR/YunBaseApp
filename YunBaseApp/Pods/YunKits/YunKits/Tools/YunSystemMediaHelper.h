@@ -16,4 +16,6 @@
 
 + (void)openURL:(NSString *__nonnull)url;
 
++ (void)openURL:(NSString *)url cmp:(void (^ __nullable)(BOOL success))cmp;
+
 @end

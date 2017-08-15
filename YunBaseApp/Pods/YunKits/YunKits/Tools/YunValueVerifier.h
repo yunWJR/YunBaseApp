@@ -18,6 +18,8 @@
 // 不是nil，空，全空格
 + (BOOL)isValidStr:(NSString *)str;
 
++ (BOOL)isInvalidStr:(NSString *)str;
+
 + (BOOL)isNilOrEmptyDic:(id)model;
 
 + (BOOL)isNilOrEmptyArray:(NSArray *)array;

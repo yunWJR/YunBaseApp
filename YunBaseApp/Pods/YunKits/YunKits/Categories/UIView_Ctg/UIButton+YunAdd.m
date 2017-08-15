@@ -14,6 +14,8 @@
 }
 
 - (CGFloat)getTitleWidth {
+    return [UILabel calWidthWithText:[self titleForState:UIControlStateNormal] font:self.titleLabel.font];
+
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_MAX, 0)];
     if (self.titleLabel.attributedText) {
         label.attributedText = self.titleLabel.attributedText;

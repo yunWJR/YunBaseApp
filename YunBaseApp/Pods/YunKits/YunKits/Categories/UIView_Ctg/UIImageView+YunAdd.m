@@ -9,6 +9,7 @@
 #import "UIImageView+YunAdd.h"
 #import "YunValueVerifier.h"
 #import "YunConfig.h"
+#import "NSURL+YunAdd.h"
 
 @implementation UIImageView (YunAdd)
 
@@ -20,7 +21,7 @@
         return;
     }
 
-    [self sd_setImageWithURL:[NSURL URLWithString:urlStr]
+    [self sd_setImageWithURL:[NSURL urlWithStr:urlStr]
             placeholderImage:phImg
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        if (!image) {
@@ -36,7 +37,7 @@
         return;
     }
 
-    [self sd_setImageWithURL:[NSURL URLWithString:urlStr]
+    [self sd_setImageWithURL:[NSURL urlWithStr:urlStr]
             placeholderImage:img
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        if (!image) {
@@ -53,7 +54,7 @@
         return;
     }
 
-    [self sd_setImageWithURL:[NSURL URLWithString:urlStr]
+    [self sd_setImageWithURL:[NSURL urlWithStr:urlStr]
             placeholderImage:phImg
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        if (!image) {

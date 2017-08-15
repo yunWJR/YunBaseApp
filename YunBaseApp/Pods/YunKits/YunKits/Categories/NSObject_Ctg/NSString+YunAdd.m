@@ -9,7 +9,7 @@
 @implementation NSString (YunAdd)
 
 - (NSString *)strByDefCtn:(NSString *)ctn {
-    return [YunValueVerifier isValidStr:ctn] ? self : ctn;
+    return [YunValueVerifier isValidStr:self] ? self : ctn;
 }
 
 @end

@@ -13,6 +13,6 @@
 
 + (BOOL)shouldUpdate:(NSString *)serverVersion;
 
-+ (void)fontPrint;
++ (void)printAllFont;
 
 @end

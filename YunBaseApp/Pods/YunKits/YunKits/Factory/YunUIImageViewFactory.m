@@ -12,26 +12,23 @@
 
 @implementation YunUIImageViewFactory
 
-+ (UIImageView *)imgView {
-    UIImageView *imgView = [[UIImageView alloc] init];
-    imgView.contentMode = YunConfig.instance.imgViewDefCtnMode; // 默认的显示模式
-    imgView.clipsToBounds = YES;
-
-    imgView.backgroundColor = [UIColor clearColor];
-
-    return imgView;
-}
-
 + (UIImageView *)imgViewWithImgName:(NSString *)imgName mode:(UIViewContentMode)mode {
-    UIImageView *imgView = [[UIImageView alloc] init];
+    UIImageView *imgView = [UIImageView new];
     imgView.contentMode = mode;
     imgView.clipsToBounds = YES;
 
-    imgView.backgroundColor = [UIColor clearColor];
+    imgView.backgroundColor = YunConfig.instance.imgViewBg;
 
     if ([YunValueVerifier isValidStr:imgName]) {
         imgView.image = [UIImage imageNamed:imgName];
     }
+
+    return imgView;
+}
+
++ (UIImageView *)imgView {
+    UIImageView *imgView = [YunUIImageViewFactory imgViewWithImgName:nil
+                                                                mode:YunConfig.instance.imgViewDefCtnMode];
 
     return imgView;
 }

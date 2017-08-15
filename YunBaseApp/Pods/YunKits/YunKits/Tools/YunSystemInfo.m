@@ -52,7 +52,7 @@
     return NO;
 }
 
-+ (void)fontPrint {
++ (void)printAllFont {
     NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
     NSArray *fontNames;
     NSInteger indFamily, indFont;

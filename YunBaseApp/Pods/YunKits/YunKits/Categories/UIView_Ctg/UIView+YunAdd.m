@@ -121,8 +121,6 @@
     while (self.subviews.count) {
         [self.subviews.lastObject removeFromSuperview];
     }
-
-    //[[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
 - (void)stopAnm {

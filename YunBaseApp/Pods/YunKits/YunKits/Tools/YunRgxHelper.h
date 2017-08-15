@@ -9,4 +9,6 @@
 
 + (BOOL)matchRgx:(NSString *)rgx ctn:(NSString *)ctn;
 
++ (NSString *)matchedCtnByRgx:(NSString *)rgx ctn:(NSString *)ctn;
+
 @end

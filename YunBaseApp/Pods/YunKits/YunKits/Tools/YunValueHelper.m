@@ -23,7 +23,15 @@
     return [NSString stringWithFormat:@"%0.02lf", value];
 }
 
-+ (NSString *)priceStr:(CGFloat)price {
++ (NSString *)doubleStr:(double)value {
+    return [NSString stringWithFormat:@"%0.02lf", value];
+}
+
++ (NSString *)priceDbStr:(double)price {
+    return [NSString stringWithFormat:@"￥%0.02lf", price];
+}
+
++ (NSString *)priceFlStr:(CGFloat)price {
     return [NSString stringWithFormat:@"￥%0.02lf", price];
 }
 

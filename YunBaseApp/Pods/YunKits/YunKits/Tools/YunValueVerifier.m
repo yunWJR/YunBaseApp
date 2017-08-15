@@ -43,6 +43,10 @@
     return ![self isNilOrEmptyOrSpaceStr:str];
 }
 
++ (BOOL)isInvalidStr:(NSString *)str {
+    return [self isNilOrEmptyOrSpaceStr:str];
+}
+
 + (BOOL)isNilOrEmptyDic:(id)model {
     if (model == nil) {
         return YES;

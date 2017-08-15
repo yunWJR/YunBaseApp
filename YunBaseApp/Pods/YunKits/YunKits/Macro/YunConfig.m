@@ -45,7 +45,14 @@
         _dateFmYmdHm = @"yyyy-MM-dd hh:mm";
         _dateFmHm = @"hh:mm";
 
+        _dateFmYm_Server = @"yyyy-MM";
+        _dateFmYmd_Server = @"yyyy-MM-dd";
+        _dateFmYmdHm_Server = @"yyyy-MM-dd hh:mm";
+        _dateFmHm_Server = @"hh:mm";
+
         _btnDefHlColor = [UIColor lightGrayColor];
+
+        _imgViewBg = [UIColor clearColor];
     }
 
     return self;

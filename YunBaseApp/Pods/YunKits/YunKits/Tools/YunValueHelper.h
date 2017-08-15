@@ -3,7 +3,6 @@
 // Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @interface YunValueHelper : NSObject
@@ -16,7 +15,11 @@
 
 + (NSString *)floatStr:(CGFloat)value;
 
-+ (NSString *)priceStr:(CGFloat)price;
++ (NSString *)doubleStr:(double)value;
+
++ (NSString *)priceDbStr:(double)price;
+
++ (NSString *)priceFlStr:(CGFloat)price;
 
 + (NSString *)priceStrWithStr:(NSString *)priceStr;
 
