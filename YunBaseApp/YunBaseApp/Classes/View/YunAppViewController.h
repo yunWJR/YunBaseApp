@@ -25,6 +25,8 @@
 
 @property (nonatomic, strong) YunBlankView *msgView;
 
+@property (nonatomic, assign) BOOL hideStateView;
+
 // 最后一次更新信息
 @property (nonatomic, strong) NSDate *lastUpdateDate;
 
