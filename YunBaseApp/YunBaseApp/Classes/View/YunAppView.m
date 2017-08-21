@@ -14,6 +14,8 @@
     if (self = [super init]) {
         _firstLoad = YES;
         _updateInterval = YunAppConfig.instance.viewUpdateInterval;
+
+        _noCtnMsg = @"无内容";
     }
     return self;
 }
