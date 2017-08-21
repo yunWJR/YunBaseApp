@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) YunBlankView *noCtnView;
 
+@property (nonatomic, copy) NSString *noCtnMsg;
+
 @property (nonatomic, strong) YunBlankView *noNetView;
 
 @property (nonatomic, strong) YunBlankView *stateView;
