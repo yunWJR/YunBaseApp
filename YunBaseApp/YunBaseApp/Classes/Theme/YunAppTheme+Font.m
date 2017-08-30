@@ -33,12 +33,12 @@
 
 // 不缩放
 + (UIFont *)nagFontTitle {
-    return [UIFont fontWithName:YunAppTheme.instance.fontBName size:YunAppTheme.instance.sizeNagTitle];
+    return [UIFont fontWithName:YunAppTheme.instance.fontNagTitle size:YunAppTheme.instance.sizeNagTitle];
 }
 
 // 不缩放
 + (UIFont *)nagFontItem {
-    return [UIFont fontWithName:YunAppTheme.instance.fontBName size:YunAppTheme.instance.sizeNagItem];
+    return [UIFont fontWithName:YunAppTheme.instance.fontNagItem size:YunAppTheme.instance.sizeNagItem];
 }
 
 @end
