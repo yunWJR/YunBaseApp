@@ -27,6 +27,11 @@
 
 @property (nonatomic, assign) CGFloat sizeLM;
 
+// nag
+@property (nonatomic, strong) NSString *fontNagTitle;
+
+@property (nonatomic, strong) NSString *fontNagItem;
+
 @property (nonatomic, assign) CGFloat sizeNagTitle;
 
 @property (nonatomic, assign) CGFloat sizeNagItem;
