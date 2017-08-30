@@ -59,6 +59,9 @@
 
     self.sizeNagTitle = 17.0f;
     self.sizeNagItem = 14.0f;
+
+    self.fontNagTitle = self.fontBName;
+    self.fontNagItem = self.fontNName;
 }
 
 - (CGFloat)sSize:(CGFloat)size {
