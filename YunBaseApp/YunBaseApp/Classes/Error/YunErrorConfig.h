@@ -49,6 +49,8 @@ typedef enum : NSInteger {
 
 @property (nonatomic, strong) NSArray<YunErrorTypeToCode *> *errorMap;
 
+@property (nonatomic, assign) BOOL debugMsg;
+
 + (YunErrorConfig *)instance;
 
 - (void)setItem:(YunErrorType)type defMsg:(NSString *)defMsg;

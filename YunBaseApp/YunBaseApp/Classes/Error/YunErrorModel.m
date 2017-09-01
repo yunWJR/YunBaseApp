@@ -6,7 +6,6 @@
 #import "YunErrorModel.h"
 #import "YunValueHelper.h"
 #import <YunKits/YunGlobalDefine.h>
-#import <YunKits/YunConfig.h>
 
 @implementation YunErrorModel
 
@@ -26,7 +25,7 @@
 }
 
 - (NSString *)getMsgByMode {
-    if (YunConfig.instance.isDebugMode) {
+    if (YunErrorConfig.instance.debugMsg) {
         return self.getDetailMsg;
     }
     else {
