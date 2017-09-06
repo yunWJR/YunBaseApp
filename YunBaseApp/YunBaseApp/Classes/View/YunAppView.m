@@ -57,6 +57,7 @@
 }
 
 - (void)updateVcData {
+    self.hasUpdated = YES;
     [self setCurUpdateDate];
 }
 

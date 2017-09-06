@@ -36,6 +36,8 @@
 // 120秒
 @property (nonatomic, assign) NSTimeInterval updateInterval;
 
+@property (nonatomic, assign) BOOL hasUpdated;
+
 #pragma mark - public functions
 
 - (void)updateData:(BOOL)force;

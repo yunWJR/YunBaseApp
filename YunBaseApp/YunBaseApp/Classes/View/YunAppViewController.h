@@ -37,6 +37,8 @@
 // 120秒
 @property (nonatomic, assign) NSTimeInterval updateInterval;
 
+@property (nonatomic, assign) BOOL hasUpdated;
+
 - (void)setNagBg:(UIColor *)color;
 
 - (void)setNagTitle:(UIColor *)color font:(UIFont *)font;
