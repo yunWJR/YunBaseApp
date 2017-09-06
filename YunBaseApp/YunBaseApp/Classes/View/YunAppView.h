@@ -16,7 +16,7 @@
 // super view
 @property (nonatomic, weak) UIViewController *superVC;
 
-@property (nonatomic, copy) NSArray *blankViewList;
+@property (nonatomic, copy) NSMutableArray *blankViewList;
 
 @property (nonatomic, strong) YunBlankView *noCtnView;
 
