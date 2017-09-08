@@ -17,7 +17,7 @@
 // YES
 @property (nonatomic, assign) BOOL updateItem;
 
-@property (nonatomic, copy) NSMutableArray *blankViewList;
+@property (nonatomic, strong) NSMutableArray *blankViewList;
 
 @property (nonatomic, strong) YunBlankView *noCtnView;
 
