@@ -53,6 +53,9 @@
         _btnDefHlColor = [UIColor lightGrayColor];
 
         _imgViewBg = [UIColor clearColor];
+
+        _ctnHlOff = 6;
+        _ctnVtOff = 16;
     }
 
     return self;

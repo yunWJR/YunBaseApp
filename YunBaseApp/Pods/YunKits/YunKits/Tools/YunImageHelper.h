@@ -7,8 +7,8 @@
 
 @interface YunImageHelper : NSObject
 
-- (NSString *)encodeToBase64Str:(UIImage *)image;
++ (NSString *)base64FormImg:(UIImage *)image;
 
-- (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData;
++ (UIImage *)imgFromBase64:(NSString *)strEncodeData;
 
 @end

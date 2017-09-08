@@ -6,6 +6,7 @@
 #import "UIButton+YunAdd.h"
 #import "UIImage+YunAdd.h"
 #import "UILabel+YunAdd.h"
+#import "YunConfig.h"
 
 @implementation UIButton (YunAdd)
 
@@ -13,21 +14,16 @@
     return [UILabel calOneLineHeight:self.titleLabel.font];
 }
 
+- (CGFloat)getOneLineHeightOff {
+    return self.getOneLineHeight + YunConfig.instance.ctnVtOff;
+}
+
 - (CGFloat)getTitleWidth {
     return [UILabel calWidthWithText:[self titleForState:UIControlStateNormal] font:self.titleLabel.font];
+}
 
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_MAX, 0)];
-    if (self.titleLabel.attributedText) {
-        label.attributedText = self.titleLabel.attributedText;
-    }
-    else {
-        label.text = [self titleForState:UIControlStateNormal];
-        label.font = self.titleLabel.font;
-    }
-
-    [label sizeToFit];
-
-    return label.frame.size.width;
+- (CGFloat)getTitleWidthOff {
+    return self.getTitleWidth + YunConfig.instance.ctnHlOff;
 }
 
 - (void)disableHl {
@@ -38,6 +34,5 @@
     [self setBackgroundImage:[UIImage imgWithColor:color]
                     forState:UIControlStateHighlighted];
 }
-
 
 @end

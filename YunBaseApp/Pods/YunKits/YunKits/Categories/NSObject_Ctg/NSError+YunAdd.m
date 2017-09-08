@@ -15,6 +15,8 @@
 }
 
 + (instancetype)errorWithCustomMsg:(NSString *)msg andCode:(NSInteger)code {
+    if (msg == nil) {msg = @"error";}
+
     return [[NSError alloc] initWithDomain:@"error_custom" code:code userInfo:@{CUSTOM_MSG_KEY : msg}];
 }
 

@@ -25,4 +25,12 @@
 
 @property (nonatomic, assign) CGFloat ctnIntervalH;
 
+@property (nonatomic, strong) NSMutableDictionary *heightDic;
+
++ (instancetype)instance;
+
+- (void)setItemHeight:(NSString *)itemId height:(CGFloat)height;
+
+- (CGFloat)getItemHeight:(NSString *)itemId;
+
 @end

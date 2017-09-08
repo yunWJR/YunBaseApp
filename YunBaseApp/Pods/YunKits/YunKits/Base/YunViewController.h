@@ -56,4 +56,6 @@
 
 - (void)didClickNagRightItem;
 
+- (void)setBackVcNeedUpdate;
+
 @end

@@ -6,6 +6,7 @@
 //
 
 #import "UILabel+YunAdd.h"
+#import "YunConfig.h"
 
 @implementation UILabel (YunAdd)
 
@@ -46,6 +47,10 @@
     return [UILabel calHeightByWidth:100 text:@"字" font:self.font];
 }
 
+- (CGFloat)getOneLineHeightOff {
+    return self.getOneLineHeight + YunConfig.instance.ctnVtOff;
+}
+
 - (CGFloat)getTextWidth {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGFLOAT_MAX, 0)];
     if (self.attributedText) {
@@ -59,6 +64,10 @@
     [label sizeToFit];
 
     return label.frame.size.width;
+}
+
+- (CGFloat)getTitleWidthOff {
+    return self.getTextWidth + YunConfig.instance.ctnHlOff;
 }
 
 - (CGFloat)getWidthByWordCount:(NSInteger)count {

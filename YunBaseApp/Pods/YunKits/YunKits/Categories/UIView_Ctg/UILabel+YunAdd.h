@@ -22,7 +22,11 @@
 
 - (CGFloat)getOneLineHeight;
 
+- (CGFloat)getOneLineHeightOff;
+
 - (CGFloat)getTextWidth;
+
+- (CGFloat)getTitleWidthOff;
 
 - (CGFloat)getWidthByWordCount:(NSInteger)count;
 

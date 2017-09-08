@@ -9,7 +9,11 @@
 
 - (CGFloat)getOneLineHeight;
 
+- (CGFloat)getOneLineHeightOff;
+
 - (CGFloat)getTitleWidth;
+
+- (CGFloat)getTitleWidthOff;
 
 - (void)disableHl;
 

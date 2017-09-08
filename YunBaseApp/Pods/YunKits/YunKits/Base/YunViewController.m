@@ -108,6 +108,12 @@
 
 }
 
+- (void)setBackVcNeedUpdate {
+    if (self.backVC) {
+        self.backVC.needUpdateData = YES;
+    }
+}
+
 #pragma mark - public functions
 
 - (void)setRightBarItemByNormalImg:(NSString *)norImg highLightImg:(NSString *)highImg {

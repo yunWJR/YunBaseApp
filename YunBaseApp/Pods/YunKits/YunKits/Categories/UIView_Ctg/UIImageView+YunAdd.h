@@ -11,7 +11,7 @@
 
 - (void)downLoadImg:(NSString *)imgStr result:(void (^)(NSURL *))rs;
 
-- (void)setImgUrlStr:(NSString *)urlStr holderImg:(UIImage *)img;
+- (void)setImgUrlStr:(NSString *)urlStr holderImg:(UIImage *)phImg;
 
 - (void)setAvrImgUrlStr:(NSString *)urlStr;
 

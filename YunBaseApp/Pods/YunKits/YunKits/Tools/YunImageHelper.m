@@ -7,14 +7,13 @@
 
 @implementation YunImageHelper
 
-- (NSString *)encodeToBase64Str:(UIImage *)image {
++ (NSString *)base64FormImg:(UIImage *)image {
     return [UIImagePNGRepresentation(image) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
 }
 
-- (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData {
-    NSData *data =
-            [[NSData alloc] initWithBase64EncodedString:strEncodeData
-                                                options:NSDataBase64DecodingIgnoreUnknownCharacters];
++ (UIImage *)imgFromBase64:(NSString *)strEncodeData {
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:strEncodeData
+                                                       options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [UIImage imageWithData:data];
 }
 

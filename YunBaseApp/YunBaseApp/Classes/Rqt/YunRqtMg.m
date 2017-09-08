@@ -40,26 +40,26 @@
     return self;
 }
 
-- (void)GET:(NSString *_Nonnull)URLString
- parameters:(nullable id)parameters
-   progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
-    success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
-    failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
+- (NSURLSessionDataTask *)GET:(NSString *_Nonnull)URLString
+                   parameters:(nullable id)parameters
+                     progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
+                      success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
+                      failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
     [YunLogHelper logMsg:FORMAT(@"GET RQT--URLString:%@\n parameters:%@", URLString, parameters)];
 
-    [_rqMg GET:URLString
-    parameters:parameters
-      progress:downloadProgress
-       success:success
-       failure:failure];
+    return [_rqMg GET:URLString
+           parameters:parameters
+             progress:downloadProgress
+              success:success
+              failure:failure];
 }
 
-- (void)POST:(NSString *_Nonnull)URLString
-  parameters:(nullable id)parameters
-    progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
-     success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
-     failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
+- (NSURLSessionDataTask *)POST:(NSString *_Nonnull)URLString
+                    parameters:(nullable id)parameters
+                      progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
+                       success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
+                       failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
     // post 参数修改
     if (YunRqtConfig.instance.queryMode) {
@@ -72,19 +72,19 @@
 
     [YunLogHelper logMsg:FORMAT(@"POST RQT--URLString:%@\n parameters:%@", URLString, parameters)];
 
-    [_rqMg POST:URLString
-     parameters:parameters
-       progress:downloadProgress
-        success:success
-        failure:failure];
+    return [_rqMg POST:URLString
+            parameters:parameters
+              progress:downloadProgress
+               success:success
+               failure:failure];
 }
 
-- (void)POST:(NSString *_Nonnull)URLString
-  parameters:(nullable id)parameters
-   queryMode:(BOOL)queryMode
-    progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
-     success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
-     failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
+- (NSURLSessionDataTask *)POST:(NSString *_Nonnull)URLString
+                    parameters:(nullable id)parameters
+                     queryMode:(BOOL)queryMode
+                      progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
+                       success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
+                       failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
     // post 参数修改
     if (queryMode) {
@@ -97,24 +97,24 @@
 
     [YunLogHelper logMsg:FORMAT(@"POST RQT--URLString:%@\n parameters:%@", URLString, parameters)];
 
-    [_rqMg POST:URLString
-     parameters:parameters
-       progress:downloadProgress
-        success:success
-        failure:failure];
+    return [_rqMg POST:URLString
+            parameters:parameters
+              progress:downloadProgress
+               success:success
+               failure:failure];
 }
 
-- (void)DELETE:(NSString *_Nonnull)URLString
-    parameters:(nullable id)parameters
-       success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
-       failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
+- (NSURLSessionDataTask *)DELETE:(NSString *_Nonnull)URLString
+                      parameters:(nullable id)parameters
+                         success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
+                         failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
     [YunLogHelper logMsg:FORMAT(@"DELETE RQT--URLString:%@\n parameters:%@", URLString, parameters)];
 
-    [_rqMg DELETE:URLString
-       parameters:parameters
-          success:success
-          failure:failure];
+    return [_rqMg DELETE:URLString
+              parameters:parameters
+                 success:success
+                 failure:failure];
 }
 
 - (void)setHeaderPara:(NSDictionary *)paras {
