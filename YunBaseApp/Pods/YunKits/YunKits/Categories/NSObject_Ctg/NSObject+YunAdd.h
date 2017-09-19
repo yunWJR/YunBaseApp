@@ -7,6 +7,8 @@
 
 @interface NSObject (YunAdd)
 
+- (id)yunDeepCopy;
+
 // 获取对象的所有属性
 - (NSDictionary *)getAllProperties;
 
