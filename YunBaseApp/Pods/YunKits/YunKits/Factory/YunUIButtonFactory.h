@@ -35,6 +35,12 @@
                             target:(id _Nullable)target
                             action:(SEL _Nullable)action;
 
++ (UIButton *_Nonnull)btnWithTitle:(NSString *_Nonnull)title
+                        titleColor:(UIColor *_Nonnull)titleColor
+                           bgColor:(UIColor *_Nonnull)bgColor
+                            target:(id _Nullable)target
+                            action:(SEL _Nullable)action;
+
 + (UIButton *_Nonnull)btnWithIconName:(NSString *_Nonnull)icon
                              fontSize:(CGFloat)fontSize
                                 color:(UIColor *_Nonnull)color

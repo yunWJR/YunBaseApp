@@ -72,4 +72,10 @@
     return compressedImage;
 }
 
+- (NSInteger)imgSize {
+    NSData *imageData = UIImageJPEGRepresentation(self, 1);
+
+    return [imageData length] / 1000;
+}
+
 @end

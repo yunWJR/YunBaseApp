@@ -91,4 +91,10 @@
     return [scan scanFloat:&val] && [scan isAtEnd];
 }
 
++ (BOOL)isPureDouble:(NSString *)str {
+    NSScanner *scan = [NSScanner scannerWithString:str];
+    double val;
+    return [scan scanDouble:&val] && [scan isAtEnd];
+}
+
 @end

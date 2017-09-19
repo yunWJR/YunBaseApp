@@ -57,14 +57,30 @@
     NSArray *fontNames;
     NSInteger indFamily, indFont;
     for (indFamily = 0; indFamily < [familyNames count]; ++indFamily) {
-        NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
+        NSLog(@"Family name: %@", familyNames[indFamily]);
         fontNames = [[NSArray alloc] initWithArray:
-                [UIFont fontNamesForFamilyName:
-                                [familyNames objectAtIndex:indFamily]]];
+                [UIFont fontNamesForFamilyName:familyNames[indFamily]]];
         for (indFont = 0; indFont < [fontNames count]; ++indFont) {
-            NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
+            NSLog(@"    Font name: %@", fontNames[indFont]);
         }
     }
+}
+
++ (BOOL)hasFont:(NSString *)name {
+    NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
+    NSArray *fontNames;
+    NSInteger indFamily, indFont;
+    for (indFamily = 0; indFamily < [familyNames count]; ++indFamily) {
+        fontNames = [[NSArray alloc] initWithArray:
+                [UIFont fontNamesForFamilyName:familyNames[indFamily]]];
+        for (indFont = 0; indFont < [fontNames count]; ++indFont) {
+            if ([fontNames[indFont] isEqualToString:name]) {
+                return YES;
+            }
+        }
+    }
+
+    return NO;
 }
 
 @end

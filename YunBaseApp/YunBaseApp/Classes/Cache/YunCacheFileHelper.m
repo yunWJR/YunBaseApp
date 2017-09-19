@@ -185,7 +185,7 @@
     if (index < 0 || index > _fileList.count - 1) {return nil;}
 
     NSString *fileN = _fileList[index];
-    if (_delegate && [_delegate respondsToSelector:@selector(getFileWithForm:)]) {
+    if (_delegate && [_delegate respondsToSelector:@selector(getFileName:index:)]) {
         return [_delegate getFileName:fileN index:index];
     }
     else {

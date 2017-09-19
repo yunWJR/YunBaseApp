@@ -30,4 +30,6 @@
 
 + (BOOL)isPureFloat:(NSString *)str;
 
++ (BOOL)isPureDouble:(NSString *)str;
+
 @end

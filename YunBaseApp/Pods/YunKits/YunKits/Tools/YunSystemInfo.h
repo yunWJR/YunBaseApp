@@ -15,4 +15,6 @@
 
 + (void)printAllFont;
 
++ (BOOL)hasFont:(NSString *)name;
+
 @end

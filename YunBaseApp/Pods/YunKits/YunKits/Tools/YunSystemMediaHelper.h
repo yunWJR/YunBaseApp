@@ -4,7 +4,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Accelerate/Accelerate.h>
 
 @interface YunSystemMediaHelper : NSObject
 
@@ -16,6 +15,6 @@
 
 + (void)openURL:(NSString *__nonnull)url;
 
-+ (void)openURL:(NSString *)url cmp:(void (^ __nullable)(BOOL success))cmp;
++ (void)openURL:(NSString *__nonnull)url cmp:(void (^ __nullable)(BOOL success))cmp;
 
 @end

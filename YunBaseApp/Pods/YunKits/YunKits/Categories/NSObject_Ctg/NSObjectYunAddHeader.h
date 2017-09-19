@@ -9,3 +9,4 @@
 #import "NSURL+YunAdd.h"
 #import "UIColor+YunAdd.h"
 #import "UIImage+YunAdd.h"
+#import "UIFont+YunAdd.h"

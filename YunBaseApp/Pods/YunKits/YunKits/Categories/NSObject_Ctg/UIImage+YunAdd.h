@@ -21,4 +21,6 @@
 
 - (UIImage *)resizeWithSize:(NSInteger)size height:(CGFloat)height;
 
+- (NSInteger)imgSize;
+
 @end

@@ -27,7 +27,7 @@
 
 #define DP_GLOBLE_QUEUE_LOW(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), globalQueueBlock);
 
-#define DP_GLOBLE_QUEUE_HIGHT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), globalQueueBlock);
+#define DP_GLOBLE_QUEUE_HIGH(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), globalQueueBlock);
 
 // 延迟执行 GLOBLE
 #define DP_AFTER_GLOBLE_QUEUE_DEF(interval, cmpBlock) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, interval * NSEC_PER_SEC),dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),cmpBlock);

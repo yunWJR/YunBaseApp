@@ -69,7 +69,11 @@
     btn.backgroundColor = bgColor;
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
-    btn.titleLabel.font = titleFont;
+
+    if (titleFont) {
+        btn.titleLabel.font = titleFont;
+    }
+
     [btn.layer setMasksToBounds:YES];
     [btn.layer setCornerRadius:radius];
     [btn.layer setBorderWidth:border];
@@ -96,6 +100,27 @@
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
     btn.titleLabel.font = titleFont;
+
+    if (target && action) {
+        [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    }
+
+    btn = [self setDefHlColor:btn];
+
+    return btn;
+}
+
++ (UIButton *_Nonnull)btnWithTitle:(NSString *_Nonnull)title
+                        titleColor:(UIColor *_Nonnull)titleColor
+                           bgColor:(UIColor *_Nonnull)bgColor
+                            target:(id _Nullable)target
+                            action:(SEL _Nullable)action {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+
+    btn.backgroundColor = bgColor;
+
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:titleColor forState:UIControlStateNormal];
 
     if (target && action) {
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
