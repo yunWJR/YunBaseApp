@@ -30,6 +30,10 @@
     [self openScheme:url cmp:cmp];
 }
 
++ (BOOL)canOpenURL:(NSString *__nonnull)url {
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]];
+}
+
 + (void)openScheme:(NSString *)scheme cmp:(void (^ __nullable)(BOOL success))cmp {
     UIApplication *application = [UIApplication sharedApplication];
     NSURL *URL = [NSURL URLWithString:scheme];

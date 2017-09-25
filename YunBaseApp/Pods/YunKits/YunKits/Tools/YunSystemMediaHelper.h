@@ -17,4 +17,6 @@
 
 + (void)openURL:(NSString *__nonnull)url cmp:(void (^ __nullable)(BOOL success))cmp;
 
++ (BOOL)canOpenURL:(NSString *__nonnull)url;
+
 @end

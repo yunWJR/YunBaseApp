@@ -63,7 +63,13 @@
 }
 
 - (BOOL)saveItem:(id)item index:(NSInteger)index isAsyn:(BOOL)isAsyn rst:(void (^)(BOOL suc))rst {
-    if ([self isInvalidIndex:index]) {return NO;}
+    if ([self isInvalidIndex:index]) {
+        if (rst) {
+            rst(NO);
+        }
+
+        return NO;
+    }
 
     if (isAsyn) {
         [self saveItemAsyn:[item yunDeepCopy] index:index rst:rst];
@@ -81,11 +87,9 @@
 - (void)saveItemAsyn:(id)item index:(NSInteger)index rst:(void (^)(BOOL suc))rst {
     DP_GLOBLE_QUEUE_LOW(^{
         BOOL sucRst = [self saveItemTask:item index:index];
-        if (rst) {
-            DP_MAIN_THREAD(^{
-                rst(sucRst);
-            })
-        }
+        DP_MAIN_THREAD(^{
+            if (rst) {rst(sucRst);}
+        })
     })
 }
 
@@ -117,7 +121,11 @@
 }
 
 - (id)getItem:(NSInteger)index isAsyn:(BOOL)isAsyn rst:(void (^)(id data))rst {
-    if ([self isInvalidIndex:index]) {return nil;}
+    if ([self isInvalidIndex:index]) {
+        if (rst)rst(nil);
+
+        return nil;
+    }
 
     if (isAsyn) {
         [self getItemAsyn:index rst:rst];
@@ -136,11 +144,9 @@
 - (void)getItemAsyn:(NSInteger)index rst:(void (^)(id data))rst {
     DP_GLOBLE_QUEUE_LOW(^{
         id rstData = [self getItemTask:index];
-        if (rst) {
-            DP_MAIN_THREAD(^{
-                rst(rstData);
-            })
-        }
+        DP_MAIN_THREAD(^{
+            if (rst) {rst(rstData);}
+        })
     })
 }
 

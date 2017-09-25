@@ -38,4 +38,6 @@
 
 - (id)getItem:(NSInteger)index isAsyn:(BOOL)isAsyn rst:(void (^)(id data))rst;
 
+- (void)checkAllFiles;
+
 @end

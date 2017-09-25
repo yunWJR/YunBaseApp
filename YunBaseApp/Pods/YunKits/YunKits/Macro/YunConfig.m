@@ -58,6 +58,8 @@
         _ctnVtOff = 16;
 
         _fontBlankCoefficient = 0.4f;
+
+        _nagItemWidth = 54;
     }
 
     return self;

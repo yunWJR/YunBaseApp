@@ -56,7 +56,7 @@
 }
 
 + (UIButton *_Nonnull)btnWithTitle:(NSString *_Nonnull)title
-                         titleFont:(UIFont *_Nonnull)titleFont
+                         titleFont:(UIFont *_Nullable)titleFont
                         titleColor:(UIColor *_Nonnull)titleColor
                            bgColor:(UIColor *_Nonnull)bgColor
                             radius:(CGFloat)radius

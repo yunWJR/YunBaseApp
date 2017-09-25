@@ -17,11 +17,11 @@ PODS:
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
-  - Masonry (1.0.2)
+  - Masonry (1.1.0)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
-  - YunKits (0.0.27):
+  - YunKits (0.0.28):
     - AFNetworking
     - Masonry
     - SDWebImage
@@ -35,9 +35,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
-  YunKits: 445ac7a31750f426ec27993a6227818ba2f64334
+  YunKits: b709a96e3198a60b2859a62e74fbf43a49da1745
 
 PODFILE CHECKSUM: 0c0183223785218cf050c1dcadaaa01bcfc49a1d
 
