@@ -10,4 +10,6 @@
 
 - (UIView *)createTitleView;
 
+- (UIView *)createTitleView:(CGFloat)itemW;
+
 @end

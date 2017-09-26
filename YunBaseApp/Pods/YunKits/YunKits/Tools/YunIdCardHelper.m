@@ -18,6 +18,7 @@
  */
 
 #import "YunIdCardHelper.h"
+#import "YunValueVerifier.h"
 
 @interface YunIdCardHelper ()
 
@@ -35,7 +36,7 @@
 
 - (BOOL)validateIDCard:(NSString *)identityCard {
     BOOL flag;
-    if (identityCard.length <= 0) {
+    if ([YunValueVerifier isInvalidStr:identityCard]) {
         flag = NO;
         return flag;
     }
@@ -69,12 +70,11 @@
 - (BOOL)checkCode:(NSString *)code {
     NSInteger sum = 0;
     for (NSInteger i = 0; i < self.validateCode.count; i++) {
-        sum
-                +=
+        sum +=
                 ((NSNumber *) self.validateCode[i]).integerValue *
                 [code substringWithRange:NSMakeRange(i, 1)].integerValue;
     }
-    int remainder = fmod(sum, 11);
+    int remainder = (int) fmod(sum, 11);
 
     NSString *last = [code substringFromIndex:code.length - 1];
 
@@ -83,12 +83,7 @@
     }
     NSInteger lastNum = last.integerValue;
 
-    if (((NSNumber *) self.digits[remainder]).integerValue == lastNum) {
-        return YES;
-    }
-    else {
-        return NO;
-    }
+    return ((NSNumber *) self.digits[remainder]).integerValue == lastNum;
 }
 
 + (NSString *)birthdayStrFromIdentityCard:(NSString *)idCard {
@@ -132,6 +127,8 @@
 
 //根据身份证号性别
 + (NSInteger)getIdCardSex:(NSString *)idCard {
+    if ([YunValueVerifier isInvalidStr:idCard]) {return 0;}
+
     int sexInt = [[idCard substringWithRange:NSMakeRange(16, 1)] intValue];
 
     if (sexInt % 2 != 0) {
@@ -144,6 +141,8 @@
 
 //根据省份证号获取年龄
 + (NSString *)getIdCardAge:(NSString *)idCard {
+    if ([YunValueVerifier isInvalidStr:idCard]) {return @"";}
+
     NSDateFormatter *formatterTow = [[NSDateFormatter alloc] init];
     [formatterTow setDateFormat:@"yyyy-MM-dd"];
     NSString *dateStr = [self birthdayStrFromIdentityCard:idCard];
@@ -151,7 +150,7 @@
 
     NSTimeInterval dateDiff = [bsyDate timeIntervalSinceNow];
 
-    int age = trunc(dateDiff / (60 * 60 * 24)) / 365;
+    int age = (int) (trunc(dateDiff / (60 * 60 * 24)) / 365);
 
     return [NSString stringWithFormat:@"%d", -age];
 }

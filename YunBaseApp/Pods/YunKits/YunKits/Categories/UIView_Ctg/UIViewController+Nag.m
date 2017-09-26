@@ -11,9 +11,13 @@
 @implementation UIViewController (Nag)
 
 - (UIView *)createTitleView {
+    return [self createTitleView:YunConfig.instance.nagItemWidth];
+}
+
+- (UIView *)createTitleView:(CGFloat)itemW {
     UIView *tV = [UIView new];
 
-    CGFloat tW = YunSizeHelper.screenWidth - YunConfig.instance.nagItemWidth * 2;
+    CGFloat tW = YunSizeHelper.screenWidth - itemW * 2;
     CGFloat tH = YunSizeHelper.navigationBarHeight;
 
     tV.frame = CGRectMake(0, 0, tW, tH);

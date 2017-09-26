@@ -18,4 +18,6 @@
                                     target:(id _Nullable)target
                                     action:(SEL _Nullable)action;
 
++ (BOOL)setBarItem:(UIBarButtonItem *_Nonnull)item img:(NSString *_Nonnull)img;
+
 @end
