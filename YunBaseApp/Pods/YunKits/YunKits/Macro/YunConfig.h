@@ -46,6 +46,9 @@
 @property (nonatomic, assign) BOOL isDebugMode;
 
 // NO
+@property (nonatomic, assign) BOOL isLogMode;
+
+// NO
 @property (nonatomic, assign) BOOL isApnsDevMode;
 
 // yyyy-MM
