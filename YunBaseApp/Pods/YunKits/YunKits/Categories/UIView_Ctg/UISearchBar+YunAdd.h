@@ -3,12 +3,13 @@
 // Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @interface UISearchBar (YunAdd)
 
 - (void)setIconByImgName:(NSString *)imgName;
+
+- (void)setRadius:(CGFloat)rd bgColor:(UIColor *)bgColor;
 
 - (void)setRadius:(CGFloat)rd
           bgColor:(UIColor *)bgColor
@@ -17,6 +18,6 @@
 
 - (void)setBg:(UIColor *)color height:(CGFloat)height;
 
-- (void)setRadius:(CGFloat)rd bgColor:(UIColor *)bgColor;
+- (void)setBg:(UIColor *)color height:(CGFloat)height filedBgImg:(NSString *)img;
 
 @end

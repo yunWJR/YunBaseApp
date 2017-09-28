@@ -14,6 +14,10 @@
              state:UIControlStateNormal];
 }
 
+- (void)setRadius:(CGFloat)rd bgColor:(UIColor *)bgColor {
+    [self setRadius:rd bgColor:bgColor borderColor:nil borderWidth:0];
+}
+
 - (void)setRadius:(CGFloat)rd
           bgColor:(UIColor *)bgColor
       borderColor:(UIColor *)borderColor
@@ -42,8 +46,17 @@
     //[self setSearchFieldBackgroundImage:searchFBarBg forState:UIControlStateNormal];
 }
 
-- (void)setRadius:(CGFloat)rd bgColor:(UIColor *)bgColor {
-    [self setRadius:rd bgColor:bgColor borderColor:nil borderWidth:0];
+- (void)setBg:(UIColor *)color height:(CGFloat)height filedBgImg:(NSString *)img {
+    /** 设置背景图片 */
+    UIImage *searchBarBg = [UIImage imgWithColor:color height:height];
+    [self setBackgroundImage:searchBarBg];   //这里图片的颜色和导航栏一样
+
+    /** 设置背景色 */
+    [self setBackgroundColor:color];
+
+    // 设置文本框背景
+    UIImage *searchFBarBg = [UIImage imageNamed:img];
+    [self setSearchFieldBackgroundImage:searchFBarBg forState:UIControlStateNormal];
 }
 
 @end

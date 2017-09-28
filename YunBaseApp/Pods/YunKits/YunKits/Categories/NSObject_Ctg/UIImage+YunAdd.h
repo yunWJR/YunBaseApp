@@ -23,4 +23,6 @@
 
 - (NSInteger)imgSize;
 
+- (UIImage *)roundCornerImg;
+
 @end

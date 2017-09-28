@@ -35,18 +35,6 @@
     return self;
 }
 
-- (BOOL)removeItemByIndex:(NSInteger)index {
-    NSString *FileFullPath = [self getFilePath:index];
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    BOOL bRet = [fileMgr fileExistsAtPath:FileFullPath];
-    if (bRet) {
-        NSError *err;
-        [fileMgr removeItemAtPath:FileFullPath error:&err];
-    }
-
-    return YES;
-}
-
 // save
 - (BOOL)saveItem:(id)item index:(NSInteger)index {
     return [self saveItem:item
@@ -108,6 +96,10 @@
 
     [[self getItemLock:index] unlock];
 
+    if (error) {
+        [self removeItemByIndex:index];
+    }
+
     return error == nil;
 }
 
@@ -156,9 +148,9 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     id item = nil;
 
+    NSError *error;
     if ([fileManager fileExistsAtPath:[self getFilePath:index]]) {
         //如果归档文件存在，则读取其中内容
-        NSError *error;
         NSData *data = [[NSMutableData alloc] initWithContentsOfFile:[self getFilePath:index]
                                                              options:NSDataReadingMappedIfSafe
                                                                error:&error];
@@ -173,7 +165,27 @@
 
     [[self getItemLock:index] unlock];
 
+    if (error) {
+        [self removeItemByIndex:index];
+    }
+
     return item;
+}
+
+- (BOOL)removeItemByIndex:(NSInteger)index {
+    [[self getItemLock:index] lock];
+
+    NSString *FileFullPath = [self getFilePath:index];
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    BOOL bRet = [fileMgr fileExistsAtPath:FileFullPath];
+    if (bRet) {
+        NSError *err;
+        [fileMgr removeItemAtPath:FileFullPath error:&err];
+    }
+
+    [[self getItemLock:index] unlock];
+
+    return YES;
 }
 
 // file

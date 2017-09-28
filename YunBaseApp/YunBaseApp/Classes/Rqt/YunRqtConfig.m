@@ -3,8 +3,7 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import <AFNetworking/AFURLRequestSerialization.h>
-#import <AFNetworking/AFURLResponseSerialization.h>
+#import <AFNetworking/AFNetworking.h>
 #import "YunRqtConfig.h"
 
 @implementation YunRqtConfig

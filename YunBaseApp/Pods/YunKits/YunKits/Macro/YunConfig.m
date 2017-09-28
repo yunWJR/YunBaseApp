@@ -38,6 +38,8 @@
 
         _isApnsDevMode = NO;
 
+        _isLogMode = NO;
+
         _iconViewTagInImgView = 99999;
 
         _dateFmYm = @"yyyy-MM";

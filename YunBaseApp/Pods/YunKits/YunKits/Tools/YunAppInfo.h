@@ -5,16 +5,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YunSystemInfo : NSObject
+@interface YunAppInfo : NSObject
 
 + (NSString *)appVersion;
 
 + (NSString *)appVersionStr;
 
 + (BOOL)shouldUpdate:(NSString *)serverVersion;
-
-+ (void)printAllFont;
-
-+ (BOOL)hasFont:(NSString *)name;
 
 @end

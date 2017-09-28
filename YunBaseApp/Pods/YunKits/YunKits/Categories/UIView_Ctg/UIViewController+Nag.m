@@ -7,6 +7,7 @@
 #import "YunSizeHelper.h"
 #import "Masonry.h"
 #import "YunConfig.h"
+#import "YunSystemHelper.h"
 
 @implementation UIViewController (Nag)
 
@@ -22,13 +23,13 @@
 
     tV.frame = CGRectMake(0, 0, tW, tH);
 
-    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
+    if ([YunSystemHelper sysVerGreater_Equal:@"11.0"]) {
         [tV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.equalTo(@(tW));
             make.height.equalTo(@(tH));
         }];
     }
-    else { //iOS10以下 无需
+    else { //iOS11以下 无需
     }
 
     self.navigationItem.titleView = tV;

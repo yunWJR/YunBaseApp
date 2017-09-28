@@ -3,12 +3,10 @@
 // Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "YunSystemInfo.h"
+#import "YunAppInfo.h"
 #import "YunValueVerifier.h"
 
-@implementation YunSystemInfo {
-
+@implementation YunAppInfo {
 }
 
 + (NSString *)appVersion {
@@ -46,37 +44,6 @@
         }
         else {
             return NO;
-        }
-    }
-
-    return NO;
-}
-
-+ (void)printAllFont {
-    NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
-    NSArray *fontNames;
-    NSInteger indFamily, indFont;
-    for (indFamily = 0; indFamily < [familyNames count]; ++indFamily) {
-        NSLog(@"Family name: %@", familyNames[indFamily]);
-        fontNames = [[NSArray alloc] initWithArray:
-                [UIFont fontNamesForFamilyName:familyNames[indFamily]]];
-        for (indFont = 0; indFont < [fontNames count]; ++indFont) {
-            NSLog(@"    Font name: %@", fontNames[indFont]);
-        }
-    }
-}
-
-+ (BOOL)hasFont:(NSString *)name {
-    NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
-    NSArray *fontNames;
-    NSInteger indFamily, indFont;
-    for (indFamily = 0; indFamily < [familyNames count]; ++indFamily) {
-        fontNames = [[NSArray alloc] initWithArray:
-                [UIFont fontNamesForFamilyName:familyNames[indFamily]]];
-        for (indFont = 0; indFont < [fontNames count]; ++indFont) {
-            if ([fontNames[indFont] isEqualToString:name]) {
-                return YES;
-            }
         }
     }
 
