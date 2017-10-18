@@ -29,4 +29,8 @@
 
 + (NSString *)md5_32bit:(NSString *)str;
 
++ (NSDictionary *)dicWithJsonStr:(NSString *)jsonStr;
+
++ (NSString *)jsonStrWithDic:(id)infoDict;
+
 @end

@@ -150,4 +150,44 @@
                              result[28], result[29], result[30], result[31]];
 }
 
++ (NSDictionary *)dicWithJsonStr:(NSString *)jsonStr {
+    if (jsonStr == nil) {
+        return nil;
+    }
+
+    NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if (err) {
+        NSLog(@"json解析失败：%@", err);
+        return nil;
+    }
+    return dic;
+}
+
++ (NSString *)jsonStrWithDic:(id)infoDict {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:infoDict
+                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+
+    NSString *jsonStr = @"";
+
+    if (!jsonData) {
+        NSLog(@"Got an error: %@", error);
+    }
+    else {
+        jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+
+    //去除掉首尾的空白字符和换行字符
+    jsonStr = [jsonStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+    [jsonStr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+
+    return jsonStr;
+}
+
 @end
