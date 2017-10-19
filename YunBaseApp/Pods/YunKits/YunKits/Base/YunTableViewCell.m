@@ -62,7 +62,7 @@
     if ([YunValueVerifier isInvalidStr:itemId]) {return 0;}
 
     NSNumber *h = [_heightDic valueForKey:itemId];
-    if (h) {
+    if (h != nil) {
         return h.floatValue;
     }
 

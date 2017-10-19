@@ -40,6 +40,8 @@
 
         _isLogMode = NO;
 
+        _nagVcPopGes = YES;
+
         _iconViewTagInImgView = 99999;
 
         _dateFmYm = @"yyyy-MM";

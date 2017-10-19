@@ -41,4 +41,6 @@
 
 + (BOOL)randomBool;
 
++ (NSString *)str:(NSString *)str withDef:(NSString *)def;
+
 @end

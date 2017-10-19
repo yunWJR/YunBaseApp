@@ -4,6 +4,7 @@
 //
 
 #import "YunValueHelper.h"
+#import "YunValueVerifier.h"
 
 @implementation YunValueHelper
 
@@ -118,6 +119,14 @@
 + (BOOL)randomBool {
     int r = arc4random() * 10;
     return r >= 5;
+}
+
++ (NSString *)str:(NSString *)str withDef:(NSString *)def {
+    if ([YunValueVerifier isInvalidStr:str]) {
+        return def;
+    }
+    
+    return str;
 }
 
 @end

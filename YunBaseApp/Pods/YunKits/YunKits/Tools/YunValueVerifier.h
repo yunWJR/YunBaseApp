@@ -11,6 +11,8 @@
 
 + (BOOL)isSameFloat:(CGFloat)value1 value2:(CGFloat)value2;
 
++ (BOOL)isSameDouble:(double)value1 value2:(double)value2;
+
 + (BOOL)isNilOrEmptyStr:(NSString *)str;
 
 + (BOOL)isNilOrEmptyOrSpaceStr:(NSString *)str;

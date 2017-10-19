@@ -21,6 +21,12 @@
     return delta > -0.0001 && delta < 0.0001;
 }
 
++ (BOOL)isSameDouble:(double)value1 value2:(double)value2 {
+    double delta = value1 - value2;
+
+    return delta > -0.0001 && delta < 0.0001;
+}
+
 + (BOOL)isNilOrEmptyStr:(NSString *)str {
     if (str == nil) {
         return YES;
