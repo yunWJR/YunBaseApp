@@ -10,6 +10,8 @@
 // 默认 120秒
 @property (nonatomic, assign) NSTimeInterval viewUpdateInterval;
 
+@property (nonatomic, assign) BOOL isHideNagBtmLine;
+
 + (YunAppConfig *)instance;
 
 @end

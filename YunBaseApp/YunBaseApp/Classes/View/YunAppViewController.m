@@ -21,6 +21,8 @@
         _updateInterval = YunAppConfig.instance.viewUpdateInterval;
 
         _noCtnMsg = @"无内容";
+
+        self.hideNagBarBtmLine = YunAppConfig.instance.isHideNagBtmLine;
     }
 
     return self;
