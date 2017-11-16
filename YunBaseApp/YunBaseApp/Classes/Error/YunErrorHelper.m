@@ -4,10 +4,9 @@
 //
 
 #import "YunErrorHelper.h"
-#import <YunKits/NSError+YunAdd.h>
-#import "YunRqtRpsHelper.h"
-#import "YunLogHelper.h"
 #import "YunGlobalDefine.h"
+#import "YunLogHelper.h"
+#import <YunKits/NSError+YunAdd.h>
 
 @implementation YunErrorHelper
 
@@ -44,6 +43,8 @@
 
 - (instancetype)initWithRpsError:(YunRqtRpsHelper *)rps {
     self = [self initWithError:rps.rpsError];
+
+    self.rps = rps;
 
     return self;
 }

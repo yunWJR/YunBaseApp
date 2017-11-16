@@ -4,12 +4,13 @@
 //
 
 #import "YunErrorModel.h"
-
-@class YunRqtRpsHelper;
+#import "YunRqtRpsHelper.h"
 
 @interface YunErrorHelper : NSObject
 
 @property (nonatomic, strong) NSError *error;
+
+@property (nonatomic, strong) YunRqtRpsHelper *rps;
 
 + (instancetype)itemWithRpsError:(YunRqtRpsHelper *)rps;
 
