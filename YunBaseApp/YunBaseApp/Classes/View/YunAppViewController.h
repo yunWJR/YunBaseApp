@@ -73,4 +73,6 @@
 
 - (BOOL)canUpdate;
 
+- (UIViewController *)getPreVc;
+
 @end

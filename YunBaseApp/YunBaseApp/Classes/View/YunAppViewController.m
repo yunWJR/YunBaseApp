@@ -184,4 +184,15 @@
     return time > _updateInterval;
 }
 
+- (UIViewController *)getPreVc {
+    NSInteger vcId = self.navigationController.viewControllers.count - 2;
+    if (vcId < 0) {
+        return nil;
+    }
+
+    UIViewController *parent = self.navigationController.viewControllers[vcId];
+
+    return parent;
+}
+
 @end
