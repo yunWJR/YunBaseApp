@@ -61,16 +61,15 @@
  *获取年
  */
 + (NSArray *)calculationYear {
-    NSMutableArray *arry = [[NSMutableArray alloc] init];
+    NSMutableArray *list = [[NSMutableArray alloc] init];
 
     for (int i = 1900; i <= 3000; i++) {
-
         NSString *str = [NSString stringWithFormat:@"%tu", i];
-        [arry addObject:str];
+        [list addObject:str];
 
     }
 
-    return arry;
+    return list;
 }
 
 /**
@@ -83,33 +82,33 @@
 /**
  *根据年份和月份获取天数
  */
-+ (NSArray *)calculationDay:(NSString *)iyear andMonth:(NSString *)month {
-    NSInteger year = [iyear integerValue];
-    NSInteger imonth = [month integerValue];
++ (NSArray *)calculationDay:(NSString *)year andMonth:(NSString *)month {
+    NSInteger yearI = [year integerValue];
+    NSInteger monthI = [month integerValue];
 
-    if ((imonth == 1) ||
-        (imonth == 3) ||
-        (imonth == 5) ||
-        (imonth == 7) ||
-        (imonth == 8) ||
-        (imonth == 10) ||
-        (imonth == 12)) {
+    if ((monthI == 1) ||
+        (monthI == 3) ||
+        (monthI == 5) ||
+        (monthI == 7) ||
+        (monthI == 8) ||
+        (monthI == 10) ||
+        (monthI == 12)) {
         return [self getDays:31];
     }
 
-    if ((imonth == 4) || (imonth == 6) || (imonth == 9) || (imonth == 11)) {
+    if ((monthI == 4) || (monthI == 6) || (monthI == 9) || (monthI == 11)) {
         return [self getDays:30];
     }
 
-    if ((year % 4 == 1) || (year % 4 == 2) || (year % 4 == 3)) {
+    if ((yearI % 4 == 1) || (yearI % 4 == 2) || (yearI % 4 == 3)) {
         return [self getDays:28];
     }
 
-    if (year % 400 == 0) {
+    if (yearI % 400 == 0) {
         return [self getDays:29];
     }
 
-    if (year % 100 == 0) {
+    if (yearI % 100 == 0) {
         return [self getDays:28];
     }
 
@@ -252,13 +251,13 @@
 
     NSCalendar *localeCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
 
-    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    NSCalendarUnit unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
 
     NSDateComponents *localeComp = [localeCalendar components:unitFlags fromDate:date];
 
-    NSString *y_str = chineseYears[localeComp.year - 1];
-    NSString *m_str = chineseMonths[localeComp.month - 1];
-    NSString *d_str = chineseDays[localeComp.day - 1];
+    NSString *y_str = chineseYears[(NSUInteger) (localeComp.year - 1)];
+    NSString *m_str = chineseMonths[(NSUInteger) (localeComp.month - 1)];
+    NSString *d_str = chineseDays[(NSUInteger) (localeComp.day - 1)];
 
     return [NSString stringWithFormat:@"%@-%@-%@", y_str, m_str, d_str];
 }
@@ -294,13 +293,13 @@
 
     NSCalendar *localeCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
 
-    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    NSCalendarUnit unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
 
     NSDateComponents *localeComp = [localeCalendar components:unitFlags fromDate:date];
 
-    NSString *y_str = chineseYears[localeComp.year - 1];
-    NSString *m_str = chineseMonths[localeComp.month - 1];
-    NSString *d_str = chineseDays[localeComp.day - 1];
+    NSString *y_str = chineseYears[(NSUInteger) (localeComp.year - 1)];
+    NSString *m_str = chineseMonths[(NSUInteger) (localeComp.month - 1)];
+    NSString *d_str = chineseDays[(NSUInteger) (localeComp.day - 1)];
 
     NSMutableDictionary *dateDic = [NSMutableDictionary new];
     dateDic[@"year"] = @(year);
@@ -321,7 +320,7 @@
     NSMutableArray *aryD = [[NSMutableArray alloc] initWithCapacity:0];
     NSArray *ary = [self calculationDay:iyear andMonth:month];
     for (int i = 1; i <= ary.count; i++) {
-        NSString *week = [self ObtainWeek:ary[i - 1] andMonth:month andYear:iyear];
+        NSString *week = [self ObtainWeek:ary[(NSUInteger) (i - 1)] andMonth:month andYear:iyear];
         NSString *day = [NSString stringWithFormat:@"%tu", i];
         if ([week isEqual:@"星期六"] || [week isEqual:@"星期天"]) {
             [aryD addObject:@{@"day" : day, @"isZM" : @"1"}];

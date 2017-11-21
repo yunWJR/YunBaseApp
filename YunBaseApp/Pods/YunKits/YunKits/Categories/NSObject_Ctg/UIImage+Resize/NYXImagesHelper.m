@@ -8,7 +8,6 @@
 //  www.cocoaintheshell.com
 //
 
-
 #import "NYXImagesHelper.h"
 
 static CIContext *__ciContext = nil;
@@ -94,7 +93,7 @@ CGColorSpaceRef NYXGetRGBColorSpace(void) {
 
 void NYXImagesKitRelease(void) {
     if (__rgbColorSpace) {
-        (void)(CGColorSpaceRelease(__rgbColorSpace)), __rgbColorSpace = NULL;
+        (void) (CGColorSpaceRelease(__rgbColorSpace)), __rgbColorSpace = NULL;
     }
     if (__ciContext) {
         __ciContext = nil;

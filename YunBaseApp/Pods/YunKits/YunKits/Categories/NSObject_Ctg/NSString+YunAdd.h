@@ -9,4 +9,6 @@
 
 - (NSString *)strByDefCtn:(NSString *)ctn;
 
+- (NSInteger)calSubCount:(NSString *)str;
+
 @end

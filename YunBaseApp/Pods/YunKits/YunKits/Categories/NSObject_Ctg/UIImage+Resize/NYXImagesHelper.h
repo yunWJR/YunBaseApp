@@ -8,7 +8,6 @@
 //  www.cocoaintheshell.com
 //
 
-
 /* Number of components for an opaque grey colorSpace = 3 */
 #define kNyxNumberOfComponentsPerGreyPixel 3
 /* Number of components for an ARGB pixel (Alpha / Red / Green / Blue) = 4 */

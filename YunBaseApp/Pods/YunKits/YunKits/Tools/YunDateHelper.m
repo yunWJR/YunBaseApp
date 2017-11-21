@@ -311,8 +311,8 @@
 + (NSDateComponents *)getDateComponents:(NSDate *)date {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     [calendar setTimeZone:[[NSTimeZone alloc] initWithName:@"Asia/Shanghai"]];
-    NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday |
-                          NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    NSCalendarUnit unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday |
+                               NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *comps = [calendar components:unitFlags fromDate:date];
 
     return comps;
@@ -382,9 +382,9 @@
 
         NSInteger rstWeekNum = [self weekNumForYear:rstYear month:rstMonth day:15];
 
-        [rstDic setObject:@(rstYear) forKey:@"year"];
-        [rstDic setObject:@(rstMonth) forKey:@"month"];
-        [rstDic setObject:@(rstWeekNum) forKey:@"week"];
+        rstDic[@"year"] = @(rstYear);
+        rstDic[@"month"] = @(rstMonth);
+        rstDic[@"week"] = @(rstWeekNum);
 
         return rstDic;
     }
@@ -399,16 +399,16 @@
 
         NSInteger rst2WeekNum = 1;
 
-        [rstDic setObject:@(rst2Year) forKey:@"year"];
-        [rstDic setObject:@(rst2Month) forKey:@"month"];
-        [rstDic setObject:@(rst2WeekNum) forKey:@"week"];
+        rstDic[@"year"] = @(rst2Year);
+        rstDic[@"month"] = @(rst2Month);
+        rstDic[@"week"] = @(rst2WeekNum);
 
         return rstDic;
     }
 
-    [rstDic setObject:@(year) forKey:@"year"];
-    [rstDic setObject:@(month) forKey:@"month"];
-    [rstDic setObject:@(weekCount + 1) forKey:@"week"];
+    rstDic[@"year"] = @(year);
+    rstDic[@"month"] = @(month);
+    rstDic[@"week"] = @(weekCount + 1);
 
     return rstDic;
 }
@@ -455,17 +455,17 @@
 
             NSInteger rstWeekNum = [self weekNumForYear:rstYear month:rstMonth day:15];
 
-            [rstDic setObject:@(rstYear) forKey:@"year"];
-            [rstDic setObject:@(rstMonth) forKey:@"month"];
-            [rstDic setObject:@(rstWeekNum) forKey:@"week"];
+            rstDic[@"year"] = @(rstYear);
+            rstDic[@"month"] = @(rstMonth);
+            rstDic[@"week"] = @(rstWeekNum);
 
             return rstDic;
         }
         else if (date.timeIntervalSince1970 >= pDay.timeIntervalSince1970 &&
                  date.timeIntervalSince1970 <= nDat.timeIntervalSince1970) { // 当前周
-            [rstDic setObject:@(year) forKey:@"year"];
-            [rstDic setObject:@(month) forKey:@"month"];
-            [rstDic setObject:@(i + 1) forKey:@"week"];
+            rstDic[@"year"] = @(year);
+            rstDic[@"month"] = @(month);
+            rstDic[@"week"] = @(i + 1);
 
             return rstDic;
         }
@@ -484,9 +484,9 @@
 
     NSInteger rst2WeekNum = 1;
 
-    [rstDic setObject:@(rst2Year) forKey:@"year"];
-    [rstDic setObject:@(rst2Month) forKey:@"month"];
-    [rstDic setObject:@(rst2WeekNum) forKey:@"week"];
+    rstDic[@"year"] = @(rst2Year);
+    rstDic[@"month"] = @(rst2Month);
+    rstDic[@"week"] = @(rst2WeekNum);
 
     return rstDic;
 }

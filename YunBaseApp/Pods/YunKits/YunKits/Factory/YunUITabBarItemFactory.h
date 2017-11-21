@@ -6,7 +6,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YunUITabBarItemFactory : NSObject {
-
 }
 
 + (UINavigationController *)barItemWithRootVc:(UIViewController *)itemVc
@@ -14,7 +13,7 @@
                                        defImg:(UIImage *)defImg
                                        selImg:(UIImage *)selImg;
 
-+ (UITabBarController *)tabBarWithVcs:(NSArray<__kindof UIViewController *> *)vcs
++ (UITabBarController *)tabBarWithVcs:(NSArray<UIViewController *> *)vcs
                               bgColor:(UIColor *)bgColor
                              selColor:(UIColor *)selColor;
 @end

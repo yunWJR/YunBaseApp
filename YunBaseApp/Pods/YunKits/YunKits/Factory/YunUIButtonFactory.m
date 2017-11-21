@@ -55,6 +55,25 @@
     return btn;
 }
 
++ (UIButton *_Nonnull)btnWithImg:(NSString *)bgImg
+                            mode:(UIViewContentMode)mode
+                           scale:(CGFloat)scale
+                          target:(id _Nullable)target
+                          action:(SEL _Nullable)action {
+    UIButton *btn = [self btnWithTarget:target action:action];
+
+    UIImageView *imgView = [YunUIImageViewFactory imgViewWithImgName:bgImg mode:mode];
+    [btn addSubview:imgView];
+
+    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(btn);
+        make.centerY.equalTo(btn);
+        make.size.equalTo(btn).multipliedBy(scale);
+    }];
+
+    return btn;
+}
+
 + (UIButton *_Nonnull)btnWithTitle:(NSString *_Nonnull)title
                          titleFont:(UIFont *_Nullable)titleFont
                         titleColor:(UIColor *_Nonnull)titleColor

@@ -9,8 +9,6 @@
 
 - (void)setImgUrlStr:(NSString *)urlStr;
 
-- (void)downLoadImg:(NSString *)imgStr result:(void (^)(NSURL *))rs;
-
 - (void)setImgUrlStr:(NSString *)urlStr holderImg:(UIImage *)phImg;
 
 - (void)setAvrImgUrlStr:(NSString *)urlStr;
@@ -18,5 +16,7 @@
 - (BOOL)setIconName:(NSString *)iconName
                size:(CGFloat)size
               color:(UIColor *)color;
+
+- (void)downLoadImg:(NSString *)urlStr result:(void (^)(NSURL *path))rst;
 
 @end

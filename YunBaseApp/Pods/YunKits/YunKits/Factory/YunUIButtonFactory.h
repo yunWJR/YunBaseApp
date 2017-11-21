@@ -19,6 +19,12 @@
                           target:(id _Nullable)target
                           action:(SEL _Nullable)action;
 
++ (UIButton *_Nonnull)btnWithImg:(NSString *)bgImg
+                            mode:(UIViewContentMode)mode
+                           scale:(CGFloat)scale
+                          target:(id _Nullable)target
+                          action:(SEL _Nullable)action;
+
 + (UIButton *_Nonnull)btnWithTitle:(NSString *_Nonnull)title
                          titleFont:(UIFont *_Nullable)titleFont
                         titleColor:(UIColor *_Nonnull)titleColor

@@ -7,7 +7,6 @@
 //  www.cocoaintheshell.com
 //
 
-
 #import "UIImage+Resizing.h"
 
 @implementation UIImage (NYX_Resizing)

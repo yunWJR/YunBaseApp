@@ -6,7 +6,6 @@
 #import "YunKeyBoardHelper.h"
 
 @implementation YunKeyBoardHelper {
-
 }
 
 + (instancetype)kbHelper:(id)target {

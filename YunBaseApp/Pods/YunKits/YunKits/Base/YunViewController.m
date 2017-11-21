@@ -30,6 +30,7 @@
         _topOff = 0;
 
         _firstLoad = YES;
+        _isAppear = NO;
 
         self.hidesBottomBarWhenPushed = _hideBottomBar;
     }
@@ -57,16 +58,17 @@
     [super viewWillAppear:animated];
 
     if (_hideNagBar) {
-        [self.navigationController.navigationBar setHidden:YES];
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
     }
     else {
-        if (_hideNagBarBackItem) {
-            UIBarButtonItem *btnItem = [[UIBarButtonItem alloc] initWithCustomView:[UIButton new]];
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
 
-            self.navigationItem.leftBarButtonItem = btnItem;
+        if (_hideNagBarBackItem) {
+            UIBarButtonItem *noneItem = [[UIBarButtonItem alloc] initWithCustomView:[UIButton new]];
+
+            self.navigationItem.leftBarButtonItem = noneItem;
         }
         else {
-            // todo none
             [self.navigationItem.backBarButtonItem setTarget:self];
             [self.navigationItem.backBarButtonItem setAction:@selector(didClickNagLeftItem)];
         }
@@ -77,25 +79,32 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+
+    self.isAppear = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
-    if (_hideNagBar) {
-        [self.navigationController.navigationBar setHidden:NO];
-    }
+    [self.navigationController setNavigationBarHidden:_hideNagBar animated:YES];
 
     [self setNagBottomLineHideStatus:_hideNagBarBtmLine];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+
+    self.isAppear = NO;
 }
 
 #pragma mark - handles
 
 - (void)didClickNagLeftItem {
+    if (self.isModalVc) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }
+
     if (_backVC) {
         [self.navigationController popToViewController:_backVC animated:YES];
     }
@@ -105,7 +114,6 @@
 }
 
 - (void)didClickNagRightItem {
-
 }
 
 - (void)setBackVcNeedUpdate {
@@ -117,9 +125,7 @@
 #pragma mark - public functions
 
 - (void)setRightBarItemByNormalImg:(NSString *)norImg highLightImg:(NSString *)highImg {
-    UIBarButtonItem *rBtnItem = [self createBarItemByNormalImg:norImg
-                                                  highLightImg:highImg
-                                                        action:@selector(didClickNagRightItem)];
+    UIBarButtonItem *rBtnItem = [self createBarItemByImg:norImg action:@selector(didClickNagRightItem)];
 
     self.navigationItem.rightBarButtonItem = rBtnItem;
 
@@ -141,10 +147,8 @@
     self.rightNagItem = rBtnItem;
 }
 
-- (void)setLeftBarItemByNormalImg:(NSString *)norImg highLightImg:(NSString *)highImg {
-    UIBarButtonItem *lBtnItem = [self createBarItemByNormalImg:norImg
-                                                  highLightImg:highImg
-                                                        action:@selector(didClickNagLeftItem)];
+- (void)setLeftBarItemByImg:(NSString *)img {
+    UIBarButtonItem *lBtnItem = [self createBarItemByImg:img action:@selector(didClickNagLeftItem)];
 
     self.navigationItem.leftBarButtonItem = lBtnItem;
 
@@ -166,25 +170,11 @@
     self.leftNagItem = lBtnItem;
 }
 
-- (UIBarButtonItem *)createBarItemByNormalImg:(NSString *)norImg
-                                 highLightImg:(NSString *)highImg
-                                       action:(nullable SEL)action {
-    UIButton *button = [UIButton new];
-    button.backgroundColor = [UIColor clearColor];
-    button.imageView.contentMode = UIViewContentModeScaleAspectFit;
-
-    if (norImg) {
-        [button setImage:[UIImage imageNamed:norImg] forState:UIControlStateNormal];
-    }
-
-    if (highImg) {
-        [button setImage:[UIImage imageNamed:highImg] forState:UIControlStateHighlighted];
-    }
-
-    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
-
-    button.frame = CGRectMake(0, 0, 40, 40);
-    UIBarButtonItem *btnItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+- (UIBarButtonItem *)createBarItemByImg:(NSString *)img action:(nullable SEL)action {
+    UIBarButtonItem *btnItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:img]
+                                                                style:UIBarButtonItemStylePlain
+                                                               target:self
+                                                               action:action];
 
     return btnItem;
 }

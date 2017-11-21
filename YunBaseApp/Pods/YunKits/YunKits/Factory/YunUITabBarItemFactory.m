@@ -20,7 +20,7 @@
     return item;
 }
 
-+ (UITabBarController *)tabBarWithVcs:(NSArray<__kindof UIViewController *> *)vcs
++ (UITabBarController *)tabBarWithVcs:(NSArray<UIViewController *> *)vcs
                               bgColor:(UIColor *)bgColor
                              selColor:(UIColor *)selColor {
     UITabBarController *tabVc = [UITabBarController new];

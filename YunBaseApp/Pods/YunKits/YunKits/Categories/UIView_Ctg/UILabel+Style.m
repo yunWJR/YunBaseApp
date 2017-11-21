@@ -9,20 +9,18 @@
 @implementation UILabel (Style)
 
 - (void)setText:(NSString *)text font:(UIFont *)font color:(UIColor *)color {
-    if (self == nil) {
-        return;
+    self.text = text;
+
+    if (font) {
+        self.font = font;
     }
 
-    self.text = text;
-    self.font = font;
-    self.textColor = color;
+    if (color) {
+        self.textColor = color;
+    }
 }
 
 - (void)setAlign:(NSTextAlignment)align lines:(NSInteger)lines adjust:(BOOL)adjust {
-    if (self == nil) {
-        return;
-    }
-
     self.textAlignment = align;
     self.numberOfLines = lines;
     self.adjustsFontSizeToFitWidth = adjust;

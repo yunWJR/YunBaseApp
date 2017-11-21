@@ -30,7 +30,7 @@
 /**
  *根据月份获取天数
  */
-+ (NSArray *)calculationDay:(NSString *)iyear andMonth:(NSString *)month;
++ (NSArray *)calculationDay:(NSString *)year andMonth:(NSString *)month;
 
 /**
  *获取时

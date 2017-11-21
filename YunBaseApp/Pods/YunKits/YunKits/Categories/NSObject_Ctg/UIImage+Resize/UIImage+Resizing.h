@@ -7,7 +7,6 @@
 //  www.cocoaintheshell.com
 //
 
-
 #import "NYXImagesHelper.h"
 
 typedef enum {

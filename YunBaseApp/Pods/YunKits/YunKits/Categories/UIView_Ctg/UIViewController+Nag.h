@@ -3,7 +3,6 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @interface UIViewController (Nag)

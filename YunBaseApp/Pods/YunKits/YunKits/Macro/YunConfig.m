@@ -46,13 +46,13 @@
 
         _dateFmYm = @"yyyy-MM";
         _dateFmYmd = @"yyyy-MM-dd";
-        _dateFmYmdHm = @"yyyy-MM-dd hh:mm";
-        _dateFmHm = @"hh:mm";
+        _dateFmYmdHm = @"yyyy-MM-dd HH:mm"; // HH - 默认24小时制
+        _dateFmHm = @"HH:mm";
 
         _dateFmYm_Server = @"yyyy-MM";
         _dateFmYmd_Server = @"yyyy-MM-dd";
-        _dateFmYmdHm_Server = @"yyyy-MM-dd hh:mm";
-        _dateFmHm_Server = @"hh:mm";
+        _dateFmYmdHm_Server = @"yyyy-MM-dd HH:mm";
+        _dateFmHm_Server = @"HH:mm";
 
         _btnDefHlColor = [UIColor lightGrayColor];
 
