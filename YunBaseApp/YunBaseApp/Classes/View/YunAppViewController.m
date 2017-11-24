@@ -167,6 +167,10 @@
 - (void)updateVcData {
     self.hasUpdated = YES;
     [self setCurUpdateDate];
+
+    if (_didUpdateVcData) {
+        _didUpdateVcData();
+    }
 }
 
 #pragma mark - update date
@@ -194,5 +198,6 @@
 
     return parent;
 }
+
 
 @end

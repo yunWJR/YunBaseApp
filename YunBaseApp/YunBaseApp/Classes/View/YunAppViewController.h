@@ -34,6 +34,8 @@
 // 最后一次更新信息
 @property (nonatomic, strong) NSDate *lastUpdateDate;
 
+@property (nonatomic, copy) void (^didUpdateVcData)(void);
+
 // 120秒
 @property (nonatomic, assign) NSTimeInterval updateInterval;
 
