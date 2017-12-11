@@ -154,10 +154,19 @@
         NSData *data = [[NSMutableData alloc] initWithContentsOfFile:[self getFilePath:index]
                                                              options:NSDataReadingMappedIfSafe
                                                                error:&error];
+
         if (data) {
             NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-            item = [unarchiver decodeObjectForKey:_dataKey];
-            [unarchiver finishDecoding];
+
+            @try {
+                item = [unarchiver decodeObjectForKey:_dataKey];
+            }
+            @catch (NSException *exception) {
+                error = [NSError new];
+            }
+            @finally {
+                [unarchiver finishDecoding];
+            }
         }
     }
     else {
