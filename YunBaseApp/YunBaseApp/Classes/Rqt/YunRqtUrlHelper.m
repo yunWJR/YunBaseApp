@@ -47,10 +47,12 @@
 }
 
 + (NSString *)urlCmBase:(NSString *)addr {
+    addr = [addr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // 处理中文
     return [[NSURL URLWithString:addr relativeToURL:YunRqtConfig.instance.baseURL] absoluteString];
 }
 
 + (NSString *)urlCmBaseApi:(NSString *)addr {
+    addr = [addr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // 处理中文
     return [[NSURL URLWithString:addr relativeToURL:YunRqtConfig.instance.baseApiURL] absoluteString];
 }
 
