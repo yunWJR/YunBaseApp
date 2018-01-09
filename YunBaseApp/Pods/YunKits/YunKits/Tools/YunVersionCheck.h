@@ -10,8 +10,8 @@
 /**
  block回调
 
- @param currentVersion 当前版本号
- @param storeVersion 商店版本号
+ @param curVer 当前版本号
+ @param appStVer 商店版本号
  @param openUrl 跳转到商店的地址
  @param isUpdate 是否为最新版本
  */

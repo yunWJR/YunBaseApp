@@ -16,6 +16,8 @@
       borderColor:(UIColor *)borderColor
       borderWidth:(CGFloat)borderWidth;
 
+- (void)setBg:(UIColor *)color;
+
 - (void)setBg:(UIColor *)color height:(CGFloat)height;
 
 - (void)setBg:(UIColor *)color height:(CGFloat)height filedBgImg:(NSString *)img;

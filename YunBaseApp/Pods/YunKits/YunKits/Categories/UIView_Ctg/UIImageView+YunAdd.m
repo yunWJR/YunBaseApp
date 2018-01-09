@@ -3,35 +3,34 @@
 // Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
 //
 
+#import "YunValueVerifier.h"
 #import <SDWebImage/SDImageCache.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "UIImageView+YunAdd.h"
 #import "NSURL+YunAdd.h"
 #import "YunConfig.h"
-#import "YunValueVerifier.h"
 
 @implementation UIImageView (YunAdd)
 
 - (void)setImgUrlStr:(NSString *)urlStr {
-    UIImage *phImg = nil;
+    UIImage *phImg = [UIImage imageNamed:YunConfig.instance.imgViewHolderImgName];
     if (self.image == nil) {
-        phImg = [UIImage imageNamed:YunConfig.instance.imgViewHolderImgName];
         self.image = phImg;
     }
 
     if ([YunValueVerifier isNilOrEmptyStr:urlStr]) {
+        self.image = phImg;
         return;
     }
 
     [self sd_setImageWithURL:[NSURL urlWithStr:urlStr]
-            placeholderImage:phImg
+            placeholderImage:self.image
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        if (!image) {
                            self.image = [UIImage imageNamed:YunConfig.instance.imgViewFailedImgName];
                        }
                    }];
-
 }
 
 - (void)setImgUrlStr:(NSString *)urlStr holderImg:(UIImage *)phImg {
@@ -40,11 +39,12 @@
     }
 
     if ([YunValueVerifier isNilOrEmptyStr:urlStr]) {
+        self.image = phImg;
         return;
     }
 
     [self sd_setImageWithURL:[NSURL urlWithStr:urlStr]
-            placeholderImage:phImg
+            placeholderImage:self.image
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        if (!image) {
                            self.image = [UIImage imageNamed:YunConfig.instance.imgViewFailedImgName];
@@ -53,18 +53,18 @@
 }
 
 - (void)setAvrImgUrlStr:(NSString *)urlStr {
-    UIImage *phImg = nil;
+    UIImage *phImg = [UIImage imageNamed:YunConfig.instance.imgViewAvrImgName];
     if (self.image == nil) {
-        phImg = [UIImage imageNamed:YunConfig.instance.imgViewAvrImgName];
         self.image = phImg;
     }
 
     if ([YunValueVerifier isNilOrEmptyStr:urlStr]) {
+        self.image = phImg;
         return;
     }
 
     [self sd_setImageWithURL:[NSURL urlWithStr:urlStr]
-            placeholderImage:phImg
+            placeholderImage:self.image
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                        if (!image) {
                            self.image = [UIImage imageNamed:YunConfig.instance.imgViewAvrImgName];

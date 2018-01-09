@@ -8,6 +8,13 @@
 
 @implementation UIImage (YunAdd)
 
++ (UIImage *)imgOfOrg:(NSString *)img {
+    UIImage *itemImg = [UIImage imageNamed:img];
+    itemImg = [itemImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+    return itemImg;
+}
+
 + (UIImage *)imgWithColor:(UIColor *)color {
     return [self imgWithColor:color size:CGSizeMake(1.0f, 1.0f)];
 }
@@ -53,8 +60,31 @@
     return newImg;
 }
 
+// kb
 - (UIImage *)resizeWithSize:(NSInteger)size {
-    return [self resizeWithSize:size height:1080];
+    return [self resizeWithMaxSize:size * 1024];
+}
+
+// byte
+- (UIImage *)resizeWithMaxSize:(NSInteger)size {
+    CGFloat cmp = 1.0;
+    CGFloat maxCop = 0.1f;
+    UIImage *img = self;
+
+    NSData *imgDataMin = UIImageJPEGRepresentation(img, maxCop);
+    if (imgDataMin.length > size) {
+        UIImage *minImg = [UIImage imageWithData:imgDataMin];
+        return minImg;
+    }
+
+    NSData *imgData = UIImageJPEGRepresentation(img, cmp);
+    while ([imgData length] > size && cmp >= maxCop) {
+        cmp -= 0.1f;
+        imgData = UIImageJPEGRepresentation(img, cmp);
+    }
+
+    UIImage *compressedImage = [UIImage imageWithData:imgData];
+    return compressedImage;
 }
 
 - (UIImage *)resizeWithSize:(NSInteger)size height:(CGFloat)height {

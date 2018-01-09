@@ -7,6 +7,8 @@
 
 @interface UIImage (YunAdd)
 
++ (UIImage *)imgOfOrg:(NSString *)img;
+
 + (UIImage *)imgWithColor:(UIColor *)color;
 
 + (UIImage *)imgWithColor:(UIColor *)color height:(CGFloat)height;
@@ -18,6 +20,8 @@
 - (UIImage *)resizeWithHeight:(CGFloat)height;
 
 - (UIImage *)resizeWithSize:(NSInteger)size;
+
+- (UIImage *)resizeWithMaxSize:(NSInteger)size;
 
 - (UIImage *)resizeWithSize:(NSInteger)size height:(CGFloat)height;
 

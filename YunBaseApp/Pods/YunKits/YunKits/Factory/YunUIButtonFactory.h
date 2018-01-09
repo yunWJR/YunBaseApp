@@ -19,7 +19,7 @@
                           target:(id _Nullable)target
                           action:(SEL _Nullable)action;
 
-+ (UIButton *_Nonnull)btnWithImg:(NSString *)bgImg
++ (UIButton *_Nonnull)btnWithImg:(NSString *_Nonnull)bgImg
                             mode:(UIViewContentMode)mode
                            scale:(CGFloat)scale
                           target:(id _Nullable)target

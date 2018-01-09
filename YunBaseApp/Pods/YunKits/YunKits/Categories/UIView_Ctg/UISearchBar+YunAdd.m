@@ -33,6 +33,15 @@
     }
 }
 
+- (void)setBg:(UIColor *)color {
+    /** 设置背景图片 */
+    UIImage *searchBarBg = [UIImage imgWithColor:color];
+    [self setBackgroundImage:searchBarBg];   //这里图片的颜色和导航栏一样
+
+    /** 设置背景色 */
+    [self setBackgroundColor:color];
+}
+
 - (void)setBg:(UIColor *)color height:(CGFloat)height {
     /** 设置背景图片 */
     UIImage *searchBarBg = [UIImage imgWithColor:color height:height];
@@ -57,6 +66,42 @@
     // 设置文本框背景
     UIImage *searchFBarBg = [UIImage imageNamed:img];
     [self setSearchFieldBackgroundImage:searchFBarBg forState:UIControlStateNormal];
+}
+
+- (UIView *)schBgView {
+    UIView *backgroundView = [self valueForKey:@"_background"];
+    if (backgroundView) {
+        return backgroundView;
+    }
+
+    for (UIView *v1 in self.subviews) {
+        for (id v2 in v1.subviews) {
+            if ([v2 isKindOfClass:UIView.class] && ![v2 isKindOfClass:UITextField.class]) {
+                UIView *bg = v2;
+                return bg;
+            }
+        }
+    }
+
+    return nil;
+}
+
+- (UITextField *)schTfView {
+    UITextField *searchField = [self valueForKey:@"_searchField"];
+    if (searchField) {
+        return searchField;
+    }
+
+    for (UIView *v1 in self.subviews) {
+        for (id v2 in v1.subviews) {
+            if ([v2 isKindOfClass:UITextField.class]) {
+                UITextField *tf = v2;
+                return tf;
+            }
+        }
+    }
+
+    return nil;
 }
 
 @end

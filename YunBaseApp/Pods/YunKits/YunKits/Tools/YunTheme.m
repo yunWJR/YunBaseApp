@@ -7,6 +7,19 @@
 #import "YunSizeHelper.h"
 
 @implementation YunTheme {
+    CGFloat _sizeScl;
+
+    CGFloat _orgScreenScale;
+}
+
+- (CGFloat)sizeScale {
+    return _sizeScl;
+}
+
+- (void)setSizeScale:(CGFloat)sizeScale {
+    _sizeScl = sizeScale;
+
+    _screenScale = _sizeScl * _orgScreenScale; // 当前屏幕相对于6屏幕的比列大小
 }
 
 + (instancetype)instance {
@@ -26,9 +39,13 @@
     if (self) {
         _baseFontSize = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline].pointSize;
 
-        CGFloat delta = [YunSizeHelper screenWidth] - 414.0f;
-        CGFloat delta1 = delta / 414.0f * 0.5f;
-        _screenScale = 1.2f * (1.0f + delta1); // 当前屏幕相对于6p屏幕的比列大小
+        _sizeScl = 1.0f;
+
+        CGFloat delta = [YunSizeHelper screenWidth] - 375.0f;
+        CGFloat delta1 = delta / 375.0f * 0.5f;
+        _orgScreenScale = (1.0f + delta1);
+
+        _screenScale = _sizeScl * _orgScreenScale; // 当前屏幕相对于6屏幕的比列大小
     }
 
     return self;

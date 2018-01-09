@@ -10,8 +10,11 @@
 // 默认 UIFontTextStyleHeadline
 @property (nonatomic, assign) CGFloat baseFontSize;
 
-// 默认 当前屏幕相对于6p屏幕的比列大小
+// 默认 当前屏幕相对于6屏幕的比列大小
 @property (nonatomic, assign) CGFloat screenScale;
+
+// 放大倍数
+@property (nonatomic, assign) CGFloat sizeScale;
 
 + (YunTheme *)instance;
 
