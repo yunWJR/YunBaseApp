@@ -48,11 +48,13 @@
 
 + (NSString *)urlCmBase:(NSString *)addr {
     addr = [addr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // 处理中文
+
     return [[NSURL URLWithString:addr relativeToURL:YunRqtConfig.instance.baseURL] absoluteString];
 }
 
 + (NSString *)urlCmBaseApi:(NSString *)addr {
     addr = [addr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // 处理中文
+
     return [[NSURL URLWithString:addr relativeToURL:YunRqtConfig.instance.baseApiURL] absoluteString];
 }
 
@@ -90,7 +92,7 @@
 + (NSString *)JSONString:(id)data; {
     NSError *error = nil;
     id result = [NSJSONSerialization dataWithJSONObject:data
-                                                options:NSJSONWritingPrettyPrinted error:&error]; // kNilOptions
+                                                options:0 error:&error]; // NSJSONWritingPrettyPrinted kNilOptions
     if (error != nil) {
         return @"";
     }
@@ -103,7 +105,7 @@
 + (NSData *)JSONData:(id)data; {
     NSError *error = nil;
     id result = [NSJSONSerialization dataWithJSONObject:data
-                                                options:NSJSONWritingPrettyPrinted error:&error]; // kNilOptions
+                                                options:0 error:&error]; // kNilOptions
     if (error != nil) {
         return nil;
     }
@@ -172,7 +174,7 @@
 + (NSString *)jsonStrWithDic:(id)infoDict {
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:infoDict
-                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
                                                          error:&error];
 
     NSString *jsonStr = @"";
