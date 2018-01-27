@@ -107,6 +107,7 @@
 
     if (_backVC) {
         [self.navigationController popToViewController:_backVC animated:YES];
+        _backVC = nil;
     }
     else {
         [self.navigationController popViewControllerAnimated:YES];

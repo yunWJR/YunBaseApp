@@ -8,13 +8,6 @@
 
 @implementation UIImage (YunAdd)
 
-+ (UIImage *)imgOfOrg:(NSString *)img {
-    UIImage *itemImg = [UIImage imageNamed:img];
-    itemImg = [itemImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
-    return itemImg;
-}
-
 + (UIImage *)imgWithColor:(UIColor *)color {
     return [self imgWithColor:color size:CGSizeMake(1.0f, 1.0f)];
 }
@@ -71,6 +64,7 @@
     CGFloat maxCop = 0.1f;
     UIImage *img = self;
 
+    // todo add
     NSData *imgDataMin = UIImageJPEGRepresentation(img, maxCop);
     if (imgDataMin.length > size) {
         UIImage *minImg = [UIImage imageWithData:imgDataMin];
@@ -78,13 +72,42 @@
     }
 
     NSData *imgData = UIImageJPEGRepresentation(img, cmp);
-    while ([imgData length] > size && cmp >= maxCop) {
-        cmp -= 0.1f;
+    while ([imgData length] > size && cmp > maxCop) {
+        cmp *= 0.7f;
+        imgData = UIImageJPEGRepresentation(img, cmp);
+    }
+
+    if (cmp < maxCop) {
+        cmp = maxCop;
         imgData = UIImageJPEGRepresentation(img, cmp);
     }
 
     UIImage *compressedImage = [UIImage imageWithData:imgData];
     return compressedImage;
+}
+
+// maxLength = xxx * 1024
+- (NSData *)compressQualityWithMaxLength:(NSInteger)maxLength {
+    CGFloat compression = 1;
+    NSData *data = UIImageJPEGRepresentation(self, compression);
+    if (data.length < maxLength) return data;
+    CGFloat max = 1;
+    CGFloat min = 0;
+    for (int i = 0; i < 6; ++i) {
+        compression = (max + min) / 2;
+        data = UIImageJPEGRepresentation(self, compression);
+        if (data.length < maxLength * 0.9) {
+            min = compression;
+        }
+        else if (data.length > maxLength) {
+            max = compression;
+        }
+        else {
+            break;
+        }
+    }
+
+    return data;
 }
 
 - (UIImage *)resizeWithSize:(NSInteger)size height:(CGFloat)height {
