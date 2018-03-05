@@ -233,16 +233,16 @@
     return _lockList[index];
 }
 
+- (BOOL)isInvalidIndex:(NSInteger)index {
+    return !(index >= 0 && index < _fileList.count);
+}
+
 - (void)checkAllFiles {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray<NSString *> *fileArr = [fileManager contentsOfDirectoryAtPath:[self docDic] error:nil];
     for (int i = 0; i < fileArr.count; ++i) {
         NSLog(@"%@", fileArr[i]);
     }
-}
-
-- (BOOL)isInvalidIndex:(NSInteger)index {
-    return !(index >= 0 && index < _fileList.count);
 }
 
 @end
