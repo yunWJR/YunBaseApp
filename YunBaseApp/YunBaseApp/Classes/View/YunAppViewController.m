@@ -45,6 +45,10 @@
         // 导航栏背景颜色
         [self setNagBg:YunAppTheme.colorNagBg];
 
+        if (!self.isNagBarClear) {
+            self.navigationController.navigationBar.translucent = true;
+        }
+
         // title 字体
         [self setNagTitle:YunAppTheme.colorNagDark font:YunAppTheme.nagFontTitle];
 
@@ -91,15 +95,23 @@
 
 - (void)setNagBg:(UIColor *)color {
     // 导航栏背景颜色
-    [self.navigationController.navigationBar setBarTintColor:color];
+    if (color) {
+        [self.navigationController.navigationBar setBarTintColor:color];
+    }
 }
 
 - (void)setNagTitle:(UIColor *)color font:(UIFont *)font {
+    NSMutableDictionary *mDic = [NSMutableDictionary new];
+    if (color) {
+        mDic[NSForegroundColorAttributeName] = color;
+    }
+
+    if (font) {
+        mDic[NSFontAttributeName] = font;
+    }
+
     // title 字体
-    [self.navigationController.navigationBar setTitleTextAttributes:@{
-            NSFontAttributeName            : font,
-            NSForegroundColorAttributeName : color
-    }];
+    [self.navigationController.navigationBar setTitleTextAttributes:mDic];
 }
 
 - (void)setRightBarItemName:(NSString *)name color:(UIColor *)color {
@@ -140,6 +152,15 @@
 
 - (void)setNavTitle:(NSString *)title {
     self.navigationItem.title = title;
+}
+
+- (void)setNagBarClear {
+    // 1、设置导航栏半透明
+    self.navigationController.navigationBar.translucent = true;
+    // 2、设置导航栏背景图片
+    [self.navigationController.navigationBar setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
+    // 3、设置导航栏阴影图片
+    self.navigationController.navigationBar.shadowImage = UIImage.new;
 }
 
 #pragma mark - private functions

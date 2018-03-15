@@ -41,6 +41,8 @@
 
 @property (nonatomic, assign) BOOL hasUpdated;
 
+@property (nonatomic, assign) BOOL isNagBarClear;
+
 - (void)setNagBg:(UIColor *)color;
 
 - (void)setNagTitle:(UIColor *)color font:(UIFont *)font;
@@ -58,6 +60,8 @@
 - (void)setRightBarItemName:(NSString *)name color:(UIColor *)color;
 
 - (void)setNavTitle:(NSString *)title;
+
+- (void)setNagBarClear;
 
 #pragma mark - request
 
