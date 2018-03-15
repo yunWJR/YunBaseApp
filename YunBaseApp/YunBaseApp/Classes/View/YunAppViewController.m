@@ -3,6 +3,7 @@
 //  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
 //
 
+#import <YYCategories/UIImage+YYAdd.h>
 #import "YunAppViewController.h"
 #import "YunAppConfig.h"
 
@@ -42,11 +43,11 @@
     [super viewWillAppear:animated];
 
     if (!self.hideNagBar) {
-        // 导航栏背景颜色
-        [self setNagBg:YunAppTheme.colorNagBg];
-
         if (!self.isNagBarClear) {
             self.navigationController.navigationBar.translucent = true;
+
+            // 导航栏背景颜色
+            [self setNagBg:YunAppTheme.colorNagBg];
         }
 
         // title 字体
@@ -96,7 +97,15 @@
 - (void)setNagBg:(UIColor *)color {
     // 导航栏背景颜色
     if (color) {
+        self.navigationController.navigationBar.translucent = false;
+
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:color]
+                                                      forBarMetrics:UIBarMetricsDefault];
+        self.navigationController.navigationBar.shadowImage = nil;
+
         [self.navigationController.navigationBar setBarTintColor:color];
+
+        [self.navigationController.navigationBar layoutIfNeeded];
     }
 }
 
@@ -161,6 +170,8 @@
     [self.navigationController.navigationBar setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
     // 3、设置导航栏阴影图片
     self.navigationController.navigationBar.shadowImage = UIImage.new;
+
+    self.isNagBarClear = YES;
 }
 
 #pragma mark - private functions

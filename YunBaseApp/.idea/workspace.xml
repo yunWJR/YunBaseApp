@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" />
       <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,51 +15,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_12206484e7323519acc20b4c31043a0b582e05a1" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="YunAppViewController.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="YunAppViewController.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="665">
+              <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="YunAppViewController.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="YunAppViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="163" column="1" lean-forward="true" selection-start-line="163" selection-start-column="1" selection-end-line="163" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#2#0" expanded="false" />
-                <element signature="e#153#197#0" expanded="false" />
-                <element signature="e#188#191#0" expanded="false" />
-                <element signature="e#237#525#0" expanded="false" />
-                <element signature="e#527#631#0" expanded="false" />
-                <element signature="e#633#705#0" expanded="false" />
-                <element signature="e#707#1557#0" expanded="false" />
-                <element signature="e#1559#1635#0" expanded="false" />
-                <element signature="e#1637#1721#0" expanded="false" />
-                <element signature="e#1723#1805#0" expanded="false" />
-                <element signature="e#1831#1962#0" expanded="false" />
-                <element signature="e#1997#2145#0" expanded="false" />
-                <element signature="e#2147#2500#0" expanded="false" />
-                <element signature="e#2502#2809#0" expanded="false" />
-                <element signature="e#2811#2906#0" expanded="false" />
-                <element signature="e#2908#3209#0" expanded="false" />
-                <element signature="e#3211#3304#0" expanded="false" />
-                <element signature="e#3306#3470#0" expanded="false" />
-                <element signature="e#3472#3640#0" expanded="false" />
-                <element signature="e#3642#3722#0" expanded="false" />
-                <element signature="e#3724#4053#0" expanded="false" />
-                <element signature="e#4148#4297#0" expanded="false" />
-                <element signature="e#4299#4357#0" expanded="false" />
-                <element signature="e#4359#4392#0" expanded="false" />
-                <element signature="e#4394#4537#0" expanded="false" />
-                <element signature="e#4567#4632#0" expanded="false" />
-                <element signature="e#4634#4832#0" expanded="false" />
-                <element signature="e#4834#5089#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="741">
+              <caret line="233" column="4" lean-forward="false" selection-start-line="233" selection-start-column="4" selection-end-line="233" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,8 +139,8 @@
         <option value="$PROJECT_DIR$/YunBaseApp.podspec" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" />
       </list>
     </option>
   </component>
@@ -183,7 +153,7 @@
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
     <option name="x" value="375" />
-    <option name="y" value="48" />
+    <option name="y" value="47" />
     <option name="width" value="1821" />
     <option name="height" value="983" />
   </component>
@@ -440,7 +410,7 @@
       <workItem from="1516797555066" duration="129000" />
       <workItem from="1517019008918" duration="382000" />
       <workItem from="1520236777945" duration="2168000" />
-      <workItem from="1521095333123" duration="684000" />
+      <workItem from="1521095333123" duration="1305000" />
     </task>
     <task id="LOCAL-00001" summary="update yunkits">
       <created>1498530494513</created>
@@ -694,11 +664,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520238989697</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="add setting nag bar for clear">
+      <created>1521096034662</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1521096034662</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75955000" />
+    <option name="totallyTimeSpent" value="76576000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -710,7 +687,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="375" y="48" width="1821" height="983" extended-state="0" />
+    <frame x="375" y="47" width="1821" height="983" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -790,7 +767,8 @@
     <MESSAGE value="fix chinese url" />
     <MESSAGE value="change json" />
     <MESSAGE value="reform code" />
-    <option name="LAST_COMMIT_MESSAGE" value="reform code" />
+    <MESSAGE value="add setting nag bar for clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="add setting nag bar for clear" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1151,48 +1129,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="741">
+          <caret line="233" column="4" lean-forward="false" selection-start-line="233" selection-start-column="4" selection-end-line="233" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="163" column="1" lean-forward="true" selection-start-line="163" selection-start-column="1" selection-end-line="163" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#153#197#0" expanded="false" />
-            <element signature="e#188#191#0" expanded="false" />
-            <element signature="e#237#525#0" expanded="false" />
-            <element signature="e#527#631#0" expanded="false" />
-            <element signature="e#633#705#0" expanded="false" />
-            <element signature="e#707#1557#0" expanded="false" />
-            <element signature="e#1559#1635#0" expanded="false" />
-            <element signature="e#1637#1721#0" expanded="false" />
-            <element signature="e#1723#1805#0" expanded="false" />
-            <element signature="e#1831#1962#0" expanded="false" />
-            <element signature="e#1997#2145#0" expanded="false" />
-            <element signature="e#2147#2500#0" expanded="false" />
-            <element signature="e#2502#2809#0" expanded="false" />
-            <element signature="e#2811#2906#0" expanded="false" />
-            <element signature="e#2908#3209#0" expanded="false" />
-            <element signature="e#3211#3304#0" expanded="false" />
-            <element signature="e#3306#3470#0" expanded="false" />
-            <element signature="e#3472#3640#0" expanded="false" />
-            <element signature="e#3642#3722#0" expanded="false" />
-            <element signature="e#3724#4053#0" expanded="false" />
-            <element signature="e#4148#4297#0" expanded="false" />
-            <element signature="e#4299#4357#0" expanded="false" />
-            <element signature="e#4359#4392#0" expanded="false" />
-            <element signature="e#4394#4537#0" expanded="false" />
-            <element signature="e#4567#4632#0" expanded="false" />
-            <element signature="e#4634#4832#0" expanded="false" />
-            <element signature="e#4834#5089#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="665">
+          <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
