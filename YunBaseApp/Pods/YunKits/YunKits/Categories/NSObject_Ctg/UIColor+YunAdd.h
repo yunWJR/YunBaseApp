@@ -1,8 +1,8 @@
 //
 //  UIColor+YunAdd.h
 //
-//  Created by WangJianrong on 15/11/13.
-//  Copyright (c) 2015年 爱多星球教育科技有限公司. All rights reserved.
+// Created by yun on 15/11/13.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

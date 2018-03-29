@@ -1,8 +1,8 @@
 //
 //  NSError+YunAdd.m
 //
-//  Created by 王健 on 16/5/26.
-//  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
+// Created by yun on 16/12/1.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -22,6 +22,10 @@
 
 + (instancetype)errorWithCustomCode:(NSInteger)code {
     return [[NSError alloc] initWithDomain:@"error_custom" code:code userInfo:@{CUSTOM_MSG_KEY : @""}];
+}
+
+- (NSString *)getErrorMsg {
+    return self.userInfo[CUSTOM_MSG_KEY];
 }
 
 @end

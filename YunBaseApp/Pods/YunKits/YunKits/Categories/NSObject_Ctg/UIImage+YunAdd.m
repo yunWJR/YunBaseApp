@@ -1,6 +1,6 @@
 //
 // Created by yun on 2017/5/17.
-// Copyright (c) 2017 skkj. All rights reserved.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import "UIImage+YunAdd.h"
@@ -55,7 +55,46 @@
 
 // kb
 - (UIImage *)resizeWithSize:(NSInteger)size {
-    return [self resizeWithMaxSize:size * 1024];
+    return [self resizeWithMaxSize:size * self.imgLgFactor];
+}
+
+// kb
+- (UIImage *)compressByMaxLength:(NSInteger)length {
+    NSInteger maxLength = length * self.imgLgFactor;
+
+    NSData *data = UIImageJPEGRepresentation(self, 1);
+    if (data.length < maxLength) return self;
+
+    NSData *copData = [self compressByMaxLengthToData:length];
+
+    UIImage *copImage = [UIImage imageWithData:copData];
+    return copImage;
+}
+
+- (NSData *)compressByMaxLengthToData:(NSInteger)length {
+    NSInteger maxLength = length * self.imgLgFactor;
+
+    CGFloat compression = 1;
+    NSData *data = UIImageJPEGRepresentation(self, compression);
+    if (data.length < maxLength) return data;
+
+    CGFloat max = 1;
+    CGFloat min = 0;
+    for (int i = 0; i < 6; ++i) {
+        compression = (max + min) / 2;
+        data = UIImageJPEGRepresentation(self, compression);
+        if (data.length < maxLength * 0.9) {
+            min = compression;
+        }
+        else if (data.length > maxLength) {
+            max = compression;
+        }
+        else {
+            break;
+        }
+    }
+
+    return data;
 }
 
 // byte
@@ -86,49 +125,16 @@
     return compressedImage;
 }
 
-// maxLength = xxx * 1024
-- (NSData *)compressQualityWithMaxLength:(NSInteger)maxLength {
-    CGFloat compression = 1;
-    NSData *data = UIImageJPEGRepresentation(self, compression);
-    if (data.length < maxLength) return data;
-    CGFloat max = 1;
-    CGFloat min = 0;
-    for (int i = 0; i < 6; ++i) {
-        compression = (max + min) / 2;
-        data = UIImageJPEGRepresentation(self, compression);
-        if (data.length < maxLength * 0.9) {
-            min = compression;
-        }
-        else if (data.length > maxLength) {
-            max = compression;
-        }
-        else {
-            break;
-        }
-    }
-
-    return data;
-}
-
-- (UIImage *)resizeWithSize:(NSInteger)size height:(CGFloat)height {
-    UIImage *newImg = [self resizeWithHeight:height];
-
-    CGFloat compression = 0.5f;
-    CGFloat maxCompression = 0.00000001f;
-    NSData *imageData = UIImageJPEGRepresentation(newImg, compression);
-    while ([imageData length] > size && compression > maxCompression) {
-        compression *= 0.5f;
-        imageData = UIImageJPEGRepresentation(newImg, compression);
-    }
-
-    UIImage *compressedImage = [UIImage imageWithData:imageData];
-    return compressedImage;
-}
-
 - (NSInteger)imgSize {
     NSData *imageData = UIImageJPEGRepresentation(self, 1);
 
-    return [imageData length] / 1000;
+    return [imageData length] / self.imgLgFactor;
+}
+
+- (NSInteger)imgLength {
+    NSData *imageData = UIImageJPEGRepresentation(self, 1);
+
+    return [imageData length] / self.imgLgFactor;
 }
 
 - (UIImage *)roundCornerImg {
@@ -172,6 +178,10 @@ void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWidth, fl
     CGContextAddArcToPoint(context, fw, 0, fw, fh / 2, 1);
     CGContextClosePath(context);
     CGContextRestoreGState(context);
+}
+
+- (NSInteger)imgLgFactor {
+    return 1024; // 1000?
 }
 
 @end

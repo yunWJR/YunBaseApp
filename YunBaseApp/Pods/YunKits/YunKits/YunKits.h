@@ -2,8 +2,8 @@
 //  YunKits.h
 //  YunKits
 //
-//  Created by yun on 2017/6/22.
-//  Copyright © 2017年 yun. All rights reserved.
+// Created by yun on 2017/6/22.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

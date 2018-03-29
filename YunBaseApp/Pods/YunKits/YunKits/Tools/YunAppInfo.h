@@ -1,14 +1,16 @@
 //
-// Created by 王健 on 2016/11/24.
-// Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
+// Created by yun on 2016/11/24.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface YunAppInfo : NSObject
 
+// 1.0.0
 + (NSString *)appVersion;
 
+// 100
 + (NSString *)appVersionStr;
 
 + (BOOL)shouldUpdate:(NSString *)serverVersion;

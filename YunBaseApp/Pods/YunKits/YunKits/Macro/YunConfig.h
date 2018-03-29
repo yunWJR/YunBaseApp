@@ -81,7 +81,7 @@
 // def service phone
 @property (nonatomic, copy) NSString *servicePhone;
 
-// def imgview bg
+// def img view bg
 @property (nonatomic, strong) UIColor *imgViewBg;
 
 // 水平空白 6

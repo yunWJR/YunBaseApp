@@ -1,6 +1,6 @@
 //
 // Created by yun on 2017/5/15.
-// Copyright (c) 2017 skkj. All rights reserved.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import "YunUITableViewFactory.h"
@@ -19,7 +19,7 @@
     tvc.dataSource = target;
     tvc.backgroundColor = [UIColor clearColor];
     tvc.separatorStyle = UITableViewCellSeparatorStyleNone;
-    // tvc.estimatedRowHeight = 40; // 防止数据过多加载缓慢 造成乱跳
+    // tvc.estimatedRowHeight = 40; // 防止数据过多加载缓慢 但是会造成刷新乱跳
 
     for (int i = 0; i < classes.count; ++i) {
         [tvc registerClass:classes[i] forCellReuseIdentifier:ids[i]];
@@ -36,7 +36,7 @@
     tvc.dataSource = target;
     tvc.backgroundColor = [UIColor clearColor];
     tvc.separatorStyle = UITableViewCellSeparatorStyleNone;
-    // tvc.estimatedRowHeight = 40; // 防止数据过多加载缓慢 造成乱跳
+    // tvc.estimatedRowHeight = 40; // 防止数据过多加载缓慢 但是会造成刷新乱跳
 
     for (int i = 0; i < ids.count; ++i) {
         [tvc registerClass:cellClass forCellReuseIdentifier:ids[i]];

@@ -46,6 +46,8 @@
 
 @property (nonatomic, assign) BOOL queryMode;
 
+@property (nonatomic, assign) BOOL logUrl;
+
 @property (nonatomic, strong) NSMutableDictionary *headerParas;
 
 @property (nonatomic, strong) AFHTTPRequestSerializer <AFURLRequestSerialization> *requestSerializer;

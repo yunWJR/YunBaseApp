@@ -1,12 +1,13 @@
 //
 //  UILabel+YunAdd.m
 //
-//  Created by yun on 16/5/8.
-//  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
+// Created by yun on 16/5/8.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import "UILabel+YunAdd.h"
 #import "YunConfig.h"
+#import "YunValueVerifier.h"
 
 @implementation UILabel (YunAdd)
 
@@ -84,7 +85,7 @@
 }
 
 - (void)setText:(NSString *)text lineInner:(CGFloat)inner {
-    if (self == nil || text == nil) {
+    if ([YunValueVerifier isInvalidStr:text]) {
         return;
     }
 

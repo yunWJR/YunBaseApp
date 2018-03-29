@@ -3,7 +3,6 @@
 //  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
 //
 
-#import <YYCategories/UIImage+YYAdd.h>
 #import "YunAppViewController.h"
 #import "YunAppConfig.h"
 
@@ -99,7 +98,7 @@
     if (color) {
         self.navigationController.navigationBar.translucent = false;
 
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:color]
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imgWithColor:color]
                                                       forBarMetrics:UIBarMetricsDefault];
         self.navigationController.navigationBar.shadowImage = nil;
 

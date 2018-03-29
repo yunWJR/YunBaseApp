@@ -4,6 +4,7 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
+#import <YunKits/YunConfig.h>
 #import "YunRqtConfig.h"
 
 @implementation YunRqtConfig
@@ -44,6 +45,7 @@
     self.rstSuccessCode = @"200";
 
     self.queryMode = NO;
+    self.logUrl = YunConfig.instance.isDebugMode;
 }
 
 @end

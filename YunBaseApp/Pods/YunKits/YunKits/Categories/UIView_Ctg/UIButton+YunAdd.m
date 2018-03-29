@@ -1,6 +1,6 @@
 //
 //  Created by 王健 on 16/9/9.
-//  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import "UIButton+YunAdd.h"

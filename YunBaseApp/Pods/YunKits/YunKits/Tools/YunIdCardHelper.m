@@ -1,6 +1,6 @@
 //
-// Created by 王健 on 16/6/28.
-// Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
+// Created by yun on 16/6/28.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 //六位数字地址码，八位数字出生日期码，三位数字顺序码和一位数字校验码。

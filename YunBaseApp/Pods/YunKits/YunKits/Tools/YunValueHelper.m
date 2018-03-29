@@ -1,6 +1,6 @@
 //
-// Created by 王健 on 2016/11/9.
-// Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
+// Created by yun on 2016/11/9.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import "YunValueHelper.h"

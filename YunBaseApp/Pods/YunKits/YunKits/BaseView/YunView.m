@@ -1,12 +1,11 @@
 //
 // Created by yun on 16/12/1.
-// Copyright (c) 2016 成都晟堃科技有限责任公司. All rights reserved.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import "YunView.h"
 
 @implementation YunView {
-
 }
 
 - (instancetype)initWithAllOff:(CGFloat)off andInterval:(CGFloat)interval {

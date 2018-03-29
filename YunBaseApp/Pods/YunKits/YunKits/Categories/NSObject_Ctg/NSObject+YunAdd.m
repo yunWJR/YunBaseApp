@@ -1,6 +1,6 @@
 //
-//  Created by yun on 16/5/15.
-//  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
+// Created by yun on 16/5/15.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import "NSObject+YunAdd.h"
@@ -8,18 +8,21 @@
 
 @implementation NSObject (YunAdd)
 
+// 深度复制
 - (id)yunDeepCopy {
     id obj = nil;
+
     @try {
         obj = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:self]];
     }
-    @catch (NSException *exception) {
-        NSLog(@"%@", exception);
+    @catch (NSException *exp) {
+        obj = nil;
     }
+
     return obj;
 }
 
-/* 获取对象的所有属性 */
+// 获取对象的所有属性
 - (NSDictionary *)getAllProperties {
     NSMutableDictionary *props = [NSMutableDictionary dictionary];
 
@@ -38,7 +41,7 @@
     return props;
 }
 
-/* 获取对象的所有方法 */
+// 获取对象的所有方法
 - (void)printAllMethods {
     unsigned int mothCout_f = 0;
     Method *mothList_f = class_copyMethodList([self class], &mothCout_f);

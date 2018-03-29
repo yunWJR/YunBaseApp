@@ -45,7 +45,7 @@
         _iconViewTagInImgView = 99999;
 
         _dateFmYm = @"yyyy-MM";
-        _dateFmYmd = @"yyyy-MM-dd";
+        _dateFmYmd = @"yyyy-MM-dd"; // DD - 今年的第几天
         _dateFmYmdHm = @"yyyy-MM-dd HH:mm"; // HH - 默认24小时制
         _dateFmHm = @"HH:mm";
 

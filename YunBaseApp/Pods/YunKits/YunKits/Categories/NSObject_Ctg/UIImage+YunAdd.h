@@ -1,12 +1,13 @@
 //
 // Created by yun on 2017/5/17.
-// Copyright (c) 2017 skkj. All rights reserved.
+// Copyright (c) 2017 yun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface UIImage (YunAdd)
 
+// image
 + (UIImage *)imgWithColor:(UIColor *)color;
 
 + (UIImage *)imgWithColor:(UIColor *)color height:(CGFloat)height;
@@ -15,18 +16,28 @@
 
 + (UIImage *)getViewImage:(UIView *)view;
 
+- (UIImage *)roundCornerImg;
+
+// size 尺寸
+// 高度压缩
 - (UIImage *)resizeWithHeight:(CGFloat)height;
 
-- (UIImage *)resizeWithSize:(NSInteger)size;
+// length 大小
+- (NSInteger)imgSize
+__deprecated_msg("已过期, 请使用imgLength");
 
-- (UIImage *)resizeWithMaxSize:(NSInteger)size;
+// kb 估计值，有一点误差
+- (NSInteger)imgLength;
 
-- (NSData *)compressQualityWithMaxLength:(NSInteger)maxLength;
+- (UIImage *)resizeWithSize:(NSInteger)size
+__deprecated_msg("已过期, 请使用compressByMaxLength");
 
-- (UIImage *)resizeWithSize:(NSInteger)size height:(CGFloat)height;
+- (UIImage *)resizeWithMaxSize:(NSInteger)size
+__deprecated_msg("已过期, 请使用compressByMaxLength");
 
-- (NSInteger)imgSize;
+// kb
+- (UIImage *)compressByMaxLength:(NSInteger)length;
 
-- (UIImage *)roundCornerImg;
+- (NSData *)compressByMaxLengthToData:(NSInteger)length;
 
 @end

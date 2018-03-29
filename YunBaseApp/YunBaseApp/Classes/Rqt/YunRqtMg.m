@@ -46,7 +46,8 @@
                       success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
                       failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
-    [YunLogHelper logMsg:FORMAT(@"GET RQT--URLString:%@\n parameters:%@", URLString, parameters)];
+    [YunLogHelper logMsg:FORMAT(@"GET RQT--%@\n paras:%@", URLString, parameters)
+                   force:YunRqtConfig.instance.logUrl];
 
     return [_rqMg GET:URLString
            parameters:parameters
@@ -70,7 +71,8 @@
         parameters = [NSDictionary new];
     }
 
-    [YunLogHelper logMsg:FORMAT(@"POST RQT--URLString:%@\n parameters:%@", URLString, parameters)];
+    [YunLogHelper logMsg:FORMAT(@"POST RQT--%@\n paras:%@", URLString, parameters)
+                   force:YunRqtConfig.instance.logUrl];
 
     return [_rqMg POST:URLString
             parameters:parameters
@@ -95,7 +97,8 @@
         parameters = [NSDictionary new];
     }
 
-    [YunLogHelper logMsg:FORMAT(@"POST RQT--URLString:%@\n parameters:%@", URLString, parameters)];
+    [YunLogHelper logMsg:FORMAT(@"POST RQT--%@\n paras:%@", URLString, parameters)
+                   force:YunRqtConfig.instance.logUrl];
 
     return [_rqMg POST:URLString
             parameters:parameters
@@ -109,7 +112,8 @@
                          success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
                          failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
-    [YunLogHelper logMsg:FORMAT(@"DELETE RQT--URLString:%@\n parameters:%@", URLString, parameters)];
+    [YunLogHelper logMsg:FORMAT(@"DELETE RQT--%@\n paras:%@", URLString, parameters)
+                   force:YunRqtConfig.instance.logUrl];
 
     return [_rqMg DELETE:URLString
               parameters:parameters
@@ -134,7 +138,8 @@
         }
     }
 
-    [YunLogHelper logMsg:FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders])];
+    [YunLogHelper logMsg:FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders])
+                   force:YunRqtConfig.instance.logUrl];
 }
 
 @end

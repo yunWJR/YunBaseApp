@@ -29,7 +29,7 @@
             make.height.equalTo(@(tH));
         }];
     }
-    else { //iOS11以下 无需
+    else { // iOS11以下 无需
     }
 
     self.navigationItem.titleView = tV;
