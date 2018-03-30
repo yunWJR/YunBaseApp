@@ -104,7 +104,7 @@
 
         [self.navigationController.navigationBar setBarTintColor:color];
 
-        [self.navigationController.navigationBar layoutIfNeeded];
+        //[self.navigationController.navigationBar layoutIfNeeded];
     }
 }
 

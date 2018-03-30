@@ -59,9 +59,12 @@
 }
 
 + (NSString *)urlStrByUTF8:(NSString *)addr {
-    NSString *escapeC = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| "; // ??? 确定编码字符
-    NSCharacterSet *escSet = [[NSCharacterSet characterSetWithCharactersInString:escapeC] invertedSet];
-    NSString *encodedUrl = [addr stringByAddingPercentEncodingWithAllowedCharacters:escSet];
+    //NSString *escapeC = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| "; // ??? 确定编码字符
+    //NSCharacterSet *escSet = [[NSCharacterSet characterSetWithCharactersInString:escapeC] invertedSet];
+    //NSString *encodedUrl = [addr stringByAddingPercentEncodingWithAllowedCharacters:escSet];
+
+    NSString *encodedUrl = [addr stringByAddingPercentEncodingWithAllowedCharacters:
+                                         [NSCharacterSet URLQueryAllowedCharacterSet]];
 
     return encodedUrl;
 }
