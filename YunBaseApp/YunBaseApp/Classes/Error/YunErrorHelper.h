@@ -18,7 +18,7 @@
 
 + (instancetype)netWorkDownError;
 
-+ (instancetype)noCachError;
++ (instancetype)noCacheError;
 
 + (instancetype)modelError;
 

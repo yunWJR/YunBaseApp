@@ -26,7 +26,7 @@
     return [[YunErrorHelper alloc] initWithError:[NSError errorWithCustomCode:YunErrTypeNetWork]];
 }
 
-+ (instancetype)noCachError {
++ (instancetype)noCacheError {
     return [[YunErrorHelper alloc] initWithError:[NSError errorWithCustomMsg:@"没有缓存数据"
                                                                      andCode:YunErrTypeCustom]];
 }
