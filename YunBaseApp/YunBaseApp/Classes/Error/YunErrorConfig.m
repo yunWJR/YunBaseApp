@@ -5,6 +5,7 @@
 
 #import "YunErrorConfig.h"
 #import "YunErrorModel.h"
+#import "YunValueVerifier.h"
 #import <YunKits/NSError+YunAdd.h>
 #import <YunKits/YunGlobalDefine.h>
 
@@ -132,7 +133,8 @@
                                                code:code
                                                 msg:self.errorMap[i].codes[j].msg == nil ?
                                                     self.errorMap[i].defMsg :
-                                                    self.errorMap[i].codes[j].msg];
+                                                    self.errorMap[i].codes[j].msg
+                                                err:error];
 
                 return item;
             }
@@ -142,14 +144,14 @@
     NSString *errMsg = [error.userInfo valueForKey:CUSTOM_MSG_KEY];
     NSString *msg = nil;
 
-    if (errMsg) {
+    if ([YunValueVerifier isValidStr:errMsg]) {
         msg = FORMAT(@"%@", errMsg);
     }
     else {
         msg = FORMAT(@"%@", error.userInfo);
     }
 
-    return [YunErrorModel itemWithType:YunErrTypeUnknown code:error.code msg:msg];
+    return [YunErrorModel itemWithType:YunErrTypeUnknown code:error.code msg:msg err:error];
 }
 
 @end

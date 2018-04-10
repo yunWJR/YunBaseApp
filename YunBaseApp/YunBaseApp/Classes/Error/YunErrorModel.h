@@ -7,11 +7,15 @@
 
 @interface YunErrorModel : NSObject
 
+@property (nonatomic, strong) NSError *orgErr;
+
 @property (nonatomic, assign) YunErrorType type;
 
 @property (nonatomic, assign) NSInteger code;
 
 @property (nonatomic, copy) NSString *msg;
+
++ (instancetype)itemWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg err:(NSError *)err;
 
 + (instancetype)itemWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg;
 

@@ -9,9 +9,10 @@
 
 @implementation YunErrorModel
 
-- (instancetype)initWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg {
+- (instancetype)initWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg err:(NSError *)err {
     self = [super init];
     if (self) {
+        self.orgErr = err;
         self.type = type;
         self.code = code;
         self.msg = msg;
@@ -20,8 +21,12 @@
     return self;
 }
 
++ (instancetype)itemWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg err:(NSError *)err {
+    return [[self alloc] initWithType:type code:code msg:msg err:err];
+}
+
 + (instancetype)itemWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg {
-    return [[self alloc] initWithType:type code:code msg:msg];
+    return [[self alloc] initWithType:type code:code msg:msg err:nil];
 }
 
 - (NSString *)getMsgByMode {
