@@ -17,6 +17,8 @@
 
 + (UIColor *)colorVcBg;
 
++ (UIColor *)colorViewBg;
+
 #pragma nag
 
 + (UIColor *)colorNagBg;

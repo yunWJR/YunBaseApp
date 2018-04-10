@@ -18,6 +18,8 @@
         _noCtnMsg = @"无内容";
 
         self.sideOff = YunAppConfig.instance.defViewSideOff;
+
+        self.backgroundColor = YunAppTheme.colorViewBg;
     }
     return self;
 }

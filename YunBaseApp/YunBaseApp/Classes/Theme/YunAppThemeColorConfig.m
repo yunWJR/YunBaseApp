@@ -59,6 +59,7 @@
     self.colorBaseDark = [UIColor grayColor];
     self.colorBaseLight = [UIColor lightGrayColor];
     self.colorVcBg = [UIColor whiteColor];
+    self.colorViewBg = [UIColor whiteColor];
 
     self.colorBaseDk1 = [UIColor grayColor];
     self.colorBaseDk2 = [UIColor grayColor];

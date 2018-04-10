@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) UIColor *colorVcBg;
 
+@property (nonatomic, strong) UIColor *colorViewBg;
+
 #pragma nag
 
 @property (nonatomic, strong) UIColor *colorNagBg;

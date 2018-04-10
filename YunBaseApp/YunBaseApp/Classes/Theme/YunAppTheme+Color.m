@@ -27,6 +27,10 @@
     return YunAppThemeColorConfig.instance.colorVcBg;
 }
 
++ (UIColor *)colorViewBg {
+    return YunAppThemeColorConfig.instance.colorViewBg;
+}
+
 #pragma nag
 
 + (UIColor *)colorNagBg {
