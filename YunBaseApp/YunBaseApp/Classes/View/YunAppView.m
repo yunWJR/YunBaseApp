@@ -16,6 +16,8 @@
         _updateInterval = YunAppConfig.instance.viewUpdateInterval;
 
         _noCtnMsg = @"无内容";
+
+        self.sideOff = YunAppConfig.instance.defViewSideOff;
     }
     return self;
 }

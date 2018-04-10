@@ -3,7 +3,7 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface YunAppConfig : NSObject
 
@@ -11,6 +11,8 @@
 @property (nonatomic, assign) NSTimeInterval viewUpdateInterval;
 
 @property (nonatomic, assign) BOOL isHideNagBtmLine;
+
+@property (nonatomic, assign) CGFloat defViewSideOff;
 
 + (YunAppConfig *)instance;
 
