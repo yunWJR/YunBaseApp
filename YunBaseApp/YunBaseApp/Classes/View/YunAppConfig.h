@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) BOOL isHideNagBtmLine;
 
+@property (nonatomic, assign) CGFloat defVcSideOff;
 @property (nonatomic, assign) CGFloat defViewSideOff;
 
 + (YunAppConfig *)instance;

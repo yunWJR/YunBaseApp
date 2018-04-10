@@ -22,6 +22,7 @@
 
         _noCtnMsg = @"无内容";
 
+        self.sideOff = YunAppConfig.instance.defVcSideOff;
         self.hideNagBarBtmLine = YunAppConfig.instance.isHideNagBtmLine;
     }
 
