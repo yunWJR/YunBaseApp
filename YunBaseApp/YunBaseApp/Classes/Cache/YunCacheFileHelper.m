@@ -8,6 +8,7 @@
 #import "NSObject+YunAdd.h"
 
 @interface YunCacheFileHelper () {
+    NSLock *_lc;
 }
 
 @end
@@ -30,6 +31,7 @@
     self = [super init];
     if (self) {
         _dataKey = @"DataKey";
+        _lc = [NSLock new];
     }
 
     return self;
@@ -51,16 +53,25 @@
 }
 
 - (BOOL)saveItem:(id)item index:(NSInteger)index isAsyn:(BOOL)isAsyn rst:(void (^)(BOOL suc))rst {
+    [_lc lock];
+
     if ([self isInvalidIndex:index]) {
         if (rst) {
             rst(NO);
         }
 
+        [_lc unlock];
         return NO;
     }
 
     if (isAsyn) {
-        [self saveItemAsyn:[item yunDeepCopy] index:index rst:rst];
+        [self saveItemAsyn:[item yunDeepCopy] index:index rst:^(BOOL suc) {
+            if (rst) {
+                rst(suc);
+            }
+
+            [_lc unlock];
+        }];
         return YES;
     }
     else {
@@ -68,6 +79,9 @@
         if (rst) {
             rst(rstSuc);
         }
+
+        [_lc unlock];
+
         return rstSuc;
     }
 }
@@ -113,15 +127,23 @@
 }
 
 - (id)getItem:(NSInteger)index isAsyn:(BOOL)isAsyn rst:(void (^)(id data))rst {
+    [_lc lock];
+
     if ([self isInvalidIndex:index]) {
         if (rst)rst(nil);
 
+        [_lc unlock];
         return nil;
     }
 
     if (isAsyn) {
-        [self getItemAsyn:index rst:rst];
+        [self getItemAsyn:index rst:^(id data) {
+            if (rst) {
+                rst(data);
+            }
+        }];
 
+        [_lc unlock];
         return nil;
     }
     else {
@@ -129,6 +151,8 @@
         if (rst) {
             rst(rstData);
         }
+
+        [_lc unlock];
         return rstData;
     }
 }
