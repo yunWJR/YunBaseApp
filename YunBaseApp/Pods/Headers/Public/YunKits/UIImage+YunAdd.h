@@ -1,1 +1,1 @@
-../../../YunKits/YunKits/Categories/NSObject_Ctg/UIImage+YunAdd.h
+../../../YunKits/YunKits/Categories/UIView_Ctg/UIImage+YunAdd.h

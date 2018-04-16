@@ -13,3 +13,6 @@
 #import "UITextView+YunAdd.h"
 #import "UIView+YunAdd.h"
 #import "UIViewController+Nag.h"
+#import "UIColor+YunAdd.h"
+#import "UIImage+YunAdd.h"
+#import "UIFont+YunAdd.h"

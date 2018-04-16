@@ -32,6 +32,8 @@
 
         _firstLoad = YES;
         _isAppear = NO;
+
+        self.hidesBottomBarWhenPushed = _hideBottomBar;
     }
 
     return self;
@@ -40,7 +42,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.hidesBottomBarWhenPushed = _hideBottomBar;
 
     // 自动校准滚动视图的嵌入视图,对加载到 self.view 的第一个 view(UIScrollView)起作用
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
@@ -217,6 +218,12 @@
     _hideNagBarBtmLine = hideNagBarBtmLine;
 
     [self updateNagBtmLineState];
+}
+
+- (void)setHideBottomBar:(BOOL)hideBottomBar {
+    _hideBottomBar = hideBottomBar;
+
+    self.hidesBottomBarWhenPushed = _hideBottomBar;
 }
 
 #pragma mark - private functions

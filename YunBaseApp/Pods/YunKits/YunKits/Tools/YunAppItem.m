@@ -38,8 +38,12 @@
     [UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
++ (BOOL)canOpenSystemSetting {
+    return UIApplicationOpenSettingsURLString != NULL;
+}
+
 + (void)gotoSettingView {
-    if (UIApplicationOpenSettingsURLString != NULL) {
+    if (self.canOpenSystemSetting) {
         [YunSystemMediaHelper openURL:UIApplicationOpenSettingsURLString];
     }
 }

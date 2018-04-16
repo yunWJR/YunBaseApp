@@ -16,12 +16,14 @@
 
 + (CGFloat)calWidthWithText:(NSString *)text font:(UIFont *)font;
 
++ (CGFloat)calWidthWithTextAt:(NSAttributedString *)at;
+
 // pro
 - (CGFloat)getTextHeightByWidth:(CGFloat)width;
 
 - (CGFloat)getOneLineHeight;
 
-- (CGFloat)getOneLineHeightOff;
+- (CGFloat)getOneLineHeightWithoutOffV;
 
 - (CGFloat)getTextWidth;
 

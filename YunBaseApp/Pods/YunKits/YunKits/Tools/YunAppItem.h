@@ -14,6 +14,9 @@
 // 禁止手机睡眠
 + (void)stopIdle;
 
+// 可以打开设置页面
++ (BOOL)canOpenSystemSetting;
+
 // 跳进app设置
 + (void)gotoSettingView;
 
