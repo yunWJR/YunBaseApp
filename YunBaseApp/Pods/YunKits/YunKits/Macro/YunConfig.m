@@ -28,6 +28,8 @@
 
         _imgViewHolderImgName = @"img_def_holder";
         _imgViewFailedImgName = @"img_def_failed";
+        _imgViewLostImgName = @"img_def_lost";
+
         _imgViewAvrImgName = @"img_def_avr";
         _imgViewNoCtnImgName = @"img_def_no_ctn";
         _imgViewNoNetName = @"img_def_no_net";

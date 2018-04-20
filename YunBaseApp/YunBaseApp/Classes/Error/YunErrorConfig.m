@@ -141,7 +141,7 @@
         }
     }
 
-    NSString *errMsg = [error.userInfo valueForKey:CUSTOM_MSG_KEY];
+    NSString *errMsg = [error.userInfo valueForKey:yun_error_custom_msg_key];
     NSString *msg = nil;
 
     if ([YunValueVerifier isValidStr:errMsg]) {

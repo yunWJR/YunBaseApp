@@ -43,10 +43,10 @@
 
 // 获取对象的所有方法
 - (void)printAllMethods {
-    unsigned int mothCout_f = 0;
-    Method *mothList_f = class_copyMethodList([self class], &mothCout_f);
+    unsigned int mothCount_f = 0;
+    Method *mothList_f = class_copyMethodList([self class], &mothCount_f);
 
-    for (int i = 0; i < mothCout_f; i++) {
+    for (int i = 0; i < mothCount_f; i++) {
         Method temp_f = mothList_f[i];
         const char *name_s = sel_getName(method_getName(temp_f));
         int arguments = method_getNumberOfArguments(temp_f);

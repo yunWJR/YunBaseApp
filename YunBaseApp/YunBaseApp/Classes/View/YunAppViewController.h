@@ -10,12 +10,21 @@
 
 @interface YunAppViewController : YunViewController
 
+// 第一次加载标识符 // 默认YES
+@property (nonatomic, assign) BOOL firstLoad;
+
+// 有数据需要更新 // 默认NO
+@property (nonatomic, assign) BOOL needUpdateData; // 使用后设为NO
+
 @property (nonatomic, assign) BOOL changed;
 
+// 点击 NagLeftItem 时触发
 @property (nonatomic, copy) void (^didPopSuperView)(YunAppViewController *vc);
 
-// YES
+// YES  更新NagBarItem
 @property (nonatomic, assign) BOOL updateItem;
+
+// blank view
 
 @property (nonatomic, strong) NSMutableArray *blankViewList;
 
@@ -29,19 +38,53 @@
 
 @property (nonatomic, strong) YunBlankView *msgView;
 
+// 第一次加载的空白页面
+@property (nonatomic, strong) YunBlankView *defBlankView;
+
 @property (nonatomic, assign) BOOL hideStateView;
 
 // 最后一次更新信息
 @property (nonatomic, strong) NSDate *lastUpdateDate;
 
-@property (nonatomic, copy) void (^didUpdateVcData)(void);
+// 调用updateVcState
+@property (nonatomic, copy) void (^didUpdateVcState)(void);
 
-// 120秒
+// 默认 NO，为 YES 时，每次请求都更新数据
+@property (nonatomic, assign) BOOL isForceLoadData;
+
+// isForceLoadData=NO 时，请求数据的间隔时间：默认120秒
 @property (nonatomic, assign) NSTimeInterval updateInterval;
+
+// 加载数据优先级：默认 NO，即先从服务器加载
+@property (nonatomic, assign) BOOL isLoadDataFromLocalFirst;
 
 @property (nonatomic, assign) BOOL hasUpdated;
 
 @property (nonatomic, assign) BOOL isNagBarClear;
+
+#pragma mark - app flow
+
+- (void)initVcData;
+
+- (void)initVcSubViews;
+
+- (void)handleViewWillAppear;
+
+- (void)handleViewDidAppear;
+
+- (BOOL)loadDataFromLocal;
+
+- (BOOL)loadDataFromServer;
+
+- (void)loadMoreDataFromServer;
+
+- (void)updateVcState;
+
+- (void)updateVcStateOn;
+
+- (void)updateVcStateCmp;
+
+#pragma mark - app style
 
 - (void)setNagBg:(UIColor *)color;
 
@@ -62,6 +105,10 @@
 - (void)setNavTitle:(NSString *)title;
 
 - (void)setNagBarClear;
+
+- (void)setBackVcNeedUpdate;
+
+- (YunAppViewController *)appBackVC;
 
 #pragma mark - request
 

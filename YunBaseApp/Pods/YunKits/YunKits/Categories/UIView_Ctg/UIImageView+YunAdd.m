@@ -3,34 +3,20 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import "YunValueVerifier.h"
 #import <SDWebImage/SDImageCache.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "UIImageView+YunAdd.h"
-#import "NSURL+YunAdd.h"
 #import "YunConfig.h"
+#import "YunValueVerifier.h"
+#import "NSURL+YunAdd.h"
 
 @implementation UIImageView (YunAdd)
 
 - (void)setImgUrlStr:(NSString *)urlStr {
     UIImage *phImg = [UIImage imageNamed:YunConfig.instance.imgViewHolderImgName];
-    if (self.image == nil) {
-        self.image = phImg;
-    }
 
-    if ([YunValueVerifier isNilOrEmptyStr:urlStr]) {
-        self.image = phImg;
-        return;
-    }
-
-    [self sd_setImageWithURL:[NSURL urlWithStr:urlStr]
-            placeholderImage:self.image
-                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                       if (!image) {
-                           self.image = [UIImage imageNamed:YunConfig.instance.imgViewFailedImgName];
-                       }
-                   }];
+    [self setImgUrlStr:urlStr holderImg:phImg];
 }
 
 - (void)setImgUrlStr:(NSString *)urlStr holderImg:(UIImage *)phImg {
@@ -46,8 +32,21 @@
     [self sd_setImageWithURL:[NSURL urlWithStr:urlStr]
             placeholderImage:self.image
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                       if (!image) {
-                           self.image = [UIImage imageNamed:YunConfig.instance.imgViewFailedImgName];
+                       if (error || !image) {
+                           UIImage *fImg = nil;
+
+                           if (error.code == -999) {
+                               // 资源丢失
+                               fImg = [UIImage imageNamed:YunConfig.instance.imgViewLostImgName];
+                           }
+
+                           if (!fImg) {
+                               fImg = [UIImage imageNamed:YunConfig.instance.imgViewFailedImgName];
+                           }
+
+                           if (fImg) {
+                               self.image = fImg;
+                           }
                        }
                    }];
 }

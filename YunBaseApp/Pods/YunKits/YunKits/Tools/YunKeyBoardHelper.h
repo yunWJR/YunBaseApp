@@ -11,6 +11,8 @@
 
 - (void)kbWillHide:(double)antDur;
 
+- (void)kbFrameChanged:(CGSize)size;
+
 @end
 
 @interface YunKeyBoardHelper : NSObject

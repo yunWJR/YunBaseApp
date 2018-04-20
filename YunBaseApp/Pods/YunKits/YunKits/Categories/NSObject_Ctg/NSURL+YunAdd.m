@@ -7,16 +7,20 @@
 
 @implementation NSURL (YunAdd)
 
++ (NSString *)urlStrWithStr:(NSString *)urlStr {
+    NSURL *url = [self urlWithStr:urlStr];
+
+    return [url absoluteString];
+}
+
 + (NSURL *)urlWithStr:(NSString *)urlStr {
-    NSString *newUrl = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:
-                                       [NSCharacterSet URLQueryAllowedCharacterSet]];
-    NSURL *url = [NSURL URLWithString:newUrl];
+    NSURL *url = [self urlWithStr:urlStr set:[NSCharacterSet URLQueryAllowedCharacterSet]];
 
     return url;
 }
 
-+ (NSString *)urlStrWithStr:(NSString *)urlStr {
-    NSURL *url = [self urlWithStr:urlStr];
++ (NSString *)urlStrWithStr:(NSString *)urlStr set:(NSCharacterSet *)set {
+    NSURL *url = [self urlWithStr:urlStr set:set];
 
     return [url absoluteString];
 }
@@ -26,12 +30,6 @@
     NSURL *url = [NSURL URLWithString:newUrl];
 
     return url;
-}
-
-+ (NSString *)urlStrWithStr:(NSString *)urlStr set:(NSCharacterSet *)set {
-    NSURL *url = [self urlWithStr:urlStr set:set];
-
-    return [url absoluteString];
 }
 
 @end

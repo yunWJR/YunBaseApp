@@ -9,8 +9,7 @@
 @implementation UISearchBar (YunAdd)
 
 - (void)setIconByImgName:(NSString *)imgName {
-    [self setImage:[UIImage imageNamed:imgName]
-  forSearchBarIcon:UISearchBarIconSearch
+    [self setImage:[UIImage imageNamed:imgName] forSearchBarIcon:UISearchBarIconSearch
              state:UIControlStateNormal];
 }
 
@@ -34,38 +33,30 @@
 }
 
 - (void)setBg:(UIColor *)color {
-    /** 设置背景图片 */
-    UIImage *searchBarBg = [UIImage imgWithColor:color];
-    [self setBackgroundImage:searchBarBg];   //这里图片的颜色和导航栏一样
-
-    /** 设置背景色 */
-    [self setBackgroundColor:color];
+    [self setBg:color height:0];
 }
 
 - (void)setBg:(UIColor *)color height:(CGFloat)height {
-    /** 设置背景图片 */
-    UIImage *searchBarBg = [UIImage imgWithColor:color height:height];
-    [self setBackgroundImage:searchBarBg];   //这里图片的颜色和导航栏一样
-
-    /** 设置背景色 */
-    [self setBackgroundColor:color];
-
-    // 设置文本框背景
-    //UIImage *searchFBarBg = [UIImage GetImageWithColor:fColor andHeight:height];
-    //[self setSearchFieldBackgroundImage:searchFBarBg forState:UIControlStateNormal];
+    [self setBg:color height:height fieldImg:nil];
 }
 
-- (void)setBg:(UIColor *)color height:(CGFloat)height filedBgImg:(NSString *)img {
-    /** 设置背景图片 */
-    UIImage *searchBarBg = [UIImage imgWithColor:color height:height];
-    [self setBackgroundImage:searchBarBg];   //这里图片的颜色和导航栏一样
+- (void)setBg:(UIColor *)color height:(CGFloat)height fieldImg:(NSString *)img {
+    // 设置背景图片
+    UIImage *bgImg = height <= 0 ?
+                     [UIImage imgWithColor:color] :
+                     [UIImage imgWithColor:color height:height];
+    [self setBackgroundImage:bgImg];   //这里图片的颜色和导航栏一样
 
-    /** 设置背景色 */
+    // 设置背景图片
     [self setBackgroundColor:color];
 
     // 设置文本框背景
-    UIImage *searchFBarBg = [UIImage imageNamed:img];
-    [self setSearchFieldBackgroundImage:searchFBarBg forState:UIControlStateNormal];
+    if (img) {
+        UIImage *fBg = [UIImage imageNamed:img];
+        if (fBg) {
+            [self setSearchFieldBackgroundImage:fBg forState:UIControlStateNormal];
+        }
+    }
 }
 
 - (UIView *)schBgView {

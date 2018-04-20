@@ -138,6 +138,7 @@
     self.attributedText = atStr;
 }
 
+// 是否设置了attributedText
 - (BOOL)hasAt {
     if (self.attributedText.length > 0 &&
         self.attributedText.length > self.attributedText.string.length) {

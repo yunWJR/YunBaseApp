@@ -10,6 +10,8 @@
     UIImageView *_nagBtmLine;
 }
 
+@property (nonatomic, weak) UIBarButtonItem *noneLeftItem;
+
 @end
 
 @implementation YunViewController
@@ -22,15 +24,11 @@
         _hideNagBarBtmLine = NO;
         _hideNagBarBackItem = NO;
 
-        _needUpdateData = NO;
-        _forceNoUpdate = NO;
-
         _hideBottomBar = YES;
 
         _sideOff = 0;
         _topOff = 0;
 
-        _firstLoad = YES;
         _isAppear = NO;
 
         self.hidesBottomBarWhenPushed = _hideBottomBar;
@@ -41,20 +39,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
-    // 自动校准滚动视图的嵌入视图,对加载到 self.view 的第一个 view(UIScrollView)起作用
-    [self setAutomaticallyAdjustsScrollViewInsets:NO];
-
-    // view不延伸（包括，状态栏、导航栏）
-    [self setEdgesForExtendedLayout:UIRectEdgeNone];
-
-    // 不延伸时，导航栏设为不透明，不然为灰色
-    self.navigationController.navigationBar.translucent = NO;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -64,9 +48,12 @@
 
     if (!_hideNagBar) {
         if (_hideNagBarBackItem) {
-            UIBarButtonItem *noneItem = [[UIBarButtonItem alloc] initWithCustomView:[UIButton new]];
+            if (_noneLeftItem == nil) {
+                _noneLeftItem = [[UIBarButtonItem alloc] initWithCustomView:[UIButton new]];
+            }
 
-            self.navigationItem.leftBarButtonItem = noneItem;
+            self.leftNagItem = _noneLeftItem;
+            self.navigationItem.leftBarButtonItem = _noneLeftItem;
         }
         else {
             [self.navigationItem.backBarButtonItem setTarget:self];
@@ -80,7 +67,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    self.isAppear = YES;
+    _isAppear = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -89,21 +76,25 @@
     [self updateNagHideState];
 
     if (!_hideNagBar) {
-        [self updateNagBtmLineState];
+        //[self updateNagBtmLineState];
     }
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
 
-    self.isAppear = NO;
+    _isAppear = NO;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - handles
 
 - (void)didClickNagLeftItem {
     if (self.isModalVc) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil]; // completion
         return;
     }
 
@@ -120,12 +111,6 @@
 }
 
 #pragma mark - public functions
-
-- (void)setBackVcNeedUpdate {
-    if (self.backVC) {
-        self.backVC.needUpdateData = YES;
-    }
-}
 
 - (void)setRightBarItemByImg:(NSString *)img {
     UIBarButtonItem *rBtnItem = [self createBarItemByImg:img action:@selector(didClickNagRightItem)];
@@ -224,6 +209,19 @@
     _hideBottomBar = hideBottomBar;
 
     self.hidesBottomBarWhenPushed = _hideBottomBar;
+}
+
+- (YunViewController *)yunBackVC {
+    if (_backVC) {
+        if ([_backVC isKindOfClass:YunViewController.class]) {
+            return (YunViewController *) _backVC;
+        }
+        else {
+            return nil;
+        }
+    }
+
+    return nil;
 }
 
 #pragma mark - private functions

@@ -21,6 +21,9 @@
 // img_def_failed
 @property (nonatomic, copy) NSString *imgViewFailedImgName;
 
+// img_no_resource
+@property (nonatomic, copy) NSString *imgViewLostImgName;
+
 // img_def_avr
 @property (nonatomic, copy) NSString *imgViewAvrImgName;
 

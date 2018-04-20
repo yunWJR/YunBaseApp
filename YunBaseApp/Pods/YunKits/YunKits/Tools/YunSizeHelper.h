@@ -24,4 +24,8 @@
 
 + (CGFloat)heightOn2x:(CGFloat)height;
 
++ (CGFloat)btmSafeOff;
+
++ (BOOL)isIPhoneX;
+
 @end

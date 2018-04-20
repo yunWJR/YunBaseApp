@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define NETWORK_STATUS_NOTI_STR @"NETWORK_STATUS_NOTI_STR"
+extern const NSString *yun_network_status_changed_key;
 
 @interface YunNetworkHelper : NSObject
 

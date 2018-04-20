@@ -20,6 +20,6 @@
 
 - (void)setBg:(UIColor *)color height:(CGFloat)height;
 
-- (void)setBg:(UIColor *)color height:(CGFloat)height filedBgImg:(NSString *)img;
+- (void)setBg:(UIColor *)color height:(CGFloat)height fieldImg:(NSString *)img;
 
 @end

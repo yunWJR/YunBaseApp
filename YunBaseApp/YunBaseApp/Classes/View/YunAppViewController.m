@@ -5,6 +5,8 @@
 
 #import "YunAppViewController.h"
 #import "YunAppConfig.h"
+#import "YunBlankView.h"
+#import "YunSizeHelper.h"
 
 @interface YunAppViewController () {
 }
@@ -17,33 +19,94 @@
     self = [super init];
 
     if (self) {
-        _updateItem = YES;
-        _updateInterval = YunAppConfig.instance.viewUpdateInterval;
-
-        _noCtnMsg = @"无内容";
-
-        self.sideOff = YunAppConfig.instance.defVcSideOff;
-        self.hideNagBarBtmLine = YunAppConfig.instance.isHideNagBtmLine;
+        [self initVcData];
     }
 
     return self;
 }
 
+// loadView -- 不要重载该方法
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = YunAppTheme.colorVcBg;
+    [self initVcSubViews];
+
+    [self showDefBlankView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self handleViewWillAppear];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [self handleViewDidAppear];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+// - (void)dealloc {} 施放对象
 
+#pragma mark - app flow
+
+- (void)initVcData {
+    _firstLoad = YES;
+    _needUpdateData = NO;
+
+    _updateItem = YES;
+    _updateInterval = YunAppConfig.instance.viewUpdateInterval;
+
+    _noCtnMsg = @"无内容";
+
+    _isNagBarClear = NO;
+
+    _isLoadDataFromLocalFirst = NO;
+    _isForceLoadData = NO;
+
+    self.sideOff = YunAppConfig.instance.defVcSideOff;
+    self.hideNagBarBtmLine = YunAppConfig.instance.isHideNagBtmLine;
+}
+
+- (void)initVcSubViews {
+    // 自动校准滚动视图的嵌入视图,对加载到 self.view 的第一个 view(UIScrollView)起作用
+    if (@available(iOS 11.0, *)) {
+    }
+    else {
+        // iOS11 废除
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
+    // view不延伸（包括，状态栏、导航栏）
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+
+    // 不延伸时，导航栏设为不透明，不然为灰色
+    //self.navigationController.navigationBar.translucent = NO;
+
+    self.view.backgroundColor = YunAppTheme.colorVcBg;
+}
+
+- (void)handleViewWillAppear {
     if (!self.hideNagBar) {
-        if (!self.isNagBarClear) {
+        //
+        if (!self.firstLoad && _isNagBarClear) {
+            [self setNagBarClear];
+        }
+
+        if (!_isNagBarClear) {
             self.navigationController.navigationBar.translucent = true;
 
             // 导航栏背景颜色
@@ -70,16 +133,68 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)handleViewDidAppear {
+    if (self.shouldLoadData) {
+        if (_isForceLoadData || self.canUpdate) {
+            if (_isLoadDataFromLocalFirst) { // 先从本地加载
+                BOOL cmp = [self loadDataFromLocal];
+                if (!cmp) {
+                    cmp = [self loadDataFromServer];
+                    if (!cmp) {
+                        [self updateVcState];
+                    }
+                }
+            }
+            else { // 先从服务器加载
+                BOOL cmp = [self loadDataFromServer];
+                if (!cmp) {
+                    cmp = [self loadDataFromLocal];
+                    if (!cmp) {
+                        [self updateVcState];
+                    }
+                }
+            }
+        }
+    }
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+- (BOOL)loadDataFromLocal {
+    [self setCurUpdateDate];
+
+    return NO;
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
+- (BOOL)loadDataFromServer {
+    [self setCurUpdateDate];
+
+    return NO;
+}
+
+- (void)loadMoreDataFromServer {
+
+}
+
+- (void)updateVcState {
+    [self updateVcStateOn];
+
+    [self updateVcStateCmp];
+}
+
+- (void)updateVcStateOn {
+    [self updateVcData];
+}
+
+- (void)updateVcStateCmp {
+    [self hideDefBlankView];
+}
+
+- (BOOL)shouldLoadData {
+    return _firstLoad || _needUpdateData;
+}
+
+- (void)setLoadDataCmp {
+    _firstLoad = NO;
+    _needUpdateData = NO;
 }
 
 #pragma mark - handles
@@ -127,8 +242,6 @@
     [self setRightBarItemName:name
                          font:[YunAppTheme nagFontItem]
                         color:color == nil ? YunAppTheme.colorNagDark : color];
-
-    self.rightNagItem = self.navigationItem.rightBarButtonItem;
 }
 
 - (void)setRightBarItemName:(NSString *)name {
@@ -176,6 +289,51 @@
 
 #pragma mark - private functions
 
+- (void)showDefBlankView {
+    if (_defBlankView) {
+        _defBlankView.hidden = NO;
+
+        [self.view addSubview:_defBlankView];
+
+        [_defBlankView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view).offset(-YunSizeHelper.statusAndNagBarHeight);
+            make.width.equalTo(self.view);
+            make.left.equalTo(self.view);
+            make.bottom.equalTo(self.view);
+        }];
+
+        [self.view bringSubviewToFront:_defBlankView];
+    }
+}
+
+- (void)hideDefBlankView {
+    if (_defBlankView) {
+        _defBlankView.hidden = YES;
+        [_defBlankView removeFromSuperview];
+
+        _defBlankView = nil;
+    }
+}
+
+- (void)setBackVcNeedUpdate {
+    if (self.appBackVC) {
+        self.appBackVC.needUpdateData = YES;
+    }
+}
+
+- (YunAppViewController *)appBackVC {
+    if (self.backVC) {
+        if ([self.backVC isKindOfClass:YunAppViewController.class]) {
+            return (YunAppViewController *) self.backVC;
+        }
+        else {
+            return nil;
+        }
+    }
+
+    return nil;
+}
+
 #pragma mark - protocol
 
 #pragma mark - request functions
@@ -200,8 +358,14 @@
     self.hasUpdated = YES;
     [self setCurUpdateDate];
 
-    if (_didUpdateVcData) {
-        _didUpdateVcData();
+    [self setLoadDataCmp];
+
+    if (_isNagBarClear) {
+        [self setNagBarClear];
+    }
+
+    if (_didUpdateVcState) {
+        _didUpdateVcState();
     }
 }
 

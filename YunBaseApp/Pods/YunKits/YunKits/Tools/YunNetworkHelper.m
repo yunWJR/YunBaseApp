@@ -10,6 +10,8 @@
 #import "YunNetworkHelper.h"
 #import "AFNetworkReachabilityManager.h"
 
+const NSString *yun_network_status_changed_key = @"yun_network_status_changed_key";
+
 @interface YunNetworkHelper () {
     BOOL _started;
 }
@@ -51,14 +53,13 @@
 
 - (void)handleStatusChanged:(AFNetworkReachabilityStatus)status {
     _started = YES;
-    NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
 
     if (_didStatusChanged) {
         _didStatusChanged(self.isNetworkAvailable);
     }
 
     [[NSNotificationCenter defaultCenter]
-                           postNotificationName:NETWORK_STATUS_NOTI_STR
+                           postNotificationName:yun_network_status_changed_key
                                          object:nil
                                        userInfo:@{@"status" : @(self.isNetworkAvailable)}];
 }

@@ -37,6 +37,11 @@
                                              selector:@selector(keyboardDidHide:)
                                                  name:UIKeyboardDidHideNotification
                                                object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardFrameChanged:)
+                                                 name:UIKeyboardDidChangeFrameNotification
+                                               object:nil];
 }
 
 - (void)removeKbNtf {
@@ -44,6 +49,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidChangeFrameNotification object:nil];
 }
 
 - (void)keyboardWillShow:(NSNotification *)noti {
@@ -79,6 +85,22 @@
 
 - (void)keyboardDidHide:(NSNotification *)noti {
     _kbIsOn = NO;
+}
+
+- (void)keyboardFrameChanged:(NSNotification *)noti {
+    if (_delegate && [_delegate respondsToSelector:@selector(kbFrameChanged:)]) {
+        // 获得键盘尺寸
+        NSDictionary *info = [noti userInfo];
+        NSValue *frameValue = info[UIKeyboardFrameEndUserInfoKey];
+        CGSize kbSize = [frameValue CGRectValue].size;
+
+        // 获取键盘弹出动画时间
+        NSValue *aniDuaVal = noti.userInfo[UIKeyboardAnimationDurationUserInfoKey];
+        NSTimeInterval aniDur;
+        [aniDuaVal getValue:&aniDur];
+
+        [_delegate kbFrameChanged:kbSize];
+    }
 }
 
 @end
