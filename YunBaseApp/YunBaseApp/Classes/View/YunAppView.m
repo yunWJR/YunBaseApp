@@ -19,7 +19,9 @@
 
         self.sideOff = YunAppConfig.instance.defViewSideOff;
 
-        self.backgroundColor = YunAppTheme.colorViewBg;
+        if (YunAppTheme.colorViewBg) {
+            self.backgroundColor = YunAppTheme.colorViewBg;
+        }
     }
     return self;
 }

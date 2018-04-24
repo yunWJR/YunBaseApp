@@ -96,7 +96,9 @@
     // 不延伸时，导航栏设为不透明，不然为灰色
     //self.navigationController.navigationBar.translucent = NO;
 
-    self.view.backgroundColor = YunAppTheme.colorVcBg;
+    if (YunAppTheme.colorVcBg) {
+        self.view.backgroundColor = YunAppTheme.colorVcBg;
+    }
 }
 
 - (void)handleViewWillAppear {
