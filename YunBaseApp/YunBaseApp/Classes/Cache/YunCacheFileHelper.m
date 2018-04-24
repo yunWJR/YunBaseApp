@@ -70,8 +70,9 @@
                 rst(suc);
             }
 
-            [_lc unlock];
         }];
+
+        [_lc unlock];
         return YES;
     }
     else {
