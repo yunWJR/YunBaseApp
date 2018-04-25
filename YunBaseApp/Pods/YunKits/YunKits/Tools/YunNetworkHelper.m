@@ -10,7 +10,7 @@
 #import "YunNetworkHelper.h"
 #import "AFNetworkReachabilityManager.h"
 
-const NSString *yun_network_status_changed_key = @"yun_network_status_changed_key";
+NSString *const yun_network_status_changed_key = @"yun_network_status_changed_key";
 
 @interface YunNetworkHelper () {
     BOOL _started;

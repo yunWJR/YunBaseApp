@@ -26,12 +26,20 @@
 
 @property (nonatomic, assign) CGFloat ctnIntervalH;
 
+// 根据 cellID 存储 cell 的高度，适用于高度固定的 cell。
+// 0-默认值，表示该 cell为动态高度
 @property (nonatomic, strong) NSMutableDictionary *heightDic;
 
 + (instancetype)instance;
 
-- (void)setItemHeight:(NSString *)itemId height:(CGFloat)height;
+- (void)setCellHeight:(NSString *)cellId height:(CGFloat)height;
 
-- (CGFloat)getItemHeight:(NSString *)itemId;
+- (void)setItemHeight:(NSString *)itemId height:(CGFloat)height
+__deprecated_msg("已过期, 请使用setCellHeight:height:");
+
+- (CGFloat)getCellHeight:(NSString *)cellId;
+
+- (CGFloat)getItemHeight:(NSString *)itemId
+__deprecated_msg("已过期, 请使用getCellHeight:");
 
 @end

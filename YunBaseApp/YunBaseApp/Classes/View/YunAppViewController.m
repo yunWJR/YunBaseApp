@@ -74,7 +74,7 @@
 
     _isNagBarClear = NO;
 
-    _isLoadDataFromLocalFirst = NO;
+    _loadDataMode = YunAppVc_LoadDataFromServer;
     _isForceLoadData = NO;
 
     self.sideOff = YunAppConfig.instance.defVcSideOff;
@@ -138,38 +138,30 @@
 - (void)handleViewDidAppear {
     if (self.shouldLoadData) {
         if (_isForceLoadData || self.canUpdate) {
-            if (_isLoadDataFromLocalFirst) { // 先从本地加载
-                BOOL cmp = [self loadDataFromLocal];
-                if (!cmp) {
-                    cmp = [self loadDataFromServer];
-                    if (!cmp) {
-                        [self updateVcState];
-                    }
+            switch (_loadDataMode) {
+                case YunAppVc_LoadDataNone: {
+                    [self updateVcState];
                 }
-            }
-            else { // 先从服务器加载
-                BOOL cmp = [self loadDataFromServer];
-                if (!cmp) {
-                    cmp = [self loadDataFromLocal];
-                    if (!cmp) {
-                        [self updateVcState];
-                    }
+                    break;
+                case YunAppVc_LoadDataFromLocal: {
+                    [self loadDataFromLocal];
                 }
+                    break;
+                case YunAppVc_LoadDataFromServer: {
+                    [self loadDataFromServer];
+                }
+                    break;
             }
         }
     }
 }
 
-- (BOOL)loadDataFromLocal {
+- (void)loadDataFromLocal {
     [self setCurUpdateDate];
-
-    return NO;
 }
 
-- (BOOL)loadDataFromServer {
+- (void)loadDataFromServer {
     [self setCurUpdateDate];
-
-    return NO;
 }
 
 - (void)loadMoreDataFromServer {

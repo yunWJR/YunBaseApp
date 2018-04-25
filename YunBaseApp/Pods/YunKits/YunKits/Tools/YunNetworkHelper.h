@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-extern const NSString *yun_network_status_changed_key;
+extern NSString *const yun_network_status_changed_key;
 
 @interface YunNetworkHelper : NSObject
 

@@ -6,6 +6,12 @@
 #import "YunBaseAppNorHeader.h"
 #import <YunKits/YunViewController.h>
 
+typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
+    YunAppVc_LoadDataNone = 0, // 不加载数据
+    YunAppVc_LoadDataFromLocal = 1, // 从本地加载
+    YunAppVc_LoadDataFromServer = 2  // 从服务器加载
+};
+
 @class YunBlankView;
 
 @interface YunAppViewController : YunViewController
@@ -55,33 +61,44 @@
 // isForceLoadData=NO 时，请求数据的间隔时间：默认120秒
 @property (nonatomic, assign) NSTimeInterval updateInterval;
 
-// 加载数据优先级：默认 NO，即先从服务器加载
-@property (nonatomic, assign) BOOL isLoadDataFromLocalFirst;
+// 加载数据模式：默认从服务器加载
+@property (nonatomic, assign) YunAppVc_LoadDataMode loadDataMode;
 
+// 已经更新过 Vc 的状态（调用过updateVcState方法）
 @property (nonatomic, assign) BOOL hasUpdated;
 
 @property (nonatomic, assign) BOOL isNagBarClear;
 
 #pragma mark - app flow
 
+// 初始化数据
 - (void)initVcData;
 
+// 初始化 view
 - (void)initVcSubViews;
 
+// ViewWillAppear
 - (void)handleViewWillAppear;
 
+// ViewDidAppear
 - (void)handleViewDidAppear;
 
-- (BOOL)loadDataFromLocal;
+// 从本地加载数据
+- (void)loadDataFromLocal;
 
-- (BOOL)loadDataFromServer;
+// 从服务器加载数据
+- (void)loadDataFromServer;
 
+// 从服务器加载更多数据
 - (void)loadMoreDataFromServer;
 
+// 更新 Vc 的状态（可以在加载完成时调用）
 - (void)updateVcState;
 
+// 开始更新 Vc 状态（实现该方法，updateVcState 时会触发）
 - (void)updateVcStateOn;
 
+// 状态更新完成（隐藏一些加载框等）（实现该方法，updateVcState 时会触发）
 - (void)updateVcStateCmp;
 
 #pragma mark - app style

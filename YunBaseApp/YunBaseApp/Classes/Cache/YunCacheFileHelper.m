@@ -15,6 +15,10 @@
 
 @implementation YunCacheFileHelper
 
++ (instancetype)helper {
+    return [[self alloc] init];
+}
+
 + (YunCacheFileHelper *)instance {
     static YunCacheFileHelper *_instance = nil;
 

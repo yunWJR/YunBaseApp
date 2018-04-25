@@ -22,6 +22,10 @@
 
 @property (nonatomic, weak) id <YunCacheFileHelperDelegate> delegate;
 
+// 新示例
++ (instancetype)helper;
+
+// 静态示例
 + (YunCacheFileHelper *)instance;
 
 - (BOOL)removeItemByIndex:(NSInteger)index;

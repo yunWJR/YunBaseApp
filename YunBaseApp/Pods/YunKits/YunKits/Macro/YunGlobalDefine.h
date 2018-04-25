@@ -6,15 +6,14 @@
 #ifndef YunMacro_YunGlobalDefine_h
 #define YunMacro_YunGlobalDefine_h
 
-// weak self
+// weak self 用于 block 循环引用，但对象施放后，weakSelf可能为 nil
 #define WEAK_SELF typeof(self) __weak weakSelf = self;
 
-// weak obj
+// weak obj 与 strong 配合，解决 block 循环引用
 #define WEAK_OBJ(type)  __weak typeof(type) weak##type = type;
 
 // strong obj
 #define STRONG_OBJ(type)  __strong typeof(type) str##type = weak##type;
-
 
 // 执行一次
 #define DP_ONCE_BLOCK(onceBlock) static dispatch_once_t onceToken; dispatch_once(&onceToken, onceBlock);

@@ -5,6 +5,7 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "NSError+YunAdd.h"
 
 NSString *const yun_error_custom_msg_key = @"yun_error_custom_msg_key";

@@ -16,7 +16,8 @@
 
 + (NSMutableDictionary *)getBasePara {
     NSMutableDictionary *paraDic =
-            [[NSMutableDictionary alloc] initWithDictionary:YunRqtConfig.instance.baseParas];
+            [[NSMutableDictionary alloc] initWithDictionary:
+                    YunRqtConfig.instance.baseParas];
 
     return paraDic;
 }

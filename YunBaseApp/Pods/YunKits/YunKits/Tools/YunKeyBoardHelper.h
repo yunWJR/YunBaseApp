@@ -7,6 +7,8 @@
 
 @protocol YunKeyBoardDelegate <NSObject>
 
+@optional
+
 - (void)kbWillShow:(CGSize)size antDur:(double)antDur;
 
 - (void)kbWillHide:(double)antDur;
