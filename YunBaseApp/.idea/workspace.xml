@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="">
+    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="change cache">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,39 +23,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_58DF6489-1563-470E-AD98-121A728AE602" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Podfile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Podfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YunAppViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="350" column="20" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#2#0" />
-                <element signature="e#94#126#0" expanded="true" />
-                <element signature="e#1461#1956#0" />
-                <element signature="e#1958#2871#0" />
-                <element signature="e#2873#3618#0" />
-                <element signature="e#3620#3694#0" />
-                <element signature="e#3696#3771#0" />
-                <element signature="e#3773#3808#0" />
-                <element signature="e#8424#8489#0" />
-                <element signature="e#8491#8689#0" />
-                <element signature="e#8691#8946#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -70,9 +43,11 @@
       <find>getItemTask</find>
       <find>// Copyright (c) 2017 skkj. All rights reserved.</find>
       <find>yun_error_custom_msg_key</find>
-      <find>needUpdateData</find>
       <find>hideNagBarBackItem</find>
       <find>setNagBarClear</find>
+      <find>_firstLoad</find>
+      <find>needUpdateData</find>
+      <find>_needUpdateData</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -89,6 +64,7 @@
       <replace>rightNagItem</replace>
       <replace>_dataKey</replace>
       <replace>// Copyright (c) 2017 yun. All rights reserved.</replace>
+      <replace>self.needUpdateData</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/YunBaseApp/Classes</dir>
@@ -149,9 +125,9 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" />
         <option value="$PROJECT_DIR$/Podfile" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" />
       </list>
     </option>
   </component>
@@ -176,7 +152,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,6 +165,24 @@
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
+              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
+              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
+              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="View" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
               <item name="YunBaseAppDemo" type="1d218c8b:XcodeProjectNode" />
             </path>
           </expand>
@@ -197,6 +190,7 @@
         </subPane>
       </pane>
       <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -414,6 +408,7 @@
       <workItem from="1524531487606" duration="302000" />
       <workItem from="1524646058018" duration="1917000" />
       <workItem from="1524648433971" duration="219000" />
+      <workItem from="1524721057347" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="update yunkits">
       <created>1498530494513</created>
@@ -755,7 +750,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97901000" />
+    <option name="totallyTimeSpent" value="99628000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -769,18 +764,19 @@
   <component name="ToolWindowManager">
     <frame x="75" y="23" width="1739" height="983" extended-state="0" />
     <layout>
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25495917" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49498886" weight="0.39537573" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5985998" weight="0.36763006" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4941657" weight="0.39537573" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5956826" visible="true" weight="0.36763006" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.24737456" side_tool="true" visible="true" weight="0.30289018" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.40431738" side_tool="true" visible="true" weight="0.36763006" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.7497083" weight="0.316763" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.75262547" visible="true" weight="0.30289018" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.46966162" weight="0.3283237" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25495917" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.630105" weight="0.6034682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.47160357" weight="0.3283237" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Code comment" order="12" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -790,7 +786,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.630105" weight="0.6034682" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -860,6 +855,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6650">
@@ -867,15 +869,17 @@
           <folding>
             <element signature="e#0#2#0" />
             <element signature="e#94#126#0" expanded="true" />
-            <element signature="e#1461#1956#0" />
-            <element signature="e#1958#2871#0" />
-            <element signature="e#2873#3618#0" />
-            <element signature="e#3620#3694#0" />
-            <element signature="e#3696#3771#0" />
-            <element signature="e#3773#3808#0" />
-            <element signature="e#8424#8489#0" />
-            <element signature="e#8491#8689#0" />
-            <element signature="e#8691#8946#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6650">
+          <caret line="350" column="20" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#2#0" />
+            <element signature="e#94#126#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -898,13 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="9" column="13" selection-start-line="9" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/YunKits/YunViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1175,37 +1172,35 @@
         <state relative-caret-position="-148" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
+    <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="137" column="14" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
+        <state relative-caret-position="228">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="350" column="20" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="20" />
+        <state relative-caret-position="-5544">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="e#0#2#0" />
             <element signature="e#94#126#0" expanded="true" />
-            <element signature="e#1461#1956#0" />
-            <element signature="e#1958#2871#0" />
-            <element signature="e#2873#3618#0" />
-            <element signature="e#3620#3694#0" />
-            <element signature="e#3696#3771#0" />
-            <element signature="e#3773#3808#0" />
-            <element signature="e#8424#8489#0" />
-            <element signature="e#8491#8689#0" />
-            <element signature="e#8691#8946#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Podfile">
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/YunKits/YunViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>

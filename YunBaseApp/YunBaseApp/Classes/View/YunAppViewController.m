@@ -64,8 +64,8 @@
 #pragma mark - app flow
 
 - (void)initVcData {
-    _firstLoad = YES;
-    _needUpdateData = NO;
+    self.firstLoad = YES;
+    self.needUpdateData = NO;
 
     _updateItem = YES;
     _updateInterval = YunAppConfig.instance.viewUpdateInterval;
@@ -183,12 +183,12 @@
 }
 
 - (BOOL)shouldLoadData {
-    return _firstLoad || _needUpdateData;
+    return self.firstLoad || self.needUpdateData;
 }
 
 - (void)setLoadDataCmp {
-    _firstLoad = NO;
-    _needUpdateData = NO;
+    self.firstLoad = NO;
+    self.needUpdateData = NO;
 }
 
 #pragma mark - handles

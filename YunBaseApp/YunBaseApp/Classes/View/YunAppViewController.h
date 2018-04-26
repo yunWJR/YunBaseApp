@@ -7,8 +7,8 @@
 #import <YunKits/YunViewController.h>
 
 typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
-    YunAppVc_LoadDataNone = 0, // 不加载数据
-    YunAppVc_LoadDataFromLocal = 1, // 从本地加载
+    YunAppVc_LoadDataNone       = 0, // 不加载数据
+    YunAppVc_LoadDataFromLocal  = 1, // 从本地加载
     YunAppVc_LoadDataFromServer = 2  // 从服务器加载
 };
 
