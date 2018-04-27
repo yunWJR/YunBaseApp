@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,32 +22,103 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_58DF6489-1563-470E-AD98-121A728AE602" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="YunAppView.h" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="YunAppView.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+            <state relative-caret-position="270">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="YunAppView.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="YunAppView.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+            <state relative-caret-position="354">
+              <caret line="78" column="1" lean-forward="true" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
               <folding>
                 <element signature="e#0#2#0" />
                 <element signature="e#94#116#0" expanded="true" />
-                <element signature="e#207#580#0" />
-                <element signature="e#614#648#0" />
-                <element signature="e#913#1062#0" />
-                <element signature="e#1064#1122#0" />
-                <element signature="e#1124#1157#0" />
-                <element signature="e#1159#1239#0" />
-                <element signature="e#1269#1334#0" />
-                <element signature="e#1336#1534#0" />
+                <element signature="e#668#1060#0" />
+                <element signature="e#776#803#0" />
+                <element signature="e#3114#3172#0" />
+                <element signature="e#3272#3355#0" />
+                <element signature="e#3357#3597#0" />
+                <element signature="e#3599#3656#0" />
+                <element signature="e#3658#3734#0" />
+                <element signature="e#3736#3817#0" />
+                <element signature="e#683#834#0" />
+                <element signature="e#836#910#0" />
+                <element signature="e#912#1080#0" />
+                <element signature="e#1686#2206#0" />
+                <element signature="e#2208#2394#0" />
+                <element signature="e#1116#1265#0" />
+                <element signature="e#1267#1325#0" />
+                <element signature="e#1327#1360#0" />
+                <element signature="e#1362#1442#0" />
+                <element signature="e#1472#1537#0" />
+                <element signature="e#1539#1737#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunAppViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-end-line="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunAppViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="34" column="18" selection-start-line="34" selection-end-line="35" />
+              <folding>
+                <element signature="e#0#2#0" />
+                <element signature="e#204#248#0" />
+                <element signature="e#239#242#0" />
+                <element signature="e#288#405#0" />
+                <element signature="e#539#651#0" />
+                <element signature="e#653#762#0" />
+                <element signature="e#764#848#0" />
+                <element signature="e#850#968#0" />
+                <element signature="e#970#1042#0" />
+                <element signature="e#1097#1489#0" />
+                <element signature="e#1988#2901#0" />
+                <element signature="e#2903#3504#0" />
+                <element signature="e#3506#3541#0" />
+                <element signature="e#3543#3601#0" />
+                <element signature="e#3603#3662#0" />
+                <element signature="e#3664#3699#0" />
+                <element signature="e#3701#3784#0" />
+                <element signature="e#3786#4026#0" />
+                <element signature="e#4028#4085#0" />
+                <element signature="e#4087#4163#0" />
+                <element signature="e#4165#4246#0" />
+                <element signature="e#4272#4403#0" />
+                <element signature="e#4438#4980#0" />
+                <element signature="e#4982#5335#0" />
+                <element signature="e#5337#5579#0" />
+                <element signature="e#5581#5676#0" />
+                <element signature="e#5678#5979#0" />
+                <element signature="e#5981#6074#0" />
+                <element signature="e#6076#6240#0" />
+                <element signature="e#6242#6410#0" />
+                <element signature="e#6412#6492#0" />
+                <element signature="e#6494#6854#0" />
+                <element signature="e#6890#7410#0" />
+                <element signature="e#7086#7340#0" />
+                <element signature="e#7412#7598#0" />
+                <element signature="e#7600#7708#0" />
+                <element signature="e#7710#7981#0" />
+                <element signature="e#8070#8135#0" />
+                <element signature="e#8137#8335#0" />
+                <element signature="e#8337#8592#0" />
               </folding>
             </state>
           </provider>
@@ -79,6 +152,9 @@
       <find>didUpdateVcState</find>
       <find>updateVcData</find>
       <find>_defBlankView</find>
+      <find>hasUpdated</find>
+      <find>_updateItem</find>
+      <find>hideDefBlankView</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -159,10 +235,10 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.m" />
         <option value="$PROJECT_DIR$/Podfile" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m" />
       </list>
     </option>
   </component>
@@ -446,14 +522,8 @@
       <workItem from="1524721057347" duration="2238000" />
       <workItem from="1524726289804" duration="4976000" />
       <workItem from="1524795613719" duration="1056000" />
-      <workItem from="1524797260630" duration="102000" />
-    </task>
-    <task id="LOCAL-00001" summary="update yunkits">
-      <created>1498530494513</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1498530494513</updated>
+      <workItem from="1524797260630" duration="131000" />
+      <workItem from="1524819727040" duration="1380000" />
     </task>
     <task id="LOCAL-00002" summary="reset def value">
       <created>1499333373520</created>
@@ -791,11 +861,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524796133074</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="add api">
+      <created>1524797369853</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1524797369853</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106273000" />
+    <option name="totallyTimeSpent" value="107682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -814,9 +891,10 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25495917" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4941657" weight="0.39537573" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.25262544" side_tool="true" visible="true" weight="0.23468208" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.37106183" side_tool="true" visible="true" weight="0.29595375" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.62893814" visible="true" weight="0.29595375" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.74737453" visible="true" weight="0.23468208" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.7467911" weight="0.20693642" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.46966162" weight="0.3283237" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -825,13 +903,12 @@
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="DB Browser" order="3" weight="0.32927573" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5956826" weight="0.36763006" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="DB Browser" order="3" weight="0.32927573" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.6295216" weight="0.29595375" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5956826" weight="0.36763006" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -887,14 +964,14 @@
     <MESSAGE value="add setting nag bar for clear" />
     <MESSAGE value="change rqt" />
     <MESSAGE value="change api name" />
-    <MESSAGE value="add api" />
     <MESSAGE value="add prop" />
     <MESSAGE value="add view bg" />
     <MESSAGE value="reform app vc" />
     <MESSAGE value="update pods" />
     <MESSAGE value="change cache" />
     <MESSAGE value="0.0.36" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.36" />
+    <MESSAGE value="add api" />
+    <option name="LAST_COMMIT_MESSAGE" value="add api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -902,6 +979,36 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" lean-forward="true" selection-end-line="94" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#2#0" />
+            <element signature="e#94#116#0" expanded="true" />
+            <element signature="e#668#1060#0" />
+            <element signature="e#776#803#0" />
+            <element signature="e#3114#3172#0" />
+            <element signature="e#3272#3355#0" />
+            <element signature="e#3357#3597#0" />
+            <element signature="e#3599#3656#0" />
+            <element signature="e#3658#3734#0" />
+            <element signature="e#3736#3817#0" />
+            <element signature="e#683#834#0" />
+            <element signature="e#836#910#0" />
+            <element signature="e#912#1080#0" />
+            <element signature="e#1686#2206#0" />
+            <element signature="e#2208#2394#0" />
+            <element signature="e#1116#1265#0" />
+            <element signature="e#1267#1325#0" />
+            <element signature="e#1327#1360#0" />
+            <element signature="e#1362#1442#0" />
+            <element signature="e#1472#1537#0" />
+            <element signature="e#1539#1737#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1235">
@@ -922,7 +1029,45 @@
           <caret line="350" column="20" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="20" />
           <folding>
             <element signature="e#0#2#0" />
-            <element signature="e#94#126#0" expanded="true" />
+            <element signature="e#204#248#0" />
+            <element signature="e#239#242#0" />
+            <element signature="e#288#405#0" />
+            <element signature="e#539#651#0" />
+            <element signature="e#653#762#0" />
+            <element signature="e#764#848#0" />
+            <element signature="e#850#968#0" />
+            <element signature="e#970#1042#0" />
+            <element signature="e#1097#1489#0" />
+            <element signature="e#1988#2901#0" />
+            <element signature="e#2903#3504#0" />
+            <element signature="e#3506#3541#0" />
+            <element signature="e#3543#3601#0" />
+            <element signature="e#3603#3662#0" />
+            <element signature="e#3664#3699#0" />
+            <element signature="e#3701#3784#0" />
+            <element signature="e#3786#4026#0" />
+            <element signature="e#4028#4085#0" />
+            <element signature="e#4087#4163#0" />
+            <element signature="e#4165#4246#0" />
+            <element signature="e#4272#4403#0" />
+            <element signature="e#4438#4980#0" />
+            <element signature="e#4982#5335#0" />
+            <element signature="e#5337#5579#0" />
+            <element signature="e#5581#5676#0" />
+            <element signature="e#5678#5979#0" />
+            <element signature="e#5981#6074#0" />
+            <element signature="e#6076#6240#0" />
+            <element signature="e#6242#6410#0" />
+            <element signature="e#6412#6492#0" />
+            <element signature="e#6494#6854#0" />
+            <element signature="e#6890#7410#0" />
+            <element signature="e#7086#7340#0" />
+            <element signature="e#7412#7598#0" />
+            <element signature="e#7600#7708#0" />
+            <element signature="e#7710#7981#0" />
+            <element signature="e#8070#8135#0" />
+            <element signature="e#8137#8335#0" />
+            <element signature="e#8337#8592#0" />
           </folding>
         </state>
       </provider>
@@ -933,7 +1078,45 @@
           <caret line="350" column="20" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="20" />
           <folding>
             <element signature="e#0#2#0" />
-            <element signature="e#94#126#0" expanded="true" />
+            <element signature="e#204#248#0" />
+            <element signature="e#239#242#0" />
+            <element signature="e#288#405#0" />
+            <element signature="e#539#651#0" />
+            <element signature="e#653#762#0" />
+            <element signature="e#764#848#0" />
+            <element signature="e#850#968#0" />
+            <element signature="e#970#1042#0" />
+            <element signature="e#1097#1489#0" />
+            <element signature="e#1988#2901#0" />
+            <element signature="e#2903#3504#0" />
+            <element signature="e#3506#3541#0" />
+            <element signature="e#3543#3601#0" />
+            <element signature="e#3603#3662#0" />
+            <element signature="e#3664#3699#0" />
+            <element signature="e#3701#3784#0" />
+            <element signature="e#3786#4026#0" />
+            <element signature="e#4028#4085#0" />
+            <element signature="e#4087#4163#0" />
+            <element signature="e#4165#4246#0" />
+            <element signature="e#4272#4403#0" />
+            <element signature="e#4438#4980#0" />
+            <element signature="e#4982#5335#0" />
+            <element signature="e#5337#5579#0" />
+            <element signature="e#5581#5676#0" />
+            <element signature="e#5678#5979#0" />
+            <element signature="e#5981#6074#0" />
+            <element signature="e#6076#6240#0" />
+            <element signature="e#6242#6410#0" />
+            <element signature="e#6412#6492#0" />
+            <element signature="e#6494#6854#0" />
+            <element signature="e#6890#7410#0" />
+            <element signature="e#7086#7340#0" />
+            <element signature="e#7412#7598#0" />
+            <element signature="e#7600#7708#0" />
+            <element signature="e#7710#7981#0" />
+            <element signature="e#8070#8135#0" />
+            <element signature="e#8137#8335#0" />
+            <element signature="e#8337#8592#0" />
           </folding>
         </state>
       </provider>
@@ -1230,45 +1413,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+        <state relative-caret-position="397">
+          <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="318" column="29" lean-forward="true" selection-start-line="318" selection-start-column="29" selection-end-line="318" selection-end-column="29" />
+        <state relative-caret-position="233">
+          <caret line="34" column="18" selection-start-line="34" selection-end-line="35" />
           <folding>
             <element signature="e#0#2#0" />
-            <element signature="e#94#126#0" expanded="true" />
+            <element signature="e#204#248#0" />
+            <element signature="e#239#242#0" />
+            <element signature="e#288#405#0" />
+            <element signature="e#539#651#0" />
+            <element signature="e#653#762#0" />
+            <element signature="e#764#848#0" />
+            <element signature="e#850#968#0" />
+            <element signature="e#970#1042#0" />
+            <element signature="e#1097#1489#0" />
+            <element signature="e#1988#2901#0" />
+            <element signature="e#2903#3504#0" />
+            <element signature="e#3506#3541#0" />
+            <element signature="e#3543#3601#0" />
+            <element signature="e#3603#3662#0" />
+            <element signature="e#3664#3699#0" />
+            <element signature="e#3701#3784#0" />
+            <element signature="e#3786#4026#0" />
+            <element signature="e#4028#4085#0" />
+            <element signature="e#4087#4163#0" />
+            <element signature="e#4165#4246#0" />
+            <element signature="e#4272#4403#0" />
+            <element signature="e#4438#4980#0" />
+            <element signature="e#4982#5335#0" />
+            <element signature="e#5337#5579#0" />
+            <element signature="e#5581#5676#0" />
+            <element signature="e#5678#5979#0" />
+            <element signature="e#5981#6074#0" />
+            <element signature="e#6076#6240#0" />
+            <element signature="e#6242#6410#0" />
+            <element signature="e#6412#6492#0" />
+            <element signature="e#6494#6854#0" />
+            <element signature="e#6890#7410#0" />
+            <element signature="e#7086#7340#0" />
+            <element signature="e#7412#7598#0" />
+            <element signature="e#7600#7708#0" />
+            <element signature="e#7710#7981#0" />
+            <element signature="e#8070#8135#0" />
+            <element signature="e#8137#8335#0" />
+            <element signature="e#8337#8592#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="78" column="1" lean-forward="true" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#2#0" />
+            <element signature="e#94#116#0" expanded="true" />
+            <element signature="e#668#1060#0" />
+            <element signature="e#776#803#0" />
+            <element signature="e#3114#3172#0" />
+            <element signature="e#3272#3355#0" />
+            <element signature="e#3357#3597#0" />
+            <element signature="e#3599#3656#0" />
+            <element signature="e#3658#3734#0" />
+            <element signature="e#3736#3817#0" />
+            <element signature="e#683#834#0" />
+            <element signature="e#836#910#0" />
+            <element signature="e#912#1080#0" />
+            <element signature="e#1686#2206#0" />
+            <element signature="e#2208#2394#0" />
+            <element signature="e#1116#1265#0" />
+            <element signature="e#1267#1325#0" />
+            <element signature="e#1327#1360#0" />
+            <element signature="e#1362#1442#0" />
+            <element signature="e#1472#1537#0" />
+            <element signature="e#1539#1737#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#2#0" />
-            <element signature="e#94#116#0" expanded="true" />
-            <element signature="e#207#580#0" />
-            <element signature="e#614#648#0" />
-            <element signature="e#913#1062#0" />
-            <element signature="e#1064#1122#0" />
-            <element signature="e#1124#1157#0" />
-            <element signature="e#1159#1239#0" />
-            <element signature="e#1269#1334#0" />
-            <element signature="e#1336#1534#0" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>

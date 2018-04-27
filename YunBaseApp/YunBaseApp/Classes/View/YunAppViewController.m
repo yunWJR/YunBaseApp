@@ -63,7 +63,7 @@
 
 // - (void)dealloc {} 施放对象
 
-#pragma mark - app flow
+#pragma mark - app vc flow
 
 - (void)initVcData {
     self.firstLoad = YES;
@@ -180,7 +180,18 @@
 }
 
 - (void)updateVcStateOn {
-    [self updateVcData];
+    self.hasUpdated = YES;
+    [self setCurUpdateDate];
+
+    [self setLoadDataCmp];
+
+    if (_isNagBarClear) {
+        [self setNagBarClear];
+    }
+
+    if (_didUpdateVcState) {
+        _didUpdateVcState();
+    }
 }
 
 - (void)updateVcStateCmp {
@@ -336,37 +347,6 @@
 #pragma mark - protocol
 
 #pragma mark - request functions
-
-- (void)rqtDataFromServer:(BOOL)force {
-    if (force || self.canUpdate) {
-        [self rqtDataFromServer];
-    }
-    else {
-        return;
-    }
-}
-
-- (void)rqtDataFromServer {
-    [self setCurUpdateDate];
-}
-
-- (void)rqtMoreDataFromServer {
-}
-
-- (void)updateVcData {
-    self.hasUpdated = YES;
-    [self setCurUpdateDate];
-
-    [self setLoadDataCmp];
-
-    if (_isNagBarClear) {
-        [self setNagBarClear];
-    }
-
-    if (_didUpdateVcState) {
-        _didUpdateVcState();
-    }
-}
 
 #pragma mark - update date
 

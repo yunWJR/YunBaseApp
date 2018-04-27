@@ -6,6 +6,7 @@
 #import "YunAppView.h"
 #import "YunAppConfig.h"
 #import "YunAppViewController.h"
+#import "YunBlankView.h"
 
 @implementation YunAppView {
     UIViewController *_superVc;
@@ -13,18 +14,68 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _firstLoad = YES;
-        _updateInterval = YunAppConfig.instance.viewUpdateInterval;
-
-        _noCtnMsg = @"无内容";
-
-        self.sideOff = YunAppConfig.instance.defViewSideOff;
-
-        if (YunAppTheme.colorViewBg) {
-            self.backgroundColor = YunAppTheme.colorViewBg;
-        }
+        [self initViewDataAndState];
     }
     return self;
+}
+
+// - (void)dealloc {} 施放对象
+
+#pragma mark - app view flow
+
+- (void)initViewDataAndState {
+    self.firstLoad = YES;
+    self.needUpdateData = NO;
+
+    _updateInterval = YunAppConfig.instance.viewUpdateInterval;
+
+    _noCtnMsg = @"无内容";
+
+    self.sideOff = YunAppConfig.instance.defViewSideOff;
+
+    if (YunAppTheme.colorViewBg) {
+        self.backgroundColor = YunAppTheme.colorViewBg;
+    }
+}
+
+- (void)updateWhenViewAppear {
+    [self showDefBlankView];
+
+    if (self.shouldLoadData) {
+        if (self.needUpdateData || self.canUpdate) {
+            [self loadViewData];
+        }
+    }
+}
+
+- (void)loadViewData {
+    [self setCurUpdateDate];
+}
+
+- (void)updateViewState {
+    [self updateViewStateOn];
+
+    [self updateViewStateCmp];
+}
+
+- (void)updateViewStateOn {
+    self.hasUpdated = YES;
+    [self setCurUpdateDate];
+
+    [self setLoadDataCmp];
+}
+
+- (void)updateViewStateCmp {
+    [self hideDefBlankView];
+}
+
+- (BOOL)shouldLoadData {
+    return self.firstLoad || self.needUpdateData;
+}
+
+- (void)setLoadDataCmp {
+    self.firstLoad = NO;
+    self.needUpdateData = NO;
 }
 
 #pragma mark - public funtions
@@ -52,6 +103,34 @@
     }
 
     return nil;
+}
+
+#pragma mark - private funtions
+
+- (void)showDefBlankView {
+    if (self.defBlankView) {
+        self.defBlankView.hidden = NO;
+
+        [self addSubview:self.defBlankView];
+
+        [self.defBlankView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self);
+            make.width.equalTo(self);
+            make.left.equalTo(self);
+            make.bottom.equalTo(self);
+        }];
+
+        [self bringSubviewToFront:self.defBlankView];
+    }
+}
+
+- (void)hideDefBlankView {
+    if (self.defBlankView) {
+        self.defBlankView.hidden = YES;
+        [self.defBlankView removeFromSuperview];
+
+        self.defBlankView = nil;
+    }
 }
 
 #pragma mark - request functions

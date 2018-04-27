@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 
 @property (nonatomic, assign) BOOL isNagBarClear;
 
-#pragma mark - app flow
+#pragma mark - app vc flow
 
 // 初始化数据
 - (void)initVcData;
@@ -130,14 +130,6 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 - (YunAppViewController *)appBackVC;
 
 #pragma mark - request
-
-- (void)rqtDataFromServer:(BOOL)force;
-
-- (void)rqtDataFromServer;
-
-- (void)rqtMoreDataFromServer;
-
-- (void)updateVcData;
 
 #pragma mark - update date
 

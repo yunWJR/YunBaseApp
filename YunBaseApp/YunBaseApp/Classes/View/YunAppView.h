@@ -14,6 +14,9 @@
 // 第一次加载标识符 // 默认YES
 @property (nonatomic, assign) BOOL firstLoad;
 
+// 有数据需要更新 // 默认NO
+@property (nonatomic, assign) BOOL needUpdateData; // 使用后设为NO
+
 // super view
 @property (nonatomic, weak) UIViewController *superVC;
 
@@ -29,6 +32,9 @@
 
 @property (nonatomic, strong) YunBlankView *msgView;
 
+// 第一次加载的空白页面
+@property (nonatomic, strong) YunBlankView *defBlankView;
+
 @property (nonatomic, assign) BOOL hideStateView;
 
 // 最后一次更新信息
@@ -38,6 +44,22 @@
 @property (nonatomic, assign) NSTimeInterval updateInterval;
 
 @property (nonatomic, assign) BOOL hasUpdated;
+
+#pragma mark - app view flow
+
+- (void)initViewDataAndState;
+
+- (void)updateWhenViewAppear;
+
+- (void)loadViewData;
+
+- (void)updateViewState;
+
+- (void)updateViewStateOn;
+
+- (void)updateViewStateCmp;
+
+- (BOOL)shouldLoadData;
 
 #pragma mark - public functions
 
