@@ -53,6 +53,8 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+
+    [self handleViewDidDisappear];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,7 +77,6 @@
     _isNagBarClear = NO;
 
     _loadDataMode = YunAppVc_LoadDataFromServer;
-    _isForceLoadData = NO;
 
     self.sideOff = YunAppConfig.instance.defVcSideOff;
     self.hideNagBarBtmLine = YunAppConfig.instance.isHideNagBtmLine;
@@ -137,7 +138,7 @@
 
 - (void)handleViewDidAppear {
     if (self.shouldLoadData) {
-        if (_isForceLoadData || self.canUpdate) {
+        if (self.needUpdateData || self.canUpdate) {
             switch (_loadDataMode) {
                 case YunAppVc_LoadDataNone: {
                     [self updateVcState];
@@ -154,6 +155,10 @@
             }
         }
     }
+}
+
+- (void)handleViewDidDisappear {
+
 }
 
 - (void)loadDataFromLocal {
@@ -284,28 +289,28 @@
 #pragma mark - private functions
 
 - (void)showDefBlankView {
-    if (_defBlankView) {
-        _defBlankView.hidden = NO;
+    if (self.defBlankView) {
+        self.defBlankView.hidden = NO;
 
-        [self.view addSubview:_defBlankView];
+        [self.view addSubview:self.defBlankView];
 
-        [_defBlankView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        [self.defBlankView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(-YunSizeHelper.statusAndNagBarHeight);
             make.width.equalTo(self.view);
             make.left.equalTo(self.view);
             make.bottom.equalTo(self.view);
         }];
 
-        [self.view bringSubviewToFront:_defBlankView];
+        [self.view bringSubviewToFront:self.defBlankView];
     }
 }
 
 - (void)hideDefBlankView {
-    if (_defBlankView) {
-        _defBlankView.hidden = YES;
-        [_defBlankView removeFromSuperview];
+    if (self.defBlankView) {
+        self.defBlankView.hidden = YES;
+        [self.defBlankView removeFromSuperview];
 
-        _defBlankView = nil;
+        self.defBlankView = nil;
     }
 }
 

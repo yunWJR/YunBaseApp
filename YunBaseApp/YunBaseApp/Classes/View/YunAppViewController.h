@@ -55,10 +55,6 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 // 调用updateVcState
 @property (nonatomic, copy) void (^didUpdateVcState)(void);
 
-// 默认 NO，为 YES 时，每次请求都更新数据
-@property (nonatomic, assign) BOOL isForceLoadData;
-
-// isForceLoadData=NO 时，请求数据的间隔时间：默认120秒
 @property (nonatomic, assign) NSTimeInterval updateInterval;
 
 // 加载数据模式：默认从服务器加载
@@ -83,6 +79,9 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 // ViewDidAppear
 - (void)handleViewDidAppear;
 
+// ViewDidDisappear
+- (void)handleViewDidDisappear;
+
 // 从本地加载数据
 - (void)loadDataFromLocal;
 
@@ -100,6 +99,9 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 
 // 状态更新完成（隐藏一些加载框等）（实现该方法，updateVcState 时会触发）
 - (void)updateVcStateCmp;
+
+// 是否需要加载数据（自动判断）
+- (BOOL)shouldLoadData;
 
 #pragma mark - app style
 
