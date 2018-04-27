@@ -7,6 +7,7 @@
 #import <YunKits/YunView.h>
 
 @class YunBlankView;
+@class YunAppViewController;
 
 @interface YunAppView : YunView
 
@@ -41,6 +42,8 @@
 #pragma mark - public functions
 
 - (void)updateData:(BOOL)force;
+
+- (YunAppViewController *)superAppVc;
 
 #pragma mark - request
 

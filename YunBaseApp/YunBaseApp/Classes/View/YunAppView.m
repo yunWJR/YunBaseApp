@@ -5,6 +5,7 @@
 
 #import "YunAppView.h"
 #import "YunAppConfig.h"
+#import "YunAppViewController.h"
 
 @implementation YunAppView {
     UIViewController *_superVc;
@@ -42,6 +43,15 @@
 
 - (void)setSuperVC:(UIViewController *)superVC {
     _superVc = superVC;
+}
+
+- (YunAppViewController *)superAppVc {
+    id sVc = self.superVC;
+    if ([sVc isKindOfClass:YunAppViewController.class]) {
+        return sVc;
+    }
+
+    return nil;
 }
 
 #pragma mark - request functions
