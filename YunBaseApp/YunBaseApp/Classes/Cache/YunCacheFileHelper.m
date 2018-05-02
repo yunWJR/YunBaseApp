@@ -9,6 +9,8 @@
 
 @interface YunCacheFileHelper () {
     NSLock *_lc;
+
+    NSLock *_saveAsynLc;
 }
 
 @end
@@ -36,6 +38,7 @@
     if (self) {
         _dataKey = @"DataKey";
         _lc = [NSLock new];
+        _saveAsynLc = [NSLock new];
     }
 
     return self;
@@ -93,10 +96,13 @@
 
 - (void)saveItemAsyn:(id)item index:(NSInteger)index rst:(void (^)(BOOL suc))rst {
     DP_GLOBLE_QUEUE_LOW(^{
+        [_saveAsynLc lock];
         BOOL sucRst = [self saveItemTask:item index:index];
         DP_MAIN_THREAD(^{
             if (rst) {rst(sucRst);}
         })
+
+        [_saveAsynLc unlock];
     })
 }
 
