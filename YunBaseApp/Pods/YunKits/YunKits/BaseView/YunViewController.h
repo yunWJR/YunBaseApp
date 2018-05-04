@@ -24,10 +24,10 @@
 @property (nonatomic, assign) BOOL hideNagBarBtmLine;
 
 // leftNagItem
-@property (nonatomic, weak) UIBarButtonItem *leftNagItem;
+@property (nonatomic, strong) UIBarButtonItem *leftNagItem;
 
 // rightNagItem
-@property (nonatomic, weak) UIBarButtonItem *rightNagItem;
+@property (nonatomic, strong) UIBarButtonItem *rightNagItem;
 
 // bottom bar隐藏属性 // 默认YES, table bar需要设置成 NO
 @property (nonatomic, assign) BOOL hideBottomBar;

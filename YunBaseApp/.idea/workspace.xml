@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +22,7 @@
       <file leaf-file-name="YunCacheFileHelper.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
+            <state relative-caret-position="1547">
               <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
             </state>
           </provider>
@@ -452,14 +451,7 @@
       <workItem from="1524819727040" duration="2397000" />
       <workItem from="1524874765394" duration="384000" />
       <workItem from="1524885687891" duration="197000" />
-      <workItem from="1525226652941" duration="34000" />
-    </task>
-    <task id="LOCAL-00003" summary="add api">
-      <created>1500254656899</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1500254656899</updated>
+      <workItem from="1525226652941" duration="48000" />
     </task>
     <task id="LOCAL-00004" summary="add api">
       <created>1500259910464</created>
@@ -797,11 +789,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524821142115</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="add lock">
+      <created>1525226697961</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1525226697961</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109314000" />
+    <option name="totallyTimeSpent" value="109328000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -875,7 +874,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="update yunkits" />
     <MESSAGE value="reset def value" />
     <MESSAGE value="add log" />
     <MESSAGE value="fix prop" />
@@ -900,7 +898,8 @@
     <MESSAGE value="0.0.36" />
     <MESSAGE value="add api" />
     <MESSAGE value="reform api" />
-    <option name="LAST_COMMIT_MESSAGE" value="reform api" />
+    <MESSAGE value="add lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="add lock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1252,7 +1251,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
+        <state relative-caret-position="1547">
           <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
         </state>
       </provider>

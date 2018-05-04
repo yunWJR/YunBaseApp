@@ -10,7 +10,7 @@
     UIImageView *_nagBtmLine;
 }
 
-@property (nonatomic, weak) UIBarButtonItem *noneLeftItem;
+@property (nonatomic, strong) UIBarButtonItem *noneLeftItem;
 
 @end
 

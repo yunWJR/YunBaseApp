@@ -66,6 +66,10 @@
         _fontBlankCoefficient = 0.4f;
 
         _nagItemWidth = 54;
+
+        // 图片压缩
+        _imgMaxBoundary = 1280;
+        _imgMaxLength = 300;
     }
 
     return self;

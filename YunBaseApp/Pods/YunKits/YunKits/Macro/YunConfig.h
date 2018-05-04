@@ -99,4 +99,12 @@
 // font 空白 系数 0.4f
 @property (nonatomic, assign) CGFloat nagItemWidth;
 
+#pragma mark - UIImage 压缩参数
+
+// 最大边
+@property (nonatomic, assign) CGFloat imgMaxBoundary;
+
+// 最大大小
+@property (nonatomic, assign) NSInteger imgMaxLength;
+
 @end
