@@ -3,7 +3,6 @@
 // Copyright (c) 2017 yun. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
 #import <YunKits/YunConfig.h>
 #import "YunRqtConfig.h"
 
@@ -43,6 +42,7 @@
     self.rstSuccessName = @"success";
 
     self.rstSuccessCode = @"200";
+    self.rstSuccessCodeInt = -1;
 
     self.queryMode = NO;
     self.logUrl = YunConfig.instance.isDebugMode;

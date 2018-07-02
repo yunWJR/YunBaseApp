@@ -42,6 +42,8 @@
 
 @property (nonatomic, copy) NSString *rstSuccessCode;
 
+@property (nonatomic, assign) NSInteger rstSuccessCodeInt;
+
 #pragma mark - rqt mg
 
 @property (nonatomic, assign) BOOL queryMode;

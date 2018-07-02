@@ -8,6 +8,7 @@
 #import "MTLModel.h"
 #import "YunLogHelper.h"
 #import "YunRqtConfig.h"
+#import "YunValueVerifier.h"
 
 @interface YunRqtRpsHelper ()
 
@@ -27,17 +28,35 @@
 }
 
 - (BOOL)isSuccess {
-    if ([self.rspObj[YunRqtConfig.instance.rspCodeName] isEqual:YunRqtConfig.instance.rstSuccessCode]) {
-        return YES;
+    // code int
+    if (YunRqtConfig.instance.rstSuccessCodeInt >= 0) {
+        if ([YunValueVerifier isIntObj:self.rspObj[YunRqtConfig.instance.rspCodeName]]) {
+            NSInteger code = [self.rspObj[YunRqtConfig.instance.rspCodeName] integerValue];
+
+            return code == YunRqtConfig.instance.rstSuccessCodeInt;
+        }
     }
 
-    if (self.rspObj[YunRqtConfig.instance.rstSuccessName]) {
-        return ((NSNumber *) self.rspObj[YunRqtConfig.instance.rstSuccessName]).integerValue == 0;
-    } // 有success字段：0为成功，其他为错误
+    // code str
+    if ([YunValueVerifier isValidStr:YunRqtConfig.instance.rstSuccessCode]) {
+        if ([self.rspObj[YunRqtConfig.instance.rspCodeName] isEqual:YunRqtConfig.instance.rstSuccessCode]) {
+            return YES;
+        }
+    }
 
-    if (self.rspObj[YunRqtConfig.instance.rstErrName]) { // 无success字段：判断 errorMsg 字段
+    // 有success字段：0为成功，其他为错误
+    if (self.rspObj[YunRqtConfig.instance.rstSuccessName]) {
+        if ([YunValueVerifier isIntObj:self.rspObj[YunRqtConfig.instance.rstSuccessName]]) {
+            NSInteger code = [self.rspObj[YunRqtConfig.instance.rstSuccessName] integerValue];
+
+            return code == 0;
+        }
+    }
+
+    // 无success字段：判断 errorMsg 字段
+    if (self.rspObj[YunRqtConfig.instance.rstErrName]) {
         NSString *err = self.rspObj[YunRqtConfig.instance.rstErrName];
-        if (err.length == 0) {
+        if ([YunValueVerifier isInvalidStr:err]) {
             return YES;
         }
     }
