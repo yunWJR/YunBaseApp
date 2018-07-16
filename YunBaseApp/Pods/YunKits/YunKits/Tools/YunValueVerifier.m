@@ -85,6 +85,20 @@
     return YES;
 }
 
++ (BOOL)isIntObj:(id)obj {
+    if ([obj isKindOfClass:NSNumber.class]) {
+        return YES;
+    }
+
+    if ([obj isKindOfClass:NSString.class]) {
+        NSString *objStr = obj;
+
+        return [self isPureInt:objStr];
+    }
+
+    return NO;
+}
+
 + (BOOL)isPureInt:(NSString *)str {
     NSScanner *scan = [NSScanner scannerWithString:str];
     int val;

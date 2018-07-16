@@ -28,6 +28,8 @@
 
 + (BOOL)isAllNum:(NSString *)str;
 
++ (BOOL)isIntObj:(id)obj;
+
 + (BOOL)isPureInt:(NSString *)str;
 
 + (BOOL)isPureFloat:(NSString *)str;

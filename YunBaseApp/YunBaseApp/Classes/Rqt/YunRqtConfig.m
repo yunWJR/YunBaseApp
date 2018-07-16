@@ -42,7 +42,7 @@
     self.rstSuccessName = @"success";
 
     self.rstSuccessCode = @"200";
-    self.rstSuccessCodeInt = -1;
+    self.rstSuccessCodeInt = 200;
 
     self.queryMode = NO;
     self.logUrl = YunConfig.instance.isDebugMode;

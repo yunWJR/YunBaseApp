@@ -34,6 +34,10 @@
         return self.getDetailMsg;
     }
     else {
+        if (_msg.length > 30) { // todo
+            return @"操作失败，请检查后重试！";
+        }
+
         return _msg;
     }
 }

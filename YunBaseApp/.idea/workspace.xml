@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../YunBaseApp.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/../YunBaseApp.podspec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueVerifier.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueVerifier.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueVerifier.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueVerifier.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,14 +22,77 @@
       <option value="directory" />
     </option>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_58DF6489-1563-470E-AD98-121A728AE602" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_26f9bc7f58922b804052e5cd927796ca04112361" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="YunCacheFileHelper.m" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m">
+      <file leaf-file-name="YunErrorHelper.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1547">
-              <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
+            <state relative-caret-position="903">
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunErrorModel.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunRqtConfig.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+              <folding>
+                <element signature="e#87#120#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunRqtConfig.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="44" column="32" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="32" />
+              <folding>
+                <element signature="e#87#116#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunRqtRpsHelper.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtRpsHelper.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunRqtRpsHelper.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtRpsHelper.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+              <folding>
+                <element signature="e#94#121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunRqtUrlHelper.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -92,11 +161,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunBlankView.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHeader.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtHeader.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+Size.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtRpsHelper.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+IconFont.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+IconFont.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+Img.m" />
@@ -114,16 +180,12 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppNavigationController.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppNavigationController.h" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.m" />
         <option value="$PROJECT_DIR$/YunBaseApp.podspec" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.h" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Log/YunLogHelper.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Log/YunLogHelper.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtMg.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.h" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+Color.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+Color.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppThemeColorConfig.h" />
@@ -143,6 +205,13 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.h" />
+        <option value="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueVerifier.m" />
+        <option value="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueVerifier.h" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtRpsHelper.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.m" />
       </list>
     </option>
   </component>
@@ -152,12 +221,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="5" />
-    <option name="y" value="23" />
-    <option name="width" value="1739" />
-    <option name="height" value="983" />
+    <option name="x" value="110" />
+    <option name="y" value="63" />
+    <option name="width" value="2450" />
+    <option name="height" value="1292" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -195,21 +267,7 @@
               <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
               <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
               <item name="Classes" type="fcab9f18:XcodeViewNode" />
-              <item name="Cache" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
-              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
-              <item name="Classes" type="fcab9f18:XcodeViewNode" />
               <item name="Error" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
-              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
-              <item name="Classes" type="fcab9f18:XcodeViewNode" />
-              <item name="Log" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -267,37 +325,6 @@
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
@@ -452,20 +479,10 @@
       <workItem from="1524874765394" duration="384000" />
       <workItem from="1524885687891" duration="197000" />
       <workItem from="1525226652941" duration="48000" />
-    </task>
-    <task id="LOCAL-00004" summary="add api">
-      <created>1500259910464</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1500259910464</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add log">
-      <created>1501492237319</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1501492237319</updated>
+      <workItem from="1525412802512" duration="903000" />
+      <workItem from="1527058728201" duration="271000" />
+      <workItem from="1530494860940" duration="1420000" />
+      <workItem from="1531738567950" duration="434000" />
     </task>
     <task id="LOCAL-00006" summary="fix prop">
       <created>1501552716504</created>
@@ -796,11 +813,25 @@
       <option name="project" value="LOCAL" />
       <updated>1525226697961</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="update pods">
+      <created>1525412969743</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1525412969743</updated>
+    </task>
+    <task id="LOCAL-00054" summary="reform success for rqtRps">
+      <created>1530495852242</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1530495852242</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109328000" />
+    <option name="totallyTimeSpent" value="112356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -812,16 +843,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="23" width="1739" height="983" extended-state="0" />
+    <frame x="110" y="63" width="2450" height="1292" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16511086" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21484536" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49358228" weight="0.39537573" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.25554258" side_tool="true" visible="true" weight="0.3132948" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.25814432" side_tool="true" visible="true" weight="0.16269165" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.7444574" visible="true" weight="0.3132948" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.7418557" visible="true" weight="0.16269165" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.46966162" weight="0.3283237" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -833,7 +864,7 @@
       <window_info id="DB Browser" order="3" weight="0.32927573" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5956826" weight="0.36763006" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.59451574" weight="0.36763006" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.62893814" weight="0.29595375" />
@@ -874,7 +905,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="reset def value" />
     <MESSAGE value="add log" />
     <MESSAGE value="fix prop" />
     <MESSAGE value="fix bug" />
@@ -893,13 +923,14 @@
     <MESSAGE value="add prop" />
     <MESSAGE value="add view bg" />
     <MESSAGE value="reform app vc" />
-    <MESSAGE value="update pods" />
     <MESSAGE value="change cache" />
     <MESSAGE value="0.0.36" />
     <MESSAGE value="add api" />
     <MESSAGE value="reform api" />
     <MESSAGE value="add lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="add lock" />
+    <MESSAGE value="update pods" />
+    <MESSAGE value="reform success for rqtRps" />
+    <option name="LAST_COMMIT_MESSAGE" value="reform success for rqtRps" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -907,41 +938,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Podfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6650">
-          <caret line="350" column="20" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6650">
-          <caret line="350" column="20" selection-start-line="350" selection-start-column="8" selection-end-line="350" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/YunBaseAppNorHeader.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/YunKits/NSError+YunAdd.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/NSObject_Ctg/NSError+YunAdd.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -953,13 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunBlankView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -977,13 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunBlankView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -991,108 +973,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorConfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHeader.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Log/YunLogHelper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtMg.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="52" column="89" lean-forward="true" selection-start-line="52" selection-start-column="89" selection-end-line="52" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtMg.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="336" column="128" selection-start-line="336" selection-start-column="128" selection-end-line="336" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtHeader.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtRpsHelper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtRpsHelper.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+Color.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-763">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+Color.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2074">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1136,13 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppConfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppConfig.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -1162,13 +1039,6 @@
         <state relative-caret-position="-148" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Podfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/YunKits/YunViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1183,20 +1053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -1204,10 +1060,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorConfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorConfig.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-734">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <element signature="e#87#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHeader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="475">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1218,41 +1119,191 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-808" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-371" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Log/YunLogHelper.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="266">
           <caret line="15" column="30" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Log/YunLogHelper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppConfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+Color.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Theme/YunAppTheme+Color.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtHeader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <element signature="e#87#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtMg.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtMg.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1819">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2432">
+          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/YunBaseApp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="e#488#520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/YunBaseAppNorHeader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunBlankView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunBlankView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1643" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueVerifier.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunValueVerifier.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="852">
+          <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+          <folding>
+            <element signature="e#87#120#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtConfig.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="15" />
+        <state relative-caret-position="713">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="32" />
+          <folding>
+            <element signature="e#87#116#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorConfig.m">
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtUrlHelper.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2442">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="475">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Cache/YunCacheFileHelper.m">
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtRpsHelper.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
+        <state relative-caret-position="399">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtRpsHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+          <folding>
+            <element signature="e#94#121#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
