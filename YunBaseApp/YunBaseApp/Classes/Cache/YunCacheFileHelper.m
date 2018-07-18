@@ -109,20 +109,30 @@
 - (BOOL)saveItemTask:(id)item index:(NSInteger)index {
     [[self getItemLock:index] lock];
 
+    NSString *fineName = [self getFileName:index];
+
+    BOOL suc = [self saveItemTask:item fileName:fineName];
+
+    [[self getItemLock:index] unlock];
+
+    return suc;
+}
+
+- (BOOL)saveItemTask:(id)item fileName:(NSString *)fileName {
+    NSString *filePath = [self getFilePathByName:fileName];
+
     NSMutableData *data = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     [archiver encodeObject:item forKey:_dataKey];
     [archiver finishEncoding];
 
     NSError *error;
-    [data writeToFile:[self getFilePath:index]
+    [data writeToFile:filePath
               options:NSAtomicWrite
                 error:&error];
 
-    [[self getItemLock:index] unlock];
-
     if (error) {
-        [self removeItemByIndex:index];
+        [self removeItemByName:fileName];
     }
 
     return error == nil;
@@ -158,7 +168,7 @@
         return nil;
     }
     else {
-        id rstData = [self getItemTask:index];
+        id rstData = [self getItemTaskByIndex:index];
         if (rst) {
             rst(rstData);
         }
@@ -170,23 +180,35 @@
 
 - (void)getItemAsyn:(NSInteger)index rst:(void (^)(id data))rst {
     DP_GLOBLE_QUEUE_LOW(^{
-        id rstData = [self getItemTask:index];
+        id rstData = [self getItemTaskByIndex:index];
         DP_MAIN_THREAD(^{
             if (rst) {rst(rstData);}
         })
     })
 }
 
-- (id)getItemTask:(NSInteger)index {
+- (id)getItemTaskByIndex:(NSInteger)index {
     [[self getItemLock:index] lock];
+
+    NSString *fineName = [self getFileName:index];
+
+    id item = [self getItemTaskByName:fineName];
+
+    [[self getItemLock:index] unlock];
+
+    return item;
+}
+
+- (id)getItemTaskByName:(NSString *)fileName {
+    NSString *filePath = [self getFilePathByName:fileName];
 
     NSFileManager *fileManager = [NSFileManager defaultManager];
     id item = nil;
 
     NSError *error;
-    if ([fileManager fileExistsAtPath:[self getFilePath:index]]) {
+    if ([fileManager fileExistsAtPath:filePath]) {
         //如果归档文件存在，则读取其中内容
-        NSData *data = [[NSMutableData alloc] initWithContentsOfFile:[self getFilePath:index]
+        NSData *data = [[NSMutableData alloc] initWithContentsOfFile:filePath
                                                              options:NSDataReadingMappedIfSafe
                                                                error:&error];
 
@@ -207,10 +229,8 @@
     else {
     }
 
-    [[self getItemLock:index] unlock];
-
     if (error) {
-        [self removeItemByIndex:index];
+        [self removeItemByName:fileName];
     }
 
     return item;
@@ -219,23 +239,44 @@
 - (BOOL)removeItemByIndex:(NSInteger)index {
     [[self getItemLock:index] lock];
 
-    NSString *FileFullPath = [self getFilePath:index];
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    BOOL bRet = [fileMgr fileExistsAtPath:FileFullPath];
-    if (bRet) {
-        NSError *err;
-        [fileMgr removeItemAtPath:FileFullPath error:&err];
-    }
+    NSString *fineName = [self getFileName:index];
+
+    BOOL suc = [self removeItemByName:fineName];
 
     [[self getItemLock:index] unlock];
 
-    return YES;
+    return suc;
+}
+
+- (BOOL)removeItemByName:(NSString *)fileName {
+    NSString *filePath = [self getFilePathByName:fileName];
+
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    BOOL hasFl = [fileMgr fileExistsAtPath:filePath];
+    if (hasFl) {
+        NSError *err;
+        [fileMgr removeItemAtPath:filePath error:&err];
+
+        if (err == nil) {
+            return YES;
+        }
+    }
+
+    return NO;
 }
 
 // file
 
 - (NSString *)getFilePath:(NSInteger)index {
     NSString *fileName = [self getFileName:index];
+    if (!fileName) {return nil;}
+
+    NSString *path = [[self docDic] stringByAppendingPathComponent:fileName];
+
+    return path;
+}
+
+- (NSString *)getFilePathByName:(NSString *)fileName {
     if (!fileName) {return nil;}
 
     NSString *path = [[self docDic] stringByAppendingPathComponent:fileName];

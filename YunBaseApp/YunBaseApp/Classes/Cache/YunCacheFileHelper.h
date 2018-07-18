@@ -28,19 +28,27 @@
 // 静态示例
 + (YunCacheFileHelper *)instance;
 
-- (BOOL)removeItemByIndex:(NSInteger)index;
-
 - (BOOL)saveItem:(id)item index:(NSInteger)index;
 
 - (BOOL)saveItem:(id)item index:(NSInteger)index rst:(void (^)(BOOL suc))rst;
 
 - (BOOL)saveItem:(id)item index:(NSInteger)index isAsyn:(BOOL)isAsyn rst:(void (^)(BOOL suc))rst;
 
+- (BOOL)saveItemTask:(id)item fileName:(NSString *)fileName;
+
 - (id)getItem:(NSInteger)index;
 
 - (id)getItem:(NSInteger)index rst:(void (^)(id data))rst;
 
 - (id)getItem:(NSInteger)index isAsyn:(BOOL)isAsyn rst:(void (^)(id data))rst;
+
+- (id)getItemTaskByName:(NSString *)fileName;
+
+- (BOOL)removeItemByIndex:(NSInteger)index;
+
+- (BOOL)removeItemByName:(NSString *)fileName;
+
+- (BOOL)isInvalidIndex:(NSInteger)index;
 
 - (void)checkAllFiles;
 
