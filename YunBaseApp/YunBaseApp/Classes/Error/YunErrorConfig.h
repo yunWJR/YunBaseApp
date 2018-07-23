@@ -7,6 +7,15 @@
 
 @class YunErrorModel;
 
+@protocol YunErrorDelegate <NSObject>
+
+@optional
+
+// YunErrorHelper的itemWithError方法前处理
+- (NSError *)preHandleInItemWithError:(NSError *)error;
+
+@end
+
 typedef enum : NSInteger {
     YunErrTypeUnknown = 0,
     YunErrTypeNetWork,
@@ -50,6 +59,8 @@ typedef enum : NSInteger {
 @property (nonatomic, strong) NSArray<YunErrorTypeToCode *> *errorMap;
 
 @property (nonatomic, assign) BOOL debugMsg;
+
+@property (nonatomic, copy) id <YunErrorDelegate> delegate;
 
 + (YunErrorConfig *)instance;
 

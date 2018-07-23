@@ -17,12 +17,9 @@
 }
 
 + (instancetype)itemWithError:(NSError *)error {
-    // token
-    if (error.code == -1011) {
-        if ([error.userInfo[@"NSLocalizedDescription"] isEqualToString:@"Request failed: unauthorized (401)"]) {
-            error = [NSError errorWithCustomMsg:@"用户已失效，请重新登录"
-                                        andCode:503];
-        }
+    if (YunErrorConfig.instance.delegate &&
+        [YunErrorConfig.instance.delegate respondsToSelector:@selector(preHandleInItemWithError:)]) {
+        error = [YunErrorConfig.instance.delegate preHandleInItemWithError:error];
     }
 
     YunErrorHelper *item = [[YunErrorHelper alloc] initWithError:error];
