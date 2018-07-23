@@ -13,9 +13,17 @@
 
 + (NSMutableDictionary *)getBaseParaWithToken:(NSString *)token;
 
++ (NSMutableDictionary *)baseParaWithDic:(NSDictionary *)dic;
+
 + (NSString *)urlCmBase:(NSString *)addr;
 
++ (NSString *)urlCmBase:(NSString *)addr withObj:(NSString *)obj;
+
 + (NSString *)urlCmBaseApi:(NSString *)addr;
+
++ (NSString *)urlCmBaseApi:(NSString *)addr withObj:(NSString *)obj;
+
++ (NSString *)url:(NSURL *)baseUrl addr:(NSString *)addr withObj:(NSString *)obj;
 
 + (NSString *)strByArray:(NSArray *)array sep:(NSString *)sep;
 
@@ -23,14 +31,16 @@
 
 + (NSString *)JSONString:(id)data;
 
++ (id)JSONDataByStr:(NSString *)str;
+
 + (NSData *)JSONData:(id)data;
-
-+ (NSString *)md5_16bit:(NSString *)str;
-
-+ (NSString *)md5_32bit:(NSString *)str;
 
 + (NSDictionary *)dicWithJsonStr:(NSString *)jsonStr;
 
 + (NSString *)jsonStrWithDic:(id)infoDict;
+
++ (NSString *)md5_16bit:(NSString *)str;
+
++ (NSString *)md5_32bit:(NSString *)str;
 
 @end
