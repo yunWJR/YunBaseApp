@@ -60,7 +60,9 @@ typedef enum : NSInteger {
 
 @property (nonatomic, assign) BOOL debugMsg;
 
-@property (nonatomic, copy) id <YunErrorDelegate> delegate;
+@property (nonatomic, weak) id <YunErrorDelegate> delegate;
+
+@property (nonatomic, copy) NSString *unknownMsg;
 
 + (YunErrorConfig *)instance;
 

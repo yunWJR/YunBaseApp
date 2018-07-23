@@ -13,6 +13,7 @@
 
 @property (nonatomic, assign) NSInteger code;
 
+// 无法获取确切 msg 时，为nil；
 @property (nonatomic, copy) NSString *msg;
 
 + (instancetype)itemWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg err:(NSError *)err;
@@ -20,6 +21,8 @@
 + (instancetype)itemWithType:(YunErrorType)type code:(NSInteger)code msg:(NSString *)msg;
 
 - (NSString *)getMsgByMode;
+
+- (NSString *)getNorMsg;
 
 - (NSString *)getDetailMsg;
 

@@ -87,6 +87,8 @@
     }
 
     self.errorMap = data;
+
+    _unknownMsg = @"操作失败，请检查后重试！";
 }
 
 - (void)setItem:(YunErrorType)type
@@ -148,7 +150,7 @@
         msg = FORMAT(@"%@", errMsg);
     }
     else {
-        msg = FORMAT(@"%@", error.userInfo);
+        msg = nil; // 无法获取确切 msg 时，为nil；
     }
 
     return [YunErrorModel itemWithType:YunErrTypeUnknown code:error.code msg:msg err:error];

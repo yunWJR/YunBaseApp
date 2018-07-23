@@ -34,16 +34,24 @@
         return self.getDetailMsg;
     }
     else {
-        if (_msg.length > 30) { // todo
-            return @"操作失败，请检查后重试！";
-        }
-
-        return _msg;
+        return self.getNorMsg;
     }
 }
 
+- (NSString *)getNorMsg {
+    if (_msg == nil) {
+        return YunErrorConfig.instance.unknownMsg;
+    }
+
+    return _msg;
+}
+
 - (NSString *)getDetailMsg {
-    return FORMAT(@"错误信息：%@\n错误码：%@", _msg, [YunValueHelper intStr:_code]);
+    if (_msg == nil) {
+        return FORMAT(@"详细错误信息：%@", _orgErr.userInfo);
+    }
+
+    return FORMAT(@"错误码：%@\n错误信息：%@", [YunValueHelper intStr:_code], _msg);
 }
 
 @end
