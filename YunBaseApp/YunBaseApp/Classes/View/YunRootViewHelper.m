@@ -22,4 +22,14 @@
     return _sharedInstance;
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _rootView = [[UIApplication sharedApplication].delegate window];
+    }
+
+    return self;
+}
+
+
 @end
