@@ -87,6 +87,12 @@
 		AE28E2CD2106D283004203CB /* YunLoadViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AE28E2B32106D283004203CB /* YunLoadViewHelper.m */; };
 		AE4815011F70EDC700B5DC61 /* YunCacheFileHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AE4814FF1F70EDC700B5DC61 /* YunCacheFileHelper.h */; };
 		AE4815021F70EDC700B5DC61 /* YunCacheFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4815001F70EDC700B5DC61 /* YunCacheFileHelper.m */; };
+		AE9AF05421070EE2006C249D /* YunH2Nv.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9AF04E21070EE2006C249D /* YunH2Nv.h */; };
+		AE9AF05521070EE2006C249D /* YunH2Nv.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9AF04F21070EE2006C249D /* YunH2Nv.m */; };
+		AE9AF05621070EE2006C249D /* YunHNv.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9AF05021070EE2006C249D /* YunHNv.h */; };
+		AE9AF05721070EE2006C249D /* YunHNv.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9AF05121070EE2006C249D /* YunHNv.m */; };
+		AE9AF05821070EE2006C249D /* YunHomeNv.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9AF05221070EE2006C249D /* YunHomeNv.h */; };
+		AE9AF05921070EE2006C249D /* YunHomeNv.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9AF05321070EE2006C249D /* YunHomeNv.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +177,12 @@
 		AE28E2B32106D283004203CB /* YunLoadViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunLoadViewHelper.m; sourceTree = "<group>"; };
 		AE4814FF1F70EDC700B5DC61 /* YunCacheFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunCacheFileHelper.h; sourceTree = "<group>"; };
 		AE4815001F70EDC700B5DC61 /* YunCacheFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunCacheFileHelper.m; sourceTree = "<group>"; };
+		AE9AF04E21070EE2006C249D /* YunH2Nv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunH2Nv.h; sourceTree = "<group>"; };
+		AE9AF04F21070EE2006C249D /* YunH2Nv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunH2Nv.m; sourceTree = "<group>"; };
+		AE9AF05021070EE2006C249D /* YunHNv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunHNv.h; sourceTree = "<group>"; };
+		AE9AF05121070EE2006C249D /* YunHNv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunHNv.m; sourceTree = "<group>"; };
+		AE9AF05221070EE2006C249D /* YunHomeNv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunHomeNv.h; sourceTree = "<group>"; };
+		AE9AF05321070EE2006C249D /* YunHomeNv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunHomeNv.m; sourceTree = "<group>"; };
 		AEE72EF41F009E9A005344FD /* YunBaseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YunBaseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE72EF81F009E9A005344FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB07977345ACC8E4538A91FB /* Pods-YunBaseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YunBaseApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +307,7 @@
 		1D4D2BBB122DF83D0213A46A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AE9AF04D21070EE2006C249D /* BaseNv */,
 				AE28E2992106D283004203CB /* ViewCategory */,
 				1D4D2AAB11AD908260590510 /* YunBaseApp.h */,
 				1D4D2B9E8B2F45723C1BA129 /* Rqt */,
@@ -354,6 +367,19 @@
 			path = ViewCategory;
 			sourceTree = "<group>";
 		};
+		AE9AF04D21070EE2006C249D /* BaseNv */ = {
+			isa = PBXGroup;
+			children = (
+				AE9AF04E21070EE2006C249D /* YunH2Nv.h */,
+				AE9AF04F21070EE2006C249D /* YunH2Nv.m */,
+				AE9AF05021070EE2006C249D /* YunHNv.h */,
+				AE9AF05121070EE2006C249D /* YunHNv.m */,
+				AE9AF05221070EE2006C249D /* YunHomeNv.h */,
+				AE9AF05321070EE2006C249D /* YunHomeNv.m */,
+			);
+			path = BaseNv;
+			sourceTree = "<group>";
+		};
 		AEE72EEA1F009E9A005344FD = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +427,7 @@
 				1D4D2FC1F4642B30D4603048 /* YunRqtUrlHelper.h in Headers */,
 				1D4D29D0B9B0D0EFF1280B5B /* YunRqtRpsHelper.h in Headers */,
 				1D4D2B4DB52FB50D4D8C1486 /* YunRqtMg.h in Headers */,
+				AE9AF05421070EE2006C249D /* YunH2Nv.h in Headers */,
 				1D4D239A8587A0747861D986 /* YunRqtConfig.h in Headers */,
 				1D4D235AC6EFE66DC85E5072 /* YunAppTheme+Font.h in Headers */,
 				1D4D2E72BD04049246047FAB /* YunAppTheme+Size.h in Headers */,
@@ -415,6 +442,7 @@
 				AE28E2932106D0C7004203CB /* YunAlertViewHelper.h in Headers */,
 				1D4D2D65CA892AA51E9B44AD /* YunAppTheme+Color.h in Headers */,
 				AE28E2BA2106D283004203CB /* YunAppView+AlertView.h in Headers */,
+				AE9AF05821070EE2006C249D /* YunHomeNv.h in Headers */,
 				1D4D2EDC00FF092A6A0CEC07 /* YunLogHelper.h in Headers */,
 				AE28E2CC2106D283004203CB /* YunLoadViewHelper.h in Headers */,
 				AE28E2C42106D283004203CB /* YunAppViewController+ErrorHlp.h in Headers */,
@@ -438,6 +466,7 @@
 				1D4D2AAEE7BE9BC77D4869A0 /* YunAccountModel.h in Headers */,
 				1D4D28AB454AB6DCFA0BDA8B /* YunAccountMgHelper.h in Headers */,
 				AE28E2B82106D283004203CB /* YunAppBlankViewConfig.h in Headers */,
+				AE9AF05621070EE2006C249D /* YunHNv.h in Headers */,
 				1D4D21D14F0CC3B98C02F13A /* YunRootViewHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +582,7 @@
 				1D4D227C4D0D0E69E95ECBE4 /* YunAppTheme+IconFont.m in Sources */,
 				AE28E2CB2106D283004203CB /* YunLoadView.m in Sources */,
 				AE28E2C52106D283004203CB /* YunAppViewController+ErrorHlp.m in Sources */,
+				AE9AF05721070EE2006C249D /* YunHNv.m in Sources */,
 				1D4D2E9A3DEAE9A6AA3E7C13 /* YunAppThemeColorConfig.m in Sources */,
 				AE28E2962106D0C7004203CB /* YunAlertView.m in Sources */,
 				1D4D27F837499557BB7553D6 /* YunAppTheme+Color.m in Sources */,
@@ -570,7 +600,9 @@
 				1D4D2A0E52E444306DFB1589 /* YunAccountMg.m in Sources */,
 				1D4D2D27D41B8B299C0F8705 /* YunAccountModel.m in Sources */,
 				1D4D20D67EC87EAC83A7F067 /* YunAccountMgHelper.m in Sources */,
+				AE9AF05521070EE2006C249D /* YunH2Nv.m in Sources */,
 				1D4D2968706EF8EA1151624C /* YunRootViewHelper.m in Sources */,
+				AE9AF05921070EE2006C249D /* YunHomeNv.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

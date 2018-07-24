@@ -1,86 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="add YunAccount">
-      <change afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../YunBaseApp.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/../YunBaseApp.podspec" afterDir="false" />
+    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Headers/Private/YunKits/YunVersionCheck.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Headers/Public/YunKits/YunVersionCheck.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCacheConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCacheConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCacheConfig.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCacheConfig.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCoderHelper.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCoderHelper.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCodersManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCodersManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCodersManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCodersManager.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageGIFCoder.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageGIFCoder.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageImageIOCoder.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageImageIOCoder.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageTransition.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageTransition.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageTransition.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageTransition.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCache.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCache.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCache.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCache.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp-acknowledgements.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp-acknowledgements.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp-resources.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp-resources.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp.debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-YunBaseApp/Pods-YunBaseApp.release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunView.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunView.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunView.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunView.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/BaseView/YunViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/NSObject_Ctg/NSString+YunAdd.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/NSObject_Ctg/NSString+YunAdd.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/NSObject_Ctg/NSTimer+YunAdd.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/NSObject_Ctg/NSTimer+YunAdd.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIImage+YunAdd.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIImage+YunAdd.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIImage+YunAdd.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIImage+YunAdd.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIImageView+YunAdd.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIImageView+YunAdd.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIImageView+YunAdd.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIImageView+YunAdd.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIView+YunAdd.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Categories/UIView_Ctg/UIView+YunAdd.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Factory/YunUIImageViewFactory.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Factory/YunUIImageViewFactory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Macro/YunConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Macro/YunConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Macro/YunConfig.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Macro/YunConfig.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunAppInfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunAppInfo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunAppItem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunAppItem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunAppItem.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunAppItem.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunIdCardHelper.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunIdCardHelper.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunPinYinTool.h" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunPinYinTool.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunPinYinTool.m" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunPinYinTool.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunVersionCheck.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/YunKits/YunKits/Tools/YunVersionCheck.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/Account/YunAccountMg.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/Account/YunAccountMg.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/Account/YunAccountMg.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/Account/YunAccountMg.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunBlankView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunBlankView.m" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -97,11 +19,45 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_12206484e7323519acc20b4c31043a0b582e05a1" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Podfile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Podfile">
+      <file leaf-file-name="YunAlertView.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state relative-caret-position="462">
+              <caret line="274" column="1" selection-start-line="274" selection-start-column="1" selection-end-line="274" selection-end-column="1" />
+              <folding>
+                <element signature="e#318#2959#0" />
+                <element signature="e#3191#6047#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunAlertViewHelper.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="652">
+              <caret line="322" column="4" selection-start-line="322" selection-start-column="4" selection-end-line="322" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunLoadViewHelper.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunLoadViewHelper.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+              <folding>
+                <element signature="e#87#116#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YunRootViewHelper.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -172,8 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Pods/YunKits/YunKits/Macro/YunConfig.h" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppNavigationController.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppNavigationController.h" />
         <option value="$PROJECT_DIR$/YunBaseApp.podspec" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Log/YunLogHelper.m" />
@@ -220,9 +174,11 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m" />
         <option value="$PROJECT_DIR$/Podfile" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.h" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunLoadViewHelper.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.m" />
       </list>
     </option>
   </component>
@@ -271,6 +227,27 @@
               <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
               <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
               <item name="Classes" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
+              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="AlertView" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
+              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="View" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
+              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="ViewCategory" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -483,28 +460,7 @@
       <workItem from="1531902717652" duration="322000" />
       <workItem from="1532308510161" duration="5393000" />
       <workItem from="1532338269521" duration="365000" />
-      <workItem from="1532396759672" duration="4266000" />
-    </task>
-    <task id="LOCAL-00012" summary="reform api">
-      <created>1502182762409</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1502182762409</updated>
-    </task>
-    <task id="LOCAL-00013" summary="add api">
-      <created>1503041509784</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1503041509784</updated>
-    </task>
-    <task id="LOCAL-00014" summary="add api">
-      <created>1503296731988</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1503296731988</updated>
+      <workItem from="1532396759672" duration="6817000" />
     </task>
     <task id="LOCAL-00015" summary="add def msg">
       <created>1503296894331</created>
@@ -828,11 +784,32 @@
       <option name="project" value="LOCAL" />
       <updated>1532322150539</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="update pods&#10;add AlertView&#10;add ViewCategory">
+      <created>1532405284051</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1532405284051</updated>
+    </task>
+    <task id="LOCAL-00062" summary="fix alertview">
+      <created>1532410022763</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1532410022763</updated>
+    </task>
+    <task id="LOCAL-00063" summary="add def rootView">
+      <created>1532410304390</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1532410304390</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122877000" />
+    <option name="totallyTimeSpent" value="125428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -848,15 +825,15 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49358228" weight="0.39537573" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" sideWeight="0.5942268" visible="true" weight="0.36712095" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5942268" weight="0.36712095" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.4057732" side_tool="true" visible="true" weight="0.36712095" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.3727835" side_tool="true" visible="true" weight="0.2342419" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.7406185" weight="0.31942078" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.46966162" weight="0.3283237" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23381443" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.62762886" weight="0.2342419" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.6272165" visible="true" weight="0.2342419" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -906,9 +883,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add updated" />
-    <MESSAGE value="fix" />
-    <MESSAGE value="fix api" />
     <MESSAGE value="fix nil" />
     <MESSAGE value="fix chinese url" />
     <MESSAGE value="change json" />
@@ -931,7 +905,10 @@
     <MESSAGE value="add YunAccount" />
     <MESSAGE value="reform error" />
     <MESSAGE value="add rqt api" />
-    <option name="LAST_COMMIT_MESSAGE" value="add rqt api" />
+    <MESSAGE value="update pods&#10;add AlertView&#10;add ViewCategory" />
+    <MESSAGE value="fix alertview" />
+    <MESSAGE value="add def rootView" />
+    <option name="LAST_COMMIT_MESSAGE" value="add def rootView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1070,26 +1047,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="207" column="81" selection-start-line="207" selection-start-column="81" selection-end-line="207" selection-end-column="81" />
-          <folding>
-            <element signature="e#88#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-489" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="265" column="3" lean-forward="true" selection-start-line="265" selection-start-column="3" selection-end-line="265" selection-end-column="3" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.h">
@@ -1116,13 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1259,16 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunLoadViewHelper.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#87#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -1293,37 +1236,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunLoadView.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+ErrorHlp.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
           <folding>
             <element signature="e#88#129#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunLoadView.h">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="322" column="4" selection-start-line="322" selection-start-column="4" selection-end-line="322" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="274" column="1" selection-start-line="274" selection-start-column="1" selection-end-line="274" selection-end-column="1" />
+          <folding>
+            <element signature="e#318#2959#0" />
+            <element signature="e#3191#6047#0" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="28" />
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="494">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Podfile">
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="308">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunLoadViewHelper.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="e#87#116#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
