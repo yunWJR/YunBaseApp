@@ -13,6 +13,7 @@
 // 100
 + (NSString *)appVersionStr;
 
+// 2.0.0 比较 1.0.0
 + (BOOL)shouldUpdate:(NSString *)serverVersion;
 
 @end

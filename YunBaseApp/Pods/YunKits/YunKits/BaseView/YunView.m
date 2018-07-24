@@ -44,4 +44,8 @@
     self.ctnIntervalH = iH;
 }
 
+- (CGFloat)twoSideOff {
+    return 2 * self.sideOff;
+}
+
 @end

@@ -36,4 +36,6 @@
 
 - (void)setIntervalV:(CGFloat)iV h:(CGFloat)iH;
 
+- (CGFloat)twoSideOff;
+
 @end

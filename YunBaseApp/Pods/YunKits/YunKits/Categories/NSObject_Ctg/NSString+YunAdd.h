@@ -7,8 +7,10 @@
 
 @interface NSString (YunAdd)
 
+// 如果 str 为 nil 或者@""，则取 ctn
 - (NSString *)strByDefCtn:(NSString *)ctn;
 
+// 查询str 中子字段的个数
 - (NSInteger)calSubCount:(NSString *)str;
 
 @end

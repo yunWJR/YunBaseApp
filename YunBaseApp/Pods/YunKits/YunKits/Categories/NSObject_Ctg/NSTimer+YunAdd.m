@@ -36,7 +36,7 @@
                                repeats:repeats];
 }
 
-- (void)yun_blockInvoke:(NSTimer *)timer {
++ (void)yun_blockInvoke:(NSTimer *)timer {
     id info = timer.userInfo;
     if ([info isKindOfClass:NSDictionary.class]) {
         NSDictionary *infoDic = info;

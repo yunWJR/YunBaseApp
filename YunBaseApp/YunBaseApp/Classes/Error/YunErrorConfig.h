@@ -14,6 +14,8 @@
 // YunErrorHelper的itemWithError方法前处理
 - (NSError *)preHandleInItemWithError:(NSError *)error;
 
+//- (void)didErrorOn:(YunErrorModel *)err hasHandle:(BOOL)hasHandle;
+
 @end
 
 typedef enum : NSInteger {
@@ -24,6 +26,7 @@ typedef enum : NSInteger {
     YunErrTypeLocal,
     YunErrTypeOutOfLogin,
     YunErrTypeUserDataError,
+    YunErrTypeMustUpdate,
     YunErrTypeCustom,
     YunErrTypeMax,
 } YunErrorType;
@@ -63,6 +66,9 @@ typedef enum : NSInteger {
 @property (nonatomic, weak) id <YunErrorDelegate> delegate;
 
 @property (nonatomic, copy) NSString *unknownMsg;
+
+// error block，通知由实际程序自己处理特定异常
+@property (nonatomic, copy) void (^didErrorOn)(YunErrorModel *err, BOOL hasHandle);
 
 + (YunErrorConfig *)instance;
 

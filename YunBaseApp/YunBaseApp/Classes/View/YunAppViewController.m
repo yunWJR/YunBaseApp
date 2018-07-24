@@ -3,9 +3,9 @@
 //  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
 //
 
+#import <YunKits/YunView.h>
 #import "YunAppViewController.h"
 #import "YunAppConfig.h"
-#import "YunBlankView.h"
 #import "YunSizeHelper.h"
 
 @interface YunAppViewController () {

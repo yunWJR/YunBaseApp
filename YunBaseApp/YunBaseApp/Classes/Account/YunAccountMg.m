@@ -3,9 +3,10 @@
 // Copyright (c) 2018 skkj. All rights reserved.
 //
 
-#import "YunCacheFileHelper.h"
 #import "YunAccountMg.h"
 #import "YunAccountModel.h"
+#import "YunAccountMgHelper.h"
+#import "YunCacheFileHelper.h"
 
 @interface YunAccountMg () {
 }
@@ -14,20 +15,12 @@
 
 @implementation YunAccountMg
 
-+ (instancetype)instance {
-    static id _sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _sharedInstance = [[self alloc] init];
-    });
-
-    return _sharedInstance;
-}
-
 - (instancetype)init {
     self = [super init];
     if (self) {
         _acctFileName = @"YunAccountData";
+
+        YunAccountMgHelper.instance.curMg = self;
     }
 
     return self;

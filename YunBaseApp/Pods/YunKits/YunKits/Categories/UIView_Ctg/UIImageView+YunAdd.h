@@ -7,6 +7,8 @@
 
 @interface UIImageView (YunAdd)
 
+- (void)setImgUrlStrWithoutDefImg:(NSString *)urlStr;
+
 - (void)setImgUrlStr:(NSString *)urlStr;
 
 - (void)setImgUrlStr:(NSString *)urlStr holderImg:(UIImage *)phImg;
@@ -16,7 +18,5 @@
 - (BOOL)setIconName:(NSString *)iconName
                size:(CGFloat)size
               color:(UIColor *)color;
-
-- (void)downLoadImg:(NSString *)urlStr result:(void (^)(NSURL *path))rst;
 
 @end

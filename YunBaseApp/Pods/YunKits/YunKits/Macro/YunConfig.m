@@ -63,8 +63,6 @@
         _ctnHlOff = 6;
         _ctnVtOff = 16;
 
-        _fontBlankCoefficient = 0.4f;
-
         _nagItemWidth = 54;
 
         // 图片压缩

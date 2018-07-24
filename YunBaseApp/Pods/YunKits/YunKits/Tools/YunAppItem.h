@@ -41,4 +41,6 @@
 // 跳转app store
 + (BOOL)gotoAppStore;
 
++ (NSString *)appStoreUrl;
+
 @end

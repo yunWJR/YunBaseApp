@@ -9,6 +9,8 @@
 
 #pragma mark - instacne
 
++ (UIImage *)imgWithObj:(id)obj;
+
 + (UIImage *)imgWithColor:(UIColor *)color;
 
 + (UIImage *)imgWithColor:(UIColor *)color height:(CGFloat)height;

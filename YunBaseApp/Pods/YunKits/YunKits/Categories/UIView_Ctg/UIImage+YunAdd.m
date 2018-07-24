@@ -12,6 +12,19 @@
 
 #pragma mark - instacne
 
++ (UIImage *)imgWithObj:(id)obj {
+    if (obj) {
+        if ([obj isKindOfClass:UIImage.class]) {
+            return obj;
+        }
+        else if ([obj isKindOfClass:NSData.class]) {
+            return [UIImage imageWithData:obj];
+        }
+    }
+
+    return nil;
+}
+
 + (UIImage *)imgWithColor:(UIColor *)color {
     return [self imgWithColor:color size:CGSizeMake(1.0f, 1.0f)];
 }

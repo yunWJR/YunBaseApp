@@ -17,8 +17,6 @@
 
 @property (nonatomic, copy) void (^didDataChanged)(YunAccountModel *data);
 
-+ (instancetype)instance;
-
 #pragma mark - public method
 
 - (void)storeUser:(id)user name:(NSString *)name;

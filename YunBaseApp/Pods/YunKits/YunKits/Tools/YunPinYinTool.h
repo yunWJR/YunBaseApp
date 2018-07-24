@@ -7,6 +7,8 @@
 
 @interface YunPinYinTool : NSObject
 
++ (NSString *)pinYinFromChinese:(NSString *)chinese;
+
 + (NSString *)pinYinFromChinese:(NSString *)chinese hasSoundMark:(BOOL)hasOrNot;
 
 @end

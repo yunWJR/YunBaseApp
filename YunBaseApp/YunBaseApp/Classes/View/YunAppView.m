@@ -6,7 +6,6 @@
 #import "YunAppView.h"
 #import "YunAppConfig.h"
 #import "YunAppViewController.h"
-#import "YunBlankView.h"
 
 @implementation YunAppView {
     UIViewController *_superVc;

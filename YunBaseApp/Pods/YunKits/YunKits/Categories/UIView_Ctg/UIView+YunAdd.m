@@ -63,7 +63,10 @@
 - (void)setViewRadius:(CGFloat)radius width:(CGFloat)width color:(UIColor *)color {
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = radius;
-    self.layer.borderWidth = width;
+
+    if (width >= 0) {
+        self.layer.borderWidth = width;
+    }
 
     if (color) {
         self.layer.borderColor = color.CGColor;
@@ -71,7 +74,7 @@
 }
 
 - (void)setViewRadius:(CGFloat)radius {
-    [self setViewRadius:radius width:0 color:nil];
+    [self setViewRadius:radius width:-1 color:nil];
 }
 
 - (void)setViewDiameter:(CGFloat)dia width:(CGFloat)width color:(UIColor *)color {
@@ -79,7 +82,7 @@
 }
 
 - (void)setViewDiameter:(CGFloat)dia {
-    [self setViewRadius:dia * 0.5f width:0 color:nil];
+    [self setViewRadius:dia * 0.5f width:-1 color:nil];
 }
 
 - (UIViewController *)superViewController {

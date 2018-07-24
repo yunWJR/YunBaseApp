@@ -12,5 +12,6 @@ target 'YunBaseApp' do
   pod 'Masonry'
   pod 'Mantle'
   pod 'YunKits'
+  pod 'MBProgressHUD'
 
 end

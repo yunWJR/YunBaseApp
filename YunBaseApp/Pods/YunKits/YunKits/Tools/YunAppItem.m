@@ -184,4 +184,14 @@
     return YES;
 }
 
++ (NSString *)appStoreUrl {
+    if ([YunValueVerifier isInvalidStr:YunConfig.instance.appId]) {
+        return @"";
+    }
+
+    NSString *urlStr = FORMAT(@"itms-apps://itunes.apple.com/app/id%@", YunConfig.instance.appId);
+
+    return urlStr;
+}
+
 @end

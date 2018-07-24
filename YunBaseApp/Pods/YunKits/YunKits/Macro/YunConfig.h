@@ -93,10 +93,7 @@
 // 垂直空白 16
 @property (nonatomic, assign) CGFloat ctnVtOff;
 
-// font 空白 系数 0.4f
-@property (nonatomic, assign) CGFloat fontBlankCoefficient;
-
-// font 空白 系数 0.4f
+// 导航栏，item 宽度
 @property (nonatomic, assign) CGFloat nagItemWidth;
 
 #pragma mark - UIImage 压缩参数

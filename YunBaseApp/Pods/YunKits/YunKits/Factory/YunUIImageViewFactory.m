@@ -17,7 +17,9 @@
     imgView.contentMode = mode;
     imgView.clipsToBounds = YES;
 
-    imgView.backgroundColor = YunConfig.instance.imgViewBg;
+    if (YunConfig.instance.imgViewBg) {
+        imgView.backgroundColor = YunConfig.instance.imgViewBg;
+    }
 
     if ([YunValueVerifier isValidStr:imgName]) {
         imgView.image = [UIImage imageNamed:imgName];

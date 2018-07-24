@@ -9,8 +9,10 @@
 
 + (BOOL)isValidIdCard:(NSString *)idCard;
 
+// 返回值误：0；正确：1 、2
 + (NSInteger)getIdCardSex:(NSString *)idCard;
 
+//
 + (NSString *)getIdCardAge:(NSString *)idCard;
 
 @end

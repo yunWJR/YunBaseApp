@@ -12,7 +12,7 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
     YunAppVc_LoadDataFromServer = 2  // 从服务器加载
 };
 
-@class YunBlankView;
+@class YunView;
 
 @interface YunAppViewController : YunViewController
 
@@ -34,19 +34,24 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 
 @property (nonatomic, strong) NSMutableArray *blankViewList;
 
-@property (nonatomic, strong) YunBlankView *noCtnView;
+// 无内容 view
+@property (nonatomic, strong) YunView *noCtnView;
 
 @property (nonatomic, copy) NSString *noCtnMsg;
 
-@property (nonatomic, strong) YunBlankView *noNetView;
+// 无网络 view
+@property (nonatomic, strong) YunView *noNetView;
 
-@property (nonatomic, strong) YunBlankView *stateView;
-
-@property (nonatomic, strong) YunBlankView *msgView;
+// 信息 view
+@property (nonatomic, strong) YunView *msgView;
 
 // 第一次加载的空白页面
-@property (nonatomic, strong) YunBlankView *defBlankView;
+@property (nonatomic, strong) YunView *defBlankView;
 
+// 加载状态 view
+@property (nonatomic, strong) YunView *stateView;
+
+// 不显示状态 view
 @property (nonatomic, assign) BOOL hideStateView;
 
 // 最后一次更新信息

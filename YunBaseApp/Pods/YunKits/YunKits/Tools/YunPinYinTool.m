@@ -7,6 +7,10 @@
 
 @implementation YunPinYinTool
 
++ (NSString *)pinYinFromChinese:(NSString *)chinese {
+    return [self pinYinFromChinese:chinese hasSoundMark:NO];
+}
+
 + (NSString *)pinYinFromChinese:(NSString *)chinese hasSoundMark:(BOOL)hasOrNot {
     CFMutableStringRef chineseMutableStringRef = CFStringCreateMutableCopy(NULL, 0, (__bridge CFStringRef) chinese);
 

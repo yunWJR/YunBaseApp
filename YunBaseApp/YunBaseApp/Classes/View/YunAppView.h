@@ -6,7 +6,6 @@
 #import "YunBaseAppNorHeader.h"
 #import <YunKits/YunView.h>
 
-@class YunBlankView;
 @class YunAppViewController;
 
 @interface YunAppView : YunView
@@ -22,18 +21,18 @@
 
 @property (nonatomic, strong) NSMutableArray *blankViewList;
 
-@property (nonatomic, strong) YunBlankView *noCtnView;
+@property (nonatomic, strong) YunView *noCtnView;
 
 @property (nonatomic, copy) NSString *noCtnMsg;
 
-@property (nonatomic, strong) YunBlankView *noNetView;
+@property (nonatomic, strong) YunView *noNetView;
 
-@property (nonatomic, strong) YunBlankView *stateView;
+@property (nonatomic, strong) YunView *stateView;
 
-@property (nonatomic, strong) YunBlankView *msgView;
+@property (nonatomic, strong) YunView *msgView;
 
 // 第一次加载的空白页面
-@property (nonatomic, strong) YunBlankView *defBlankView;
+@property (nonatomic, strong) YunView *defBlankView;
 
 @property (nonatomic, assign) BOOL hideStateView;
 
