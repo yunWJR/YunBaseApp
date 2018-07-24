@@ -13,49 +13,41 @@
 const NSInteger baseTag = 100;
 
 @implementation YunAlertView {
-    BOOL _hasInitBtns;
 }
 
 - (void)initViewWithButtons:(NSArray<NSString *> *)btnTitles {
-    for (int l = 0; l < _btnList.count; ++l) {
-        [_btnList[l] removeFromSuperview];
-    }
-
     // 无效数据
     if ((btnTitles == nil || btnTitles.count == 0) &&
         (_btnList == nil || _btnList.count == 0)) {
         return;
     }
 
-    //if (_hasInitBtns) {
-    //    return;
-    //}
-    //_hasInitBtns = YES;
+    for (int l = 0; l < _btnList.count; ++l) {
+        [_btnList[l] removeFromSuperview];
+    }
 
-    if (_btnList == nil || _btnList.count == 0) {
-        _btnList = [NSMutableArray new];
+    _btnList = [NSMutableArray new];
 
-        for (int i = 0; i < btnTitles.count; ++i) {
-            UIButton *btn = nil;
+    for (int i = 0; i < btnTitles.count; ++i) {
+        UIButton *btn = nil;
 
-            if (_delegate && [_delegate respondsToSelector:@selector(createButtonWithTitle:index:)]) {
-                btn = [_delegate createButtonWithTitle:btnTitles[i] index:i];
-            }
-
-            if (btn == nil) {
-                btn = [UIButton new];;
-                btn.backgroundColor = [YunAppTheme colorBaseHl];
-                [btn setTitle:btnTitles[i] forState:UIControlStateNormal];
-                btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-                btn.titleLabel.adjustsFontSizeToFitWidth = YES;
-                btn.titleLabel.textColor = YunAppTheme.colorBaseWhite;
-                btn.titleLabel.font = [YunAppTheme fontB:17];
-            }
-
-            [btn setViewDiameter:_btnHeight];
-
-            [_btnList addObject:btn];
+        if (_delegate && [_delegate respondsToSelector:@selector(createButtonWithTitle:index:)]) {
+            btn = [_delegate createButtonWithTitle:btnTitles[i] index:i];
         }
+
+        if (btn == nil) {
+            btn = [UIButton new];;
+            btn.backgroundColor = [YunAppTheme colorBaseHl];
+            [btn setTitle:btnTitles[i] forState:UIControlStateNormal];
+            btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+            btn.titleLabel.adjustsFontSizeToFitWidth = YES;
+            btn.titleLabel.textColor = YunAppTheme.colorBaseWhite;
+            btn.titleLabel.font = [YunAppTheme fontB:17];
+        }
+
+        [btn setViewDiameter:_btnHeight];
+
+        [_btnList addObject:btn];
     }
 
     // 添加 tag 和 aciton

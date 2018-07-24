@@ -33,9 +33,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _alertView = [YunAlertView new];
-        _alertView.delegate = self;
-        [_alertView initViews];
+        //_alertView = [YunAlertView new];
+        //_alertView.delegate = self;
+        //[_alertView initViews];
     }
 
     return self;
@@ -105,6 +105,9 @@
 
     _styleList = [[NSMutableArray alloc] initWithArray:btnStyles];
 
+    _alertView = [YunAlertView new];
+    _alertView.delegate = self;
+    [_alertView initViews];
     _alertView.superView = superView;
     [_alertView initViewWithButtons:btnTitles];
     [_alertView setTitle:title ctn:content];
