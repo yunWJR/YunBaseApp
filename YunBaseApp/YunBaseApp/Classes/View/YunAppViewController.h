@@ -40,7 +40,10 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 @property (nonatomic, copy) NSString *noCtnMsg;
 
 // 无网络 view
-@property (nonatomic, strong) YunView *noNetView;
+@property (nonatomic, strong) YunView *netErrView;
+
+// 内容无效 view
+@property (nonatomic, strong) YunView *ctnErrView;
 
 // 信息 view
 @property (nonatomic, strong) YunView *msgView;

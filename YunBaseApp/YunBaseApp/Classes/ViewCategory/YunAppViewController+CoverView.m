@@ -56,7 +56,7 @@
 }
 
 - (YunCoverView *)getErrCtnView {
-    YunCoverView *view = (YunCoverView *) [self noCtnView];
+    YunCoverView *view = (YunCoverView *) self.ctnErrView;
     if (view == nil) {
         view = [YunCoverView itemWithMsg:@"出错了！"
                                      img:YunConfig.instance.imgViewNoNetName
@@ -76,7 +76,7 @@
             make.centerY.equalTo(self.view);
         }];
 
-        //[self setItem:VcBvErrCtnView view:view];
+        self.ctnErrView = view;
     }
 
     return view;
@@ -177,13 +177,13 @@
 }
 
 - (void)hideNoNetView {
-    if (self.noNetView) {
-        self.noNetView.hidden = YES;
+    if (self.netErrView) {
+        self.netErrView.hidden = YES;
     }
 }
 
 - (YunCoverView *)getNoNetView {
-    YunCoverView *view = (YunCoverView *) self.noNetView;
+    YunCoverView *view = (YunCoverView *) self.netErrView;
     if (view == nil) {
         view = [YunCoverView itemWithMsg:@"网络错误，请检查您的网络后重试！"
                                      img:YunConfig.instance.imgViewNoNetName
@@ -204,7 +204,7 @@
             make.centerY.equalTo(self.view);
         }];
 
-        self.noNetView = view;
+        self.netErrView = view;
     }
 
     view.hidden = NO;
