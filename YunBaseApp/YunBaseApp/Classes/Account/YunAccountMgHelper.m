@@ -4,6 +4,7 @@
 //
 
 #import "YunAccountMgHelper.h"
+#import "YunAccountMg.h"
 
 @interface YunAccountMgHelper () {
 }
@@ -11,6 +12,14 @@
 @end
 
 @implementation YunAccountMgHelper
+
+- (YunAccountMg *)curMg {
+    if (_curMg == nil) {
+        _curMg = [YunAccountMg new];
+    }
+
+    return _curMg;
+}
 
 + (instancetype)instance {
     static id _sharedInstance = nil;
