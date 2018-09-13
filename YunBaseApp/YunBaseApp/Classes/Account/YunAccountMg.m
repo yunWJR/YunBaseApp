@@ -40,6 +40,17 @@
     [self handleAcctUpdated];
 }
 
+- (void)storeUser:(id)user {
+    if (_acct == nil) {
+        _acct = [YunAccountModel new];
+    }
+    _acct.user = user;
+
+    [self saveAcctData];
+
+    [self handleAcctUpdated];
+}
+
 - (id)fetchUser {
     if (_acct == nil) {
         [self loadAcctData];
@@ -54,6 +65,14 @@
     }
 
     return _acct.userName;
+}
+
+- (NSString *)getUserToken {
+    if (_delegate && [_delegate respondsToSelector:@selector(getUserToken:)]) {
+        [_delegate getUserToken:_acct];
+    }
+
+    return nil;
 }
 
 - (void)removeUser {
@@ -82,11 +101,19 @@
     if (_didDataChanged) {
         _didDataChanged(_acct);
     }
+
+    if (_delegate && [_delegate respondsToSelector:@selector(didAcctUpdated:)]) {
+        [_delegate didAcctUpdated:_acct];
+    }
 }
 
 - (void)handleAcctRemoved {
     if (_didDataChanged) {
         _didDataChanged(_acct);
+    }
+
+    if (_delegate && [_delegate respondsToSelector:@selector(didAcctRemoved:)]) {
+        [_delegate didAcctRemoved:_acct];
     }
 }
 
