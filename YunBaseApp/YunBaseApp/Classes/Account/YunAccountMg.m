@@ -69,7 +69,7 @@
 
 - (NSString *)getUserToken {
     if (_delegate && [_delegate respondsToSelector:@selector(getUserToken:)]) {
-        [_delegate getUserToken:_acct];
+        return [_delegate getUserToken:_acct];
     }
 
     return nil;
