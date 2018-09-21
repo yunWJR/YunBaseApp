@@ -9,9 +9,19 @@
 @interface YunAccountMgHelper () {
 }
 
+@property (nonatomic, strong) YunAccountMg *curMg;
+
 @end
 
 @implementation YunAccountMgHelper
+
++ (YunAccountMg *)mg {
+    return YunAccountMgHelper.instance.curMg;
+}
+
++ (void)setMg:(YunAccountMg *)mg {
+    YunAccountMgHelper.instance.curMg = mg;
+}
 
 - (YunAccountMg *)curMg {
     if (_curMg == nil) {
@@ -30,5 +40,6 @@
 
     return _sharedInstance;
 }
+
 
 @end

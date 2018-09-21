@@ -9,8 +9,10 @@
 
 @interface YunAccountMgHelper : NSObject
 
-@property (nonatomic, strong) YunAccountMg *curMg;
+//+ (instancetype)instance;
 
-+ (instancetype)instance;
++ (YunAccountMg *)mg;
+
++ (void)setMg:(YunAccountMg *)mg;
 
 @end

@@ -56,7 +56,7 @@
     }
 
     if (err.type == YunErrTypeOutOfLogin) {
-        [YunAccountMgHelper.instance.curMg removeAcct];
+        [YunAccountMgHelper.mg removeAcct];
 
         [YunAlertViewHelper.instance showYes:err.getMsgByMode result:^(BOOL yes) {
             if (YunErrorConfig.instance.didErrorOn) {

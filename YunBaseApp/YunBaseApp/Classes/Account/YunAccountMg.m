@@ -20,7 +20,7 @@
     if (self) {
         _acctFileName = @"YunAccountData";
 
-        YunAccountMgHelper.instance.curMg = self;
+        YunAccountMgHelper.mg = self;
     }
 
     return self;
@@ -69,6 +69,7 @@
 
 - (NSString *)getUserToken {
     if (_delegate && [_delegate respondsToSelector:@selector(getUserToken:)]) {
+
         return [_delegate getUserToken:_acct];
     }
 
