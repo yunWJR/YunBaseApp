@@ -65,6 +65,14 @@
         return;
     }
 
+    if (err.type == YunErrTypeNoCtnAndGoBack) {
+        [YunAlertViewHelper.instance showYes:err.getMsgByMode result:^(BOOL yes) {
+            [self didClickNagLeftItem];
+        }];
+
+        return;
+    }
+
     if (!self.hasUpdated) { // 第一次加载
         if (err.type == YunErrTypeNetWork) {
             [self showNoNetView];

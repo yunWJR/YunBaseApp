@@ -4,6 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YunErrorDefine.h"
 
 @class YunErrorModel;
 
@@ -17,19 +18,6 @@
 //- (void)didErrorOn:(YunErrorModel *)err hasHandle:(BOOL)hasHandle;
 
 @end
-
-typedef enum : NSInteger {
-    YunErrTypeUnknown = 0,
-    YunErrTypeNetWork,
-    YunErrTypeServer,
-    YunErrTypeRqtTimeOut,
-    YunErrTypeLocal,
-    YunErrTypeOutOfLogin,
-    YunErrTypeUserDataError,
-    YunErrTypeMustUpdate,
-    YunErrTypeCustom,
-    YunErrTypeMax,
-} YunErrorType;
 
 @interface YunErrorCodeAndMsg : NSObject
 
