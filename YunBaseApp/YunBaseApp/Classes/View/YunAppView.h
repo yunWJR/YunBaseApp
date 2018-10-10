@@ -16,7 +16,7 @@
 // 有数据需要更新 // 默认NO
 @property (nonatomic, assign) BOOL needUpdateData; // 使用后设为NO
 
-// super view
+// super Vc 可以不指定，通过层级自动判别
 @property (nonatomic, weak) UIViewController *superVC;
 
 @property (nonatomic, strong) NSMutableArray *blankViewList;

@@ -7,8 +7,14 @@
 #import "YunAppConfig.h"
 #import "YunAppViewController.h"
 
+@interface YunAppView ()
+
+// 指定的SuperVc
+@property (nonatomic, weak) UIViewController *appointSuperVc;
+
+@end
+
 @implementation YunAppView {
-    UIViewController *_superVc;
 }
 
 - (instancetype)init {
@@ -83,16 +89,16 @@
 }
 
 - (UIViewController *)superVC {
-    if (_superVc == nil) {
+    if (_appointSuperVc == nil) {
         return [self superViewController];
     }
     else {
-        return _superVc;
+        return _appointSuperVc;
     }
 }
 
 - (void)setSuperVC:(UIViewController *)superVC {
-    _superVc = superVC;
+    _appointSuperVc = superVC;
 }
 
 - (YunAppViewController *)superAppVc {
