@@ -5,6 +5,7 @@
 
 #import "YunLoadView.h"
 #import "MBProgressHUD.h"
+#import "YunAppBlankViewConfig.h"
 
 @implementation YunLoadView {
     UIView *_backView;
@@ -42,11 +43,16 @@
 - (void)showWithBg:(BOOL)hasBack {
     self.hidden = NO;
     if (hasBack) {
-        _backView.backgroundColor = _bgColor ? _bgColor :
-                                    [UIColor colorWithRed:0
-                                                    green:0
-                                                     blue:0
-                                                    alpha:0.3f];
+        UIColor *bgCl = _bgColor ?
+                        _bgColor :
+                        YunAppBlankViewConfig.instance.loadViewBgColor ?
+                        YunAppBlankViewConfig.instance.loadViewBgColor :
+                        [UIColor colorWithRed:0
+                                        green:0
+                                         blue:0
+                                        alpha:0.3f];
+
+        _backView.backgroundColor = bgCl;
     }
     else {
         _backView.backgroundColor = [UIColor clearColor];

@@ -3,13 +3,14 @@
 // Copyright (c) 2018 skkj. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface YunAppBlankViewConfig : NSObject
 
 @property (nonatomic, assign) BOOL isFullLoad;
 
-+ (instancetype)instance;
+@property (nonatomic, strong) UIColor *loadViewBgColor;
 
++ (instancetype)instance;
 
 @end
