@@ -110,8 +110,6 @@
         }
 
         if (!_isNagBarClear) {
-            self.navigationController.navigationBar.translucent = true;
-
             // 导航栏背景颜色
             [self setNagBg:YunAppTheme.colorNagBg];
         }
@@ -154,6 +152,11 @@
                     break;
             }
         }
+    }
+
+    if (!_isNagBarClear) {
+        // 导航栏背景颜色
+        [self setNagBg:YunAppTheme.colorNagBg];
     }
 }
 
@@ -222,15 +225,20 @@
 - (void)setNagBg:(UIColor *)color {
     // 导航栏背景颜色
     if (color) {
-        self.navigationController.navigationBar.translucent = false;
+        self.navigationController.navigationBar.translucent = NO;
 
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imgWithColor:color]
-                                                      forBarMetrics:UIBarMetricsDefault];
-        self.navigationController.navigationBar.shadowImage = nil;
+        UIImage *colorImg = [UIImage imgWithColor:color];
+        if (colorImg == nil) {
+            [YunLogHelper logMsg:@"colorImg is nil"];
+        }
 
         [self.navigationController.navigationBar setBarTintColor:color];
 
-        //[self.navigationController.navigationBar layoutIfNeeded];
+        [self.navigationController.navigationBar setBackgroundImage:colorImg
+                                                      forBarMetrics:UIBarMetricsDefault];
+        self.navigationController.navigationBar.shadowImage = UIImage.new;
+
+        [self.navigationController.navigationBar layoutIfNeeded];
     }
 }
 
@@ -288,7 +296,10 @@
 
 - (void)setNagBarClear {
     // 1、设置导航栏半透明
-    self.navigationController.navigationBar.translucent = true;
+    self.navigationController.navigationBar.translucent = YES;
+
+    [self.navigationController.navigationBar setBarTintColor:UIColor.clearColor];
+
     // 2、设置导航栏背景图片
     [self.navigationController.navigationBar setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
     // 3、设置导航栏阴影图片
