@@ -5,6 +5,8 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol YunAppViewControllerDelegate;
+
 @interface YunAppConfig : NSObject
 
 // 默认 120秒
@@ -14,6 +16,8 @@
 
 @property (nonatomic, assign) CGFloat defVcSideOff;
 @property (nonatomic, assign) CGFloat defViewSideOff;
+
+@property (nonatomic, weak) id <YunAppViewControllerDelegate> appDelegate;
 
 + (YunAppConfig *)instance;
 
