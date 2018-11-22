@@ -9,8 +9,6 @@
 
 @interface YunAccountMgHelper : NSObject
 
-//+ (instancetype)instance;
-
 + (YunAccountMg *)mg;
 
 + (void)setMg:(YunAccountMg *)mg;

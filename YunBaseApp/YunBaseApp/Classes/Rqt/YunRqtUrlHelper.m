@@ -8,6 +8,8 @@
 #import "YunGlobalDefine.h"
 #import "YunValueVerifier.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <Mantle/MTLModel+NSCoding.h>
+#import <Mantle/MTLJSONAdapter.h>
 
 @interface YunRqtUrlHelper () {
 }
@@ -55,6 +57,20 @@
                     YunRqtConfig.instance.baseParas];
 
     [paraDic addEntriesFromDictionary:dic];
+
+    return paraDic;
+}
+
++ (NSMutableDictionary *)baseParaWithMTLObj:(id)data {
+    NSMutableDictionary *paraDic = [[NSMutableDictionary alloc] initWithDictionary:
+            YunRqtConfig.instance.baseParas];
+
+    if ([data isKindOfClass:MTLModel.class]) {
+        NSDictionary *dic = [MTLJSONAdapter JSONDictionaryFromModel:data error:nil];
+        if (dic) {
+            [paraDic addEntriesFromDictionary:dic];
+        }
+    }
 
     return paraDic;
 }

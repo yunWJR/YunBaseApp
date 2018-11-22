@@ -15,6 +15,8 @@
 
 + (NSMutableDictionary *)baseParaWithDic:(NSDictionary *)dic;
 
++ (NSMutableDictionary *)baseParaWithMTLObj:(id)data;
+
 + (NSString *)urlCmBase:(NSString *)addr;
 
 + (NSString *)urlCmBase:(NSString *)addr withObj:(NSString *)obj;

@@ -7,6 +7,7 @@
 #import "YunAppViewController.h"
 #import "YunAppConfig.h"
 #import "YunSizeHelper.h"
+#import "YunYunAppViewControllerDelegate.h"
 
 typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     didInitVcDataDelegateItem,

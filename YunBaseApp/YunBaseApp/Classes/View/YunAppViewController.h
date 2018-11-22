@@ -6,29 +6,14 @@
 #import "YunBaseAppNorHeader.h"
 #import <YunKits/YunViewController.h>
 
-@class YunAppViewController;
-
-@protocol YunAppViewControllerDelegate <NSObject>
-
-- (void)didInitVcData:(YunAppViewController *)sender;
-
-- (void)didInitVcSubViews:(YunAppViewController *)sender;
-
-- (void)startLoadData:(YunAppViewController *)sender;
-
-- (void)startUpdateVcState:(YunAppViewController *)sender;
-
-- (void)didUpdateVcStateCmp:(YunAppViewController *)sender;
-
-@end
-
 typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
-    YunAppVc_LoadDataNone = 0, /// 不加载数据
-    YunAppVc_LoadDataFromLocal = 1, /// 从本地加载
+    YunAppVc_LoadDataNone       = 0, /// 不加载数据
+    YunAppVc_LoadDataFromLocal  = 1, /// 从本地加载
     YunAppVc_LoadDataFromServer = 2  /// 从服务器加载
 };
 
 @class YunView;
+@protocol YunAppViewControllerDelegate;
 
 @interface YunAppViewController : YunViewController
 

@@ -1,7 +1,7 @@
-//
-// Created by yun on 2017/7/31.
-// Copyright (c) 2017 yun. All rights reserved.
-//
+///
+/// Created by yun on 2017/7/31.
+/// Copyright (c) 2017 yun. All rights reserved.
+///
 
 #import <Foundation/Foundation.h>
 
@@ -22,10 +22,10 @@
 
 @property (nonatomic, weak) id <YunCacheFileHelperDelegate> delegate;
 
-// 新示例
+/// 新实例
 + (instancetype)helper;
 
-// 静态示例
+/// 静态实例
 + (YunCacheFileHelper *)instance;
 
 - (BOOL)saveItem:(id)item index:(NSInteger)index;

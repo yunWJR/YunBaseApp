@@ -13,8 +13,6 @@
 @implementation YunH2Nv
 
 + (instancetype)nvWithVc:(UIViewController *)vc {
-    //vc = [BdVcTest new];
-
     YunH2Nv *nc = [[YunH2Nv alloc] initWithRootViewController:vc];
     nc.vc = vc;
 
@@ -25,12 +23,10 @@
     [super viewDidLoad];
 
     self.view.transform = CGAffineTransformMakeRotation((CGFloat) M_PI_2);
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)shouldAutorotate {

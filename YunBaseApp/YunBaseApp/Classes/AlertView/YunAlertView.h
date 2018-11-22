@@ -1,24 +1,23 @@
-//
-// Created by yun on 2018/7/23.
-// Copyright (c) 2018 skkj. All rights reserved.
-//
+///
+/// Created by yun on 2018/7/23.
+/// Copyright (c) 2018 skkj. All rights reserved.
+///
 
 #import <UIKit/UIKit.h>
 #import "YunView.h"
 
 @protocol YunAlertViewDelegate <NSObject>
 
-//
 @optional
 
 - (void)didItemOn:(UIButton *)btn index:(NSInteger)index;
 
 - (BOOL)shouldHideViewWhenBtnOn:(UIButton *)btn index:(NSInteger)index;
 
-// 创建 button，只设置样式，不设置 tag 和 action
+/// 创建 button，只设置样式，不设置 tag 和 action
 - (UIButton *)createButtonWithTitle:(NSString *)title index:(NSInteger)index;
 
-// 设置样式
+/// 设置样式
 - (UIButton *)buttonStype:(UIButton *)btn index:(NSInteger)index;
 
 @end
