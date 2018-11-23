@@ -35,6 +35,7 @@
     if (self) {
         _viewUpdateInterval = 120;
         _defDelegate = self;
+        _isDefDelegateOn = YES;
     }
 
     return self;
