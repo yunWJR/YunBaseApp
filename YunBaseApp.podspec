@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YunBaseApp"
-  s.version      = "0.0.43"
+  s.version      = "0.0.44"
   s.summary      = "YunBaseApp framework for iOS"
 
   # This description is used to generate tags and improve search results.
