@@ -202,10 +202,12 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 }
 
 - (void)updateVcStateOn {
-    self.hasUpdated = YES;
-    [self setCurUpdateDate];
 
-    [self setLoadDataCmp];
+    // 移动到updateVcStateCmp
+    //self.hasUpdated = YES;
+    //[self setCurUpdateDate];
+    //
+    //[self setLoadDataCmp];
 
     if (_isNagBarClear) {
         [self setNagBarClear];
@@ -217,6 +219,11 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 }
 
 - (void)updateVcStateCmp {
+    self.hasUpdated = YES;
+    [self setCurUpdateDate];
+
+    [self setLoadDataCmp];
+
     [self hideDefBlankView];
 
     [self notiDelegate:didUpdateVcStateCmpDelegateItem];
