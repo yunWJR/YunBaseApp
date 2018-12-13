@@ -397,9 +397,9 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 
 - (BOOL)notiDelegate:(YunAppViewControllerDelegateItem)item {
     BOOL isHandle = NO;
-    if (_delegate) {
+    if (_yunAppDelegate) {
         isHandle = [self handleNotiDelegate:item
-                                   delegate:_delegate];
+                                   delegate:_yunAppDelegate];
     }
 
     if (isHandle) {
