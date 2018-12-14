@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="rename yunAppDelegate">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" afterDir="false" />
-    </list>
+    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="add 左滑手势" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="264">
+              <caret line="189" column="1" lean-forward="true" selection-start-line="189" selection-start-column="1" selection-end-line="189" selection-end-column="1" />
               <folding>
                 <element signature="e#0#2#0" />
                 <element signature="e#311#485#1" />
@@ -75,6 +71,7 @@
                 <element signature="e#1134#1252#0" />
                 <element signature="e#1254#1326#0" />
                 <element signature="e#1384#1834#0" />
+                <element signature="e#1836#2387#0" />
                 <element signature="e#2389#3235#0" />
                 <element signature="e#3237#3962#0" />
                 <element signature="e#3964#3999#0" />
@@ -277,7 +274,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1863" />
+    <option name="x" value="-1888" />
     <option name="y" value="67" />
     <option name="width" value="1816" />
     <option name="height" value="942" />
@@ -337,13 +334,6 @@
               <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
               <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
               <item name="Classes" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
-              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
-              <item name="Classes" type="fcab9f18:XcodeViewNode" />
-              <item name="View" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -580,14 +570,7 @@
       <workItem from="1544579108028" duration="941000" />
       <workItem from="1544670891534" duration="256000" />
       <workItem from="1544680597011" duration="18000" />
-      <workItem from="1544752038847" duration="233000" />
-    </task>
-    <task id="LOCAL-00029" summary="add prop">
-      <created>1510809222761</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1510809222761</updated>
+      <workItem from="1544752038847" duration="1584000" />
     </task>
     <task id="LOCAL-00030" summary="update pods">
       <created>1511231903192</created>
@@ -925,11 +908,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544671099470</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="add 左滑手势">
+      <created>1544752280876</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1544752280876</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140224000" />
+    <option name="totallyTimeSpent" value="141575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -941,8 +931,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1863" y="67" width="1816" height="942" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1888" y="67" width="1816" height="942" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31993204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1016,7 +1005,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add lock" />
     <MESSAGE value="update pods" />
     <MESSAGE value="reform success for rqtRps" />
     <MESSAGE value="0.0.38" />
@@ -1041,7 +1029,8 @@
     <MESSAGE value="set isDefDelegateOn on default" />
     <MESSAGE value="change updateVcStateOn" />
     <MESSAGE value="rename yunAppDelegate" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename yunAppDelegate" />
+    <MESSAGE value="add 左滑手势" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 左滑手势" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/Rqt/YunRqtMg.m">
@@ -1280,8 +1269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="264">
+          <caret line="189" column="1" lean-forward="true" selection-start-line="189" selection-start-column="1" selection-end-line="189" selection-end-column="1" />
           <folding>
             <element signature="e#0#2#0" />
             <element signature="e#311#485#1" />
@@ -1293,6 +1282,7 @@
             <element signature="e#1134#1252#0" />
             <element signature="e#1254#1326#0" />
             <element signature="e#1384#1834#0" />
+            <element signature="e#1836#2387#0" />
             <element signature="e#2389#3235#0" />
             <element signature="e#3237#3962#0" />
             <element signature="e#3964#3999#0" />
