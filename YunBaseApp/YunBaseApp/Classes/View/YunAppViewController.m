@@ -112,6 +112,12 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
         self.view.backgroundColor = YunAppTheme.colorVcBg;
     }
 
+    /// 左滑手势
+    if (_popGestureOn) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    }
+
     [self notiDelegate:didInitVcSubViewsDelegateItem];
 }
 
@@ -490,6 +496,20 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     UIViewController *parent = self.navigationController.viewControllers[vcId];
 
     return parent;
+}
+
+#pragma mark - interactivePopGestureRecognizer
+
+/// 左滑手势处理
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if (self.navigationController.childViewControllers.count == 1) {
+        // root 不返回
+        return NO;
+    }
+
+    // 其他 vc 判断
+
+    return YES;
 }
 
 @end

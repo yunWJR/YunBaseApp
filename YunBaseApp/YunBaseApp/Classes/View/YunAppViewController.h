@@ -7,8 +7,8 @@
 #import <YunKits/YunViewController.h>
 
 typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
-    YunAppVc_LoadDataNone       = 0, /// 不加载数据
-    YunAppVc_LoadDataFromLocal  = 1, /// 从本地加载
+    YunAppVc_LoadDataNone = 0, /// 不加载数据
+    YunAppVc_LoadDataFromLocal = 1, /// 从本地加载
     YunAppVc_LoadDataFromServer = 2  /// 从服务器加载
 };
 
@@ -78,6 +78,9 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 
 /// 导航栏是否为透明：默认 NO
 @property (nonatomic, assign) BOOL isNagBarClear;
+
+/// 是否开启左滑返回手势，仅在第一层开启
+@property (nonatomic, assign) BOOL popGestureOn;
 
 #pragma mark - app vc flow
 
