@@ -65,4 +65,6 @@ typedef void(^AlertCustomBlock)(NSInteger index);
          cusBlock:(AlertCustomBlock)cusBlock
         superView:(UIView *)superView;
 
+- (void)showHudMsg:(NSString *)msg delay:(float)delay complete:(void (^)(BOOL))complete;
+
 @end

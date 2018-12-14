@@ -3,10 +3,12 @@
 // Copyright (c) 2018 skkj. All rights reserved.
 //
 
+#import <MBProgressHUD/MBProgressHUD.h>
 #import "YunAlertViewHelper.h"
 #import "YunAlertView.h"
 #import "YunAlertStyleModel.h"
 #import "YunAlertConfig.h"
+#import "YunHudOnWindow.h"
 
 @interface YunAlertViewHelper () <YunAlertViewDelegate> {
     NSMutableArray<YunAlertStyleModel *> *_styleList;
@@ -133,6 +135,25 @@
     }
 
     [_alertView showView];
+}
+
+- (void)showHudMsg:(NSString *)msg delay:(float)delay complete:(void (^)(BOOL))complete {
+    YunHudOnWindow *hV = [YunHudOnWindow new];
+    hV.amt = YES;
+    hV.blur = NO;
+    hV.bgColor = [UIColor clearColor];
+    [hV showView];
+
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:hV animated:YES];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.progress = 100;
+    hud.label.text = msg;
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [hV hideView];
+        [hud hideAnimated:YES];
+        complete(YES);
+    });
 }
 
 - (NSMutableArray *)stylesWithCount:(NSInteger)count {
