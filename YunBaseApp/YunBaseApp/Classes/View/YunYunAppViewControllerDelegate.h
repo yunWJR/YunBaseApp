@@ -9,6 +9,14 @@
 
 @protocol YunAppViewControllerDelegate <NSObject>
 
+- (void)viewWillAppear:(YunAppViewController *)sender;
+
+- (void)viewDidAppear:(YunAppViewController *)sender;
+
+- (void)viewWillDisappear:(YunAppViewController *)sender;
+
+- (void)viewDidDisappear:(YunAppViewController *)sender;
+
 - (void)didInitVcData:(YunAppViewController *)sender;
 
 - (void)didInitVcSubViews:(YunAppViewController *)sender;

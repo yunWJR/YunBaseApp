@@ -10,6 +10,10 @@
 #import "YunYunAppViewControllerDelegate.h"
 
 typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
+    viewWillAppear,
+    viewDidAppear,
+    viewWillDisappear,
+    viewDidDisappear,
     didInitVcDataDelegateItem,
     didInitVcSubViewsDelegateItem,
     startLoadDataDelegateItem,
@@ -48,22 +52,30 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     [super viewWillAppear:animated];
 
     [self handleViewWillAppear];
+
+    [self notiDelegate:viewWillAppear];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
     [self handleViewDidAppear];
+
+    [self notiDelegate:viewDidAppear];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+
+    [self notiDelegate:viewWillDisappear];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
 
     [self handleViewDidDisappear];
+
+    [self notiDelegate:viewDidDisappear];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -408,7 +420,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
                                    delegate:_yunAppDelegate];
     }
 
-    if (isHandle) {
+    if (isHandle && !YunAppConfig.instance.isDefDelegateAlwaysOn) {
         return isHandle;
     }
 
@@ -423,6 +435,35 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 - (BOOL)handleNotiDelegate:(YunAppViewControllerDelegateItem)item delegate:(id <YunAppViewControllerDelegate>)delegate {
     if (delegate) {
         switch (item) {
+            case viewWillAppear: {
+                if ([delegate respondsToSelector:@selector(viewWillAppear:)]) {
+                    [delegate viewWillAppear:self];
+                    return YES;
+                }
+            }
+                break;
+            case viewDidAppear: {
+                if ([delegate respondsToSelector:@selector(viewDidAppear:)]) {
+                    [delegate viewDidAppear:self];
+                    return YES;
+                }
+            }
+                break;
+            case viewWillDisappear: {
+                if ([delegate respondsToSelector:@selector(viewWillDisappear:)]) {
+                    [delegate viewWillDisappear:self];
+                    return YES;
+                }
+            }
+                break;
+            case viewDidDisappear: {
+                if ([delegate respondsToSelector:@selector(viewDidDisappear:)]) {
+                    [delegate viewDidDisappear:self];
+                    return YES;
+                }
+            }
+                break;
+
             case didInitVcDataDelegateItem: {
                 if ([delegate respondsToSelector:@selector(didInitVcData:)]) {
                     [delegate didInitVcData:self];

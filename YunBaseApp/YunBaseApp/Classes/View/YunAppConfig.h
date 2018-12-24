@@ -20,6 +20,9 @@
 /// 默认的appDelegate 响应开关：默认 YES
 @property (nonatomic, assign) BOOL isDefDelegateOn;
 
+/// 是否一直响应默认的appDelegate： 默认 NO
+@property (nonatomic, assign) BOOL isDefDelegateAlwaysOn;
+
 /// 自定义appDelegate，除了响应默认的appDelegate，还将响应自定义的appDelegate。
 @property (nonatomic, weak) id <YunAppViewControllerDelegate> customDelegate;
 

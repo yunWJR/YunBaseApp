@@ -36,6 +36,7 @@
         _viewUpdateInterval = 120;
         _defDelegate = self;
         _isDefDelegateOn = YES;
+        _isDefDelegateAlwaysOn = NO;
     }
 
     return self;
@@ -46,6 +47,30 @@
 }
 
 #pragma mark - YunAppViewControllerDelegate
+
+- (void)viewWillAppear:(YunAppViewController *)sender {
+    if (_customDelegate && [_customDelegate respondsToSelector:@selector(viewWillAppear:)]) {
+        [_customDelegate viewWillAppear:sender];
+    }
+}
+
+- (void)viewDidAppear:(YunAppViewController *)sender {
+    if (_customDelegate && [_customDelegate respondsToSelector:@selector(viewDidAppear:)]) {
+        [_customDelegate viewDidAppear:sender];
+    }
+}
+
+- (void)viewWillDisappear:(YunAppViewController *)sender {
+    if (_customDelegate && [_customDelegate respondsToSelector:@selector(viewWillDisappear:)]) {
+        [_customDelegate viewWillDisappear:sender];
+    }
+}
+
+- (void)viewDidDisappear:(YunAppViewController *)sender {
+    if (_customDelegate && [_customDelegate respondsToSelector:@selector(viewDidDisappear:)]) {
+        [_customDelegate viewDidDisappear:sender];
+    }
+}
 
 - (void)didInitVcData:(YunAppViewController *)sender {
     if (_customDelegate && [_customDelegate respondsToSelector:@selector(didInitVcData:)]) {
