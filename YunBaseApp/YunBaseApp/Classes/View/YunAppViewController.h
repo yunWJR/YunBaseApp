@@ -148,6 +148,8 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 
 - (void)setNagBarClear;
 
+- (void)pushVc:(UIViewController *)vc;
+
 - (void)setBackVcNeedUpdate;
 
 - (YunAppViewController *)appBackVC;

@@ -110,6 +110,11 @@
     return nil;
 }
 
+- (void)pushVc:(UIViewController *)vc {
+    [self.superVC.navigationController pushViewController:vc
+                                                 animated:YES];
+}
+
 #pragma mark - private funtions
 
 - (void)showDefBlankView {

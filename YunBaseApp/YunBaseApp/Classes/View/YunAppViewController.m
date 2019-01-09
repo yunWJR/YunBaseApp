@@ -366,6 +366,11 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     self.isNagBarClear = YES;
 }
 
+- (void)pushVc:(UIViewController *)vc {
+    [self.navigationController pushViewController:vc
+                                         animated:YES];
+}
+
 #pragma mark - private functions
 
 - (void)showDefBlankView {

@@ -66,6 +66,8 @@
 
 - (YunAppViewController *)superAppVc;
 
+- (void)pushVc:(UIViewController *)vc;
+
 #pragma mark - request
 
 - (void)rqtDataFromServer:(BOOL)force;
