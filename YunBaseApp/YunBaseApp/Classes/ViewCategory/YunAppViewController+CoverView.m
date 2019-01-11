@@ -85,7 +85,7 @@
 - (void)handleRetryByErrCtn {
     self.firstLoad = YES;
     self.hasUpdated = NO;
-    self.needUpdateData = NO;
+    self.needUpdateData = YES;
 
     WEAK_SELF
     self.didUpdateVcState = ^{
