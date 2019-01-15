@@ -82,6 +82,7 @@ const NSInteger baseTag = 100;
     for (int k = 0; k < _btnList.count; ++k) {
         [_btnList[k] mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(_ctnLabel.mas_bottom).offset(self.ctnIntervalV * 2);
+            make.height.equalTo(@(_btnHeight));
             make.bottom.offset(-self.bottomOff);
         }];
     }
