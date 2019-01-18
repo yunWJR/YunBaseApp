@@ -22,7 +22,46 @@ typedef void(^AlertYesBlock)(BOOL yes);
 
 typedef void(^AlertCustomBlock)(NSInteger index);
 
+@protocol YunAlertViewHelperDelegate <NSObject>
+
+@optional
+
+- (void)showDelete:(NSString *)content result:(AlertYesBlock)result;
+
+- (void)showYes:(NSString *)content;
+
+- (void)showYes:(NSString *)content result:(AlertYesBlock)result;
+
+- (void)showYesNo:(NSString *)content result:(AlertYesBlock)result;
+
+- (void)showAlert:(AlertType)type
+          content:(NSString *)content
+         yesBlock:(AlertYesBlock)yesBlock
+         cusBlock:(AlertCustomBlock)cusBlock
+        superView:(UIView *)superView;
+
+- (void)showAlert:(NSString *)title
+          content:(NSString *)content
+        btnTitles:(NSArray *)btnTitles
+         yesBlock:(AlertYesBlock)yesBlock
+         cusBlock:(AlertCustomBlock)cusBlock
+        superView:(UIView *)superView;
+
+- (void)showHudMsg:(NSString *)msg delay:(float)delay complete:(void (^)(BOOL))complete;
+
+- (void)showAlert:(NSString *)title
+          content:(NSString *)content
+        btnTitles:(NSArray *)btnTitles
+        btnStyles:(NSArray<YunAlertStyleModel *> *)btnStyles
+         yesBlock:(AlertYesBlock)yesBlock
+         cusBlock:(AlertCustomBlock)cusBlock
+        superView:(UIView *)superView;
+
+@end
+
 @interface YunAlertViewHelper : NSObject
+
+@property (nonatomic, weak) id <YunAlertViewHelperDelegate> delegate;
 
 @property (nonatomic, copy) AlertYesBlock yesBlock;
 

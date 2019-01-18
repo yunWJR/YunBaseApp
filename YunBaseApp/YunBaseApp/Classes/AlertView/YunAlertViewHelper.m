@@ -44,21 +44,41 @@
 }
 
 - (void)showYes:(NSString *)content {
+    if (self.curDelegate && [self.curDelegate respondsToSelector:@selector(showYes:)]) {
+        [self.curDelegate showYes:content];
+        return;
+    }
+
     [self showAlert:AlertTypeYes content:content yesBlock:nil cusBlock:nil superView:nil];
 }
 
 - (void)showYes:(NSString *)content
          result:(AlertYesBlock)result {
+    if (self.curDelegate && [self.curDelegate respondsToSelector:@selector(showYes:result:)]) {
+        [self.curDelegate showYes:content result:result];
+        return;
+    }
+
     [self showAlert:AlertTypeYes content:content yesBlock:result cusBlock:nil superView:nil];
 }
 
 - (void)showDelete:(NSString *)content
             result:(AlertYesBlock)result {
+    if (self.curDelegate && [self.curDelegate respondsToSelector:@selector(showDelete:result:)]) {
+        [self.curDelegate showDelete:content result:result];
+        return;
+    }
+
     [self showAlert:AlertTypeDelCan content:content yesBlock:result cusBlock:nil superView:nil];
 }
 
 - (void)showYesNo:(NSString *)content
            result:(AlertYesBlock)result {
+    if (self.curDelegate && [self.curDelegate respondsToSelector:@selector(showYesNo:result:)]) {
+        [self.curDelegate showYesNo:content result:result];
+        return;
+    }
+
     [self showAlert:AlertTypeYesNo content:content yesBlock:result cusBlock:nil superView:nil];
 }
 
@@ -67,6 +87,16 @@
          yesBlock:(AlertYesBlock)yesBlock
          cusBlock:(AlertCustomBlock)cusBlock
         superView:(UIView *)superView {
+    if (self.curDelegate &&
+        [self.curDelegate respondsToSelector:@selector(showAlert:content:yesBlock:cusBlock:superView:)]) {
+        [self.curDelegate showAlert:type
+                            content:content
+                           yesBlock:yesBlock
+                           cusBlock:cusBlock
+                          superView:superView];
+        return;
+    }
+
     NSArray *btnStyles = [self stylesByType:type];
 
     [self showAlert:[self titleByType:type]
@@ -84,6 +114,17 @@
          yesBlock:(AlertYesBlock)yesBlock
          cusBlock:(AlertCustomBlock)cusBlock
         superView:(UIView *)superView {
+    if (self.curDelegate &&
+        [self.curDelegate respondsToSelector:@selector(showAlert:content:btnTitles:yesBlock:cusBlock:superView:)]) {
+        [self.curDelegate showAlert:title
+                            content:content
+                          btnTitles:btnTitles
+                           yesBlock:yesBlock
+                           cusBlock:cusBlock
+                          superView:superView];
+        return;
+    }
+
     NSArray *btnStyles = [self stylesWithCount:btnTitles.count];
 
     [self showAlert:title
@@ -122,6 +163,18 @@
          yesBlock:(AlertYesBlock)yesBlock
          cusBlock:(AlertCustomBlock)cusBlock
         superView:(UIView *)superView {
+    if (self.curDelegate &&
+        [self.curDelegate respondsToSelector:@selector(showAlert:content:btnTitles:btnStyles:yesBlock:cusBlock:superView:)]) {
+        [self.curDelegate showAlert:title
+                            content:content
+                          btnTitles:btnTitles
+                          btnStyles:btnStyles
+                           yesBlock:yesBlock
+                           cusBlock:cusBlock
+                          superView:superView];
+        return;
+    }
+
     [self creatAlert:title
              content:content
            btnTitles:btnTitles
@@ -138,6 +191,12 @@
 }
 
 - (void)showHudMsg:(NSString *)msg delay:(float)delay complete:(void (^)(BOOL))complete {
+    if (self.curDelegate &&
+        [self.curDelegate respondsToSelector:@selector(showHudMsg:delay:complete:)]) {
+        [self.curDelegate showHudMsg:msg delay:delay complete:complete];
+        return;
+    }
+
     YunHudOnWindow *hV = [YunHudOnWindow new];
     hV.amt = YES;
     hV.blur = NO;
@@ -341,6 +400,18 @@
     btn.titleLabel.textColor = item.titleColor;
 
     return btn;
+}
+
+- (id <YunAlertViewHelperDelegate>)curDelegate {
+    if (_delegate) {
+        return _delegate;
+    }
+
+    if (YunAlertConfig.instance.alertViewDelegaet) {
+        return YunAlertConfig.instance.alertViewDelegaet;
+    }
+
+    return nil;
 }
 
 @end

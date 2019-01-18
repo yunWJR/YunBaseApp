@@ -5,7 +5,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol YunAlertViewHelperDelegate;
+
 @interface YunAlertConfig : NSObject
+
+@property (nonatomic, weak) id <YunAlertViewHelperDelegate> alertViewDelegaet;
 
 @property (nonatomic, strong) UIColor *yesTitleColor;
 @property (nonatomic, strong) UIColor *yesBgColor;
