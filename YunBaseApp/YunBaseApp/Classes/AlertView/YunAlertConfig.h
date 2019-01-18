@@ -9,7 +9,7 @@
 
 @interface YunAlertConfig : NSObject
 
-@property (nonatomic, weak) id <YunAlertViewHelperDelegate> alertViewDelegaet;
+@property (nonatomic, weak) id <YunAlertViewHelperDelegate> alertViewDelegate;
 
 @property (nonatomic, strong) UIColor *yesTitleColor;
 @property (nonatomic, strong) UIColor *yesBgColor;

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="add bg">
+    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="add delegate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +34,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_1D6B8DDF-B3D9-4866-966F-1410A79A1082" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state relative-caret-position="247">
+              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -71,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="109" selection-end-line="416" selection-end-column="4" />
+            <state relative-caret-position="414">
+              <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
               <folding>
                 <element signature="e#0#2#0" />
                 <element signature="e#270#389#0" />
@@ -244,10 +243,10 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppView+CoverView.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.h" />
       </list>
     </option>
   </component>
@@ -556,14 +555,7 @@
       <workItem from="1547174293979" duration="492000" />
       <workItem from="1547535024555" duration="655000" />
       <workItem from="1547797571211" duration="663000" />
-      <workItem from="1547811343562" duration="486000" />
-    </task>
-    <task id="LOCAL-00040" summary="change api name">
-      <created>1522821633711</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1522821633711</updated>
+      <workItem from="1547811343562" duration="562000" />
     </task>
     <task id="LOCAL-00041" summary="add api">
       <created>1523323668388</created>
@@ -901,11 +893,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547797586347</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="add delegate">
+      <created>1547811840403</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1547811840403</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146913000" />
+    <option name="totallyTimeSpent" value="146989000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1011,13 +1010,13 @@
     <MESSAGE value="add alert api" />
     <MESSAGE value="add ActionList" />
     <MESSAGE value="rename" />
-    <MESSAGE value="add delegate" />
     <MESSAGE value="add api pushVc:" />
     <MESSAGE value="修改Vc重试策略、重试时必定重新请求数据。" />
     <MESSAGE value="增加 block 为 nil 判断" />
     <MESSAGE value="修复 AlertView 的 btn 的高度样式" />
     <MESSAGE value="add bg" />
-    <option name="LAST_COMMIT_MESSAGE" value="add bg" />
+    <MESSAGE value="add delegate" />
+    <option name="LAST_COMMIT_MESSAGE" value="add delegate" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppView+AlertView.m">
@@ -1346,13 +1345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1369,8 +1361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="109" selection-end-line="416" selection-end-column="4" />
+        <state relative-caret-position="414">
+          <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
           <folding>
             <element signature="e#0#2#0" />
             <element signature="e#270#389#0" />
@@ -1400,6 +1392,13 @@
             <element signature="e#8827#8923#0" />
             <element signature="e#8925#9149#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
         </state>
       </provider>
     </entry>

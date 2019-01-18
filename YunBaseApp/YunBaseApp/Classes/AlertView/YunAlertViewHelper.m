@@ -407,8 +407,8 @@
         return _delegate;
     }
 
-    if (YunAlertConfig.instance.alertViewDelegaet) {
-        return YunAlertConfig.instance.alertViewDelegaet;
+    if (YunAlertConfig.instance.alertViewDelegate) {
+        return YunAlertConfig.instance.alertViewDelegate;
     }
 
     return nil;
