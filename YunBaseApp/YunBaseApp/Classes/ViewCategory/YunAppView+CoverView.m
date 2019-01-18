@@ -61,6 +61,7 @@
         view = [YunCoverView itemWithMsg:@"网络错误，请检查您的网络后重试！"
                                      img:YunConfig.instance.imgViewNoNetName
                                 btnTitle:@"点击重试" btnTag:1];
+        view.backgroundColor = YunAppTheme.colorVcBg;
         WEAK_SELF
         view.didBtnClick = ^(NSInteger btnTag) {
             [weakSelf handleRetryByErrCtn];
