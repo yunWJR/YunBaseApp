@@ -28,6 +28,7 @@
     self = [super init];
     if (self) {
         _maxH = YunSizeHelper.screenHeight - 250;
+        _animationDur = 0.3f;
     }
 
     return self;
@@ -35,6 +36,9 @@
 
 - (void)initSubClass {
     self.leftOff = 15;
+    if (_animation) {
+        self.amt = NO;
+    }
 
     UIView *ctnView = [self createCtnView];
     ctnView.userInteractionEnabled = YES;
@@ -45,9 +49,24 @@
 
     [ctnView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
-        make.centerY.equalTo(self);
         make.width.equalTo(self).offset(-self.leftOff * 2);
     }];
+
+    if (_locationType == 1) {
+        [ctnView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self).offset(-self.leftOff + (_animation ? YunSizeHelper.screenHeight : 0));
+        }];
+    }
+    else if (_locationType == 2) {
+        [ctnView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).offset(self.leftOff - (_animation ? YunSizeHelper.screenHeight : 0));
+        }];
+    }
+    else {
+        [ctnView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self);
+        }];
+    }
 }
 
 #pragma mark - request functions
@@ -83,6 +102,31 @@
         }];
 
         [_scV setContentSize:CGSizeMake(_scV.width, ctnH)];
+
+        [self layoutIfNeeded];
+
+        if (_animation) {
+            if (_locationType == 1) {
+                [self.contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+                    make.bottom.equalTo(self).offset(-self.leftOff);
+                }];
+            }
+            else if (_locationType == 2) {
+                [self.contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self).offset(self.leftOff);
+                }];
+            }
+            else {
+                [self.contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+                    make.centerY.equalTo(self);
+                }];
+            }
+
+            [UIView animateWithDuration:_animationDur
+                             animations:^{
+                                 [self layoutIfNeeded];
+                             }];
+        }
     }];
 }
 

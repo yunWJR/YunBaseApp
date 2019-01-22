@@ -10,6 +10,13 @@
 @interface YunInputActionListView : YunHudOnWindow {
 }
 
+// 0-默认（中间） 1-下方 2-上方
+@property (nonatomic, assign) NSInteger locationType;
+
+@property (nonatomic, assign) BOOL animation;
+
+@property (nonatomic, assign) NSTimeInterval animationDur;
+
 @property (nonatomic, copy) NSString *viewTitle;
 
 @property (nonatomic, strong) NSArray<YunActionListItemModel *> *itemList;
