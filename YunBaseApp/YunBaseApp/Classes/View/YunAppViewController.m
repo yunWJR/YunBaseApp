@@ -142,7 +142,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 
         if (!_isNagBarClear) {
             // 导航栏背景颜色
-            [self setNagBg:YunAppTheme.colorNagBg];
+            [self setNagBg:self.getCurVcNagBgColor];
         }
 
         // title 字体
@@ -187,7 +187,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 
     if (!_isNagBarClear) {
         // 导航栏背景颜色-修复透明导航到不透明导航，偶尔导航栏为黑色。
-        [self setNagBg:YunAppTheme.colorNagBg];
+        [self setNagBg:self.getCurVcNagBgColor];
     }
 }
 
@@ -508,6 +508,14 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     }
 
     return NO;
+}
+
+- (UIColor *)getCurVcNagBgColor {
+    if (_nagBgColor) {
+        return _nagBgColor;
+    }
+
+    return YunAppTheme.colorNagBg;
 }
 
 #pragma mark - protocol

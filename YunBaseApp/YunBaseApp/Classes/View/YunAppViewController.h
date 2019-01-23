@@ -79,6 +79,9 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 /// 导航栏是否为透明：默认 NO
 @property (nonatomic, assign) BOOL isNagBarClear;
 
+/// 导航栏背景
+@property (nonatomic, strong) UIColor *nagBgColor;
+
 /// 是否开启左滑返回手势，仅在第一层开启
 @property (nonatomic, assign) BOOL popGestureOn;
 
