@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="add animation">
+    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="add nagBgColor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" afterDir="false" />
@@ -117,26 +117,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="82" column="49" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="49" />
+            <state relative-caret-position="482">
+              <caret line="86" lean-forward="true" selection-end-line="175" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="568" column="4" selection-start-line="568" selection-start-column="4" selection-end-line="568" selection-end-column="4" />
+            <state relative-caret-position="407">
+              <caret line="312" lean-forward="true" selection-end-line="569" selection-end-column="4" />
               <folding>
                 <element signature="e#0#2#0" />
                 <element signature="e#311#569#1" />
                 <element signature="e#572#616#0" />
                 <element signature="e#607#610#0" />
-                <element signature="e#618#13979#0" />
                 <element signature="e#656#773#0" />
                 <element signature="e#799#905#0" />
                 <element signature="e#907#1060#0" />
@@ -146,44 +145,6 @@
                 <element signature="e#1506#1578#0" />
                 <element signature="e#1636#2086#0" />
                 <element signature="e#2088#2848#0" />
-                <element signature="e#2850#3697#0" />
-                <element signature="e#3699#4425#0" />
-                <element signature="e#4427#4462#0" />
-                <element signature="e#4464#4574#0" />
-                <element signature="e#4576#4687#0" />
-                <element signature="e#4689#4774#0" />
-                <element signature="e#4776#4916#0" />
-                <element signature="e#4918#5198#0" />
-                <element signature="e#5200#5400#0" />
-                <element signature="e#5402#5478#0" />
-                <element signature="e#5480#5551#0" />
-                <element signature="e#5553#5633#0" />
-                <element signature="e#5635#5700#0" />
-                <element signature="e#5702#5783#0" />
-                <element signature="e#5809#5940#0" />
-                <element signature="e#5975#6654#0" />
-                <element signature="e#6656#7009#0" />
-                <element signature="e#7011#7253#0" />
-                <element signature="e#7255#7350#0" />
-                <element signature="e#7352#7653#0" />
-                <element signature="e#7655#7748#0" />
-                <element signature="e#7750#7914#0" />
-                <element signature="e#7916#8084#0" />
-                <element signature="e#8086#8166#0" />
-                <element signature="e#8168#8611#0" />
-                <element signature="e#8613#8763#0" />
-                <element signature="e#8799#9319#0" />
-                <element signature="e#8995#9249#0" />
-                <element signature="e#9321#9507#0" />
-                <element signature="e#9509#9617#0" />
-                <element signature="e#9619#9890#0" />
-                <element signature="e#9892#10426#0" />
-                <element signature="e#10428#13015#0" />
-                <element signature="e#13017#13145#0" />
-                <element signature="e#13102#13167#0" />
-                <element signature="e#13169#13426#0" />
-                <element signature="e#13428#13683#0" />
-                <element signature="e#13733#13973#0" />
               </folding>
             </state>
           </provider>
@@ -326,8 +287,8 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" />
       </list>
     </option>
   </component>
@@ -372,7 +333,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,6 +362,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -638,14 +599,8 @@
       <workItem from="1547797571211" duration="663000" />
       <workItem from="1547811343562" duration="1171000" />
       <workItem from="1548147030517" duration="144000" />
-      <workItem from="1548210499905" duration="50000" />
-    </task>
-    <task id="LOCAL-00043" summary="add view bg">
-      <created>1523342218052</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1523342218052</updated>
+      <workItem from="1548210499905" duration="657000" />
+      <workItem from="1548222267686" duration="168000" />
     </task>
     <task id="LOCAL-00044" summary="add view bg">
       <created>1523350399061</created>
@@ -983,11 +938,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548147124003</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="add nagBgColor">
+      <created>1548210555609</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1548210555609</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147792000" />
+    <option name="totallyTimeSpent" value="148567000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1002,13 +964,13 @@
     <frame x="0" y="23" width="1440" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32374102" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23093525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="DB Browser" order="4" weight="0.32927573" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.62627405" weight="0.2918239" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.6251798" visible="true" weight="0.1721225" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1016,7 +978,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49358228" weight="0.39537573" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.46966162" weight="0.3283237" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.39640287" side_tool="true" visible="true" weight="0.09926082" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.37482014" side_tool="true" visible="true" weight="0.1721225" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.6035971" weight="0.15417106" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.59232295" visible="true" weight="0.3653643" />
       <window_info anchor="bottom" id="Code comment" order="12" />
@@ -1074,7 +1036,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="fix hide of noCtnView  error" />
     <MESSAGE value="add delegate for YunAccountMg" />
     <MESSAGE value="fix YunAccountMgHelper nil obj" />
     <MESSAGE value="fix getUserToken" />
@@ -1099,7 +1060,8 @@
     <MESSAGE value="add delegate" />
     <MESSAGE value="rename" />
     <MESSAGE value="add animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add animation" />
+    <MESSAGE value="add nagBgColor" />
+    <option name="LAST_COMMIT_MESSAGE" value="add nagBgColor" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppView+AlertView.m">
@@ -1420,13 +1382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5016">
-          <caret line="264" column="4" selection-start-line="264" selection-start-column="4" selection-end-line="264" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1434,16 +1389,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5016">
+          <caret line="264" column="4" selection-start-line="264" selection-start-column="4" selection-end-line="264" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="86" lean-forward="true" selection-end-line="175" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="568" column="4" selection-start-line="568" selection-start-column="4" selection-end-line="568" selection-end-column="4" />
+        <state relative-caret-position="407">
+          <caret line="312" lean-forward="true" selection-end-line="569" selection-end-column="4" />
           <folding>
             <element signature="e#0#2#0" />
             <element signature="e#311#569#1" />
             <element signature="e#572#616#0" />
             <element signature="e#607#610#0" />
-            <element signature="e#618#13979#0" />
             <element signature="e#656#773#0" />
             <element signature="e#799#905#0" />
             <element signature="e#907#1060#0" />
@@ -1453,52 +1421,7 @@
             <element signature="e#1506#1578#0" />
             <element signature="e#1636#2086#0" />
             <element signature="e#2088#2848#0" />
-            <element signature="e#2850#3697#0" />
-            <element signature="e#3699#4425#0" />
-            <element signature="e#4427#4462#0" />
-            <element signature="e#4464#4574#0" />
-            <element signature="e#4576#4687#0" />
-            <element signature="e#4689#4774#0" />
-            <element signature="e#4776#4916#0" />
-            <element signature="e#4918#5198#0" />
-            <element signature="e#5200#5400#0" />
-            <element signature="e#5402#5478#0" />
-            <element signature="e#5480#5551#0" />
-            <element signature="e#5553#5633#0" />
-            <element signature="e#5635#5700#0" />
-            <element signature="e#5702#5783#0" />
-            <element signature="e#5809#5940#0" />
-            <element signature="e#5975#6654#0" />
-            <element signature="e#6656#7009#0" />
-            <element signature="e#7011#7253#0" />
-            <element signature="e#7255#7350#0" />
-            <element signature="e#7352#7653#0" />
-            <element signature="e#7655#7748#0" />
-            <element signature="e#7750#7914#0" />
-            <element signature="e#7916#8084#0" />
-            <element signature="e#8086#8166#0" />
-            <element signature="e#8168#8611#0" />
-            <element signature="e#8613#8763#0" />
-            <element signature="e#8799#9319#0" />
-            <element signature="e#8995#9249#0" />
-            <element signature="e#9321#9507#0" />
-            <element signature="e#9509#9617#0" />
-            <element signature="e#9619#9890#0" />
-            <element signature="e#9892#10426#0" />
-            <element signature="e#10428#13015#0" />
-            <element signature="e#13017#13145#0" />
-            <element signature="e#13102#13167#0" />
-            <element signature="e#13169#13426#0" />
-            <element signature="e#13428#13683#0" />
-            <element signature="e#13733#13973#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="82" column="49" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="49" />
         </state>
       </provider>
     </entry>

@@ -82,6 +82,12 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 /// 导航栏背景
 @property (nonatomic, strong) UIColor *nagBgColor;
 
+/// 导航栏title 颜色
+@property (nonatomic, strong) UIColor *nagTitleColor;
+
+/// 导航栏title 字体
+@property (nonatomic, strong) UIFont *nagTitleFont;
+
 /// 是否开启左滑返回手势，仅在第一层开启
 @property (nonatomic, assign) BOOL popGestureOn;
 
@@ -133,7 +139,7 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 
 - (void)setNagBg:(UIColor *)color;
 
-- (void)setNagTitle:(UIColor *)color font:(UIFont *)font;
+- (void)setNagTitleColor:(UIColor *)color font:(UIFont *)font;
 
 - (void)setLeftBarItemName:(NSString *)name;
 

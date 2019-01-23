@@ -146,7 +146,8 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
         }
 
         // title 字体
-        [self setNagTitle:YunAppTheme.colorNagDark font:YunAppTheme.nagFontTitle];
+        [self setNagTitleColor:self.nagTitleColor ? self.nagTitleColor : YunAppTheme.colorNagDark
+                          font:self.nagTitleFont ? self.nagTitleFont : YunAppTheme.nagFontTitle];
 
         if (_updateNagBarItem) {
             // 返回item
@@ -300,7 +301,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     }
 }
 
-- (void)setNagTitle:(UIColor *)color font:(UIFont *)font {
+- (void)setNagTitleColor:(UIColor *)color font:(UIFont *)font {
     NSMutableDictionary *mDic = [NSMutableDictionary new];
     if (color) {
         mDic[NSForegroundColorAttributeName] = color;
