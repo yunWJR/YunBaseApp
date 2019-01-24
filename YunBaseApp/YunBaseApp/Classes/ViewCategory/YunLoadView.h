@@ -9,7 +9,11 @@
 
 @property (nonatomic, strong) UIColor *bgColor;
 
+@property (nonatomic, strong) UILabel *cmtLbl;
+
 - (void)showWithBg:(BOOL)hasBack;
+
+- (void)showWithBg:(BOOL)hasBack cmt:(NSString *)cmt;
 
 - (void)hiddenView;
 

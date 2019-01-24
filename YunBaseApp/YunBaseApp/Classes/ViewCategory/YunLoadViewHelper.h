@@ -13,6 +13,8 @@
 
 + (YunLoadViewHelper *)instance;
 
+- (void)showLoadView:(BOOL)hasBg cmt:(NSString *)cmt;
+
 - (void)showLoadView:(BOOL)hasBg;
 
 - (void)hideLoadView;

@@ -36,7 +36,7 @@
     return self;
 }
 
-- (void)showLoadView:(BOOL)hasBg {
+- (void)showLoadView:(BOOL)hasBg cmt:(NSString *)cmt {
     if (_superView == nil) {
         _superView = YunRootViewHelper.instance.rootView;
     }
@@ -53,7 +53,11 @@
 
     [_superView layoutIfNeeded];
 
-    [_loadView showWithBg:hasBg];
+    [_loadView showWithBg:hasBg cmt:cmt];
+}
+
+- (void)showLoadView:(BOOL)hasBg {
+    [self showLoadView:hasBg cmt:nil];
 }
 
 - (void)hideLoadView {
