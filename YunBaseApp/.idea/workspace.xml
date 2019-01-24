@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="add nagBgColor">
+    <list default="true" id="94f77636-b4de-498d-9c09-e1d139012a19" name="Default" comment="add nag title color font">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.h" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.m" beforeDir="false" afterPath="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.m" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,76 +38,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_1D6B8DDF-B3D9-4866-966F-1410A79A1082" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertConfig.m">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="7" selection-end-line="42" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertView.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1330">
-              <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1235">
-              <caret line="65" column="23" selection-end-line="108" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2090">
-              <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#2#0" />
-                <element signature="e#270#389#0" />
-                <element signature="e#326#383#0" />
-                <element signature="e#427#491#0" />
-                <element signature="e#493#713#0" />
-                <element signature="e#625#680#0" />
-                <element signature="e#715#919#0" />
-                <element signature="e#4370#4494#0" />
-                <element signature="e#4500#4734#0" />
-                <element signature="e#4736#5715#0" />
-                <element signature="e#5717#6362#0" />
-                <element signature="e#5905#5915#1" />
-                <element signature="e#5982#5989#1" />
-                <element signature="e#6056#6064#1" />
-                <element signature="e#6133#6146#1" />
-                <element signature="e#6216#6231#1" />
-                <element signature="e#6301#6316#1" />
-                <element signature="e#6364#6972#0" />
-                <element signature="e#7007#7221#0" />
-                <element signature="e#7223#7544#0" />
-                <element signature="e#7546#7865#0" />
-                <element signature="e#7867#8194#0" />
-                <element signature="e#8196#8377#0" />
-                <element signature="e#8416#8733#0" />
-                <element signature="e#8735#8825#0" />
-                <element signature="e#8827#8923#0" />
-                <element signature="e#8925#9149#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppView+CoverView.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="171">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -111,59 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="86" lean-forward="true" selection-end-line="175" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="312" lean-forward="true" selection-end-line="569" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#2#0" />
-                <element signature="e#311#569#1" />
-                <element signature="e#572#616#0" />
-                <element signature="e#607#610#0" />
-                <element signature="e#656#773#0" />
-                <element signature="e#799#905#0" />
-                <element signature="e#907#1060#0" />
-                <element signature="e#1062#1211#0" />
-                <element signature="e#1213#1341#0" />
-                <element signature="e#1343#1504#0" />
-                <element signature="e#1506#1578#0" />
-                <element signature="e#1636#2086#0" />
-                <element signature="e#2088#2848#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5016">
-              <caret line="264" column="4" selection-start-line="264" selection-start-column="4" selection-end-line="264" selection-end-column="4" />
+            <state relative-caret-position="334">
+              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
             </state>
           </provider>
         </entry>
@@ -238,15 +126,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Account/YunAccountModel.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorHelper.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorConfig.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Error/YunErrorModel.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertStyleModel.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppView+AlertView.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+AlertView.h" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.h" />
         <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunRootViewHelper.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunLoadViewHelper.m" />
@@ -271,14 +156,12 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+Nag.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+Nag.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/Hud/YunHudOnWindow.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ActionList/YunInputActionListView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppConfig.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunYunAppViewControllerDelegate.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppConfig.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppView.m" />
-        <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppView+CoverView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/AlertView/YunAlertViewHelper.h" />
@@ -288,12 +171,18 @@
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.h" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.h" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.h" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m" />
         <option value="$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.m" />
+        <option value="$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.h" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="164" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="1057" />
@@ -357,6 +246,13 @@
               <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
               <item name="Classes" type="fcab9f18:XcodeViewNode" />
               <item name="View" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="YunBaseApp" type="1d218c8b:XcodeProjectNode" />
+              <item name="YunBaseApp" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="ViewCategory" type="fcab9f18:XcodeViewNode" />
             </path>
           </expand>
           <select />
@@ -600,14 +496,8 @@
       <workItem from="1547811343562" duration="1171000" />
       <workItem from="1548147030517" duration="144000" />
       <workItem from="1548210499905" duration="657000" />
-      <workItem from="1548222267686" duration="168000" />
-    </task>
-    <task id="LOCAL-00044" summary="add view bg">
-      <created>1523350399061</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1523350399061</updated>
+      <workItem from="1548222267686" duration="227000" />
+      <workItem from="1548292955301" duration="312000" />
     </task>
     <task id="LOCAL-00045" summary="change cache">
       <created>1523409708713</created>
@@ -945,11 +835,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548210555609</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="add nag title color font">
+      <created>1548222450266</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1548222450266</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148567000" />
+    <option name="totallyTimeSpent" value="148938000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -961,10 +858,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="1057" extended-state="0" />
+    <frame x="164" y="23" width="1440" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23093525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29784173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -1036,7 +933,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add delegate for YunAccountMg" />
     <MESSAGE value="fix YunAccountMgHelper nil obj" />
     <MESSAGE value="fix getUserToken" />
     <MESSAGE value="reform YunAccountMgHelper" />
@@ -1061,7 +957,8 @@
     <MESSAGE value="rename" />
     <MESSAGE value="add animation" />
     <MESSAGE value="add nagBgColor" />
-    <option name="LAST_COMMIT_MESSAGE" value="add nagBgColor" />
+    <MESSAGE value="add nag title color font" />
+    <option name="LAST_COMMIT_MESSAGE" value="add nag title color font" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppView+AlertView.m">
@@ -1076,19 +973,10 @@
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+AlertView.m">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+ErrorHlp.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+ErrorHlp.m">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.m">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunLoadView.h">
@@ -1111,13 +999,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppView+ErrorHlp.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.m">
       <provider selected="true" editor-type-id="text-editor">
@@ -1375,13 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ActionListView/YunInputActionListView.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1398,15 +1272,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="86" lean-forward="true" selection-end-line="175" selection-end-column="4" />
+        <state relative-caret-position="3382">
+          <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="179" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="20" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunCoverView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#2#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/View/YunAppViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="312" lean-forward="true" selection-end-line="569" selection-end-column="4" />
+        <state relative-caret-position="718">
+          <caret line="222" column="8" selection-start-line="222" selection-start-column="8" selection-end-line="222" selection-end-column="8" />
           <folding>
             <element signature="e#0#2#0" />
             <element signature="e#311#569#1" />
@@ -1422,6 +1320,20 @@
             <element signature="e#1636#2086#0" />
             <element signature="e#2088#2848#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppViewController+CoverView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/YunBaseApp/Classes/ViewCategory/YunAppBlankViewConfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
     </entry>

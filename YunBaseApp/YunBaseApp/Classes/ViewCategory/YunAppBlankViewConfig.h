@@ -5,7 +5,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class YunCoverView;
+
+@protocol YunAppCoverViewDelegate <NSObject>
+
+@optional
+
+- (YunCoverView *)didGetErrCtnCoverView:(YunCoverView *)view;
+
+- (YunCoverView *)didGetNoNetCoverView:(YunCoverView *)view;
+
+- (YunCoverView *)didGetNoCtnCoverView:(YunCoverView *)view;
+
+@end
+
 @interface YunAppBlankViewConfig : NSObject
+
+@property (nonatomic, weak) id <YunAppCoverViewDelegate> coverDelegate;
 
 @property (nonatomic, assign) BOOL isFullLoad;
 

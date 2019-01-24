@@ -14,11 +14,15 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 
 @class YunView;
 @protocol YunAppViewControllerDelegate;
+@protocol YunAppCoverViewDelegate;
 
 @interface YunAppViewController : YunViewController
 
 /// delegate
 @property (nonatomic, weak) id <YunAppViewControllerDelegate> yunAppDelegate;
+
+/// cover delegate
+@property (nonatomic, weak) id <YunAppCoverViewDelegate> coverDelegate;
 
 /// 第一次加载标识符 /// 默认YES
 @property (nonatomic, assign) BOOL firstLoad;

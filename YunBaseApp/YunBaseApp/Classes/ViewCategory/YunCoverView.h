@@ -13,6 +13,14 @@
 
 @property (nonatomic, strong) UIImageView *imgView;
 
+@property (nonatomic, strong) UILabel *msgLabel;
+
+@property (nonatomic, strong) UIButton *funcButton;
+
+@property (nonatomic, strong) UIButton *selButton;
+
+@property (nonatomic, strong) UIView *bgView;
+
 + (instancetype)itemWithMsg:(NSString *)msg
                         img:(NSString *)img
                    btnTitle:(NSString *)btnTitle

@@ -8,13 +8,6 @@
 #import "YunSizeHelper.h"
 
 @implementation YunCoverView {
-    UIView *_bgView;
-
-    UILabel *_msgLbl;
-
-    UIButton *_funBtn;
-
-    UIButton *_selBtn;
 }
 
 - (instancetype)init {
@@ -33,13 +26,13 @@
 
     _imgView = [YunUIImageViewFactory imgViewWithImgNameIconMode:@""];
 
-    _msgLbl = [YunUILabelFactory labelWithText:@"说明信息"
+    _msgLabel = [YunUILabelFactory labelWithText:@"说明信息"
                                           font:YunAppTheme.fontL_N
                                          color:YunAppTheme.colorBaseDark
                                          align:NSTextAlignmentCenter
                                          lines:0 adjust:NO];
 
-    _funBtn = [YunUIButtonFactory btnWithTitle:@"操作按钮"
+    _funcButton = [YunUIButtonFactory btnWithTitle:@"操作按钮"
                                      titleFont:YunAppTheme.fontL_N
                                     titleColor:YunAppTheme.colorBaseWhite
                                        bgColor:YunAppTheme.colorBaseHl
@@ -48,12 +41,12 @@
                                    borderColor:YunAppTheme.colorBaseHl
                                         target:self
                                         action:@selector(didClickBtn)];
-    _funBtn.hidden = YES;
+    _funcButton.hidden = YES;
 
     [self addSubview:_bgView];
     [self addSubview:_imgView];
-    [self addSubview:_msgLbl];
-    [self addSubview:_funBtn];
+    [self addSubview:_msgLabel];
+    [self addSubview:_funcButton];
 
     [_bgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
@@ -70,29 +63,29 @@
         make.height.equalTo(@(imgH));
     }];
 
-    [_msgLbl mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_msgLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_imgView.mas_bottom).offset(28);
         make.centerX.equalTo(self);
         make.width.equalTo(self).multipliedBy(0.7f);
     }];
 
-    CGFloat btnH = [_funBtn getOneLineHeight] + 12;
-    [_funBtn setViewDiameter:btnH width:0.5 color:YunAppTheme.colorBaseHl];
+    CGFloat btnH = [_funcButton getOneLineHeight] + 12;
+    [_funcButton setViewDiameter:btnH width:0.5 color:YunAppTheme.colorBaseHl];
 
-    [_funBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_msgLbl.mas_bottom).offset(14);
+    [_funcButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_msgLabel.mas_bottom).offset(14);
         make.centerX.equalTo(self);
         make.width.equalTo(@100);
         make.height.equalTo(@(btnH));
     }];
 
     // self
-    _selBtn = [YunUIButtonFactory btnWithTarget:self action:@selector(didClickSelf)];
-    _selBtn.hidden = YES;
+    _selButton = [YunUIButtonFactory btnWithTarget:self action:@selector(didClickSelf)];
+    _selButton.hidden = YES;
 
-    [self addSubview:_selBtn];
+    [self addSubview:_selButton];
 
-    [_selBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_selButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
         make.left.equalTo(self);
         make.width.equalTo(self);
@@ -125,32 +118,32 @@
            img:(NSString *)img
       btnTitle:(NSString *)btnTitle
         btnTag:(NSInteger)btnTag {
-    _msgLbl.text = msg;
+    _msgLabel.text = msg;
 
     [self setImageWithName:img];
 
     if ([YunValueVerifier isValidStr:btnTitle]) {
-        _funBtn.hidden = NO;
+        _funcButton.hidden = NO;
 
-        [_funBtn setTitle:btnTitle forState:UIControlStateNormal];
-        _funBtn.tag = btnTag;
+        [_funcButton setTitle:btnTitle forState:UIControlStateNormal];
+        _funcButton.tag = btnTag;
 
-        CGFloat btnW = [_funBtn getTitleWidth] + 30;
+        CGFloat btnW = [_funcButton getTitleWidth] + 30;
         if (btnW > YunSizeHelper.screenWidth * 0.8f) {
             btnW = YunSizeHelper.screenWidth * 0.8f;
         }
 
-        [_funBtn mas_updateConstraints:^(MASConstraintMaker *make) {
+        [_funcButton mas_updateConstraints:^(MASConstraintMaker *make) {
             make.width.equalTo(@(btnW));
         }];
     }
     else {
-        _funBtn.hidden = YES;
+        _funcButton.hidden = YES;
     }
 }
 
 - (void)updateMsg:(NSString *)msg {
-    _msgLbl.text = msg;
+    _msgLabel.text = msg;
 }
 
 - (void)setImageWithName:(NSString *)img {
@@ -166,14 +159,14 @@
         _didSelfClick = block;
     }
 
-    _selBtn.hidden = _didSelfClick == nil;
+    _selButton.hidden = _didSelfClick == nil;
 }
 
 #pragma mark - handle
 
 - (void)didClickBtn {
     if (_didBtnClick) {
-        _didBtnClick(_funBtn.tag);
+        _didBtnClick(_funcButton.tag);
     }
 }
 
