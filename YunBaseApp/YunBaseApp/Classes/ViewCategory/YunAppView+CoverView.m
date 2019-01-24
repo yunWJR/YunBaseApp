@@ -75,6 +75,11 @@
             make.centerY.equalTo(self);
         }];
 
+        if (self.curDelegate &&
+            [self.curDelegate respondsToSelector:@selector(didGetErrCtnCoverView:)]) {
+            view = [self.curDelegate didGetErrCtnCoverView:view];
+        }
+
         //[self setItem:ViewBvErrCtnView view:view];
     }
 
@@ -156,6 +161,11 @@
             make.bottom.equalTo(self);
         }];
 
+        if (self.curDelegate &&
+            [self.curDelegate respondsToSelector:@selector(didGetNoCtnCoverView:)]) {
+            view = [self.curDelegate didGetNoCtnCoverView:view];
+        }
+
         self.noCtnView = view;
     }
 
@@ -206,6 +216,11 @@
             make.centerX.equalTo(self);
             make.centerY.equalTo(self);
         }];
+
+        if (self.curDelegate &&
+            [self.curDelegate respondsToSelector:@selector(didGetNoNetCoverView:)]) {
+            view = [self.curDelegate didGetNoNetCoverView:view];
+        }
 
         self.noNetView = view;
     }
@@ -302,6 +317,14 @@
 - (void)hideGeneraBlankView {
     [self hideNoNetView];
     [self hideErrCtnView];
+}
+
+- (id <YunAppCoverViewDelegate>)curDelegate {
+    if (self.coverDelegate) {
+        return self.coverDelegate;
+    }
+
+    return YunAppBlankViewConfig.instance.coverDelegate;
 }
 
 @end

@@ -7,8 +7,12 @@
 #import <YunKits/YunView.h>
 
 @class YunAppViewController;
+@protocol YunAppCoverViewDelegate;
 
 @interface YunAppView : YunView
+
+/// cover delegate
+@property (nonatomic, weak) id <YunAppCoverViewDelegate> coverDelegate;
 
 // 第一次加载标识符 // 默认YES
 @property (nonatomic, assign) BOOL firstLoad;
