@@ -1,180 +1,331 @@
-///
-///  Created by 王健 on 16/8/25.
-///  Copyright © 2016年 成都晟堃科技有限责任公司. All rights reserved.
-///
+//
+// Created by yun on 2017/6/28.
+// Copyright (c) 2017 skkj. All rights reserved.
+//
+
+#import "YunAppViewController+CoverView.h"
+#import <YunKits/YunConfig.h>
+#import "YunCoverView.h"
+#import "YunLoadView.h"
+#import "YunLoadViewHelper.h"
+#import "YunAppBlankViewConfig.h"
+
+@implementation YunAppViewController (CoverView)
+
+#pragma mark - blankList
+
+- (id)getBlankView:(VcBlankViewItem)item {
+    if (self.blankViewList == nil) {
+        self.blankViewList = [NSMutableArray new];
+        for (int i = 0; i < VcBvMax; ++i) {
+            [self.blankViewList addObject:@""];
+        }
+    }
+
+    id itemV = self.blankViewList[item];
+    if ([itemV isKindOfClass:NSString.class]) {
+        return nil;
+    }
+
+    return itemV;
+}
+
+- (void)setItem:(VcBlankViewItem)item view:(id)view {
+    self.blankViewList[item] = view;
+}
+
+#pragma mark - err ctn
+
+- (void)showErrCtnView:(NSString *)errMsg {
+    [self hideBlankView];
+
+    YunCoverView *noCtn = [self getErrCtnView];
+    if (noCtn) {
+        [noCtn updateMsg:errMsg];
+        noCtn.hidden = NO;
+    }
+
+    [self.view bringSubviewToFront:noCtn];
+}
+
+- (void)hideErrCtnView {
+    YunCoverView *noCtn = [self getErrCtnView];
+    if (noCtn) {
+        noCtn.hidden = YES;
+    }
+}
+
+- (YunCoverView *)getErrCtnView {
+    YunCoverView *view = (YunCoverView *) self.ctnErrView;
+    if (view == nil) {
+        view = [YunCoverView itemWithMsg:@"出错了！"
+                                     img:YunConfig.instance.imgViewNoNetName
+                                btnTitle:@"点击重试" btnTag:1];
+        view.backgroundColor = YunAppTheme.colorBaseWhite;
+        [view setBgColor:YunAppTheme.colorBaseWhite];
+        WEAK_SELF
+        view.didBtnClick = ^(NSInteger btnTag) {
+            [weakSelf handleRetryByErrCtn];
+        };
+
+        [self.view addSubview:view];
+
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.equalTo(self.view);
+            make.centerX.equalTo(self.view);
+            make.centerY.equalTo(self.view);
+        }];
+
+        if (self.curDelegate &&
+            [self.curDelegate respondsToSelector:@selector(didGetErrCtnCoverView:)]) {
+            view = [self.curDelegate didGetErrCtnCoverView:view];
+        }
+
+        self.ctnErrView = view;
+    }
+
+    return view;
+}
+
+- (void)handleRetryByErrCtn {
+    self.firstLoad = YES;
+    self.hasUpdated = NO;
+    self.needUpdateData = YES;
+
+    WEAK_SELF
+    self.didUpdateVcState = ^{
+        [weakSelf hideGeneraBlankView];  // 视觉优化 todo
+    };
+
+    [self viewDidAppear:NO];
+}
 
-#import "YunBaseAppNorHeader.h"
-#import <YunKits/YunViewController.h>
+#pragma mark - no ctn blank
 
-typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
-    YunAppVc_LoadDataNone = 0, /// 不加载数据
-    YunAppVc_LoadDataFromLocal = 1, /// 从本地加载
-    YunAppVc_LoadDataFromServer = 2  /// 从服务器加载
-};
+- (void)initDefBlankView {
+    if (self.defBlankView == nil) {
+        self.defBlankView = [YunView new];
+        self.defBlankView.backgroundColor = YunAppTheme.colorBaseWhite;
+    }
+}
 
-@class YunView;
-@protocol YunAppViewControllerDelegate;
-@protocol YunAppCoverViewDelegate;
+#pragma mark - no ctn
 
-@interface YunAppViewController : YunViewController
+- (void)showNoCtnViewByImg:(NSString *)imgName {
+    [self hideBlankView];
 
-/// delegate
-@property (nonatomic, weak) id <YunAppViewControllerDelegate> yunAppDelegate;
+    YunCoverView *noCtn = [self getNoCtnView];
+    [noCtn updateMsg:@""];
+    [noCtn setImageWithName:imgName];
 
-/// cover delegate
-@property (nonatomic, weak) id <YunAppCoverViewDelegate> coverDelegate;
+    [self.view bringSubviewToFront:noCtn];
+}
 
-/// 第一次加载标识符 /// 默认YES
-@property (nonatomic, assign) BOOL firstLoad;
+- (void)showNoCtnView:(NSString *)msg {
+    [self hideBlankView];
 
-/// 有数据需要更新 /// 默认NO
-@property (nonatomic, assign) BOOL needUpdateData; /// 使用后设为NO
+    YunCoverView *noCtn = [self getNoCtnView];
+    [noCtn updateMsg:msg];
 
-@property (nonatomic, assign) BOOL changed;
+    [self.view bringSubviewToFront:noCtn];
+}
 
-/// 点击 NagLeftItem 时触发
-@property (nonatomic, copy) void (^didPopSuperView)(YunAppViewController *sender);
+- (void)showNoCtnView {
+    [self showNoCtnView:self.noCtnMsg];
+}
 
-/// YES  更新NagBarItem
-@property (nonatomic, assign) BOOL updateNagBarItem;
+- (void)hideNoCtnView {
+    if (self.noCtnView) {
+        self.noCtnView.hidden = YES;
+    }
 
-/// blank view
-@property (nonatomic, strong) NSMutableArray *blankViewList;
+    [self hideGeneraBlankView];
+}
 
-/// 无内容 view
-@property (nonatomic, strong) YunView *noCtnView;
+- (YunCoverView *)getNoCtnView {
+    YunCoverView *view = (YunCoverView *) self.noCtnView;
+    if (view == nil) {
+        view = [YunCoverView itemWithMsg:@"无内容"
+                                     img:YunConfig.instance.imgViewNoCtnImgName];
+        view.backgroundColor = YunAppTheme.colorBaseWhite;
 
-/// 默认 无内容文字
-@property (nonatomic, copy) NSString *noCtnMsg;
+        [self.view addSubview:view];
 
-/// 无网络 view
-@property (nonatomic, strong) YunView *netErrView;
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view);
+            make.width.equalTo(self.view);
+            make.centerX.equalTo(self.view);
+            make.bottom.equalTo(self.view);
+        }];
+
+        if (self.curDelegate &&
+            [self.curDelegate respondsToSelector:@selector(didGetNoCtnCoverView:)]) {
+            view = [self.curDelegate didGetNoCtnCoverView:view];
+        }
 
-/// 内容无效 view
-@property (nonatomic, strong) YunView *ctnErrView;
+        self.noCtnView = view;
+    }
+
+    view.hidden = NO;
+    return view;
+}
+
+- (void)setNoCtnSelfBlock:(void (^)(void))block {
+    YunCoverView *bv = self.getNoCtnView;
+
+    [bv setSelfBlock:block];
+}
+
+#pragma mark - no net
+
+- (void)showNoNetView {
+    [self hideBlankView];
+
+    YunCoverView *noNet = [self getNoNetView];
+
+    [self.view bringSubviewToFront:noNet];
+}
+
+- (void)hideNoNetView {
+    if (self.netErrView) {
+        self.netErrView.hidden = YES;
+    }
+}
+
+- (YunCoverView *)getNoNetView {
+    YunCoverView *view = (YunCoverView *) self.netErrView;
+    if (view == nil) {
+        view = [YunCoverView itemWithMsg:@"网络错误，请检查您的网络后重试！"
+                                     img:YunConfig.instance.imgViewNoNetName
+                                btnTitle:@"点击重试" btnTag:1];
+        view.backgroundColor = YunAppTheme.colorBaseWhite;
+        [view setBgColor:YunAppTheme.colorBaseWhite];
+
+        WEAK_SELF
+        view.didBtnClick = ^(NSInteger btnTag) {
+            [weakSelf handleRetryByNoNet];
+        };
 
-/// 消息信息 view
-@property (nonatomic, strong) YunView *msgView;
-
-/// 第一次加载的空白页面
-@property (nonatomic, strong) YunView *defBlankView;
-
-/// 加载状态 view
-@property (nonatomic, strong) YunView *stateView;
-
-/// 隐藏加载状态：默认 NO
-@property (nonatomic, assign) BOOL hideStateView;
-
-/// 最后一次更新数据时间
-@property (nonatomic, strong) NSDate *lastUpdateDate;
-
-/// 更新间隔时间：默认120s
-@property (nonatomic, assign) NSTimeInterval updateInterval;
-
-/// 调用updateVcState
-@property (nonatomic, copy) void (^didUpdateVcState)(void);
-
-/// 加载数据模式：默认从服务器加载
-@property (nonatomic, assign) YunAppVc_LoadDataMode loadDataMode;
-
-/// 已经更新过 Vc 的状态（调用过updateVcState方法）
-@property (nonatomic, assign) BOOL hasUpdated;
-
-/// 导航栏是否为透明：默认 NO
-@property (nonatomic, assign) BOOL isNagBarClear;
-
-/// 导航栏背景
-@property (nonatomic, strong) UIColor *nagBgColor;
-
-/// 导航栏title 颜色
-@property (nonatomic, strong) UIColor *nagTitleColor;
-
-/// 导航栏title 字体
-@property (nonatomic, strong) UIFont *nagTitleFont;
-
-/// 是否开启左滑返回手势，仅在第一层开启
-@property (nonatomic, assign) BOOL popGestureOn;
-
-#pragma mark - app vc flow
-
-/// 初始化数据
-- (void)initVcData;
-
-/// 初始化 view
-- (void)initVcSubViews;
-
-/// ViewWillAppear
-- (void)handleViewWillAppear;
-
-/// ViewDidAppear
-- (void)handleViewDidAppear;
-
-/// ViewDidDisappear
-- (void)handleViewDidDisappear;
-
-/// 从本地加载数据
-- (void)loadDataFromLocal;
-
-/// 从服务器加载数据
-- (void)loadDataFromServer;
-
-/// 从服务器加载更多数据
-- (void)loadMoreDataFromServer;
-
-/// 更新 Vc 的状态（可以在加载完成时调用）
-- (void)updateVcState;
-
-/// 开始更新 Vc 状态（实现该方法，updateVcState 时会触发）
-- (void)updateVcStateOn;
-
-/// 状态更新完成（隐藏一些加载框等）（实现该方法，updateVcState 时会触发）
-- (void)updateVcStateCmp;
-
-/// 是否需要加载数据（自动判断）
-- (BOOL)shouldLoadData;
-
-- (void)loadData;
-
-- (void)loadDataCmp;
-
-- (void)loadDataCmpAndUpdateVcState;
-
-#pragma mark - app style
-
-- (void)setNagBg:(UIColor *)color;
-
-- (void)setNagTitleColor:(UIColor *)color font:(UIFont *)font;
-
-- (void)setLeftBarItemName:(NSString *)name;
-
-- (void)setLeftBarItemBtn:(UIBarButtonItem *)btn;
-
-- (void)setLeftBarItemName:(NSString *)name color:(UIColor *)color;
-
-- (void)setRightBarItemBtn:(UIBarButtonItem *)btn;
-
-- (void)setRightBarItemName:(NSString *)name;
-
-- (void)setRightBarItemName:(NSString *)name color:(UIColor *)color;
-
-- (void)setNavTitle:(NSString *)title;
-
-- (void)setNagBarClear;
-
-- (void)pushVc:(UIViewController *)vc;
-
-- (void)setBackVcNeedUpdate;
-
-- (YunAppViewController *)appBackVC;
-
-#pragma mark - request
-
-#pragma mark - update date
-
-- (void)setCurUpdateDate;
-
-- (BOOL)canUpdate;
-
-- (UIViewController *)getPreVc;
+        [self.view addSubview:view];
+
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.equalTo(self.view);
+            make.centerX.equalTo(self.view);
+            make.centerY.equalTo(self.view);
+        }];
+
+        if (self.curDelegate &&
+            [self.curDelegate respondsToSelector:@selector(didGetNoNetCoverView:)]) {
+            view = [self.curDelegate didGetNoNetCoverView:view];
+        }
+
+        self.netErrView = view;
+    }
+
+    view.hidden = NO;
+    return view;
+}
+
+- (void)handleRetryByNoNet {
+    self.firstLoad = YES;
+    self.hasUpdated = NO;
+    self.needUpdateData = NO;
+
+    WEAK_SELF
+    self.didUpdateVcState = ^{
+        [weakSelf hideGeneraBlankView];  // 视觉优化 todo
+    };
+
+    [self viewDidAppear:NO];
+}
+
+#pragma mark - load
+
+- (void)showLoadView:(BOOL)hasBg {
+    if (self.hideStateView) {
+        return;
+    }
+
+    [self showLoadViewForce:hasBg];
+}
+
+// 忽略self.hideStateView属性
+- (void)showLoadViewForce:(BOOL)hasBg {
+    if (YunAppBlankViewConfig.instance.isFullLoad) {
+        [YunLoadViewHelper.instance showLoadView:hasBg];
+    }
+    else {
+        YunLoadView *loadView = [self getLoadViewInstance];
+        [loadView showWithBg:hasBg];
+
+        [self.view bringSubviewToFront:loadView];
+    }
+}
+
+- (void)hideLoadView {
+    if (YunAppBlankViewConfig.instance.isFullLoad) {
+        [YunLoadViewHelper.instance hideLoadView];
+    }
+    else {
+        YunLoadView *loadView = [self getLoadViewInstance];
+        [loadView hiddenView];
+    }
+}
+
+- (YunLoadView *)getLoadViewInstance {
+    YunLoadView *view = (YunLoadView *) self.stateView;
+    if (view == nil) {
+        view = [YunLoadView new];
+
+        [self.view addSubview:view];
+
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.equalTo(self.view);
+            make.centerX.equalTo(self.view);
+            make.centerY.equalTo(self.view);
+        }];
+
+        self.stateView = view;
+    }
+
+    view.hidden = NO;
+    return view;
+}
+
+#pragma mark - msg
+
+#pragma mark - handle
+
+#pragma mark - private funtions
+
+- (void)hideBlankView {
+    [self hideGeneraBlankView];
+
+    if (self.noCtnView) {
+        self.noCtnView.hidden = YES;
+    }
+
+    if (self.msgView) {
+        self.msgView.hidden = YES;
+    }
+
+    if (self.stateView) {
+        self.stateView.hidden = YES;
+        [(YunLoadView *) self.stateView stop];
+    }
+}
+
+- (void)hideGeneraBlankView {
+    [self hideNoNetView];
+    [self hideErrCtnView];
+}
+
+- (id <YunAppCoverViewDelegate>)curDelegate {
+    if (self.coverDelegate) {
+        return self.coverDelegate;
+    }
+
+    return YunAppBlankViewConfig.instance.coverDelegate;
+}
 
 @end
