@@ -1,8 +1,8 @@
 # YunBaseApp
 
-自己开发的 iOS 应用开发的基本框架，涉及 App 中等各种功能：UIViewController 的封装、主题管理、帐号管理、日志管理、、加载页、提示信息、错误封装等。
+YunBaseApp是自己在开发iOS应用的过程中，积累形成的基本开发框架。其中涉及开发App中等各种功能：UIViewController 的封装、主题管理、帐号管理、日志管理、、加载页、提示信息、错误封装等。
 
-- Platform: iOS 9.0 and later
+支持的平台: iOS 9.0 and later
 
 ## 需要的组件
 
@@ -53,14 +53,16 @@ Use the cocoaPods
 
 ## Account （用户信息管理）
 
-### 1)实现代理
+### 1）实现代理
+
+- 设置代理
 
 ```
     /// 设置全局代理
     YunAccountMgHelper.mg.delegate = self;
 ```
 
-代理实现
+- 代理实现
 
 ```
 - (void)didAcctUpdated:(YunAccountModel *)acct {
@@ -75,7 +77,7 @@ Use the cocoaPods
 ```
 
 
-### 2)功能
+### 2）功能
 
 ```
     // 保存
@@ -91,8 +93,6 @@ Use the cocoaPods
 ## ActionListView （Action选择控件）
 
 使用示例如下：
-
-一些配置项，见**YunInputActionListView**
 
 ```
     /// 添加选择项
@@ -112,32 +112,46 @@ Use the cocoaPods
     actionListView.itemList = itemList;
 
     actionListView.didSelectItem = ^(YunActionListItemModel *item) {
-      // 选中的项
+      // 处理选中项的逻辑
     };
 
     /// 显示 view
     [actionListView showView];
 ```
 
+- 一些配置项，见：`YunInputActionListView `
+
 ## AlertView （提示控件）
 
 ### 1. 默认实现的提示控件：
 
-```
-   [YunAlertViewHelper.instance showYes:@"加载完成"];
+- 使用示例
 
+```
+    /// 确定提示
+    [YunAlertViewHelper.instance showYes:@"加载完成"];
+
+    /// 是否提示
     [YunAlertViewHelper.instance showYesNo:@"确定添加成员？" result:^(BOOL yes) {
 
     }];
 
+    /// 删除询问提示
     [YunAlertViewHelper.instance showDelete:@"确定删除成员？" result:^(BOOL yes) {
 
     }];
 ```
 
-配置信息见：**YunAlertConfig**
+- 其他 API参见：`YunAlertViewHelper `
 
-### 2. 也可以自定义实现控件，需要实现**YunAlertViewHelperDelegate**
+
+- 配置信息见：``YunAlertConfig``
+
+### 2. 自定义实现提示控件
+
+实现：`YunAlertViewHelperDelegate `即可
+
+- 设置代理（单例或全局都可以）
 
 ```
     /// 单例代理
@@ -147,16 +161,19 @@ Use the cocoaPods
     YunAlertConfig.instance.alertViewDelegate = self;
 ```
 
-实现代理
+- 实现代理
 
 ```
 - (void)showDelete:(NSString *)content result:(AlertYesBlock)result {
+    /// 自己实现控件显示
 }
 
 - (void)showYes:(NSString *)content {
+    /// 自己实现控件显示
 }
 
 - (void)showYes:(NSString *)content result:(AlertYesBlock)result {
+    /// 自己实现控件显示
 }
 
 ...
@@ -165,7 +182,9 @@ Use the cocoaPods
 
 ## Cache （缓存管理）
 
-### 1)设置缓存文件
+### 1）设置缓存文件
+
+- 第一种方式：设置 fileList
 
 ```
     /// 初始化缓存文件名
@@ -174,13 +193,25 @@ Use the cocoaPods
     ];
 ```
 
-或者实现代理
+- 第二种方式：实现代理
 
 ```
     YunCacheFileHelper.instance.delegate = self;
 ```
 
-### 2)缓存功能
+代理实现
+
+```
+- (NSString *)getFileName:(NSString *)fileName index:(NSInteger)index {
+    if(index == 1){
+        return @"file1";
+    }
+    return nil;
+}
+```
+
+
+### 2）缓存功能
 
 ```
     id cacheData; // 需要实现序列化，我采用的是MTLModel
@@ -199,6 +230,8 @@ Use the cocoaPods
 ## Error （Error管理）
 
 ### 1)配置错误信息
+
+配置错误码和对应的错误信息，以及一些特殊错误的处理逻辑（如：登录过期）。
 
 ```
     /// 设置自定义错误码和错误信息
@@ -228,9 +261,11 @@ Use the cocoaPods
 
 ### 2)生成错误对象
 
+根据不同场景生成错误对象
+
 ```
     /// 自定义错误
-    YunErrorModel *errorDef = [YunErrorModel itemWithType:YunErrTypeRqtTimeOut
+    YunErrorModel *errorItem = [YunErrorModel itemWithType:YunErrTypeRqtTimeOut
                                                      code:-1
                                                       msg:nil];
 
@@ -239,9 +274,34 @@ Use the cocoaPods
     YunErrorModel *rqtRspError = [YunErrorHelper itemWithRpsError:rspHelper].getError;
 ```
 
+### 3）使用错误信息
+
+- 获取错误内容
+
+```
+    /// 根据 debug 模式返回错误信息：
+    /// 如果debug=NO，则返回正常的错误信息，生产环境
+    /// 如果debug=YES，则返回详细的错误信息，测试环境
+    NSString *errStr = errorItem.getMsgByMode;
+
+    NSString *errDtStr = errorItem.getDetailMsg;
+    NSString *errNorStr = errorItem.getNorMsg;
+```
+
+- 直接显示`YunRqtRpsHelper`错误内容
+
+对于继承于`YunAppViewController`的的 Controller，可以直接显示请求错误`YunRqtRpsHelper `.
+
+```
+YunRqtRpsHelper *error; // 获取的请求类错误。
+ [self showRqtError:error]; // 默认显示getMsgByMode错误信息。
+```
+
 ## HudView （HudView 基类）
 
 ### 使用示例
+
+- 自定义 Hud
 
 继承`YunHudOnWindow`类，实现`- (void)initSubClass;`方法
 
@@ -269,13 +329,27 @@ Use the cocoaPods
 
 ```
 
+- 使用 Hud
+
+```
+    YunHudOnWindowDemo *hudDemo = [YunHudOnWindowDemo new];
+    [hudDemo showView];
+```
+
 ## Log （日志封装）
 
 根据设置控制是否输出日志信息。
 
 - 配置项 
 
-`YunConfig.instance.isLogMode = YES;`
+```
+/// 默认配置，根据 debug 模式设定是否输出日志。
+YunConfig.instance.isLogMode = YunConfig.instance.isDebugMode;
+
+/// 强制模式
+YunConfig.instance.isLogMode = YES;
+
+```
 
 - 日志输出
 
@@ -285,10 +359,16 @@ Use the cocoaPods
 
 ## Rqt （网络请求封装）
 
-### 1)参数设置
+基于 AFNetworking，采用门面模式封装的请求接口。
+
+如果需要使用其他框架实现，可以添加一个 delegate，来指定实现方法。
+
+### 1）参数设置
+
+具体参看YunRqtConfig
 
 ```
- /// 参数设置 具体参看YunRqtConfig
+    /// 参数设置 
     YunRqtConfig.instance.devType = @"1";
     YunRqtConfig.instance.devTypeParaName = @"deviceType";
 
@@ -304,11 +384,11 @@ Use the cocoaPods
 
     YunRqtConfig.instance.tokenParaName = @"token";
 
-    YunRqtConfig.instance.rspCodeName = @"status";
+    YunRqtConfig.instance.rspCodeName = @"data";
 
     NSString *userToken ; /// token 获取
 
-    // Content-Type 不要设置
+    // 设置默认添加到 header
     YunRqtConfig.instance.headerParas = [@{
             YunRqtConfig.instance.tokenParaName   : userToken == nil ? @"" : userToken,
             YunRqtConfig.instance.devTypeParaName : YunRqtConfig.instance.devType,
@@ -350,7 +430,6 @@ Use the cocoaPods
 
     [rqMg POST:[YunRqtUrlHelper urlCmBaseApi:@"createItem"]
     parameters:[YunRqtUrlHelper baseParaWithDic:@{@"itemId" : itemId}]
-     queryMode:NO
       progress:nil
        success:^(NSURLSessionDataTask *task, id responseObject) {
            YunRqtRpsHelper *rsp = [[YunRqtRpsHelper alloc] initWithRsp:responseObject];
@@ -368,13 +447,15 @@ Use the cocoaPods
 //...
 ```
 
+- 其他方法参看`YunRqtMg`
+
 ## Theme （主题管理）
 
 ### 1）配置信息
 
-```
-    /// 具体参考YunAppThemeColorConfig
-    
+具体参考`YunAppThemeColorConfig `
+
+```   
     /// 缩放设置
     CGFloat delta = [YunSizeHelper screenWidth] - 414.0f;
     CGFloat delta1 = delta / 414.0f * 0.5f;
@@ -453,6 +534,8 @@ Use the cocoaPods
 
 ### 3）改变应用字体大小
 
+可以实现自定义应用字体大小。
+
 ```
     /// 改变 App 内所有字体大小
     CGFloat tgSize;
@@ -461,14 +544,15 @@ Use the cocoaPods
 
 ### 4）改变主题颜色
 
-重新配置`YunAppThemeColorConfig`内，所有颜色配置。
+可以配置不同的主题色彩。
 
+重新配置`YunAppThemeColorConfig`内的颜色配置。
 
 ## View （UIView 和 UIViewController 的封装）
 
 `YunAppViewController`和`YunAppView`是对`UIViewController `和`UIView`的封装，实现了 App 应用中大多数场景和配置。
 
-- 根据`UIViewController `的生命周期，分解成不同的业务方法。分解参见[UIViewController 生命周期方法与业务逻辑](https://yunwjr.github.io/2018/04/18/iOS-kit-vc-life/)
+- 根据`UIViewController`的生命周期，分解成不同的业务方法。分解参见[UIViewController 生命周期方法与业务逻辑](https://yunwjr.github.io/2018/04/18/iOS-kit-vc-life/)
 
 - 封装常用的设置，如：导航栏透明/隐藏，导航栏按钮设置，侧滑返回，数据更新逻辑等
 
@@ -612,10 +696,14 @@ Use the cocoaPods
 
 ## ViewCategory (UIView 和 UIViewController的扩展)
 
+`ViewCategory`实现了`YunAppViewController`和`YunAppView`的一些分类方法，包括：空白页、加载页、错误页等。
+ 
+`YunAppBlankViewConfig`中，默认实现了`YunAppCoverViewDelegate`，实现了默认的加载动画。包括：
 
-
-
-
+1. 第一次进入，先显示空白页，避免显示未赋值的控件布局。
+2. `loadDataFromServer`（加载数据）时，自动显示加载框。 `updateVcStateCmp`（加载完成，页面更新完成后）时，默认隐藏加载框。
+3. 第一次加载数据（`loadDataFromServer`）失败，默认显示加载失败页面，可以重试加载。
+4. 显示请求错误信息`YunErrorHelper`。默认处理了登录过期等逻辑。
 
 
 
