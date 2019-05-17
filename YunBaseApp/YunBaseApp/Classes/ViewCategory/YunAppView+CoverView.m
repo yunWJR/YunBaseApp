@@ -312,6 +312,8 @@
         self.stateView.hidden = YES;
         [(YunLoadView *) self.stateView stop];
     }
+
+    [self hideLoadView];
 }
 
 - (void)hideGeneraBlankView {
