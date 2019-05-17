@@ -177,4 +177,6 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 
 - (UIViewController *)getPreVc;
 
+- (void)hideDefBlankView;
+
 @end
