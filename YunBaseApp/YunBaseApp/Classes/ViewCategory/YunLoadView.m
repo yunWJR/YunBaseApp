@@ -81,7 +81,10 @@
         _backView.backgroundColor = [UIColor clearColor];
     }
 
-    _progressHUD = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    if (_progressHUD == nil) {
+        _progressHUD = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    }
+    [_progressHUD showAnimated:YES];
 
     _cmtLbl.text = cmt;
     _cmtLbl.hidden = [YunValueVerifier isInvalidStr:cmt];
@@ -97,10 +100,13 @@
                      animations:^{
                          self.alpha = 0.0f;
                      }];
+    [self stop];
 }
 
 - (void)stop {
     [_progressHUD hideAnimated:NO];
+    [_progressHUD removeFromSuperview];
+    _progressHUD = nil;
 }
 
 #pragma mark - handle
