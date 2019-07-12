@@ -24,6 +24,8 @@ typedef enum : NSInteger {
 
 - (void)hideErrCtnView;
 
+- (void)showNoCtnViewByImg:(NSString *)imgName msg:(NSString *) msg;
+
 - (void)showNoCtnViewByImg:(NSString *)imgName;
 
 - (void)showNoCtnView:(NSString *)msg;

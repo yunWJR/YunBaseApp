@@ -59,6 +59,9 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 /// 第一次加载的空白页面
 @property (nonatomic, strong) YunView *defBlankView;
 
+/// 是否显示第一次加载的空白页面 默认：YES
+@property (nonatomic, assign) BOOL isSHowDefBlankView;
+
 /// 加载状态 view
 @property (nonatomic, strong) YunView *stateView;
 
@@ -158,6 +161,10 @@ typedef NS_ENUM(NSInteger, YunAppVc_LoadDataMode) {
 - (void)setRightBarItemName:(NSString *)name color:(UIColor *)color;
 
 - (void)setNavTitle:(NSString *)title;
+
+- (void)setNavLeftTitle:(NSString *)title;
+
+- (void)setNavLeftTitle:(NSString *)title color:(UIColor *) color;
 
 - (void)setNagBarClear;
 

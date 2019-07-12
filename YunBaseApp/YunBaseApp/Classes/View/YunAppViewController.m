@@ -28,13 +28,31 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 
 @implementation YunAppViewController
 
-- (instancetype)init {
-    self = [super init];
-
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
     if (self) {
         [self initVcData];
     }
+    
+    return self;
+}
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self initVcData];
+    }
+    
+    return self;
+}
+
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        [self initVcData];
+    }
+    
     return self;
 }
 
@@ -42,39 +60,39 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self initVcSubViews];
-
+    
     [self showDefBlankView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
+    
     [self handleViewWillAppear];
-
+    
     [self notiDelegate:viewWillAppear];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
+    
     [self handleViewDidAppear];
-
+    
     [self notiDelegate:viewDidAppear];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-
+    
     [self notiDelegate:viewWillDisappear];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-
+    
     [self handleViewDidDisappear];
-
+    
     [self notiDelegate:viewDidDisappear];
 }
 
@@ -89,19 +107,21 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 - (void)initVcData {
     self.firstLoad = YES;
     self.needUpdateData = NO;
-
+    
     _updateNagBarItem = YES;
     _updateInterval = YunAppConfig.instance.viewUpdateInterval;
-
+    
     _noCtnMsg = @"无内容";
-
+    
     _isNagBarClear = NO;
-
+    
+    _isSHowDefBlankView = YES;
+    
     _loadDataMode = YunAppVc_LoadDataFromServer;
-
+    
     self.sideOff = YunAppConfig.instance.defVcSideOff;
     self.hideNagBarBtmLine = YunAppConfig.instance.isHideNagBtmLine;
-
+    
     [self notiDelegate:didInitVcDataDelegateItem];
 }
 
@@ -113,23 +133,23 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
         // iOS11 废除
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-
+    
     // view不延伸（包括，状态栏、导航栏）
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
-
+    
     // 不延伸时，导航栏设为不透明，不然为灰色
     //self.navigationController.navigationBar.translucent = NO;
-
+    
     if (YunAppTheme.colorVcBg) {
         self.view.backgroundColor = YunAppTheme.colorVcBg;
     }
-
+    
     /// 左滑手势
     if (_popGestureOn) {
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
     }
-
+    
     [self notiDelegate:didInitVcSubViewsDelegateItem];
 }
 
@@ -139,22 +159,22 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
         if (!self.firstLoad && _isNagBarClear) {
             [self setNagBarClear];
         }
-
+        
         if (!_isNagBarClear) {
             // 导航栏背景颜色
             [self setNagBg:self.getCurVcNagBgColor];
         }
-
+        
         // title 字体
         [self setNagTitleColor:self.nagTitleColor ? self.nagTitleColor : YunAppTheme.colorNagDark
                           font:self.nagTitleFont ? self.nagTitleFont : YunAppTheme.nagFontTitle];
-
+        
         if (_updateNagBarItem) {
             // 返回item
             if (!self.hideNagBarBackItem) {
                 self.navigationItem.leftBarButtonItem = self.leftNagItem;
             }
-
+            
             // right item
             self.navigationItem.rightBarButtonItem = self.rightNagItem;
         }
@@ -185,7 +205,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
             }
         }
     }
-
+    
     if (!_isNagBarClear) {
         // 导航栏背景颜色-修复透明导航到不透明导航，偶尔导航栏为黑色。
         [self setNagBg:self.getCurVcNagBgColor];
@@ -193,18 +213,18 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 }
 
 - (void)handleViewDidDisappear {
-
+    
 }
 
 - (void)loadDataFromLocal {
     [self setCurUpdateDate];
-
+    
     [self notiDelegate:startLoadDataDelegateItem];
 }
 
 - (void)loadDataFromServer {
     [self setCurUpdateDate];
-
+    
     [self notiDelegate:startLoadDataDelegateItem];
 }
 
@@ -214,24 +234,24 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 
 - (void)updateVcState {
     [self notiDelegate:startUpdateVcStateDelegateItem];
-
+    
     [self updateVcStateOn];
-
+    
     [self updateVcStateCmp];
 }
 
 - (void)updateVcStateOn {
-
+    
     // 移动到updateVcStateCmp
     //self.hasUpdated = YES;
     //[self setCurUpdateDate];
     //
     //[self setLoadDataCmp];
-
+    
     if (_isNagBarClear) {
         [self setNagBarClear];
     }
-
+    
     if (_didUpdateVcState) {
         _didUpdateVcState();
     }
@@ -240,11 +260,11 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 - (void)updateVcStateCmp {
     self.hasUpdated = YES;
     [self setCurUpdateDate];
-
+    
     [self setLoadDataCmp];
-
+    
     [self hideDefBlankView];
-
+    
     [self notiDelegate:didUpdateVcStateCmpDelegateItem];
 }
 
@@ -273,7 +293,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 
 - (void)didClickNagLeftItem {
     [super didClickNagLeftItem];
-
+    
     if (_didPopSuperView) {
         _didPopSuperView(self);
     }
@@ -285,19 +305,21 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     // 导航栏背景颜色
     if (color) {
         self.navigationController.navigationBar.translucent = NO;
-
+        
         UIImage *colorImg = [UIImage imgWithColor:color];
         if (colorImg == nil) {
             [YunLogHelper logMsg:@"colorImg is nil"];
         }
-
+        
         [self.navigationController.navigationBar setBarTintColor:color];
-
+        
         [self.navigationController.navigationBar setBackgroundImage:colorImg
                                                       forBarMetrics:UIBarMetricsDefault];
-        self.navigationController.navigationBar.shadowImage = UIImage.new;
-
+        self.navigationController.navigationBar.shadowImage = [UIImage new];
+        
         [self.navigationController.navigationBar layoutIfNeeded];
+        
+        [self updateNagBtmLineState];
     }
 }
 
@@ -306,11 +328,11 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     if (color) {
         mDic[NSForegroundColorAttributeName] = color;
     }
-
+    
     if (font) {
         mDic[NSFontAttributeName] = font;
     }
-
+    
     // title 字体
     [self.navigationController.navigationBar setTitleTextAttributes:mDic];
 }
@@ -329,7 +351,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     [self setLeftBarItemName:name
                         font:[YunAppTheme nagFontItem]
                        color:color == nil ? YunAppTheme.colorNagDark : color];
-
+    
     self.leftNagItem = self.navigationItem.leftBarButtonItem;
 }
 
@@ -339,31 +361,46 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 
 - (void)setLeftBarItemBtn:(UIBarButtonItem *)btn {
     self.navigationItem.leftBarButtonItem = btn;
-
+    
     self.leftNagItem = self.navigationItem.leftBarButtonItem;
 }
 
 - (void)setRightBarItemBtn:(UIBarButtonItem *)btn {
     self.navigationItem.rightBarButtonItem = btn;
-
+    
     self.rightNagItem = self.navigationItem.rightBarButtonItem;
 }
 
 - (void)setNavTitle:(NSString *)title {
     self.navigationItem.title = title;
+    //    [self setNavLeftTitle:title color:nil];
+}
+
+- (void)setNavLeftTitle:(NSString *)title {
+    [self setNavLeftTitle:title color:nil];
+}
+
+- (void)setNavLeftTitle:(NSString *)title color:(UIColor *) color {
+    UILabel * leftTitleLB = [UILabel new];
+    leftTitleLB.text = title;
+    leftTitleLB.font = self.nagTitleFont ? self.nagTitleFont : YunAppTheme.nagFontTitle;
+    leftTitleLB.textColor = color == nil ? (self.nagTitleColor ? self.nagTitleColor : YunAppTheme.colorNagDark) : color;
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:leftTitleLB];
+    self.navigationItem.leftBarButtonItems = @[self.leftNagItem, item];
+    
 }
 
 - (void)setNagBarClear {
     // 1、设置导航栏半透明
     self.navigationController.navigationBar.translucent = YES;
-
+    
     [self.navigationController.navigationBar setBarTintColor:UIColor.clearColor];
-
+    
     // 2、设置导航栏背景图片
     [self.navigationController.navigationBar setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
     // 3、设置导航栏阴影图片
     self.navigationController.navigationBar.shadowImage = UIImage.new;
-
+    
     self.isNagBarClear = YES;
 }
 
@@ -375,18 +412,18 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
 #pragma mark - private functions
 
 - (void)showDefBlankView {
-    if (self.defBlankView) {
+    if (self.isSHowDefBlankView && self.defBlankView) {
         self.defBlankView.hidden = NO;
-
+        
         [self.view addSubview:self.defBlankView];
-
+        
         [self.defBlankView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(-YunSizeHelper.statusAndNagBarHeight);
             make.width.equalTo(self.view);
             make.left.equalTo(self.view);
             make.bottom.equalTo(self.view);
         }];
-
+        
         [self.view bringSubviewToFront:self.defBlankView];
     }
 }
@@ -395,7 +432,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     if (self.defBlankView) {
         self.defBlankView.hidden = YES;
         [self.defBlankView removeFromSuperview];
-
+        
         self.defBlankView = nil;
     }
 }
@@ -415,7 +452,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
             return nil;
         }
     }
-
+    
     return nil;
 }
 
@@ -425,16 +462,16 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
         isHandle = [self handleNotiDelegate:item
                                    delegate:_yunAppDelegate];
     }
-
+    
     if (isHandle && !YunAppConfig.instance.isDefDelegateAlwaysOn) {
         return isHandle;
     }
-
+    
     if (YunAppConfig.instance.appDelegate) {
         isHandle = [self handleNotiDelegate:item
                                    delegate:YunAppConfig.instance.appDelegate];
     }
-
+    
     return isHandle;
 }
 
@@ -469,7 +506,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
                 }
             }
                 break;
-
+                
             case didInitVcDataDelegateItem: {
                 if ([delegate respondsToSelector:@selector(didInitVcData:)]) {
                     [delegate didInitVcData:self];
@@ -507,7 +544,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
                 break;
         }
     }
-
+    
     return NO;
 }
 
@@ -515,7 +552,7 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     if (_nagBgColor) {
         return _nagBgColor;
     }
-
+    
     return YunAppTheme.colorNagBg;
 }
 
@@ -533,11 +570,11 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     if (_lastUpdateDate == nil) {
         return YES;
     }
-
+    
     if (_updateInterval <= 0) {
         return YES;
     }
-
+    
     NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:_lastUpdateDate];
     return time > _updateInterval;
 }
@@ -547,9 +584,9 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
     if (vcId < 0) {
         return nil;
     }
-
+    
     UIViewController *parent = self.navigationController.viewControllers[vcId];
-
+    
     return parent;
 }
 
@@ -561,9 +598,9 @@ typedef NS_ENUM(NSInteger, YunAppViewControllerDelegateItem) {
         // root 不返回
         return NO;
     }
-
+    
     // 其他 vc 判断
-
+    
     return YES;
 }
 

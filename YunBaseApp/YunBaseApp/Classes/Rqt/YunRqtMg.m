@@ -62,14 +62,14 @@
                        success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
                        failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
-    // post 参数修改
-    if (YunRqtConfig.instance.queryMode) {
-        NSString *paraStr = AFQueryStringFromParameters(parameters);
-        if (![YunValueVerifier isNilOrEmptyStr:paraStr]) {
-            URLString = [NSString stringWithFormat:@"%@?%@", URLString, paraStr];
-        }
-        parameters = [NSDictionary new];
-    }
+//    // post 参数修改
+//    if (YunRqtConfig.instance.queryMode) {
+//        NSString *paraStr = AFQueryStringFromParameters(parameters);
+//        if (![YunValueVerifier isNilOrEmptyStr:paraStr]) {
+//            URLString = [NSString stringWithFormat:@"%@?%@", URLString, paraStr];
+//        }
+//        parameters = [NSDictionary new];
+//    }
 
     [YunLogHelper logMsg:FORMAT(@"POST RQT--%@\n paras:%@", URLString, parameters)
                    force:YunRqtConfig.instance.logUrl];
