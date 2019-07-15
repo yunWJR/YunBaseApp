@@ -80,12 +80,12 @@
     else {
         _backView.backgroundColor = [UIColor clearColor];
     }
-    
+
     if (_progressHUD == nil) {
         _progressHUD = [MBProgressHUD showHUDAddedTo:self animated:YES];
     }
     [_progressHUD showAnimated:YES];
-    
+
     _cmtLbl.text = cmt;
     _cmtLbl.hidden = [YunValueVerifier isInvalidStr:cmt];
     
