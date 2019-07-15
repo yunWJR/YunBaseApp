@@ -17,13 +17,13 @@
 
 + (YunLoadViewHelper *)instance {
     static YunLoadViewHelper *_instance = nil;
-
+    
     @synchronized (self) {
         if (_instance == nil) {
             _instance = [[self alloc] init];
         }
     }
-
+    
     return _instance;
 }
 
@@ -32,7 +32,7 @@
     if (self) {
         _loadView = [YunLoadView new];
     }
-
+    
     return self;
 }
 
@@ -40,19 +40,21 @@
     if (_superView == nil) {
         _superView = YunRootViewHelper.instance.rootView;
     }
-
+    
     [_loadView removeFromSuperview];
-
+    
     [_superView addSubview:_loadView];
-
+    
     [_loadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_superView);
         make.left.equalTo(_superView);
         make.size.equalTo(_superView);
     }];
-
+    
     [_superView layoutIfNeeded];
-
+    
+    _loadView.hidden = NO;
+    
     [_loadView showWithBg:hasBg cmt:cmt];
 }
 
@@ -61,6 +63,9 @@
 }
 
 - (void)hideLoadView {
+    //    _loadView.hidden = YES;
+    
+    [_loadView stop];
     [_loadView removeFromSuperview];
 }
 

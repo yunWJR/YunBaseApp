@@ -14,7 +14,7 @@
 
 @implementation YunLoadView {
     UIView *_backView;
-
+    
     MBProgressHUD *_progressHUD;
 }
 
@@ -23,33 +23,33 @@
     if (self) {
         [self initSubView];
     }
-
+    
     return self;
 }
 
 - (void)initSubView {
     self.backgroundColor = [UIColor clearColor];
-
+    
     self.alpha = 0.0f;
-
+    
     _backView = [UIView new];
-
+    
     _cmtLbl = [YunUILabelFactory labelWithText:@""
                                           font:[YunAppTheme fontN:16]
                                          color:YunAppTheme.colorBaseDark
                                          align:NSTextAlignmentCenter
                                          lines:0
                                         adjust:NO];
-
+    
     [self addSubview:_backView];
     [self addSubview:_cmtLbl];
-
+    
     [_backView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.centerY.equalTo(self);
         make.size.equalTo(self);
     }];
-
+    
     [_cmtLbl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self).offset(60);
         make.width.equalTo(self).offset(-80);
@@ -67,14 +67,14 @@
     self.hidden = NO;
     if (hasBack) {
         UIColor *bgCl = _bgColor ?
-                        _bgColor :
-                        YunAppBlankViewConfig.instance.loadViewBgColor ?
-                        YunAppBlankViewConfig.instance.loadViewBgColor :
-                        [UIColor colorWithRed:0
-                                        green:0
-                                         blue:0
-                                        alpha:0.3f];
-
+        _bgColor :
+        YunAppBlankViewConfig.instance.loadViewBgColor ?
+        YunAppBlankViewConfig.instance.loadViewBgColor :
+        [UIColor colorWithRed:0
+                        green:0
+                         blue:0
+                        alpha:0.3f];
+        
         _backView.backgroundColor = bgCl;
     }
     else {
@@ -88,7 +88,7 @@
 
     _cmtLbl.text = cmt;
     _cmtLbl.hidden = [YunValueVerifier isInvalidStr:cmt];
-
+    
     [UIView animateWithDuration:0.1
                      animations:^{
                          self.alpha = 1.0f;

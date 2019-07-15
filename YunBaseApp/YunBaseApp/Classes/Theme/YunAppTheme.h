@@ -4,14 +4,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class YunTheme;
+#import <YunTheme.h>
 
 @interface YunAppTheme : NSObject
 
 @property (nonatomic, strong) NSString *fontLName;
 
 @property (nonatomic, strong) NSString *fontNName;
+
+@property (nonatomic, strong) NSString *fontMName;
 
 @property (nonatomic, strong) NSString *fontBName;
 
@@ -26,6 +27,8 @@
 @property (nonatomic, assign) CGFloat sizeL;
 
 @property (nonatomic, assign) CGFloat sizeLM;
+
+@property (nonatomic, assign) CGFloat sizeB;
 
 // nag
 @property (nonatomic, strong) NSString *fontNagTitle;

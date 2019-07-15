@@ -61,6 +61,8 @@
 
 - (void)updateNagHideState;
 
+- (void)updateNagBtmLineState;
+
 - (CGFloat)twoSideOff;
 
 @end

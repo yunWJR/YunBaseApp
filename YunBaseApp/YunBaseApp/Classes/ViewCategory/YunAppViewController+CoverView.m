@@ -9,6 +9,7 @@
 #import "YunLoadView.h"
 #import "YunLoadViewHelper.h"
 #import "YunAppBlankViewConfig.h"
+#import <YunSizeHelper.h>
 
 @implementation YunAppViewController (CoverView)
 
@@ -21,12 +22,12 @@
             [self.blankViewList addObject:@""];
         }
     }
-
+    
     id itemV = self.blankViewList[item];
     if ([itemV isKindOfClass:NSString.class]) {
         return nil;
     }
-
+    
     return itemV;
 }
 
@@ -38,13 +39,13 @@
 
 - (void)showErrCtnView:(NSString *)errMsg {
     [self hideBlankView];
-
+    
     YunCoverView *noCtn = [self getErrCtnView];
     if (noCtn) {
         [noCtn updateMsg:errMsg];
         noCtn.hidden = NO;
     }
-
+    
     [self.view bringSubviewToFront:noCtn];
 }
 
@@ -67,23 +68,23 @@
         view.didBtnClick = ^(NSInteger btnTag) {
             [weakSelf handleRetryByErrCtn];
         };
-
+        
         [self.view addSubview:view];
-
+        
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.equalTo(self.view);
             make.centerX.equalTo(self.view);
             make.centerY.equalTo(self.view);
         }];
-
+        
         if (self.curDelegate &&
             [self.curDelegate respondsToSelector:@selector(didGetErrCtnCoverView:)]) {
             view = [self.curDelegate didGetErrCtnCoverView:view];
         }
-
+        
         self.ctnErrView = view;
     }
-
+    
     return view;
 }
 
@@ -91,12 +92,12 @@
     self.firstLoad = YES;
     self.hasUpdated = NO;
     self.needUpdateData = YES;
-
+    
     WEAK_SELF
     self.didUpdateVcState = ^{
         [weakSelf hideGeneraBlankView];  // 视觉优化 todo
     };
-
+    
     [self viewDidAppear:NO];
 }
 
@@ -111,22 +112,32 @@
 
 #pragma mark - no ctn
 
+- (void)showNoCtnViewByImg:(NSString *)imgName msg:(NSString *) msg {
+    [self hideBlankView];
+    
+    YunCoverView *noCtn = [self getNoCtnView];
+    [noCtn updateMsg:msg];
+    [noCtn setImageWithName:imgName];
+    
+    [self.view bringSubviewToFront:noCtn];
+}
+
 - (void)showNoCtnViewByImg:(NSString *)imgName {
     [self hideBlankView];
-
+    
     YunCoverView *noCtn = [self getNoCtnView];
     [noCtn updateMsg:@""];
     [noCtn setImageWithName:imgName];
-
+    
     [self.view bringSubviewToFront:noCtn];
 }
 
 - (void)showNoCtnView:(NSString *)msg {
     [self hideBlankView];
-
+    
     YunCoverView *noCtn = [self getNoCtnView];
     [noCtn updateMsg:msg];
-
+    
     [self.view bringSubviewToFront:noCtn];
 }
 
@@ -138,7 +149,7 @@
     if (self.noCtnView) {
         self.noCtnView.hidden = YES;
     }
-
+    
     [self hideGeneraBlankView];
 }
 
@@ -148,31 +159,31 @@
         view = [YunCoverView itemWithMsg:@"无内容"
                                      img:YunConfig.instance.imgViewNoCtnImgName];
         view.backgroundColor = YunAppTheme.colorBaseWhite;
-
+        
         [self.view addSubview:view];
-
+        
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view);
             make.width.equalTo(self.view);
             make.centerX.equalTo(self.view);
             make.bottom.equalTo(self.view);
         }];
-
+        
         if (self.curDelegate &&
             [self.curDelegate respondsToSelector:@selector(didGetNoCtnCoverView:)]) {
             view = [self.curDelegate didGetNoCtnCoverView:view];
         }
-
+        
         self.noCtnView = view;
     }
-
+    
     view.hidden = NO;
     return view;
 }
 
 - (void)setNoCtnSelfBlock:(void (^)(void))block {
     YunCoverView *bv = self.getNoCtnView;
-
+    
     [bv setSelfBlock:block];
 }
 
@@ -180,9 +191,9 @@
 
 - (void)showNoNetView {
     [self hideBlankView];
-
+    
     YunCoverView *noNet = [self getNoNetView];
-
+    
     [self.view bringSubviewToFront:noNet];
 }
 
@@ -200,28 +211,30 @@
                                 btnTitle:@"点击重试" btnTag:1];
         view.backgroundColor = YunAppTheme.colorBaseWhite;
         [view setBgColor:YunAppTheme.colorBaseWhite];
-
+        
         WEAK_SELF
         view.didBtnClick = ^(NSInteger btnTag) {
             [weakSelf handleRetryByNoNet];
         };
-
+        
         [self.view addSubview:view];
-
+        
+        CGFloat topOffset = self.hideNagBar ? YunSizeHelper.statusAndNagBarHeight : 0;
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.equalTo(self.view);
             make.centerX.equalTo(self.view);
-            make.centerY.equalTo(self.view);
+            make.bottom.equalTo(self.view);
+            make.top.equalTo(self.view).offset(topOffset);
+            make.width.equalTo(self.view);
         }];
-
+        
         if (self.curDelegate &&
             [self.curDelegate respondsToSelector:@selector(didGetNoNetCoverView:)]) {
             view = [self.curDelegate didGetNoNetCoverView:view];
         }
-
+        
         self.netErrView = view;
     }
-
+    
     view.hidden = NO;
     return view;
 }
@@ -230,12 +243,12 @@
     self.firstLoad = YES;
     self.hasUpdated = NO;
     self.needUpdateData = NO;
-
+    
     WEAK_SELF
     self.didUpdateVcState = ^{
         [weakSelf hideGeneraBlankView];  // 视觉优化 todo
     };
-
+    
     [self viewDidAppear:NO];
 }
 
@@ -245,7 +258,7 @@
     if (self.hideStateView) {
         return;
     }
-
+    
     [self showLoadViewForce:hasBg];
 }
 
@@ -257,7 +270,7 @@
     else {
         YunLoadView *loadView = [self getLoadViewInstance];
         [loadView showWithBg:hasBg];
-
+        
         [self.view bringSubviewToFront:loadView];
     }
 }
@@ -276,18 +289,18 @@
     YunLoadView *view = (YunLoadView *) self.stateView;
     if (view == nil) {
         view = [YunLoadView new];
-
+        
         [self.view addSubview:view];
-
+        
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.equalTo(self.view);
             make.centerX.equalTo(self.view);
             make.centerY.equalTo(self.view);
         }];
-
+        
         self.stateView = view;
     }
-
+    
     view.hidden = NO;
     return view;
 }
@@ -300,15 +313,15 @@
 
 - (void)hideBlankView {
     [self hideGeneraBlankView];
-
+    
     if (self.noCtnView) {
         self.noCtnView.hidden = YES;
     }
-
+    
     if (self.msgView) {
         self.msgView.hidden = YES;
     }
-
+    
     if (self.stateView) {
         self.stateView.hidden = YES;
         [(YunLoadView *) self.stateView stop];
@@ -326,7 +339,7 @@
     if (self.coverDelegate) {
         return self.coverDelegate;
     }
-
+    
     return YunAppBlankViewConfig.instance.coverDelegate;
 }
 

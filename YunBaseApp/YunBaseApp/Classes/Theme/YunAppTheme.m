@@ -16,13 +16,13 @@
 
 + (YunAppTheme *)instance {
     static YunAppTheme *_instance = nil;
-
+    
     @synchronized (self) {
         if (_instance == nil) {
             _instance = [[self alloc] init];
         }
     }
-
+    
     return _instance;
 }
 
@@ -30,10 +30,10 @@
     self = [super init];
     if (self) {
         _yunTm = [YunTheme instance];
-
+        
         [self initData];
     }
-
+    
     return self;
 }
 
@@ -42,24 +42,25 @@
     self.fontLName = [UIFont systemFontOfSize:14].fontName;
     self.fontNName = [UIFont systemFontOfSize:14].fontName;
     self.fontBName = [UIFont boldSystemFontOfSize:14].fontName;
-
+    
     self.fontNumName = self.fontNName;
-
+    
     self.sizeSM = 13;
     self.sizeS = 14;
     self.sizeN = 15;
     self.sizeL = 16;
     self.sizeLM = 17;
-
+    self.sizeB = 24;
+    
     self.scaleIsOn = YES;
-
+    
     self.lineHL = 0.5f;
     self.lineH = 1.0f;
     self.lineHB = 1.5f;
-
+    
     self.sizeNagTitle = 17.0f;
     self.sizeNagItem = 14.0f;
-
+    
     self.fontNagTitle = self.fontBName;
     self.fontNagItem = self.fontNName;
 }

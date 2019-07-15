@@ -9,6 +9,8 @@
 
 @protocol YunAppViewControllerDelegate <NSObject>
 
+@optional
+
 - (void)viewWillAppear:(YunAppViewController *)sender;
 
 - (void)viewDidAppear:(YunAppViewController *)sender;
