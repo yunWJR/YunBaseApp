@@ -56,6 +56,11 @@
 
 - (instancetype)initWithError:(NSError *)error {
     [YunLogHelper logMsg:FORMAT(@"Error: %@", error)];
+    
+    if (YunErrorConfig.instance.delegate &&
+        [YunErrorConfig.instance.delegate respondsToSelector:@selector(didInitWithError:)]) {
+        [YunErrorConfig.instance.delegate didInitWithError:error];
+    }
 
     self = [super init];
     if (self) {
