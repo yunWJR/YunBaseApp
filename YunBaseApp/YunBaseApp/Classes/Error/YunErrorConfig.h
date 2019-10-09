@@ -15,8 +15,8 @@
 // YunErrorHelper的itemWithError方法前处理
 - (NSError *)preHandleInItemWithError:(NSError *)error;
 
-// YunErrorHelper的initWithError方法执行
-- (void)didInitWithError:(NSError *)error;
+// YunErrorHelper的initWithError:requestData: 方法执行
+- (void)didInitWithError:(NSError *)error requestData:(NSString *) requestData;
 
 //- (void)didErrorOn:(YunErrorModel *)err hasHandle:(BOOL)hasHandle;
 

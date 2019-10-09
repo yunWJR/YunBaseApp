@@ -321,12 +321,12 @@
     if (self.noCtnView) {
         self.noCtnView.hidden = YES;
     }
-    
+
     if (self.stateView) {
         self.stateView.hidden = YES;
         [(YunLoadView *) self.stateView stop];
     }
-    
+
     [self hideLoadView];
 }
 

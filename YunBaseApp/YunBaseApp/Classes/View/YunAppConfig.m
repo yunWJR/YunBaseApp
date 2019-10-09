@@ -92,7 +92,8 @@
 
 - (void)startLoadData:(YunAppViewController *)sender {
     if (_isDefDelegateOn) {
-        [sender showLoadView:sender.firstLoad];
+//        [sender showLoadView:sender.firstLoad];
+        [sender showLoadView:NO];
     }
 
     if (_customDelegate && [_customDelegate respondsToSelector:@selector(startLoadData:)]) {
