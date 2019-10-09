@@ -56,7 +56,7 @@
 }
 
 - (YunCoverView *)getErrCtnView {
-    YunCoverView *view = (YunCoverView *) [self noCtnView];
+    YunCoverView *view = (YunCoverView *) self.noCtnView;
     if (view == nil) {
         view = [YunCoverView itemWithMsg:@"网络错误，请检查您的网络后重试！"
                                      img:YunConfig.instance.imgViewNoNetName
@@ -80,13 +80,15 @@
             view = [self.curDelegate didGetErrCtnCoverView:view];
         }
         
-        //[self setItem:ViewBvErrCtnView view:view];
+        self.noCtnView = view;
     }
     
     return view;
 }
 
 - (void)handleRetryByErrCtn {
+    [self hideGeneraBlankView];
+    
     self.firstLoad = YES;
     self.hasUpdated = NO;
     self.needUpdateData = YES;
@@ -246,7 +248,7 @@
 }
 
 - (void)handleRetryByNoNet {
-    [self hideNoNetView];
+    [self hideGeneraBlankView];
     
     self.firstLoad = YES;
     self.hasUpdated = NO;
@@ -319,11 +321,7 @@
     if (self.noCtnView) {
         self.noCtnView.hidden = YES;
     }
-    
-    if (self.noNetView) {
-        self.noNetView.hidden = YES;
-    }
-    
+
     if (self.stateView) {
         self.stateView.hidden = YES;
         [(YunLoadView *) self.stateView stop];

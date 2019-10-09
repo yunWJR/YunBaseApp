@@ -5,7 +5,6 @@
 
 #import "YunRqtMg.h"
 #import <YunKits/YunGlobalDefine.h>
-#import "AFHTTPSessionManager.h"
 #import "YunValueVerifier.h"
 #import "YunLogHelper.h"
 #import "YunRqtConfig.h"
@@ -46,8 +45,13 @@
                       success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
                       failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
-    [YunLogHelper logMsg:FORMAT(@"GET RQT--%@\n paras:%@", URLString, parameters)
+    self.httpRequestHeaders = FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders]);
+    self.requestUrlAndparameters = FORMAT(@"GET RQT--%@\n paras:%@", URLString, parameters);
+    [YunLogHelper logMsg:self.requestUrlAndparameters
                    force:YunRqtConfig.instance.logUrl];
+    
+    self.url = URLString;
+    self.parameters = parameters;
 
     return [_rqMg GET:URLString
            parameters:parameters
@@ -61,18 +65,14 @@
                       progress:(nullable void (^)(NSProgress *_Nonnull))downloadProgress
                        success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
                        failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
-
-//    // post 参数修改
-//    if (YunRqtConfig.instance.queryMode) {
-//        NSString *paraStr = AFQueryStringFromParameters(parameters);
-//        if (![YunValueVerifier isNilOrEmptyStr:paraStr]) {
-//            URLString = [NSString stringWithFormat:@"%@?%@", URLString, paraStr];
-//        }
-//        parameters = [NSDictionary new];
-//    }
-
-    [YunLogHelper logMsg:FORMAT(@"POST RQT--%@\n paras:%@", URLString, parameters)
+    
+    self.httpRequestHeaders = FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders]);
+    self.requestUrlAndparameters = FORMAT(@"POST RQT--%@\n paras:%@", URLString, parameters);
+    [YunLogHelper logMsg:self.requestUrlAndparameters
                    force:YunRqtConfig.instance.logUrl];
+    
+    self.url = URLString;
+    self.parameters = parameters;
 
     return [_rqMg POST:URLString
             parameters:parameters
@@ -97,12 +97,49 @@
         parameters = [NSDictionary new];
     }
 
-    [YunLogHelper logMsg:FORMAT(@"POST RQT--%@\n paras:%@", URLString, parameters)
+    self.httpRequestHeaders = FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders]);
+    self.requestUrlAndparameters = FORMAT(@"POST RQT--%@\n paras:%@", URLString, parameters);
+    [YunLogHelper logMsg:self.requestUrlAndparameters
                    force:YunRqtConfig.instance.logUrl];
+    
+    self.url = URLString;
+    self.parameters = parameters;
 
     return [_rqMg POST:URLString
             parameters:parameters
               progress:downloadProgress
+               success:success
+               failure:failure];
+}
+
+- (NSURLSessionDataTask *)POST:(NSString *)URLString
+                    parameters:(nullable id)parameters
+     constructingBodyWithBlock:(nullable void (^)(id<AFMultipartFormData> _Nonnull))block
+                       success:(nullable void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
+                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
+{
+    return [self POST:URLString parameters:parameters constructingBodyWithBlock:block progress:nil success:success failure:failure];
+}
+
+- (NSURLSessionDataTask *)POST:(NSString *)URLString
+                    parameters:(id)parameters
+     constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
+                      progress:(nullable void (^)(NSProgress * _Nonnull uploadProgress))uploadProgress
+                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+{
+    self.httpRequestHeaders = FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders]);
+    self.requestUrlAndparameters = FORMAT(@"POST RQT--%@\n paras:%@", URLString, parameters);
+    [YunLogHelper logMsg:self.requestUrlAndparameters
+                   force:YunRqtConfig.instance.logUrl];
+    
+    self.url = URLString;
+    self.parameters = parameters;
+    
+    return [_rqMg POST:URLString
+            parameters:parameters
+constructingBodyWithBlock:block
+              progress:uploadProgress
                success:success
                failure:failure];
 }
@@ -112,8 +149,13 @@
                          success:(nullable void (^)(NSURLSessionDataTask *_Nonnull, id _Nullable))success
                          failure:(nullable void (^)(NSURLSessionDataTask *_Nullable, NSError *_Nonnull))failure {
 
-    [YunLogHelper logMsg:FORMAT(@"DELETE RQT--%@\n paras:%@", URLString, parameters)
+    self.httpRequestHeaders = FORMAT(@"HTTPRequestHeaders--%@", [_rqMg.requestSerializer HTTPRequestHeaders]);
+    self.requestUrlAndparameters = FORMAT(@"DELETE RQT--%@\n paras:%@", URLString, parameters);
+    [YunLogHelper logMsg:self.requestUrlAndparameters
                    force:YunRqtConfig.instance.logUrl];
+    
+    self.url = URLString;
+    self.parameters = parameters;
 
     return [_rqMg DELETE:URLString
               parameters:parameters
